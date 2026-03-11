@@ -1,0 +1,4713 @@
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md
+
+本文介绍用 AI 编辑器快速跑通一个可用的腾讯云实时音视频 TRTC 和即时通信 IM 应用。我们提供了丰富的文档资源来提升您的开发体验。
+
+[RTC MCP Server](https://write.woa.com/#32173486-db56-466d-b8ed-ca4c28b027d3)
+
+[RTC Skills](https://write.woa.com/#1b9d0a80-b3f8-4387-9b83-4e53af424e73)
+
+[快速开始指南](https://write.woa.com/#b78521a8-feff-4ac8-be60-4f46f5e5b183)
+
+[OpenClaw 指南](https://write.woa.com/#179ee73f-a7e2-49d8-b742-ec1af41edfbe)
+
+## 准备账号与凭证（必做）
+
+你需要先在腾讯云控制台创建应用，并获取以下凭证：
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >凭证</td>
+
+<td rowspan="1" colSpan="1" >获取位置</td>
+
+<td rowspan="1" colSpan="1" >用途</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >`SDKAppID`</td>
+
+<td rowspan="1" colSpan="1" >[IM 控制台](https://console.cloud.tencent.com/im)</td>
+
+<td rowspan="1" colSpan="1" >SDK 初始化、MCP 环境变量</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >`SecretKey`</td>
+
+<td rowspan="1" colSpan="1" >IM 控制台 → 应用管理</td>
+
+<td rowspan="1" colSpan="1" >生成 UserSig（仅用于测试）、MCP 环境变量</td>
+</tr>
+</table>
+
+
+## 配置 MCP（必做）
+
+在你的 AI 编辑器（CodeBuddy / Trae / Cursor / Codex / Claude Code / Claude Desktop 等）里配置 MCP：
+``` json
+{
+  "mcpServers": {
+    "tencentcloud-sdk-mcp": {
+      "command": "npx",
+      "args": ["-y", "@tencentcloud/sdk-mcp@latest"],
+      "env": {
+        "SDKAPPID": "YOUR_SDKAPPID",
+        "SECRETKEY": "YOUR_SECRET_KEY"
+      }
+    }
+  }
+}
+```
+
+查看 CodeBuddy、Trae 、Cursor、Codex、Claude Code、Claude Desktop 等的详细安装说明，请点击 [MCP 配置](https://write.woa.com/document/197816375534501888)。
+
+## 安装 Skills（推荐）
+
+运行以下命令安装 Skills，CLI 会自动识别你正在使用的工具（CodeBuddy / Trae / Cursor / Codex/ Claude Code / Claude Desktop 等）：
+``` bash
+npx skills add Tencent-RTC/tencent-rtc-skills
+```
+
+建议安装 Skills，以提高 Agent 调用 MCP 工具的稳定性与准确率。详细说明见：[Tencent RTC Skills](https://write.woa.com/document/194928764706254848)。
+
+## 快速开始指南
+
+直接复制下面 Prompt 到 IDE 对话框，集成完整的 Chat UIKit ：
+``` markdown
+任务：集成 Chat UIKit 实现类微信的聊天应用（使用 full-featured 模式并完成最小可运行）
+
+执行要求：
+1. 自动识别框架（React/Vue3/Flutter/Android/iOS）.
+2. 无法识别时，需要调用 `present_framework_choice` 给用户选择。
+3. 按平台调用 MCP 工具：
+   - Web: `get_web_chat_uikit_integration`
+   - Native: `get_native_chat_uikit_integration`
+4. 参数：
+   - `framework`: 按实际框架填写
+   - `integrationMode`: `full-featured`
+5. 调用 `get_usersig` 获取 2 个测试 userID 的凭证，完成 SDK 初始化与登录。
+6. 生成完整聊天入口（会话列表 + 聊天窗口 + 联系人/个人中心）和登录页，用户可选择测试账号登录，并自动补齐路由或页面注册。
+7. 启动项目并输出：修改文件、运行命令、验证步骤。
+
+验收清单：
+- SDK 初始化成功
+- 用户登录成功
+- 会话列表可见
+- 可以发送和接收消息
+
+常见问题排查：
+- userSig 无效：重新调用 `get_usersig`
+- 登录失败：检查 `SDKAPPID/SECRETKEY` 环境变量
+- 消息不显示：检查会话 ID 格式（例如 `C2Cuserxxx`）
+
+约束：
+- 不使用过时 API
+- 生产环境必须改为服务端签发 UserSig
+```
+
+## OpenClaw 指南
+
+如果您想在即时通信 IM 应用中接入 OpenClaw，您可以参考[OpenClaw 快速接入指南](https://cloud.tencent.com/document/product/269/128326)。
+
+## 扩展场景（可选）
+
+在跑通 Chat UIKit 集成后，您可以根据需要使用下面的 Prompt。
+
+
+
+
+【构建音视频通话应用】
+``` markdown
+任务：在当前项目中集成 CallKit（先跑通 1v1 语音通话和视频通话）
+
+执行要求：
+1. 自动识别框架（React/Vue3/Flutter/Android/iOS）.
+2. 无法识别时，需要调用 `present_framework_choice` 给用户选择。
+3. 按平台调用 MCP 工具：
+   - Web: `get_web_call_uikit_integration`
+   - Native: `get_native_call_uikit_integration`
+4. 参数：`framework`。
+5. 调用 `get_usersig` 完成初始化和登录。
+6. 生成最小可运行的呼叫入口和来电处理页面。
+
+验收清单：
+- 初始化与登录成功
+- 能发起 1v1 视频通话
+- 能收到来电并接听
+
+常见问题排查：
+- 60001：重新生成 userSig
+- 通话失败：检查网络与设备权限
+```
+
+
+【构建直播互动应用】
+``` markdown
+任务：在当前项目中集成 LiveKit（先跑通视频直播基础流程）
+
+执行要求：
+1. 自动识别框架（Web Vue3/Flutter/Android/iOS）。
+2. 无法识别时，需要调用 `present_framework_choice` 给用户选择。
+3. 按平台调用 MCP 工具：
+   - Web: `get_web_live_uikit_integration`
+   - Native: `get_native_live_uikit_integration`
+4. 参数：`framework`。
+5. 调用 `get_usersig` 完成初始化和登录。
+6. 生成主播开播页、观众观看页、基础互动入口。
+
+验收清单：
+- 主播可开播
+- 观众可观看
+- 基础互动可用（如连麦入口）
+
+常见问题排查：
+- 黑屏：检查设备权限与渲染初始化
+- 无声：检查音频权限与设备路由
+
+```
+
+
+【构建视频会议应用】
+``` markdown
+任务：在当前项目中集成 RoomKit（先跑通 quick-start 模式）
+
+执行要求：
+1. 自动识别框架（Web Vue3）。
+2. 无法识别时，需要调用 `present_framework_choice` 给用户选择。
+3. 按平台调用 MCP 工具：
+   - Web: `get_web_room_uikit_integration`
+   - Native: `get_native_room_uikit_integration`
+4. 参数：`framework`。
+5. 调用 `get_usersig` 完成初始化和登录。
+6. 生成会议入口页、会议房间页、路由注册。
+
+验收清单：
+- 设备检测正常
+- 可入会并看到音视频
+- 屏幕共享可用（平台支持时）
+
+常见问题排查：
+- 进房失败：检查 roomId 与登录状态
+- 无画面/无声音：检查摄像头麦克风权限
+```
+
+## 参考
+
+[MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
+
+[Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md
+
+MCP (Model Context Protocol) 标准化了应用向 LLM 提供上下文的方式。本文介绍如何使用 MCP 集成实时音视频 TRTC 和即时通信 IM 的 UIKit 组件，仅支持 `stdio`模式传输。
+
+## MCP 功能
+- **智能集成**：覆盖 Chat/Call/Live/Room UIKit 和 底层 SDK（WebRTC 和 Native RTC） 集成工具。
+
+- **功能详情查询：** 提供 UI 组件与 API 使用详情。
+
+- **常见问题查询：**常见问题查询工具。
+
+- **测试 UserSig 生成：** UserSig 生成工具（仅用于测试）。
+
+- **多平台支持：**完整的 Web、iOS、Android、Flutter 文档支持。
+
+
+## 前置条件
+
+MCP 已经发布在 [NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp) 上，您可以通过 `npx` 安装在任何支持 MCP 的 AI 编辑器中。
+
+使用 MCP 您需要先在腾讯云控制台创建应用，并获取以下凭证：
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >凭证</td>
+
+<td rowspan="1" colSpan="1" >获取位置</td>
+
+<td rowspan="1" colSpan="1" >用途</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >`SDKAppID`</td>
+
+<td rowspan="1" colSpan="1" >[IM 控制台](https://console.cloud.tencent.com/im)</td>
+
+<td rowspan="1" colSpan="1" >MCP 环境变量</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >`SecretKey`</td>
+
+<td rowspan="1" colSpan="1" >IM 控制台 → 应用管理</td>
+
+<td rowspan="1" colSpan="1" >MCP 环境变量，生成 UserSig （仅用于测试）</td>
+</tr>
+</table>
+
+
+## MCP 配置
+
+### 在 AI 编辑器中配置
+
+在您使用的 AI 编辑器（CodeBuddy / Trae / Cursor / Codex / Claude Code / Claude Desktop 等）配置 MCP。
+
+
+
+【CodeBuddy】
+
+设置 > 选择 MCP > 配置 MCP > 打开 mcp.json。
+``` json
+{
+  "mcpServers": {
+    "tencentcloud-sdk-mcp": {
+      "command": "npx",
+      "args": ["-y", "@tencentcloud/sdk-mcp@latest"],
+      "env": {
+        "SDKAPPID": "YOUR_SDKAPPID",
+        "SECRETKEY": "YOUR_SECRET_KEY"
+      }
+    }
+  }
+}
+```
+
+【Trae】
+
+设置 > 选择 MCP > 手动添加 MCP > 原始配置(JSON) > 打开 mcp.json。
+``` json
+{
+  "mcpServers": {
+    "tencentcloud-sdk-mcp": {
+      "command": "npx",
+      "args": ["-y", "@tencentcloud/sdk-mcp@latest"],
+      "env": {
+        "SDKAPPID": "YOUR_SDKAPPID",
+        "SECRETKEY": "YOUR_SECRET_KEY"
+      }
+    }
+  }
+}
+```
+
+【Cursor】
+
+设置 > 选择 Tools & MCP > Add Custom MCP  > 打开 mcp.json。
+``` json
+{
+  "mcpServers": {
+    "tencentcloud-sdk-mcp": {
+      "command": "npx",
+      "args": ["-y", "@tencentcloud/sdk-mcp@latest"],
+      "env": {
+        "SDKAPPID": "YOUR_SDKAPPID",
+        "SECRETKEY": "YOUR_SECRET_KEY"
+      }
+    }
+  }
+}
+```
+
+【Codex】
+1. 运行以下命令配置 MCP，将 SDKAPPID 和 SECRETKEY 替换为真实的应用信息。
+
+``` bash
+codex mcp add tencentcloud-sdk-mcp \
+  --env SDKAPPID=YOUR_SDK_APP_ID --env SECRETKEY=YOUR_SECRET_KEY \
+  -- npx -y @tencentcloud/sdk-mcp@latest
+```
+
+如需项目级配置，可追加 `--scope project`，写入项目根目录的 `.mcp.json`。
+2. 运行 `codex mcp list` 验证 MCP 是否配置成功，列表中出现 `tencentcloud-sdk-mcp` 表示配置成功。
+
+
+【Claude Code】
+3. 运行以下命令配置 MCP，将 SDKAPPID 和 SECRETKEY 替换为真实的应用信息。
+
+``` bash
+claude mcp add tencentcloud-sdk-mcp \
+  --env SDKAPPID=YOUR_SDK_APP_ID --env SECRETKEY=YOUR_SECRET_KEY \
+  -- npx -y @tencentcloud/sdk-mcp@latest
+```
+
+如需项目级配置，可追加 `--scope project`，写入项目根目录的 `.mcp.json`。
+4. 运行 `claude mcp list` 验证 MCP 是否配置成功，列表中出现 `tencentcloud-sdk-mcp`表示配置成功。
+
+
+【Claude Desktop】
+
+设置 > 选择 Developer > Edit Config > claude_desktop_config.json 。
+``` json
+{
+  "mcpServers": {
+    "tencentcloud-sdk-mcp": {
+      "command": "npx",
+      "args": ["-y", "@tencentcloud/sdk-mcp@latest"],
+      "env": {
+        "SDKAPPID": "YOUR_SDKAPPID",
+        "SECRETKEY": "YOUR_SECRET_KEY"
+      }
+    }
+  }
+}
+```
+
+### 环境变量
+- **SDKAPPID:** 实时音视频 TRTC 和即时通信 IM 应用 ID。
+
+- **SECRETKEY:** SDKAPPID 对应的密钥，用于生成测试 UserSig。
+
+
+### 验证 MCP
+
+直接复制下面 Prompt 到 IDE 对话框，验证 MCP 的可用性：
+``` plaintext
+使用 tencentcloud-sdk-mcp 工具获取 test001 的 userSig
+```
+
+当 Agent 输出 SDKAppID、userID、userSig 信息说明 MCP 配置成功。
+
+## 附录：全局手动安装
+
+如果需要全局安装，可以在命令行执行以下命令：
+``` javascript
+npx -y @tencentcloud/sdk-mcp@latest
+```
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md
+
+RTC Skills 为腾讯云实时音视频场景提供结构化指引。它可以将自然语言需求转为可执行步骤，并帮助 Agent 按正确顺序调用对应的 MCP 工具。使用 RTC Skills，让 AI Agent 更高效地完成 Chat、Call、Live、Room 的 MCP 集成。
+
+## 前置条件
+
+使用 Skills 前，请先完成 MCP Server 配置，[MCP 配置说明](https://write.woa.com/document/197816375534501888)。
+
+## 安装
+
+安装 RTC Skills 全量包，安装过程中需要您选择使用的工具（CodeBuddy / Trae / Cursor / Codex / Claude Code / Claude Desktop 等）：
+``` bash
+npx skills add Tencent-RTC/tencent-rtc-skills
+```
+
+如需手动导入，可通过 GitHub 克隆：
+``` bash
+git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencent-rtc-skills
+```
+
+### 优势
+- **结构化知识注入**：将领域知识直接注入 Agent 上下文，降低歧义，提升输出一致性。
+
+- **与 Prompt 工程深度配合：**内置标准化执行流程，帮助 Agent 按可复用路径完成集成。
+
+- **零运行时依赖**：Skills 为静态文本资源，无需额外启动服务。
+
+- **场景覆盖完整：**单一技能包覆盖 Chat / Call / Live / Room 集成场景。
+
+
+## 参考
+
+[Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
+
+[MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/common/error_code.md
+
+---
+product: 'Room'
+tech_stack: 'roomKit'
+framework: 'common'
+title: 'roomKit 错误码大全'
+keywords: ['错误码', '报错', 'roomKit', 'room 套餐问题', '麦克风权限问题', '摄像头/麦克风问题']
+---
+
+# RoomKit 错误码大全
+
+## RoomKit 错误码 (Topic: RoomKit Error Code)
+
+## 错误码 -2
+**原因：** 操作频率超限，请求过于频繁，请稍后重试。
+**解决方案：** 操作频率超限，请求过于频繁，请稍后重试。
+
+## 错误码 -1002
+**原因：** SDK 未初始化。
+**解决方案：** 请先调用初始化接口完成 SDK 初始化。
+
+## 错误码 -1004
+**原因：** 未购买套餐包或者已欠费。
+**解决方案：** 请前往[腾讯云控制台](https://buy.cloud.tencent.com/trtc)购买。首次使用，可以[开通体验版](https://cloud.tencent.com/document/product/647/105439)</a>。
+
+## 错误码 -1101
+**原因：** 摄像头权限被拒绝。
+**解决方案：** 请检查浏览器设置，确保已允许使用您的摄像头。如果您确认已授予权限， 请前往 [音视频能力检测工具] 检查您的设备和环境是否支持： https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html
+
+## 错误码 -1105
+**原因：** 麦克风权限被拒绝。
+**解决方案：** 请检查浏览器设置，确保已允许使用您的麦克风。如果您确认已授予权限， 请前往 [音视频能力检测工具] 检查您的设备和环境是否支持： https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html
+
+## 错误码 -1100
+**原因：** 打开摄像头失败。
+**解决方案：** 请检查浏览器设置，确保已允许使用您的摄像头。如果您确认已授予权限， 请前往 [音视频能力检测工具] 检查您的设备和环境是否支持： https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html
+
+## 错误码 -1104
+**原因：** 打开麦克风失败。
+**解决方案：** 请检查浏览器设置，确保已允许使用您的麦克风。如果您确认已授予权限， 请前往 [音视频能力检测工具] 检查您的设备和环境是否支持： https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html
+
+## 错误码 100007
+**原因：** 
+**解决方案：** 未购买套餐包或者已欠费，请前往[腾讯云控制台购买](https://buy.cloud.tencent.com/trtc)。首次使用，可以[开通体验版](https://cloud.tencent.com/document/product/647/105439)。
+
+## 错误码 70001
+**原因：** 用户签名已过期。
+**解决方案：** 建议生成的签名有效期不少于 24 小时。可参阅[生成 UserSig(用户鉴权)](https://cloud.tencent.com/document/product/269/32688)</a>。
+
+## 错误码 70003
+**原因：** 非法的用户签名。
+**解决方案：** 请重新生成。可参阅[生成 UserSig(用户鉴权)](https://cloud.tencent.com/document/product/269/32688)</a>。
+
+## 错误码 70014
+**原因：** SDKAppID 与用户签名不匹配。
+**解决方案：** 请检查。可前往[腾讯云控制台](https://console.cloud.tencent.com/trtc/usersigtool)验证签名。
+
+## 错误码 5300
+**原因：** 获取设备或者采集音视频出现异常。
+**解决方案：** 请前往 [音视频能力检测工具] 检查您的设备和环境是否支持： https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html
+
+## 错误码 5301
+**原因：** 未检测到摄像头/麦克风设备。
+**解决方案：** 请确保您的摄像头/麦克风已连接，并检查系统或浏览器设置中摄像头/麦克风是否可用。
+
+## 错误码 5302
+**原因：** 摄像头/麦克风权限被拒绝。
+**解决方案：** 请检查浏览器设置，确保已允许使用您的摄像头和麦克风。如果您确认已授予权限， 请前往 [音视频能力检测工具] 检查您的设备和环境是否支持： https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/faq.md
+
+
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/call-user-to-room.md
+
+会中呼叫功能允许会议内的用户（邀请者）向房间外的其他用户（被邀请者）发送实时入会邀请。该功能基于 `Atomicx State Hooks` 实现，能够帮助开发者快速构建具有主动邀约能力的互动场景。
+
+## 适用场景
+- **协同办公：**在进行远程会议时，若涉及跨部门决策，可一键呼叫外部专家快速入会，缩短沟通链路。
+
+- **直播教学：**老师在授课过程中，若发现部分学生缺席，可直接邀请其加入课堂。
+
+- **互联网医疗会诊：**首诊医生在病历分析过程中，通过呼叫功能邀请上级医生进入虚拟诊室进行多方会诊，或者医生呼叫在等候室的患者进行问诊。
+
+
+## 前提条件
+
+在接入功能前，请确保满足以下条件：
+- **邀请者 (User A)：**用户已经通过 `useLoginState` 完成登录鉴权，参考 [接入概览](https://write.woa.com/document/197379797539790848)，并已作为一个房间的房主或成员在房间内，参考 [房间周期](https://write.woa.com/document/197379861957083136)。
+
+- **被邀请者 (User B)：**用户已经通过 `useLoginState` 完成登录鉴权，参考 [接入概览](https://write.woa.com/document/197379797539790848)，以便接收信令事件。
+
+- **环境依赖：**项目已正确安装并引入 `tuikit-atomicx-vue3`。
+
+
+## 实现会中呼叫功能
+
+实现会中呼叫的核心流程如下：
+
+![会中呼叫时序图](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027160512/82ba8603dee611f0a4f35254007c27c5.png)
+
+会中呼叫时序图
+
+
+### 步骤1：发起呼叫（邀请者）
+
+邀请者调用 [callUserToRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#callUserToRoom) 接口发起邀请。请确保邀请者当前已在房间内（即 [currentRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#currentRoom) 不为空），否则无法发起呼叫。
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { currentRoom, callUserToRoom } = useRoomState();
+
+const inviteUser = async () => {
+  // 会中呼叫必须关联一个已存在的 roomId，因此需先校验当前用户的进房状态
+  if (!currentRoom.value) {
+    console.warn('请先进入房间再发起邀请');
+    return;
+  }
+
+  try {
+    const resultMap = await callUserToRoom({
+      roomId: currentRoom.value.roomId, // 被邀请者将要加入的房间 ID
+      userIdList: ['user1', 'user2'],    // 目标用户 ID 数组，支持单人或多人
+      timeout: 60,                        // 邀请有效时长（秒），超时后双方会触发 onCallTimeout
+      // extensionInfo 可用于传递业务自定义数据，例如邀请类型、附加消息等
+      extensionInfo: JSON.stringify({ type: 'emergency', priority: 'high' }) 
+    });
+    
+    // resultMap 返回每个 userId 对应的状态，例如 Success、AlreadyInRoom (已在房) 或 AlreadyInCalling (通话中)
+    console.log('邀请发送完成，详情状态映射:', resultMap);
+  } catch (error) {
+    console.error('呼叫请求发送失败，请检查网络或登录状态:', error);
+  }
+};
+```
+
+### 步骤2：监听呼叫事件（被邀请者）
+
+被邀请者需要监听 `onCallReceived` 事件。建议在例如 `App.vue`等长驻组件中实现，以确保无论用户在哪个页面都能响应。
+``` typescript
+import { ref, onMounted, onUnmounted } from 'vue';
+import { useRoomState, RoomEvent } from 'tuikit-atomicx-vue3/room';
+
+const { 
+  subscribeEvent, 
+  unsubscribeEvent, 
+  acceptCall, 
+  rejectCall, 
+  joinRoom, 
+  currentRoom 
+} = useRoomState();
+
+const showInviteDialog = ref(false); // 控制 UI 弹窗显隐
+const currentCallInfo = ref(null);   // 缓存收到的邀请上下文
+
+const handleCallReceived = async ({ roomInfo, call, extensionInfo }) => {
+  // 冲突处理：如果用户当前已经在会议中，根据业务策略通常应直接拒绝新邀请，防止干扰
+  if (currentRoom.value?.roomId) {
+    await rejectCall({ roomId: roomInfo.roomId });
+    return;
+  }
+
+  // 记录邀请详情，用于在 UI 上展示邀请者名称或业务透传数据
+  currentCallInfo.value = { roomInfo, call };
+  showInviteDialog.value = true;
+};
+
+// 接受邀请逻辑
+const onUserAccept = async () => {
+  if (!currentCallInfo.value) return;
+  const { roomId } = currentCallInfo.value.roomInfo;
+
+  try {
+    // 关键流程 A：响应信令。告知邀请者已接受，使其能更新 UI（例如显示“对方已接听”）
+    await acceptCall({ roomId });
+    
+    // 关键流程 B：执行进房。只有调用 joinRoom 才会真正开启音视频推拉流链路
+    await joinRoom({ roomId }); 
+  } catch (error) {
+    console.error('接受呼叫后的进房操作失败:', error);
+  } finally {
+    closeDialog();
+  }
+};
+
+// 拒绝邀请逻辑
+const onUserReject = async () => {
+  if (currentCallInfo.value) {
+    // 告知邀请者已拒绝，邀请者会收到 onCallRejected 事件
+    await rejectCall({ roomId: currentCallInfo.value.roomInfo.roomId });
+  }
+  closeDialog();
+};
+
+const closeDialog = () => {
+  showInviteDialog.value = false;
+  currentCallInfo.value = null;
+};
+
+// 事件全生命周期管理：确保在组件挂载时监听，销毁时移除，防止事件溢出
+onMounted(() => {
+  subscribeEvent(RoomEvent.onCallReceived, handleCallReceived);
+  
+  // 监听导致邀请结束的各种异常/同步事件，确保 UI 弹窗能及时闭合
+  subscribeEvent(RoomEvent.onCallCancelled, closeDialog); // 邀请者取消了呼叫
+  subscribeEvent(RoomEvent.onCallTimeout, closeDialog);   // 呼叫超时未响应
+  subscribeEvent(RoomEvent.onCallHandledByOtherDevice, closeDialog); // 用户在其他设备已处理该呼叫
+});
+
+onUnmounted(() => {
+  // 移除所有监听器，避免在组件销毁后继续执行 handleCallReceived 导致内存泄漏或报错
+  unsubscribeEvent(RoomEvent.onCallReceived, handleCallReceived);
+  unsubscribeEvent(RoomEvent.onCallCancelled, closeDialog);
+  unsubscribeEvent(RoomEvent.onCallTimeout, closeDialog);
+  unsubscribeEvent(RoomEvent.onCallHandledByOtherDevice, closeDialog);
+});
+```
+
+## 实践教程：提升呼叫接通率
+
+为了在业务中获得更高的呼叫接通率，除了基础功能的实现外，建议参考以下策略优化用户体验：
+
+### 1. 增强呼叫感知（避免用户遗漏）
+
+由于 Web 端特性，浏览器静音或页面处于后台运行状态可能导致用户遗漏呼叫。
+- **视觉提醒**：利用 [Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) 检测页面可见性状态。若页面处于后台，可通过循环修改 `document.title` 实现标题栏闪烁提示（例如：“【新邀请】UserA 邀请您入会...”），以吸引用户注意。
+
+- **听觉提醒**：在 `onCallReceived` 事件触发时播放高优先级的提示铃声。注意：需遵循浏览器的 [自动播放策略](https://developer.mozilla.org/zh-CN/docs/Web/Media/Guides/Autoplay)，大部分浏览器在缺乏用户交互（例如点击、触摸或按键）的情况下会限制音频自动播放。
+
+
+### 2. 丰富邀请上下文（提升接听意愿）
+
+缺乏明确意图的邀请容易被用户拒绝。建议充分利用 `extensionInfo` 字段传递关键业务信息，以提升用户的接听意愿。
+- **传递业务上下文**：利用 `extensionInfo` 透传如 `reason`（例如：“项目紧急评审”）、`level`（例如：“P0故障排查”）等业务字段，告知用户呼叫的紧迫性和重要性。
+
+
+### 3. 多通道触达兜底（确保消息可达）
+
+受限于 Web 端机制，浏览器进程结束将无法接收实时信令。建议采取以下替代方案以确保触达：
+- **浏览器系统通知**：引导用户授权 [Web Notification API](https://developer.mozilla.org/en-US/docs/Web/API/Notification)。只要浏览器进程未关闭（包括最小化或在后台标签页），即可触发操作系统级别的弹窗通知，有效提醒用户。
+
+- **多通道触达**：建议结合业务后端逻辑，在检测到用户不在线或超时未响应时，通过**短信**、**邮件**或**企业微信**等外部渠道发送入会链接，实现全方位触达。
+
+
+### 4. 智能重试机制（解决“接受邀请后进房失败”）
+
+在弱网或其他不稳定环境下，用户点击接受邀请后调用 `joinRoom` 可能会出现偶发性失败。
+- **自动重试**：建议在 `onUserAccept` 的异常处理逻辑（`catch`）中引入 2-3 次自动重试机制（推荐结合指数退避策略），以最大程度确保用户点击“接受”后能成功加入会议。
+
+
+## 开发注意事项
+1. **接受邀请不等于进房**
+
+
+   `acceptCall` 仅仅是信令层面的回复（告知对方已接听）。用户必须在调用 `acceptCall` 后紧接着手动调用 `await joinRoom({ roomId })` 才能真正进入音视频房间。
+
+2. **生命周期管理**
+
+
+   请务必在组件销毁周期（`onUnmounted`）调用 `unsubscribeEvent`。如果不清理监听器，当用户切换页面时，旧页面的监听器会残留在内存中，导致一次邀请弹出多个窗口或逻辑重复执行。
+
+3. **超时设置**
+
+
+   如果不设置 `timeout` 参数，在某些网络异常或程序崩溃情况下，邀请可能长期处于挂起状态，导致无法再次对该用户发起呼叫。建议设置为 30-60 秒。
+
+
+## 常见问题
+1. **如何在呼叫时带上自定义参数（如“来自XX的紧急会议”）？**
+
+
+   使用 `callUserToRoom` 的 `extensionInfo` 参数传递 JSON 字符串。被邀请者可以在 `onCallReceived` 事件的 `extensionInfo` 字段中解析该字符串获取业务信息。
+
+2. **被邀请者如果不在线，上线后能收到邀请吗？**
+
+
+   不可以。邀请事件是一个瞬时信令动作，SDK 目前不会补发离线期间收到的呼叫通知。
+
+3. **可以取消已发出的邀请吗？**
+
+
+   可以。调用 `cancelCall({ roomId, userIdList })` 即可撤销。此时被邀请者会收到 `onCallCancelled` 事件，您需要监听此事件来关闭被邀请端的 UI 弹窗。
+
+4. **接受后进房失败怎么办？**
+
+
+   检查是否已登录 `TUIRoomEngine`，重试 `joinRoom({ roomId })` 并捕获错误提示用户；必要时在 UI 上提供“重试”按钮。
+
+5. **对方忙线或已在其他房间如何提示？**
+
+
+   `callUserToRoom` 的返回值 `resultMap` 中若出现 `AlreadyInRoom` / `AlreadyInCalling`，应在邀请者 UI 提示“对方忙线/已在会中”，并决定是否稍后重试。
+
+6. **超时/取消后弹窗不关闭？**
+
+
+   确保监听 `onCallTimeout`、`onCallCancelled`、`onCallHandledByOtherDevice`，统一在回调里关闭弹窗、清理当前邀请数据。
+
+7. **多设备同时响铃如何处理？**
+
+
+   在任意设备接受/拒绝后，其余设备会收到 `onCallHandledByOtherDevice`，需关闭其他端弹窗避免重复处理。
+
+8. **extensionInfo 该怎么约定？**
+
+
+   建议使用 JSON 字符串并约定字段（例如 `type`、`priority`、`from`），在 `handleCallReceived` 时解析后展示友好文案（例如“来自XX的紧急会议”）。
+
+
+## **示例项目**
+
+腾讯云在 GitHub 上提供了示例项目 [atomicx-vite-vue3-ts](https://github.com/Tencent-RTC/TUIRoomKit/tree/main/Web/example/atomicx-vite-vue3-ts) ，您可以参考以实现完整的 RoomKit 功能。
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useRoomState**</td>
+
+<td rowspan="1" colSpan="1" >房间状态管理（创建、加入、预约等）</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState)</td>
+</tr>
+</table>
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/device-detection.md
+
+本篇文档将指导您如何在用户加入房间前提供设备预览与测试功能。通过 Atomicx 提供的进房前测试接口，您可以引导用户检查并调整音视频设备状态，确保以最佳状态进入多人音视频房间。
+
+## 功能介绍
+
+设备预览是保障音视频房间顺利运行的重要环节。Atomicx 专为进房前场景提供了一套独立的测试接口，其核心能力包括：
+- **视频画面预览**：在不推流的情况下启动摄像头，验证画面清晰度与光线。
+
+- **麦克风检测**：通过实时音量反馈，确认麦克风采集是否正常。
+
+- **扬声器校准**：通过播放测试音，确认输出设备及其音量设置。
+
+
+## 前提条件
+- 用户已经通过 [useLoginState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-LoginState) 完成登录鉴权，请参考 [接入概览](https://write.woa.com/document/197379797539790848)。
+
+
+## 实现设备检测功能
+
+### 步骤1：摄像头测试
+
+使用 [startCameraTest](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#startCameraTest) 方法启动摄像头测试。该方法仅用于本地预览，不会产生网络流量。
+
+**代码示例：**
+``` typescript
+<template>
+  <div class="preview-container">
+    <!-- 摄像头预览区域 -->
+    <div id="camera-preview" class="camera-preview">
+      <!-- 加载状态 -->
+      <div v-if="isCameraTestLoading" class="loading-overlay">
+        <div class="loading-spinner" />
+        <span>正在启动摄像头...</span>
+      </div>
+    </div>
+
+    <!-- 摄像头选择 -->
+    <div class="camera-selector">
+      <label>选择摄像头</label>
+      <select 
+        :value="currentCamera?.deviceId" 
+        @change="handleCameraChange"
+        :disabled="isCameraTestLoading"
+      >
+        <option 
+          v-for="camera in cameraList" 
+          :key="camera.deviceId"
+          :value="camera.deviceId"
+        >
+          {{ camera.deviceName }}
+        </option>
+      </select>
+    </div>
+
+    <!-- 控制按钮 -->
+    <div class="control-buttons">
+      <button @click="getCameraList">获取摄像头列表</button>
+      <button 
+        @click="toggleCameraTest"
+        :disabled="isCameraTestLoading"
+      >
+        {{ isCameraTesting ? '停止预览' : '开始预览' }}
+      </button>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
+import { IconWarning } from '@tencentcloud/uikit-base-component-vue3';
+import { 
+  useLoginState,
+  useDeviceState, 
+  DeviceStatus,
+  DeviceError,
+} from 'tuikit-atomicx-vue3/room';
+
+const { 
+  isCameraTesting,
+  isCameraTestLoading,
+  cameraList,
+  currentCamera,
+  startCameraTest,
+  stopCameraTest,
+  getCameraList,
+  setCurrentCamera
+} = useDeviceState();
+
+onUnmounted(() => {
+  if (isCameraTesting.value) {
+    stopCameraTest();
+  }
+});
+
+const toggleCameraTest = async () => {
+  if (isCameraTesting.value) {
+    await stopCameraTest();
+  } else {
+    const previewElement = document.getElementById('camera-preview');
+    if (previewElement) {
+      await startCameraTest({ view: previewElement });
+    }
+  }
+};
+
+const handleCameraChange = async (event: Event) => {
+  const deviceId = (event.target as HTMLSelectElement).value;
+  try {
+    await setCurrentCamera({ deviceId });
+  } catch (error) {
+    console.error('切换摄像头失败:', error);
+  }
+};
+</script>
+
+<style scoped>
+.preview-container {  position: relative;  width: 100%;  max-width: 640px;  margin: 0 auto;}.camera-preview {  width: 100%;  position: relative;  aspect-ratio: 16 / 9;  background-color: #000;  border-radius: 8px;  overflow: hidden;}.loading-overlay {  position: absolute;  inset: 0;  display: flex;  flex-direction: column;  align-items: center;  justify-content: center;  gap: 12px;  background-color: rgba(0, 0, 0, 0.7);  color: white;  border-radius: 8px;}.loading-spinner {  width: 40px;  height: 40px;  border: 4px solid rgba(255, 255, 255, 0.3);  border-top-color: white;  border-radius: 50%;  animation: spin 0.8s linear infinite;}@keyframes spin {  to { transform: rotate(360deg); }}.error-message {  display: flex;  align-items: center;  gap: 8px;  padding: 12px;  margin-top: 12px;  background-color: #ffebee;  color: #c62828;  border-radius: 4px;  font-size: 14px;}.camera-selector {  margin-top: 16px;  display: flex;  align-items: center;  gap: 12px;}.camera-selector label {  font-weight: 500;  min-width: 80px;}.camera-selector select {  flex: 1;  padding: 8px 12px;  border: 1px solid #e0e0e0;  border-radius: 4px;  font-size: 14px;}.control-buttons {  margin-top: 16px;  display: flex;  gap: 12px;}.control-buttons button {  flex: 1;  padding: 12px 24px;  background-color: #1976d2;  color: white;  border: none;  border-radius: 4px;  font-size: 14px;  font-weight: 500;  cursor: pointer;  transition: background-color 0.3s;}.control-buttons button:hover:not(:disabled) {  background-color: #1565c0;}.control-buttons button:disabled {  background-color: #bdbdbd;  cursor: not-allowed;}
+</style>
+```
+
+### 步骤2：麦克风测试
+
+通过 [startMicrophoneTest](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#startMicrophoneTest) 启动麦克风测试，并利用 [testingMicVolume](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#testingMicVolume) 实现 UI 音量条的实时波动。
+
+**代码示例：**
+``` typescript
+<template>
+  <div class="microphone-test">
+    <!-- 音量显示 -->
+    <div class="volume-display">
+      <div class="volume-label">麦克风音量</div>
+      <div class="volume-bar-container">
+        <div 
+          class="volume-bar" 
+          :style="{ width: `${testingMicVolume}%` }"
+          :class="volumeClass"
+        />
+      </div>
+      <div class="volume-value">{{ testingMicVolume }}</div>
+    </div>
+
+    <!-- 麦克风选择 -->
+    <div class="microphone-selector">
+      <label>选择麦克风</label>
+      <select 
+        :value="currentMicrophone?.deviceId" 
+        @change="handleMicrophoneChange"
+        :disabled="isMicrophoneTesting"
+      >
+        <option 
+          v-for="mic in microphoneList" 
+          :key="mic.deviceId"
+          :value="mic.deviceId"
+        >
+          {{ mic.deviceName }}
+        </option>
+      </select>
+    </div>
+
+    <!-- 控制按钮 -->
+    <div class="control-buttons">
+      <button 
+        @click="getMicrophoneList"
+      >
+        获取设备
+      </button>
+      <button 
+        @click="toggleMicrophoneTest"
+      >
+        {{ isMicrophoneTesting ? '停止测试' : '开始测试' }}
+      </button>
+    </div>
+
+    <!-- 测试提示 -->
+    <div v-if="isMicrophoneTesting" class="test-tip">
+      <span>请对着麦克风说话，查看音量变化</span>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
+import { 
+  useDeviceState, 
+  DeviceError,
+} from 'tuikit-atomicx-vue3/room';
+
+const { 
+  isMicrophoneTesting,
+  testingMicVolume,
+  microphoneList,
+  currentMicrophone,
+  startMicrophoneTest,
+  stopMicrophoneTest,
+  getMicrophoneList,
+  setCurrentMicrophone
+} = useDeviceState();
+
+// 音量条样式类
+const volumeClass = computed(() => {
+  const volume = testingMicVolume.value;
+  if (volume === 0) return 'volume-zero';
+  if (volume < 30) return 'volume-low';
+  if (volume < 70) return 'volume-medium';
+  return 'volume-high';
+});
+
+// 清理：停止测试
+onUnmounted(() => {
+  if (isMicrophoneTesting.value) {
+    stopMicrophoneTest();
+  }
+});
+
+// 切换麦克风测试
+const toggleMicrophoneTest = async () => {
+  if (isMicrophoneTesting.value) {
+    await stopMicrophoneTest();
+  } else {
+    try {
+      await startMicrophoneTest({ interval: 200 });
+    } catch (error) {
+      console.error('启动麦克风测试失败:', error);
+    }
+  }
+};
+
+// 切换麦克风设备
+const handleMicrophoneChange = async (event: Event) => {
+  const deviceId = (event.target as HTMLSelectElement).value;
+  try {
+    await setCurrentMicrophone({ deviceId });
+  } catch (error) {
+    console.error('切换麦克风失败:', error);
+  }
+};
+</script>
+
+<style scoped>
+.microphone-test {  width: 100%;  max-width: 640px;  margin: 0 auto;}.volume-display {  padding: 24px;  background-color: #f5f5f5;  border-radius: 8px;  margin-bottom: 16px;}.volume-label {  font-size: 14px;  font-weight: 500;  color: #666;  margin-bottom: 12px;}.volume-bar-container {  width: 100%;  height: 24px;  background-color: #e0e0e0;  border-radius: 12px;  overflow: hidden;  margin-bottom: 8px;}.volume-bar {  height: 100%;  transition: width 0.1s ease;  border-radius: 12px;}.volume-bar.volume-zero {  background-color: #9e9e9e;}.volume-bar.volume-low {  background-color: #ff9800;}.volume-bar.volume-medium {  background-color: #4caf50;}.volume-bar.volume-high {  background-color: #2196f3;}.volume-value {  text-align: center;  font-size: 18px;  font-weight: 600;  color: #333;}.microphone-selector {  display: flex;  align-items: center;  gap: 12px;  margin-bottom: 16px;}.microphone-selector label {  font-weight: 500;  min-width: 80px;}.microphone-selector select {  flex: 1;  padding: 8px 12px;  border: 1px solid #e0e0e0;  border-radius: 4px;  font-size: 14px;}.error-message {  display: flex;  align-items: center;  gap: 8px;  padding: 12px;  margin-bottom: 16px;  background-color: #ffebee;  color: #c62828;  border-radius: 4px;  font-size: 14px;}.control-buttons {  margin-bottom: 12px; display: flex; gap: 8px; }.control-buttons button {  flex: 1; width: 100%;  padding: 12px 24px;  background-color: #1976d2;  color: white;  border: none;  border-radius: 4px;  font-size: 14px;  font-weight: 500;  cursor: pointer;  transition: background-color 0.3s;}.control-buttons button:hover:not(:disabled) {  background-color: #1565c0;}.control-buttons button:disabled {  background-color: #bdbdbd;  cursor: not-allowed;}.test-tip {  display: flex;  align-items: center;  gap: 8px;  padding: 12px;  background-color: #e3f2fd;  color: #1565c0;  border-radius: 4px;  font-size: 13px;}
+</style>
+```
+
+### 步骤3：扬声器测试
+
+使用 [startSpeakerTest](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#startSpeakerTest) 方法播放一段指定的音频文件来确认扬声器是否工作正常。
+
+**代码示例：**
+``` typescript
+<template>
+  <div class="speaker-test">
+    <!-- 扬声器选择 -->
+    <div class="speaker-selector">
+      <label>选择扬声器</label>
+      <select 
+        :value="currentSpeaker?.deviceId" 
+        @change="handleSpeakerChange"
+        :disabled="isSpeakerTesting"
+      >
+        <option 
+          v-for="speaker in speakerList" 
+          :key="speaker.deviceId"
+          :value="speaker.deviceId"
+        >
+          {{ speaker.deviceName }}
+        </option>
+      </select>
+    </div>
+
+    <!-- 控制按钮 -->
+    <div class="control-buttons">
+      <button @click="getSpeakerList">获取扬声器列表</button>
+      <button 
+        @click="toggleSpeakerTest"
+        :disabled="isSpeakerTesting"
+      >
+        {{ isSpeakerTesting ? '正在播放...' : '播放测试音频' }}
+      </button>
+      <button 
+        v-if="isSpeakerTesting"
+        @click="stopSpeakerTest"
+      >
+        停止播放
+      </button>
+    </div>
+
+    <!-- 测试提示 -->
+    <div v-if="isSpeakerTesting" class="test-tip">
+      <span>正在播放测试音频，请确认是否能听到声音</span>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue';
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+
+const { 
+  isSpeakerTesting,
+  speakerList,
+  currentSpeaker,
+  startSpeakerTest,
+  stopSpeakerTest,
+  getSpeakerList,
+  setCurrentSpeaker,
+} = useDeviceState();
+
+// 测试音频文件路径
+// 注意：此 URL 仅供开发测试使用，生产环境请使用您自己的音频文件，建议使用 3-5 秒的 MP3 格式音频文件
+const testAudioPath = 'https://web.sdk.qcloud.com/trtc/electron/download/resources/media/TestSpeaker.mp3';
+
+// 清理：停止测试
+onUnmounted(() => {
+  if (isSpeakerTesting.value) {
+    stopSpeakerTest();
+  }
+});
+
+// 切换扬声器测试
+const toggleSpeakerTest = async () => {
+  if (isSpeakerTesting.value) {
+    await stopSpeakerTest();
+  } else {
+    try {
+      await startSpeakerTest({ filePath: testAudioPath });
+    } catch (error) {
+      console.error('启动扬声器测试失败:', error);
+    }
+  }
+};
+
+// 切换扬声器设备
+const handleSpeakerChange = async (event: Event) => {
+  const deviceId = (event.target as HTMLSelectElement).value;
+  try {
+    await setCurrentSpeaker({ deviceId });
+  } catch (error) {
+    console.error('切换扬声器失败:', error);
+  }
+};
+</script>
+
+<style scoped>
+.speaker-test {  width: 100%;  max-width: 640px;  margin: 0 auto;}.speaker-selector {  display: flex;  align-items: center;  gap: 12px;  margin-bottom: 24px;}.speaker-selector label {  font-weight: 500;  min-width: 80px;}.speaker-selector select {  flex: 1;  padding: 8px 12px;  border: 1px solid #e0e0e0;  border-radius: 4px;  font-size: 14px;}.volume-slider-container {  display: flex;  align-items: center;  gap: 12px;}.volume-slider {  flex: 1;  height: 6px;  border-radius: 3px;  background: #e0e0e0;  outline: none;  -webkit-appearance: none;}.volume-slider::-webkit-slider-thumb {  -webkit-appearance: none;  width: 18px;  height: 18px;  border-radius: 50%;  background: #1976d2;  cursor: pointer;}.volume-slider::-moz-range-thumb {  width: 18px;  height: 18px;  border-radius: 50%;  background: #1976d2;  cursor: pointer;  border: none;}.volume-value {  min-width: 50px;  text-align: right;  font-weight: 500;  color: #333;}.control-buttons {  display: flex;  gap: 12px;  margin-bottom: 12px;}button {  flex: 1;  padding: 12px 24px;  background-color: #1976d2;  color: white;  border: none;  border-radius: 4px;  font-size: 14px;  font-weight: 500;  cursor: pointer;  transition: background-color 0.3s;}.control-buttons button:hover:not(:disabled) {  background-color: #1565c0;}.control-buttons button:disabled {  background-color: #bdbdbd;  cursor: not-allowed;}.test-tip {  display: flex;  align-items: center;  gap: 8px;  padding: 12px;  background-color: #e3f2fd;  color: #1565c0;  border-radius: 4px;  font-size: 13px;}
+</style>
+```
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useDeviceState**</td>
+
+<td rowspan="1" colSpan="1" >包含音视频设备状态，音视频设备列表及操作接口。</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState)</td>
+</tr>
+</table>
+
+
+## 常见问题
+
+### 为什么摄像头预览没有画面？
+
+可能的原因包括：
+- **权限被拒绝：**检查浏览器是否允许摄像头权限。
+
+- **设备被占用：**关闭其他使用摄像头的应用。
+
+- **设备未连接：**检查摄像头是否正确连接。
+
+- **浏览器不支持：**使用 Chrome、Edge 等现代浏览器。
+
+
+### 麦克风测试时音量一直为 0？
+
+可能的原因包括：
+- **麦克风权限未授予：**检查浏览器权限设置。
+
+- **麦克风被静音：**检查系统麦克风设置。
+
+- **设备选择错误：**切换到正确的麦克风设备。
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/device-state.md
+
+本文档指导您如何使用 Atomicx 组件和 `useDeviceState` Hook 来管理会议中的音视频设备（摄像头、麦克风、扬声器）状态，以及如何获取本地网络质量信息。
+
+## 功能介绍
+- **设备枚举与切换：**支持实时获取系统可用设备列表，并实现无缝切换。
+
+- **状态精细化控制：**提供开启/关闭、采集静音、音量调节及实时音量监测能力。
+
+- **错误诊断：**实时反馈硬件冲突、系统权限缺失等异常状态。
+
+- **网络质量监控：**提供包含延迟、丢包率在内的多维度网络信息。
+
+
+## 前提条件
+- 用户已经通过 [useLoginState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-LoginState) 完成登录鉴权，请参考 [接入概览](https://write.woa.com/document/197379797539790848)。
+
+- 若在 `iframe` 中集成，需在标签中声明权限。
+
+   ``` typescript
+   <iframe allow="microphone; camera;"></iframe>
+   ```
+
+## 实现摄像头管理
+
+您可以通过 [useDeviceState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState) 来控制本地摄像头的开关、切换设备，并监听采集状态和错误。
+
+### 步骤1：开启/关闭摄像头
+
+通过调用 [openLocalCamera](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#openLocalCamera) 和 [closeLocalCamera](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#closeLocalCamera) 方法来控制摄像头的开关。
+``` typescript
+import { useDeviceState, DeviceStatus } from 'tuikit-atomicx-vue3/room';
+const { cameraStatus, openLocalCamera, closeLocalCamera } = useDeviceState();
+const toggleCamera = async () => {
+  if (cameraStatus.value === DeviceStatus.On) {
+    await closeLocalCamera();
+  } else {
+    await openLocalCamera();
+  }
+};
+```
+
+### 步骤2：获取/切换摄像头设备
+
+#### 桌面端获取和切换摄像头示例
+
+您可以通过 [cameraList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#cameraList) 获取所有可用的摄像头设备，使用 [setCurrentCamera](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setCurrentCamera) 方法切换当前使用的摄像头。
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { cameraList, currentCamera, getCameraList, setCurrentCamera } = useDeviceState();
+
+// 获取摄像头列表
+await getCameraList();
+
+// 遍历并显示可用摄像头
+cameraList.value.forEach((camera) => {
+  console.log(`摄像头: ${camera.deviceName} (${camera.deviceId})`);
+});
+
+// 切换到指定摄像头
+const switchCamera = async (deviceId: string) => {
+  try {
+    // 切换设备（如果摄像头已开启，会自动使用新设备重新采集）
+    await setCurrentCamera({ deviceId });
+    console.log('摄像头切换成功');
+  } catch (error) {
+    console.error('摄像头切换失败:', error);
+    // 切换失败时会保持使用原设备
+  }
+};
+
+// 监听当前摄像头变化
+watch(currentCamera, (camera) => {
+  if (camera) {
+    console.log('当前使用摄像头:', camera.deviceName);
+  }
+});
+```
+
+> **说明：**
+> 
+
+> 调用 [setCurrentCamera](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setCurrentCamera) 切换设备时，如果摄像头已开启，Atomicx 会自动停止当前设备的采集，并使用新设备重新开始采集，视频流会无缝切换。如果切换失败，会保持使用原设备。
+> 
+
+
+#### 移动端切换摄像头示例
+
+移动端使用 [switchCamera](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#switchCamera) 切换前后置摄像头。
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { isFrontCamera, switchCamera } = useDeviceState();
+
+// 判断是否为移动端
+const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+// 切换前后置摄像头（仅移动端支持）
+const toggleCamera = async () => {
+  if (!isMobile) {
+    console.warn('前后置摄像头切换仅在移动端支持');
+    return;
+  }
+  
+  // 切换到相反的摄像头
+  await switchCamera({ isFrontCamera: !isFrontCamera.value });
+  console.log(`已切换到${isFrontCamera.value ? '前置' : '后置'}摄像头`);
+};
+```
+
+### 步骤3：处理摄像头采集错误
+
+当摄像头采集发生错误时，您可以通过 [cameraLastError](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#cameraLastError) 属性获取错误信息。
+
+> 注意：
+> 
+
+> 常见的摄像头错误包括 `NoSystemPermission` (无系统权限) 和 `OccupiedError`（设备被占用）。您应基于此属性向用户展示明确的错误提示。
+> 
+
+``` typescript
+import { useDeviceState, DeviceError } from 'tuikit-atomicx-vue3/room';
+const { cameraLastError } = useDeviceState();
+
+// 监听摄像头错误
+watch(cameraLastError, (error) => {
+  switch (error) {
+    case DeviceError.NoSystemPermission:
+      console.error('摄像头权限被拒绝，请在系统设置中开启摄像头权限');
+      break;
+    case DeviceError.NoDeviceDetected:
+      console.error('未检测到摄像头设备');
+      break;
+    case DeviceError.OccupiedError:
+      console.error('摄像头被其他应用占用');
+      break;
+    case DeviceError.NotSupportCapture:
+      console.error('当前浏览器不支持摄像头采集');
+      break;
+    default:
+      break;
+  }
+});
+```
+
+## 实现麦克风管理
+
+您可以通过 [useDeviceState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState) 来控制本地麦克风的开关、静音、音量调节和实时音量显示，并监听采集状态和错误。
+
+### 步骤1：开启/关闭麦克风
+``` typescript
+import { useDeviceState, DeviceStatus } from 'tuikit-atomicx-vue3/room';
+const { microphoneStatus, openLocalMicrophone, closeLocalMicrophone } = useDeviceState();
+const toggleMicrophone = async () => {
+  if (microphoneStatus.value === DeviceStatus.On) {
+    await closeLocalMicrophone();
+  } else {
+    await openLocalMicrophone();
+  }
+};
+```
+
+### 步骤2：获取/切换麦克风设备
+
+#### 桌面端浏览器获取/切换麦克风示例
+
+您可以通过 [microphoneList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#microphoneList) 获取所有可用的麦克风设备，使用 [setCurrentMicrophone](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setCurrentMicrophone) 方法切换当前使用的麦克风。
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+
+const { 
+  microphoneList, 
+  currentMicrophone, 
+  getMicrophoneList, 
+  setCurrentMicrophone 
+} = useDeviceState();
+
+// 获取麦克风列表
+await getMicrophoneList();
+
+// 遍历并显示可用麦克风
+microphoneList.value.forEach((mic) => {
+  console.log(`麦克风: ${mic.deviceName} (${mic.deviceId})`);
+});
+
+// 切换到指定麦克风
+const switchMicrophone = async (deviceId: string) => {
+  await setCurrentMicrophone({ deviceId });
+};
+
+// 监听当前麦克风变化
+watch(currentMicrophone, (mic) => {
+  if (mic) {
+    console.log('当前使用麦克风:', mic.deviceName);
+  }
+});
+```
+
+### 步骤3：设置采集音量
+
+您可以使用 [setCaptureVolume](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setCaptureVolume) 方法来调整本地麦克风的采集音量。
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { captureVolume, setCaptureVolume } = useDeviceState();
+
+// 设置采集音量为 50%
+await setCaptureVolume(50);
+
+// 监听采集音量变化
+watch(captureVolume, (volume) => {
+  console.log('当前采集音量:', volume);
+});
+```
+
+### 步骤4：显示实时音量
+
+[currentMicVolume](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#currentMicVolume) 属性会实时更新本地麦克风的采集音量，可用于音量条的动态显示。
+``` typescript
+<template>
+  <div class="mic-volume">
+    <label>麦克风音量</label>
+    <div class="volume-bar-container">
+      <div 
+        class="volume-bar" 
+        :style="{ width: `${currentMicVolume}%` }" 
+      />
+    </div>
+    <span>{{ currentMicVolume }}</span>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { currentMicVolume } = useDeviceState();
+</script>
+
+<style scoped>
+.volume-bar-container {
+  width: 200px;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.volume-bar {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.1s ease;
+}
+</style>
+```
+
+### 步骤5：处理麦克风采集错误
+
+当麦克风采集发生错误时，您可以通过 [microphoneLastError](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#microphoneLastError) 数据获取错误信息。
+``` typescript
+import { useDeviceState, DeviceError } from 'tuikit-atomicx-vue3/room';
+const { microphoneLastError } = useDeviceState();
+
+// 监听麦克风错误
+watch(microphoneLastError, (error) => {
+  switch (error) {
+    case DeviceError.NoSystemPermission:
+      console.error('麦克风权限被拒绝，请在系统设置中开启麦克风权限');
+      break;
+    case DeviceError.NoDeviceDetected:
+      console.error('未检测到麦克风设备');
+      break;
+    case DeviceError.OccupiedError:
+      console.error('麦克风被其他应用占用');
+      break;
+    case DeviceError.NotSupportCapture:
+      console.error('当前浏览器不支持麦克风采集');
+      break;
+    default:
+      break;
+  }
+});
+```
+
+## 实现扬声器管理
+
+扬声器（播放设备）主要涉及切换设备和设置播放音量。
+
+### 步骤1：获取/切换扬声器设备
+
+您可以通过 [speakerList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#speakerList) 获取所有可用的扬声器设备，使用 [setCurrentSpeaker](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setCurrentSpeaker) 方法切换当前使用的扬声器。
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { 
+  speakerList, 
+  currentSpeaker, 
+  getSpeakerList, 
+  setCurrentSpeaker 
+} = useDeviceState();
+
+// 获取扬声器列表
+await getSpeakerList();
+
+// 遍历并显示可用扬声器
+speakerList.value.forEach((speaker) => {
+  console.log(`扬声器: ${speaker.deviceName} (${speaker.deviceId})`);
+});
+
+// 切换到指定扬声器
+const switchSpeaker = async (deviceId: string) => {
+  await setCurrentSpeaker({ deviceId });
+};
+
+// 监听当前扬声器变化
+watch(currentSpeaker, (speaker) => {
+  if (speaker) {
+    console.log('当前使用扬声器:', speaker.deviceName);
+  }
+});
+```
+
+### 步骤2：设置播放音量
+
+您可以使用 [setOutputVolume](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setOutputVolume) 方法来调整扬声器的播放音量。
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { outputVolume, setOutputVolume } = useDeviceState();
+
+// 设置播放音量为 60%
+await setOutputVolume(60);
+
+// 监听播放音量变化
+watch(outputVolume, (volume) => {
+  console.log('当前播放音量:', volume);
+});
+```
+
+## 实现网络质量监控
+
+使用 [useDeviceState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState) 中的 [networkInfo](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#networkInfo) 数据，您可以实时监控本地用户的网络质量。
+
+> **说明：**
+> 
+
+> 仅当本地用户通过 [joinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#joinRoom)加入房间并打开麦克风或摄像头时，[networkInfo](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#networkInfo) 中才可以拿到有效数据。
+> 
+
+``` typescript
+<template>
+  <div class="network-indicator" @click="showDetails = !showDetails">
+    <TUIIcon v-if="networkIcon" :icon="networkIcon" />
+    <span class="network-text">{{ networkText }}</span>
+    <div v-if="showDetails" class="network-details">
+      <div>延迟: {{ networkInfo?.delay }}ms</div>
+      <div>上行丢包: {{ networkInfo?.upLoss }}%</div>
+      <div>下行丢包: {{ networkInfo?.downLoss }}%</div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { computed, ref } from 'vue';
+import {
+  IconNetworkStability,
+  IconNetworkFluctuation,
+  IconNetworkLag,
+  IconNetworkDisconnected,
+  IconArrowStrokeUp,
+} from '@tencentcloud/uikit-base-component-vue3';
+import { useDeviceState, NetworkQuality } from 'tuikit-atomicx-vue3/room';
+
+const { networkInfo } = useDeviceState();
+const showDetails = ref(false);
+
+// 网络质量图标
+const networkIcon = computed(() => {
+  if (!networkInfo.value) return '';
+  switch (networkInfo.value.quality) {
+    case NetworkQuality.Excellent:
+    case NetworkQuality.Good:
+      return IconNetworkStability;
+    case NetworkQuality.Poor:
+      return IconNetworkFluctuation;
+    case NetworkQuality.Bad:
+    case NetworkQuality.VeryBad:
+      return IconNetworkLag;
+    case NetworkQuality.Down:
+      return IconNetworkDisconnected;
+    default:
+      return '';
+  }
+});
+
+// 网络质量文本
+const networkText = computed(() => {
+  if (!networkInfo.value) return '未知';
+  switch (networkInfo.value.quality) {
+    case NetworkQuality.Excellent:
+      return '优秀';
+    case NetworkQuality.Good:
+      return '良好';
+    case NetworkQuality.Poor:
+      return '一般';
+    case NetworkQuality.Bad:
+      return '差';
+    case NetworkQuality.VeryBad:
+      return '很差';
+    case NetworkQuality.Down:
+      return '断开';
+    default:
+      return '未知';
+  }
+});
+</script>
+
+<style scoped>
+
+.network-indicator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.network-details {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 2;
+}
+</style>
+```
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useDeviceState**</td>
+
+<td rowspan="1" colSpan="1" >包含音视频设备状态，音视频设备列表及操作接口。</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState)</td>
+</tr>
+</table>
+
+
+## 常见问题
+
+### 如果用户的电脑无麦克风或扬声器设备，是否可以进入音视频房间？
+
+可以进入房间。 用户在缺少麦克风、扬声器或摄像头的情况下，依然可以调用 `joinRoom` 接口成功进入音视频房间。但在这种状态下，用户将面临以下交互异常。
+
+**功能限制：**
+- **无法开启媒体采集：**由于系统底层无法驱动相关硬件，调用 [openLocalMicrophone](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#openLocalMicrophone) 或 [openLocalCamera](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#openLocalCamera) 接口时将触发异步错误。此时，[microphoneLastError](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#microphoneLastError) 或 [cameraLastError](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#cameraLastError) 属性将返回 `DeviceError.NoDeviceDetected`（未检测到设备）。
+
+- **采集端受限：**无法通过本端设备采集并传输声音（需麦克风）或影像（需摄像头）。
+
+- **播放端受限：**由于缺少扬声器设备，用户将无法听到房间内其他参会者的音频。
+
+
+   **仍然可以使用的功能：**
+
+
+   仅观看模式：用户依然可以观看远端参会者分享的视频流或屏幕共享画面。
+
+
+### 如何实现设备热插拔检测？
+
+Atomicx 已经内置了设备热插拔检测功能，当媒体设备插拔时，设备列表和当前设备数据会自动更新。
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/free-beauty-panel.md
+
+基础美颜功能允许用户在视频通话或直播中，对人像进行磨皮、美白和红润处理。
+
+## 适用场景
+- **视频会议：** 弱化皮肤瑕疵，提亮肤色，使参会者看起来更加专业和精神。
+
+- **在线直播：** 主播通过美颜功能提升画面观感，吸引更多观众。
+
+- **在线教育：** 教师和学生保持整洁自然的形象，营造良好的课堂氛围。
+
+
+## 前提条件
+- **用户状态：** 用户已经通过 useLoginState 完成登录鉴权，参考 [接入概览](https://write.woa.com/document/197379797539790848)，处于 **已登录** 状态。
+
+- **环境依赖：** 项目已引入 `tuikit-atomicx-vue3`。
+
+- **设备要求：** 需要有可用的摄像头设备，并且用户已授权摄像头访问权限。如果用户拒绝授权，虚拟背景功能将无法使用。
+
+
+## 实现基础美颜功能
+
+本功能提供两种集成方案，您可以根据业务需求选择最适合的一种：
+- **方案一（推荐）：** 使用 UI 组件快速集成。直接引入 `tuikit-atomicx-vue3` 提供的美颜面板组件（[FreeBeautyPanel](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/FreeBeautyPanel)），将其嵌入到您的应用弹窗中，开发成本最低。
+
+- **方案二（高级）：** 使用底层 API 自定义集成。基于 atomicx-core SDK API [useFreeBeautyState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-FreeBeautyState) 状态钩子自行实现 UI 和交互逻辑，灵活度最高。
+
+   ![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027160512/70883e08df0d11f08304525400454e06.png)
+
+
+## 方案一：使用 UI 组件快速集成
+
+`tuikit-atomicx-vue3` 提供了核心美颜设置面板组件：
+- [**FreeBeautyPanel**](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/FreeBeautyPanel)**：** 基础美颜配置面板，包含磨皮、美白、红润的参数调节功能。
+
+
+### 步骤1：引入组件
+``` typescript
+import { FreeBeautyPanel } from 'tuikit-atomicx-vue3/room';
+```
+
+### 步骤2：使用组件
+
+通常建议将 `FreeBeautyPanel` 放置在一个弹窗（Dialog）或模态框（Modal）中，通过按钮点击触发显示。
+
+**以下示例展示了如何实现一个点击按钮弹出美颜设置的完整交互：**
+
+> **注意：**
+> 
+
+> 所有 TUIKit 组件必须包裹在 [UIKitProvider](https://write.woa.com/document/197379797539790848) 内部，否则将无法获取上下文依赖，导致样式异常。
+> 
+
+``` typescript
+<template>
+  <UIKitProvider theme="light" language="zh-CN">
+    <div class="toolbar-container">
+      <!-- 1. 触发按钮 -->
+      <button @click="openBeautySettings">设置美颜</button>
+
+      <!-- 2. 设置弹窗 -->
+      <div v-if="showSettings" class="modal-mask">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span>基础美颜</span>
+            <button @click="showSettings = false">关闭</button>
+          </div>
+          
+          <div class="modal-body">
+            <!-- 3. 引入面板组件 -->
+            <!-- @close 事件：当用户点击面板内的关闭按钮（如有）时触发 -->
+            <FreeBeautyPanel @close="showSettings = false" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </UIKitProvider>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { UIKitProvider } from '@tencentcloud/uikit-base-component-vue3';
+import { FreeBeautyPanel, useDeviceState } from 'tuikit-atomicx-vue3/room';
+
+const showSettings = ref(false);
+const { cameraList } = useDeviceState();
+
+const openBeautySettings = () => {
+  // 1. 检查是否有可用摄像头
+  if (cameraList.value.length === 0) {
+    alert('未检测到摄像头，无法设置美颜');
+    return;
+  }
+
+  // 2. 打开设置面板
+  showSettings.value = true;
+};
+</script>
+
+<style scoped>
+.modal-mask {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-content { background: white; width: 600px; border-radius: 8px; overflow: hidden; }
+.modal-header { padding: 16px; display: flex; justify-content: space-between; border-bottom: 1px solid #eee; }
+.modal-body { padding: 16px; }
+</style>
+```
+
+该组件内部逻辑如下：
+- **显示面板：** 用户点击按钮后弹出包含 `FreeBeautyPanel` 的弹窗。
+
+- **调节参数：** 用户拖动面板内的滑块调节磨皮、美白、红润参数。
+
+- **实时预览：** 调节过程中会实时调用预览接口预览美颜效果。
+
+- **保存生效：** 关闭面板（触发 `@close` 事件）时自动保存当前设置，使其对远端生效。
+
+
+## 方案二：使用底层 API 自定义集成
+
+本节主要介绍如何通过 atomicx-core SDK API [useFreeBeautyState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-FreeBeautyState) 接口来实现基础美颜。
+
+### 步骤1：设置预览
+
+在用户调节美颜参数（例如拖动滑块）时，使用 [setFreeBeauty](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setFreeBeauty) 进行实时预览。此时效果仅本地可见，不会传输给远端用户。
+
+> **注意：**
+> 
+
+> 参数取值范围为 0-100。
+> 
+
+``` typescript
+import { useFreeBeautyState } from 'tuikit-atomicx-vue3/room';
+
+const { setFreeBeauty, beautyConfig } = useFreeBeautyState();
+
+// 示例：调节美颜参数
+const updatePreview = async (beauty: number, white: number, ruddy: number) => {
+  // beautyConfig 中的值会自动更新，这里演示如何手动设置预览
+  await setFreeBeauty({
+    beautyLevel: beauty,      // 磨皮 (0-100)
+    whitenessLevel: white,    // 美白 (0-100)
+    ruddinessLevel: ruddy     // 红润 (0-100)
+  });
+};
+```
+
+### 步骤2：保存并生效
+
+用户确认预览效果满意后，调用 [saveBeautySetting](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#saveBeautySetting) 将当前配置应用到视频流中。此时远端用户可以看到美颜效果。
+
+> **注意：**
+> 
+
+> 虚拟背景功能依赖摄像头设备。可使用 [useDeviceState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState) 检查设备状态。
+> 
+> - [cameraList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#cameraList)：当前可用的摄像头设备列表，如果列表为空，说明未检测到摄像头或摄像头权限被禁止。
+
+``` typescript
+import { useFreeBeautyState } from 'tuikit-atomicx-vue3/room';
+
+const { saveBeautySetting } = useFreeBeautyState();
+
+const applyBeauty = async () => {
+  // 保存当前预览的设置，使其对远端生效
+  await saveBeautySetting();
+  console.log('美颜已生效');
+};
+```
+
+### 步骤3：关闭美颜效果
+
+若需关闭美颜，只需将所有参数设置为 0 并保存。
+``` typescript
+const closeBeauty = async () => {
+  // 1. 将所有参数设为 0 并预览
+  await setFreeBeauty({
+    beautyLevel: 0,
+    whitenessLevel: 0,
+    ruddinessLevel: 0
+  });
+  
+  // 2. 保存生效
+  await saveBeautySetting();
+};
+```
+
+## 开发注意事项
+- **参数范围：**`setFreeBeauty` 接收的参数（`beautyLevel`, `whitenessLevel`, `ruddinessLevel`）范围均为 0-100。
+
+- **预览与生效：** 为了提供更好的用户体验，美颜调节分为**“预览”**和**“生效”**两个阶段。`setFreeBeauty` 仅用于本地预览，必须调用 `saveBeautySetting` 才会正式调用 `trtcCloud.setBeautyStyle` 应用到推流中。
+
+- **设备依赖：** 美颜功能依赖于视频流，因此必须在摄像头开启的状态下才能看到效果。如果未检测到摄像头，建议禁用美颜入口。
+
+- **性能消耗：** 开启美颜会增加一定的 CPU 和 GPU 负载，建议在低端设备上引导用户适度使用。
+
+
+## 常见问题
+
+### **为什么调节美颜后远端看不到效果？**
+
+请确认是否调用了 `saveBeautySetting()`。`setFreeBeauty()` 仅用于本地预览，只有保存后才会应用到推流视频中。
+
+### **没有摄像头时能设置美颜吗？**
+
+不能。美颜功能是对视频流进行处理，如果没有采集到视频画面，美颜无法生效。建议在无摄像头时隐藏或禁用美颜入口。
+
+### **离开房间或关闭摄像头后，需要手动重置美颜吗？**
+
+不需要。`useFreeBeautyState` 内部已实现状态自动管理：
+- 摄像头切换： 关闭摄像头时美颜暂停，重新开启后会自动恢复上次保存的设置。
+
+- 进出房间： 退出房间时会自动重置所有美颜参数，无需开发者手动清理。
+
+
+## **示例项目**
+
+腾讯云在 GitHub 上提供了示例项目 [atomicx-vite-vue3-ts](https://github.com/Tencent-RTC/TUIRoomKit/tree/main/Web/example/atomicx-vite-vue3-ts) ，您可以参考以实现完整的 RoomKit 功能。
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useFreeBeautyState**</td>
+
+<td rowspan="1" colSpan="1" >免费美颜功能管理</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-FreeBeautyState)</td>
+</tr>
+</table>
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-chat.md
+
+会中聊天功能允许会议内的成员通过文字、表情等形式进行实时互动。该功能基于 `tuikit-atomicx-vue3` 的 IM 组件能力实现，为用户提供便捷的即时通讯体验。
+
+## 适用场景
+- **在线研讨会：**主讲人进行视频演讲时，参会者可以通过文字提问或讨论。
+
+- **远程协作：**团队成员在沟通时，可发送文字、图片、文件等。
+
+- **直播教学：**学生可以在聊天区发送弹幕或问题，老师实时查看并解答，增强课堂互动性。
+
+
+## 前提条件
+
+在接入功能前，请确保满足以下条件：
+- **用户状态：**用户已经通过 useLoginState 完成登录鉴权，参考 [接入概览](https://write.woa.com/document/197379797539790848)，并已作为一个房间的房主或成员在房间内，参考 [房间管理](https://write.woa.com/document/197379861957083136)。
+
+- **环境依赖：**项目已正确安装并引入 `tuikit-atomicx-vue3`。
+
+
+## 实现会中聊天功能
+
+本功能提供两种集成方案，您可以根据业务需求选择最适合的一种：
+- **方案一（推荐）：**使用 UI 组件快速集成。直接引入 `tuikit-atomicx-vue3` 提供的消息列表组件（[MessageList](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/MessageList)）和消息输入组件（[MessageInput](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/MessageInput)），开发成本最低。
+
+- **方案二（高级）：**使用底层 API 自定义集成。基于 atomicx-core SDK API [useMessageListState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageListState) 和 [useMessageInputState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageInputState) 状态钩子自行实现 UI 和交互逻辑，灵活度最高。
+
+   ![会中聊天](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027160512/8c740e5cdf1111f09143525400bf7822.png)
+
+   会中聊天
+
+
+## 方案一：使用 UI 组件快速集成
+
+`tuikit-atomicx-vue3` 提供了两个核心组件：
+- [**MessageList**](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/MessageList)**：** 消息列表组件，展示聊天记录，支持消息的复制、撤回、删除等操作。
+
+- [**MessageInput**](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/MessageInput)**：** 消息输入组件，支持文本、表情、图片、文件发送，并可根据禁言状态自动禁用。
+
+
+### 步骤1：数据初始化
+
+在用户加入房间成功后，需要调用 [setActiveConversation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setActiveConversation) 接口初始化聊天数据。建议监听 [currentRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#currentRoom) 的变化来自动处理。
+
+> **说明：**
+> 
+> - `GROUP` 为固定前缀，`setActiveConversation` 参数必须为 ``GROUP${roomId}``，否则无法正常收发消息。
+> - `GROUP` 为 IM SDK 群组会话的固定前缀（参考 [IM 会话类型](https://web.sdk.qcloud.com/im/doc/zh-cn/Conversation.html)）。房间聊天基于 IM 群组实现，因此会话 ID 必须为 ``GROUP${roomId}`` 格式。
+
+``` typescript
+import { watch } from 'vue';
+import { useConversationListState } from 'tuikit-atomicx-vue3/chat';
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { currentRoom } = useRoomState();
+const { setActiveConversation } = useConversationListState();
+
+// 监听房间 ID 变化，自动切换到对应的 IM 群组会话
+watch(() => currentRoom.value?.roomId, (roomId) => {
+  if (roomId) {
+    // 关键步骤：设置当前活跃会话 ID，规则为 "GROUP" + 房间ID
+    setActiveConversation(`GROUP${roomId}`);
+  }
+}, { immediate: true });
+```
+
+### 步骤2： 使用组件
+
+在您的页面中，可以直接组合使用这两个组件。同时结合 [useRoomParticipantState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState) 获取当前用户的禁言状态，控制输入框的可用性。
+
+> **注意：**
+> 
+
+> 所有 TUIKit 组件必须包裹在 [UIKitProvider](https://write.woa.com/document/197379797539790848) 内部，否则将无法获取上下文依赖，导致样式异常。
+> 
+
+``` typescript
+<template>
+  <UIKitProvider theme="light" language="zh-CN">
+    <div class="room-chat-container">
+      <!-- 消息列表组件 -->
+      <!-- messageActionList: 配置长按消息支持的操作，例如复制、撤回、删除 -->
+      <MessageList
+        class="message-list"
+        :messageActionList="['copy', 'recall', 'delete']"
+      />
+
+      <!-- 消息输入组件 -->
+      <!-- disabled: 当用户被禁言时禁用输入框 -->
+      <!-- hideSendButton: 可选，隐藏发送按钮，使用回车发送 -->
+      <MessageInput
+        class="message-input"
+        :placeholder="inputPlaceholder"
+        :disabled="isMessageDisabled"
+        hideSendButton
+      />
+    </div>
+  </UIKitProvider>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue';
+import { UIKitProvider } from '@tencentcloud/uikit-base-component-vue3';
+import { MessageInput, MessageList } from 'tuikit-atomicx-vue3/chat';
+import { useRoomParticipantState } from 'tuikit-atomicx-vue3/room';
+
+const { localParticipant } = useRoomParticipantState();
+
+// 获取当前用户的禁言状态，isMessageDisabled 由房间后台实时同步，无需前端主动轮询，前端只需绑定该状态即可自动响应禁言变更。
+const isMessageDisabled = computed(() => localParticipant.value?.isMessageDisabled);
+
+// 根据状态动态显示占位符提示
+const inputPlaceholder = computed(() => 
+  isMessageDisabled.value ? '您已被禁言' : '请输入消息...'
+);
+</script>
+
+<style scoped>
+.room-chat-container{display:flex;flex-direction:column;height:100%;padding:8px;gap:8px}.message-list{flex:1;overflow:hidden}.message-input{flex-shrink:0;border:1px solid #e0e0e0;border-radius:8px}
+</style>
+```
+
+### 步骤3：处理未读消息计数（可选）
+
+如果聊天窗口平时是折叠或关闭状态，您需要通过监听 [messageList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#messageList) 的变化来统计未读消息数，并在 UI 上（如聊天图标角标）进行提示。
+``` typescript
+import { ref, watch } from 'vue';
+import { useMessageListState } from 'tuikit-atomicx-vue3/chat';
+
+const { messageList } = useMessageListState();
+const unreadCount = ref(0);
+const isChatWindowOpen = ref(false); // 需根据您的业务逻辑维护此状态
+
+watch(() => messageList.value?.length, (newLength, oldLength) => {
+  // 如果是首次加载或数据为空，不进行计数
+  if (!newLength || newLength === 0) return;
+
+  // 仅当聊天窗口关闭且收到新消息时，增加未读计数
+  if (!isChatWindowOpen.value && newLength > (oldLength || 0)) {
+    unreadCount.value += (newLength - (oldLength || 0));
+  }
+});
+
+// 当用户打开聊天窗口时，清空未读计数
+const openChatWindow = () => {
+  isChatWindowOpen.value = true;
+  unreadCount.value = 0;
+};
+```
+
+## 方案二：使用底层 API 自定义集成
+
+本节主要介绍如何通过 atomicx-core SDK API [useMessageListState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageListState) 和 [useMessageInputState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageInputState) 接口来实现自定义的聊天界面。
+
+> **注意：**
+> 
+
+> `MessageInputState` 默认支持与 `@tiptap/vue-3` 编辑器集成。如果您仅需要简单的文本输入框（例如 `<input>` 或 `<textarea>`），请**忽略**`setEditorInstance`、`setContent` 等与编辑器实例绑定的 API，直接使用 `updateRawValue` 和 `sendMessage` 即可。
+> 
+
+
+#### 步骤1：数据初始化
+
+在用户加入房间成功后，需要调用 [setActiveConversation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setActiveConversation) 接口初始化聊天数据。建议监听 [currentRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#currentRoom) 的变化来自动处理。
+
+> **说明：**
+> 
+> - `GROUP` 为固定前缀，`setActiveConversation` 参数必须为 ``GROUP${roomId}``，否则无法正常收发消息。
+> - 在房间切换或退房时，建议重置或清空活跃会话，避免消息错发至错误会话。
+
+``` typescript
+import { watch } from 'vue';
+import { useConversationListState } from 'tuikit-atomicx-vue3/chat';
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { currentRoom } = useRoomState();
+const { setActiveConversation } = useConversationListState();
+
+// 监听房间 ID 变化，自动切换到对应的 IM 群组会话
+watch(() => currentRoom.value?.roomId, (roomId) => {
+  if (roomId) {
+    // 关键步骤：设置当前活跃会话 ID，规则为 "GROUP" + 房间ID
+    setActiveConversation(`GROUP${roomId}`);
+  }
+}, { immediate: true });
+```
+
+#### 步骤2：获取消息列表
+
+使用 [useMessageListState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageListState) 获取当前会话的消息列表。`messageList` 是响应式数据，会自动更新新收到的消息。
+``` typescript
+import { useMessageListState } from 'tuikit-atomicx-vue3/chat';
+
+const { 
+  messageList,      // 响应式消息列表
+  loadMoreOlderMessage, // 加载更多历史消息方法
+  hasMoreOlderMessage,   // 是否还有更多历史消息
+} = useMessageListState();
+
+// 示例：渲染消息列表
+// <div v-for="msg in messageList" :key="msg.ID">
+//   {{ msg.payload.text }}
+// </div>
+```
+
+#### 步骤3：发送消息
+
+使用 [useMessageInputState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageInputState) 管理输入框内容并发送消息。
+``` typescript
+import { useMessageInputState } from 'tuikit-atomicx-vue3/chat';
+
+const { 
+  inputRawValue,  // 响应式数据：当前输入内容
+  updateRawValue, // 方法：更新输入内容（会自动触发"对方正在输入"状态）
+  sendMessage     // 方法：发送消息
+} = useMessageInputState();
+
+const handleSend = async () => {
+  // 校验非空
+  if (!inputRawValue.value) return;
+  
+  try {
+    // 1. 发送消息
+    // 方式 A：发送当前 inputRawValue 的内容
+    await sendMessage();
+    
+    // 方式 B：直接发送指定文本（不依赖 inputRawValue）
+    // await sendMessage('Hello World');
+
+    console.log('发送成功');
+    
+    // 2. 发送成功后清空输入框
+    // 关键点：非富文本模式下，务必使用 updateRawValue('') 清空
+    // 请勿使用 setContent('')，该方法仅在绑定了 editor 实例后生效
+    updateRawValue('');
+  } catch (error) {
+    console.error('发送失败', error);
+  }
+};
+
+// 示例：绑定原生输入框
+// <input 
+//   :value="inputRawValue" 
+//   @input="(e) => updateRawValue(e.target.value)" 
+//   @keyup.enter="handleSend" 
+// />
+```
+
+#### 步骤4：加载历史消息
+
+通过 [loadMoreOlderMessage](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageListState) 方法分页拉取历史消息。通常在滚动到列表顶部时触发。
+
+> **注意：**
+> 
+
+> 在加载历史消息后，通常需要手动调整滚动条位置，以保持当前浏览视角不发生跳变。
+> 
+
+``` typescript
+import { useMessageListState } from 'tuikit-atomicx-vue3/chat';
+
+const { 
+  hasMoreOlderMessage,
+  loadMoreOlderMessage
+} = useMessageListState();
+
+const loadHistory = async () => {
+  if (hasMoreOlderMessage.value) {
+    // 记录加载前的滚动高度
+    // const previousHeight = scrollContainer.value.scrollHeight;
+    
+    await loadMoreOlderMessage();
+    
+    // DOM 更新后恢复滚动位置
+    // nextTick(() => {
+    //   const currentHeight = scrollContainer.value.scrollHeight;
+    //   scrollContainer.value.scrollTop += (currentHeight - previousHeight);
+    // });
+  }
+};
+```
+
+#### 步骤5：高级功能（已读回执）
+
+如果您需要已读回执功能，可以使用 [setEnableReadReceipt](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setEnableReadReceipt)。
+``` typescript
+const { 
+  setEnableReadReceipt, // 开启/关闭已读回执
+} = useMessageListState();
+
+// 开启已读回执
+setEnableReadReceipt(true);
+```
+
+## 开发注意事项
+- **禁言状态同步**
+
+
+   `localParticipant.isMessageDisabled` 是由房间管理员控制的。当管理员开启“全员禁言”或单独禁言某用户时，该属性会自动更新。请务必将此属性绑定到输入框的 `disabled` 状态上，以在前端层面限制用户发言。
+
+- **会话切换时机**
+
+
+   确保 `setActiveConversation` 在进房成功后且 `roomId` 有值时调用。如果在进房前调用，可能会因为 SDK 尚未初始化完毕或未登录而失败。
+
+- **容器布局要求（重要）**
+
+
+   消息列表组件内部处理了滚动逻辑，因此**父容器必须有固定的高度**（例如 `height: 100%` 或具体像素值）并设置 `overflow: hidden`，否则会导致列表无限拉长、无法滚动。
+
+- **消息类型处理**
+
+
+   `messageList` 中包含多种类型的消息（文本、图片、文件等），自定义渲染时需根据 `msg.type` 进行区分处理。
+
+- **输入状态管理**
+
+
+   使用 `updateRawValue` 更新输入内容会自动触发 "对方正在输入" 的状态通知（如果支持）。如果仅使用 `inputRawValue.value = 'xxx'` 可能不会触发该状态。
+
+- **历史消息滚动维持**
+
+
+   在自定义开发中，调用 `loadMoreOlderMessage` 加载历史消息后，DOM 高度会增加。为了防止视图跳动，需要在加载前记录 `scrollHeight`，加载后（`nextTick`）计算高度差并调整 `scrollTop`。
+
+- **新消息滚动策略**
+
+
+   建议实现“智能滚动”逻辑：当用户位于列表底部时，收到新消息自动滚动到底部；当用户正在浏览历史消息时，保持当前位置不动，并显示“有新消息”的提示气泡。
+
+- **会话 ID 格式要求**
+
+
+   调用 `setActiveConversation` 时，必须使用 ``GROUP${roomId}`` 格式（GROUP 为固定前缀）。这是 IM SDK 群组会话的标准格式，不可自定义或省略前缀，否则无法正常收发消息。
+
+
+## 常见问题
+
+**切到群组会话失败或消息列表无内容？**
+
+确保已登录并进房成功后再调用 `setActiveConversation('GROUP' + roomId)`；未登录或 roomId 为空会导致失败。
+
+**消息收不到或列表空白？**
+
+检查当前活跃会话是否正确（`GROUP` 前缀 + roomId），以及网络/鉴权是否正常；必要时重新设置活跃会话 `setActiveConversation` 刷新。
+
+**未读计数不清零？**
+
+需要手动维护未读计数逻辑。打开聊天窗口时，或收到新消息但窗口关闭时进行计数更新。
+
+**被禁言仍能点击发送？**
+
+请确保前端 UI 根据 `isMessageDisabled` 状态禁用了发送按钮和输入框。虽然服务端也会拦截，但前端禁用体验更好。
+
+**自定义头像/昵称展示？**
+
+可通过 `MessageList` 插槽或自定义 Message 组件，优先显示房间内的 `nameCard`，并自定义头像样式等。
+
+**自定义方案如何发送图片或文件？**
+
+`sendMessage` 方法支持传入 `InputContent[]` 数组。您可以构造包含 `type: 'image'` 或 `type: 'file'` 以及对应 `file` 对象的数组来实现富媒体消息发送。
+``` typescript
+import { useMessageInputState } from 'tuikit-atomicx-vue3/chat';
+
+const { sendMessage } = useMessageInputState();
+
+// 示例：发送图片
+// const file = ...; // 从 input type="file" 获取的 File 对象
+await sendMessage([{ type: 'image', file }]);
+```
+
+**如何修改 UI 组件的默认样式？**
+
+`tuikit-atomicx-vue3` 的组件类名通常保持稳定。您可以使用 CSS 深度选择器（例如 Vue 的 `:deep()`）来覆盖默认样式。例如 `.message-list :deep(.tui-message-bubble) { background-color: #f0f0f0; }`。
+
+## **示例项目**
+
+腾讯云在 GitHub 上提供了示例项目 [atomicx-vite-vue3-ts](https://github.com/Tencent-RTC/TUIRoomKit/tree/main/Web/example/atomicx-vite-vue3-ts) ，您可以参考以实现完整的 RoomKit 功能。
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useRoomState**</td>
+
+<td rowspan="1" colSpan="1" >房间状态管理（创建、加入、预约等）</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState)</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useRoomParticipantState**</td>
+
+<td rowspan="1" colSpan="1" >房间参与者管理（成员列表、权限控制）</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState)</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useConversationListState**</td>
+
+<td rowspan="1" colSpan="1" >会话列表管理</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-ConversationListState)</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useMessageListState**</td>
+
+<td rowspan="1" colSpan="1" >消息列表管理</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageListState)</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useMessageInputState**</td>
+
+<td rowspan="1" colSpan="1" >消息输入管理</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageInputState)</td>
+</tr>
+</table>
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-participant-state.md
+
+本篇文档将指导您如何管理房间内的参会者。Atomicx 提供了开箱即用的列表组件 `RoomParticipantList` 用于快速集成，并暴露了 [useRoomParticipantState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState) Hook，方便您实现自定义的成员控制逻辑。
+
+## 功能介绍
+
+成员管理模块涵盖了房间内用户信息展示以及权限处理的全套能力：
+- **实时列表展示：**动态呈现房间内所有成员的昵称、角色、音视频状态及音量波动。
+
+- **权限控制：**支持房主或管理员执行踢人、全员禁言、转让房主等管理操作。
+
+- **分级管理：**支持对房主、管理员及普通成员实现差异化的权限策略。
+
+
+## 前提条件
+- 用户已经通过 [useLoginState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-LoginState) 完成登录鉴权，请参考 [接入概览](https://write.woa.com/document/197379797539790848)。
+
+- 用户已经通过 [useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) 进入房间，请参考 [房间管理](https://write.woa.com/document/197379861957083136)。
+
+
+## 集成成员管理组件
+
+如果您需要快速构建成员列表界面，推荐直接使用 `RoomParticipantList` 组件。`RoomParticipantList` 是一个开箱即用的参会者列表组件，内置了完整的成员管理 UI 和交互。
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/9407bc54dbe911f0a4f35254007c27c5.png)
+
+
+集成 `RoomParticipantList` 组件示例代码：
+``` typescript
+<template>
+  <div class="room-page">
+    <!-- 参会者列表侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span>参会者 ({{ currentRoom.participantCount }})</span>
+        <IconClose />
+      </div>
+
+      <!-- 参会者列表组件 -->
+      <RoomParticipantList />
+    </aside>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { IconClose } from '@tencentcloud/uikit-base-component-vue3';
+import { 
+  RoomView,
+  RoomParticipantList,
+  useRoomState,
+  useRoomParticipantState 
+} from 'tuikit-atomicx-vue3/room';
+
+const { currentRoom } = useRoomState();
+const { participantList } = useRoomParticipantState();
+</script>
+
+<style scope>
+.room-page {
+  width: 100vw;
+  height: 100vh;
+  min-width: 1150px;
+  display: flex;
+  flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar-header {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+</style>
+```
+
+> **说明：**
+> 
+> - `RoomParticipantList` 会自动占满父容器的高度和宽度，请确保其父容器具备明确的尺寸。
+> - 使用 `RoomParticipantList` 组件请确保在 `App.vue` 中配置全局 `UIKitProvider`，具体请参考 [配置 App.vue](https://cloud.tencent.com/document/product/647/81962#ce98ee15-b0cb-43af-81da-70f51231430e)。
+
+
+## 实现成员管理功能
+
+如果您需要自定义成员列表 UI 或在特定业务中触发管理行为，请使用 [useRoomParticipantState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState)。
+
+### 步骤1：获取成员列表
+
+通过 [getParticipantList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#getParticipantList) 获取响应式的成员数据 [participantList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#participantList)。
+``` typescript
+import { useRoomState, useRoomParticipantState } from 'tuikit-atomicx-vue3/room';
+
+const { currentRoom } = useRoomState();
+const { participantList, participantListCursor, getParticipantList } = useRoomParticipantState();
+
+// 在进房成功之后获取房间内用户列表
+watch(() => currentRoom.value?.roomId, async () => {
+ await getParticipantList();
+})
+
+// 当列表滚动到底部时，加载更多用户
+const handleLoadMore = async () => {
+  if (participantListCursor.value) {
+    await getParticipantList({ cursor: participantListCursor.value });
+  }
+};
+```
+
+> **说明：**
+> 
+
+> `getParticipantList` 接口拉取成功的数据会自动维护在 `participantList` 中，UI 只需要渲染 `participantList` 的数据即可。
+> 
+
+
+### 步骤2：渲染参会者信息
+
+开发者可以使用  [participantList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#participantList) 数据自定义渲染用户信息列表。
+``` typescript
+<template>
+  <div class="participant-list">
+    <div class="list-header">
+      <h3>参会者 ({{ participantList.length }})</h3>
+      <button @click="handleRefresh">
+        <IconRefresh />
+      </button>
+    </div>
+    <div class="list-content">
+      <div 
+        v-for="participant in participantList" 
+        :key="participant.userId"
+        class="participant-item"
+      >
+        <!-- 头像 -->
+        <Avatar 
+          :user-id="participant.userId" 
+          :avatar-url="participant.avatarUrl" 
+        />
+
+        <!-- 用户信息 -->
+        <div class="user-info">
+          <div class="user-name">
+            <span>{{ participant.userName }}</span>
+            <span v-if="participant.userId === localParticipant.userId" class="badge">我</span>
+            <span 
+              v-if="participant.role === RoomParticipantRole.Owner" 
+              class="role-badge owner"
+            >
+              房主
+            </span>
+            <span 
+              v-else-if="participant.role === RoomParticipantRole.Admin" 
+              class="role-badge admin"
+            >
+              管理员
+            </span>
+          </div>
+        </div>
+
+        <!-- 设备状态 -->
+        <div class="device-status">
+          <IconMicOn 
+            size="20"
+            v-if="participant.microphoneStatus === DeviceStatus.On" 
+            class="icon-on"
+          />
+          <IconMicOff size="20" v-else class="icon-off" />
+          <IconCameraOn
+            size="20"
+            v-if="participant.cameraStatus === DeviceStatus.On" 
+            class="icon-on"
+          />
+          <IconCameraOff size="20" v-else class="icon-off" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue';
+import { IconRefresh, IconMicOn, IconMicOff, IconCameraOn, IconCameraOff } from '@tencentcloud/uikit-base-component-vue3';
+import { 
+  useRoomParticipantState,
+  Avatar,
+  RoomParticipantRole,
+  DeviceStatus
+} from 'tuikit-atomicx-vue3/room';
+
+const { 
+  localParticipant, 
+  participantList,
+  getParticipantList,
+  transferOwner
+} = useRoomParticipantState();
+
+const handleRefresh = async () => {
+  await getParticipantList({ cursor: '' });
+};
+</script>
+
+<style scoped>
+.participant-list {  display: flex;  flex-direction: column;  width: 400px;  height: 100%;  background-color: white;}.list-header {  display: flex;  align-items: center;  justify-content: space-between;  padding: 16px;  border-bottom: 1px solid #e0e0e0;}.list-header h3 {  margin: 0;  font-size: 16px;  font-weight: 600;}.list-content {  flex: 1;  overflow-y: auto;  padding: 8px;}.participant-item {  display: flex;  align-items: center;  gap: 12px;  padding: 12px;  border-radius: 8px;  transition: background-color 0.2s;}.participant-item:hover {  background-color: #f5f5f5;}.participant-item.is-local {  background-color: #e3f2fd;}.user-info {  flex: 1;  min-width: 0;}.user-name {  display: flex;  align-items: center;  gap: 6px;  font-size: 14px;  font-weight: 500;}.badge {  padding: 2px 6px;  background-color: #4caf50;  color: white;  border-radius: 3px;  font-size: 12px;}.role-badge {  padding: 2px 6px;  border-radius: 3px;  font-size: 12px;}.role-badge.owner {  background-color: #ff9800;  color: white;}.role-badge.admin {  background-color: #2196f3;  color: white;}.device-status {  display: flex;  gap: 8px;}.icon-on {  color: #4caf50;}.icon-off {  color: #999;}.action-button {  padding: 4px 8px;  background: transparent;  border: none;  cursor: pointer;  border-radius: 4px;  color: #666;}.action-button:hover {  background-color: #f0f0f0;}
+</style>
+```
+
+### 步骤3：设置用户自定义信息
+
+开发者可以使用 [updateParticipantMetaData](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#updateParticipantMetaData) 接口设置用户的自定义数据，用于**实现职务**、**购买状态**等能力。更新之后 `metaData` 信息将被维护在 `participantList` 对应用户的响应式数据中。
+``` typescript
+<template>
+  <div v-for="participant in participantList" :key="participant.userId">
+    <span>{{ participant.userName }}</span>
+    <span v-if="participant.metaData">
+      {{ JSON.parse(participant.metaData).level }}
+    </span>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue';
+import { IconRefresh, IconMicOn, IconMicOff, IconCameraOn, IconCameraOff } from '@tencentcloud/uikit-base-component-vue3';
+import { 
+  useRoomParticipantState,
+} from 'tuikit-atomicx-vue3/room';
+
+const { 
+  updateParticipantMetaData,
+} = useRoomParticipantState();
+
+await updateParticipantMetaData({
+ userId: '', // 指定用户 id
+ metaData: JSON.stringify({ level: 1 }),   // 业务自定义信息
+})
+</script>
+```
+
+### 步骤4：管理成员身份
+
+房主可以通过 [setAdmin](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setAdmin) 接口变更用户角色为管理员, 通过 [revokeAdmin](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#revokeAdmin) 方法撤销用户管理员身份。
+``` typescript
+const { setAdmin, revokeAdmin } = useRoomParticipantState();
+
+// 将普通用户设置为管理员
+await setAdmin({ userId });
+
+// 将管理员设置为普通用户
+await revokeAdmin({ userId });
+```
+
+### 步骤5：管理成员媒体设备
+
+房主及管理员可以通过 [closeParticipantDevice](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#closeParticipantDevice) 接口远程控制其他成员的媒体设备，以维持会议环境的安静及有序。
+``` typescript
+import { useRoomParticipantState, DeviceType } from 'tuikit-atomicx-vue3/room';
+const { closeParticipantDevice } = useRoomParticipantState();
+
+// 强制关闭指定成员的麦克风
+async function handleCloseUserMicrophone(userId: string) {
+  await closeParticipantDevice({
+    userId,
+    deviceType: DeviceType.Microphone,
+  });
+}
+
+// 强制关闭指定成员的摄像头
+async function handleCloseUserCamera(userId: string) {
+  await closeParticipantDevice({
+    userId,
+    deviceType: DeviceType.Camera,
+  });
+}
+```
+
+### 步骤6：开启全局状态管理
+
+房主及管理员可通过 [disableAllDevices](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#disableAllDevices) 及 [disableAllMessages](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#disableAllMessages) 接口开启房间全局状态管理。
+
+#### **禁用房间内所有普通用户的媒体设备**
+``` typescript
+import { useRoomParticipantState, DeviceType } from 'tuikit-atomicx-vue3/room';
+const { closeParticipantDevice } = useRoomParticipantState();
+
+// 强制关闭所有普通成员的麦克风
+async function handleDisableAllMicrophone() {
+  await disableAllDevices({
+    deviceType: DeviceType.Microphone,
+    disable: true,
+  });
+}
+
+// 解除全员麦克风禁用
+async function handleEnableAllMicrophone() {
+  await disableAllDevices({
+    deviceType: DeviceType.Microphone,
+    disable: false,
+  });
+}
+
+// 强制关闭所有普通成员的摄像头
+async function handleDisableAllCamera() {
+  await disableAllDevices({
+    deviceType: DeviceType.Camera,
+    disable: true,
+  });
+}
+
+// 解除全员摄像头禁用
+async function handleEnableAllCamera() {
+  await disableAllDevices({
+    deviceType: DeviceType.Camera,
+    disable: false,
+  });
+}
+```
+
+#### **禁用房间内所有普通用户的会中聊天**
+``` typescript
+import { useRoomParticipantState, DeviceType } from 'tuikit-atomicx-vue3/room';
+const { disableAllMessages } = useRoomParticipantState();
+
+// 强制禁用所有普通成员的聊天能力
+async function handleDisableAllMessage() {
+  await disableAllMessages({
+    disable: true,
+  });
+}
+```
+
+### **步骤7：**监控成员发言状态
+
+通过 [speakingUsers](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#speakingUsers) 可以实时获取房间内正在说话的用户及其音量大小。
+``` typescript
+const { speakingUsers } = useRoomParticipantState();
+
+// 判断用户是否正在说话
+const isSpeaking = (userId: string) => speakingUsers.value.has(userId);
+// 获取用户实时音量 (0-100)
+const getVolume = (userId: string) => speakingUsers.value.get(userId) || 0;
+```
+
+### 步骤8：踢出房间内成员
+
+房主及管理员可以通过 [kickParticipant](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#kickParticipant) 接口将用户移出房间。
+``` typescript
+const { kickParticipant } = useRoomParticipantState();
+
+// 将用户踢出房间
+await kickParticipant({ userId });
+```
+
+### 步骤9：邀请其他人加入房间
+
+实际业务中，您可能需要向未进房的用户发起呼叫邀请。Atomicx 提供了完整的呼叫系统支持，请查看 [会中呼叫](https://write.woa.com/document/197380078005506048)。
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useRoomParticipantState**</td>
+
+<td rowspan="1" colSpan="1" >包含房间内用户数据，用户管理接口。</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState)</td>
+</tr>
+</table>
+
+
+## 开发建议
+
+**权限校验：**在 UI 层建议通过 `participant.role` 判断当前用户的操作权限，对不具备管理权限的用户隐藏**踢人**或**禁言**按钮。
+``` typescript
+<script setup>
+import { RoomParticipantRole } from 'tuikit-atomicx-vue3/room';
+
+const { localParticipant } = useRoomParticipantState();
+
+// 判断当前用户是否有管理权限
+const hasAdminPermission = computed(() => {
+  return localParticipant.value.role === RoomParticipantRole.Owner ||
+         localParticipant.value.role === RoomParticipantRole.Admin;
+});
+</script>
+
+// 在模板中使用
+<template>
+<button v-if="hasAdminPermission" @click="handleKick">踢出</button>
+<template>
+```
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-state.md
+
+本篇文档将详细指导您如何使用 Atomicx 的 [useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) 管理房间的完整生命周期，包括创建、加入、离开以及结束房间，以及处理关键的房间状态通知。以下时序图演示了房间从创建到销毁的主要流程。
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/b5d730a6dfdc11f08775525400bf7822.png)
+
+
+## 功能介绍
+
+[useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) 是 Atomicx 方案中负责房间管理的核心 Hook。它封装了复杂的底层信令流程，开发者可以通过简单的响应式数据和方法调用来驱动房间状态。
+- **创建与加入：**通过 [createAndJoinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#createAndJoinRoom) 方法创建并加入房间，或通过 [joinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#joinRoom) 方法加入已有房间。
+
+- **状态实时同步：**`useRoomState`Hook 内部维护 [currentRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#currentRoom) 响应式数据，自动同步房间名称、模式及成员数等信息。
+
+- **权限分明的退出机制：**针对不同角色提供了清晰的操作边界。普通成员可以使用 [leaveRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#leaveRoom) 退出；而房主（主持人）则拥有 [endRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#endRoom) 权限，可以一键结束房间并销毁房间资源。
+
+
+## **前提条件**
+
+用户已经通过 [useLoginState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-LoginState) 完成登录鉴权，请参考 [接入概览](https://write.woa.com/document/197379797539790848)。
+
+## 实现房间管理
+
+### 步骤1：导入 useRoomState
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { 
+  createAndJoinRoom, 
+  joinRoom, 
+  leaveRoom, 
+  endRoom,
+  currentRoom 
+} = useRoomState();
+```
+
+### 步骤2：创建房间
+
+创建房间（房主）：使用 [createAndJoinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#createAndJoinRoom)，调用成功后该用户将自动获得房主权限。
+
+> **注意：**
+> 
+
+> 创建房间时指定的 roomId 建议由业务后台生成并下发，以确保房间 Id 在全局应用中的唯一性与稳定性。
+> 
+
+- **示例一：用户创建房间**
+
+   ``` typescript
+   import { useRoomState } from 'tuikit-atomicx-vue3/room';
+   const { createAndJoinRoom } = useRoomState();
+   
+   await createAndJoinRoom({
+     roomId: 'YOUR_ROOM_ID',    // 指定房间 Id，由业务后台生成
+   })
+   ```
+- **示例二：用户创建房间并指定房间名称**
+
+   ``` typescript
+   import { useRoomState } from 'tuikit-atomicx-vue3/room';
+   const { createAndJoinRoom } = useRoomState();
+   
+   await createAndJoinRoom({
+     roomId: 'YOUR_ROOM_ID',    // 指定房间 Id，由业务后台生成
+     options: {
+       roomName: '我的临时房间'
+     }
+   })
+   ```
+- **示例三：用户创建密码房间**
+
+   ``` typescript
+   import { useRoomState } from 'tuikit-atomicx-vue3/room';
+   const { createAndJoinRoom } = useRoomState();
+   
+   await createAndJoinRoom({
+     roomId: 'YOUR_ROOM_ID',    // 指定房间 Id，由业务后台生成
+     options: {
+       roomName: '我的临时房间',
+       password: '123456',
+     }
+   })
+   ```   
+
+   > **说明：**
+   > 
+
+   > 创建者在调用 [createAndJoinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#createAndJoinRoom) 时会自动加入房间，无需输入密码。
+   > 
+
+- **示例四：用户创建房间并配置成员管理信息**
+
+   ``` typescript
+   import { useRoomState } from 'tuikit-atomicx-vue3/room';
+   const { createAndJoinRoom } = useRoomState();
+   
+   await createAndJoinRoom({
+     roomId: 'YOUR_ROOM_ID',    // 指定房间 Id，由业务后台生成
+     options: {
+       roomName: '我的临时房间',
+       password: '123456',
+       isAllMicrophoneDisabled: true,   // 开启全员静音
+       isAllCameraDisabled: true,       // 开启全员静画
+       isAllScreenShareDisabled: true,  // 开启全员禁止屏幕共享
+       isAllMessageDisabled: true,      // 开启全员禁止发会中消息
+     }
+   })
+   ```   
+
+   > **说明：**
+   > 
+
+   > 成员管理配置信息仅对普通成员生效，房主和管理员不受限制。如需在房间创建后修改成员管理配置或单独管理成员权限，请参考 [成员管理](https://write.woa.com/document/197380064613830656)。
+   > 
+
+
+### 步骤3：用户加入已有房间
+
+登录用户可以调用 [joinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#joinRoom) 加入已有房间。Atomicx 仅支持用户同时加入一个房间。
+- **示例一：用户加入房间**
+
+   ``` typescript
+   import { useRoomState } from 'tuikit-atomicx-vue3/room';
+   const { joinRoom } = useRoomState();
+   
+   await joinRoom({
+     roomId: 'YOUR_ROOM_ID',    // 指定房间 Id，由业务后台生成
+   })
+   ```
+- **示例二：用户加入密码房间**
+
+   ``` typescript
+   import { useRoomState } from 'tuikit-atomicx-vue3/room';
+   const { joinRoom } = useRoomState();
+   
+   await joinRoom({
+     roomId: 'YOUR_ROOM_ID',    // 指定房间 Id，由业务后台生成
+     password: '123456',
+   })
+   ```
+
+### 步骤4：更新房间信息
+
+房主可以在创建房间后使用 [updateRoomInfo](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#updateRoomInfo) 更新房间名称和密码。
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+const { updateRoomInfo } = useRoomState();
+
+await updateRoomInfo({
+  roomId: 'YOUR_ROOM_ID',    // 指定房间 Id，由业务后台生成
+  options: {
+     roomName: '新的房间名称',
+     password: '234567',
+  },
+})
+```
+
+> **说明：**
+> 
+
+> 房主必须在房间内才能调用 [updateRoomInfo](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#updateRoomInfo)。如果房主已离开房间，需要重新加入后才能更新房间信息。
+> 
+
+
+### 步骤5：离开房间
+
+房主及普通用户均可调用 [leaveRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#leaveRoom) 接口离开房间，使用该接口的前提是用户已经通过 [createAndJoinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#createAndJoinRoom) 或者 [joinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#joinRoom) 接口加入房间。
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+const { leaveRoom } = useRoomState();
+
+await leaveRoom();
+```
+
+### 步骤6：销毁房间
+
+仅房主可调用 [endRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#endRoom) 接口销毁房间，使用该接口的前提是用户已经通过 [createAndJoinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#createAndJoinRoom) 创建房间或者已经获取房主身份。
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+const { endRoom } = useRoomState();
+
+await endRoom();
+```
+
+> **说明：**
+> 
+> - 如果房主离开房间但未调用 [endRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#endRoom)，房间将继续存在，直到满足自动回收条件（连续 6 小时无用户）。
+> - 房主可以通过 [transferOwner](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#transferOwner) 接口将房主身份转移给其他用户。
+
+
+### 步骤7：异常退出处理
+
+#### 处理房间被销毁事件
+
+普通用户可通过监听 `RoomEvent.onRoomEnded` 事件处理房间被销毁的业务交互。
+``` typescript
+import { useRoomState, RoomEvent } from 'tuikit-atomicx-vue3/room';
+import { TUIMessageBox } from '@tencentcloud/uikit-base-component-vue3';
+const { subscribeEvent, unsubscribeEvent } = useRoomState();
+
+function onRoomEnded() {
+  TUIMessageBox.alert({
+    title: '通知',
+    content: '房主已解散房间',
+  });
+}
+
+// 在组件加载时监听 RoomEvent
+subscribeEvent(RoomEvent.onRoomEnded, onRoomEnded);
+// 在组件销毁时取消监听 RoomEvent
+unsubscribeEvent(RoomEvent.onRoomEnded, onRoomEnded);
+```
+
+#### 处理用户被踢退房事件
+
+普通用户可通过监听 `RoomParticipantEvent.onKickedFromRoom` 事件处理用户被踢出房间的业务交互。
+``` typescript
+import { useRoomParticipantState, RoomParticipantEvent, KickedOutOfRoomReason } from 'tuikit-atomicx-vue3/room';
+import { TUIMessageBox } from '@tencentcloud/uikit-base-component-vue3';
+
+const { subscribeEvent, unsubscribeEvent } = useRoomParticipantState();
+
+function onKickedFromRoom({ reason }: { reason: KickedOutOfRoomReason; message: string }) {
+    let notice = '';
+    switch (reason) {
+      case KickedOutOfRoomReason.KickedByAdmin:
+        notice = '您已被房主移出房间';
+        break;
+      case KickedOutOfRoomReason.ReplacedByAnotherDevice:
+        notice = '您的账号已在其他设备登录';
+        break;
+      case KickedOutOfRoomReason.KickedByServer:
+        notice = '您已被服务器移出房间';
+        break;
+      case KickedOutOfRoomReason.ConnectionTimeout:
+        notice = '网络连接超时，正在退出房间';
+        break;
+      case KickedOutOfRoomReason.InvalidStatusOnReconnect:
+        notice = '房间已解散或您在离线期间已被移出';
+        break;
+      case KickedOutOfRoomReason.RoomLimitExceeded:
+        notice = '房间人数已达上限，无法加入';
+        break;
+      default:
+        notice = '您已被移出房间';
+        break;
+    }
+    TUIMessageBox.alert({
+      title: '通知',
+      content: notice,
+    });
+  }
+
+// 在组件加载时监听 RoomParticipantEvent
+subscribeEvent(RoomParticipantEvent.onKickedFromRoom, onKickedFromRoom);
+// 在组件销毁时取消监听 RoomParticipantEvent
+unsubscribeEvent(RoomParticipantEvent.onKickedFromRoom, onKickedFromRoom);
+```
+
+## 进阶实现
+
+当前文档介绍的是快速创建并立即加入一个房间，适用于即时多人音视频互通场景。
+
+但在现实商业场景中，我们往往需要提前规划：设置房间的主题、预定特定的开始与结束时间、并邀请参与者。参与者可以在多人音视频房间开始前收到提醒，并准时接入。
+
+Atomicx 提供了完整的预约房间能力，包括：
+- **预定房间：**提前设定多人房间时间与参与人名单。
+
+- **预约列表**：查看并管理自己名下的所有待开始的多人房间。
+
+- **入会提醒：**支持开始前的自动提醒逻辑。
+
+
+   如果您需要实现上述更复杂的商业多人音视频房间管理逻辑，请参考：[预定房间](https://write.woa.com/document/197380092150673408)。
+
+
+## 常见问题
+
+### 房间内已经没有用户但房间未被解散，房间是否会一直存在？
+
+房间内连续 6 小时无用户进入时，后台将尝试回收房间。
+
+### 房间内已经没有用户但房间未被解散，是否会产生费用消耗？
+
+没有用户但是未被解散的房间仅占用套餐群组数，不产生分钟数消耗和额外费用消耗。
+
+### 一个用户可以同时加入多个房间吗？
+
+Atomicx 提供的 `useRoomState` 为单例接口，仅支持用户同时加入一个房间。若您需要支持一个用户同时加入多个房间，欢迎 [联系我们](https://cloud.tencent.com/document/product/647/19906) 提交反馈。
+
+### 最多支持多少人同时加入房间？
+
+房间内用户数量上限和您的套餐包相关，具体请查看 [TUIRoomKit 套餐包说明](https://cloud.tencent.com/document/product/647/104842#function)。
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-view.md
+
+本篇文档将指导您使用 Atomicx 的核心视图组件 `RoomView` 实现实时音视频房间的视频画面渲染。通过配置布局模板和利用组件插槽，您可以快速实现视频布局的切换与个性化定制。
+
+`RoomView` 是 Atomicx 中负责视频画面渲染的主容器组件。它会自动处理视频流的订阅、渲染和释放，您只需关注其布局配置和 UI 增强。
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/c09ab2a6e07f11f0a5a25254007c27c5.png)
+
+
+## 核心能力
+
+`RoomView` 作为多人音视频房间的核心视图容器，内置了多项企业级音视频处理能力：
+- **智能性能管理**：支持视口内视频流懒加载，并能根据流区域尺寸，远端流数量自动进行高低清流切换，显著降低系统能耗与带宽占用。
+
+- **精细化排序策略**：系统根据角色（主持人优先）与媒体状态（音视频开启优先）自动调整画面顺序。
+
+- **交互式演讲者模式**：支持双击锁定主画面，并在侧边栏或顶部栏布局中支持收起非核心区域，聚焦演示内容。
+
+- **沉浸式视觉设计**：所有视频窗口强制保持 `16:9` 的标准比例，并配合交互显示的工具栏，提供无干扰的多人音视频房间体验。
+
+
+## 可定制范围
+
+`RoomView` 仅聚焦于底层视频流的播放，而将视图层的所有“表现权”交给了开发者。使用 `RoomView` 您可以自由定义：
+- **布局切换**：根据业务场景（例如演讲模式或讨论模式）实时变换布局。
+
+- **视频挂件 UI：**包含昵称标签、音量动态波形、角色徽章等。
+
+
+## **前提条件**
+- 用户已经通过 [useLoginState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-LoginState) 完成登录鉴权，请参考 [接入概览](https://write.woa.com/document/197379797539790848)。
+
+- 用户已经通过 [useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) 进入房间，参考 [房间管理](https://write.woa.com/document/197379861957083136)。
+
+- 已在 `App.vue` 中配置全局 `UIKitProvider`，具体请参考 [配置 App.vue](https://cloud.tencent.com/document/product/647/81962#ce98ee15-b0cb-43af-81da-70f51231430e)。
+
+
+## 实现视频布局功能
+
+### 步骤1：引入并渲染基础布局
+
+在您的会议页面（例如 RoomLayoutView.vue）中引入 `RoomView` 及布局枚举 `RoomLayoutTemplate`。
+``` typescript
+<template>
+  <div class="room-container">
+    <RoomView />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { RoomView } from 'tuikit-atomicx-vue3/room';
+</script>
+
+<style lang="scss">
+.room-container {
+ width: 100%;
+ height: 100%;
+}
+</style>
+```
+
+> **注意：**
+> 
+
+> `RoomView` 会自动占满父容器的高度和宽度，请确保其父容器具备明确的尺寸。
+> 
+
+
+### 步骤2：切换布局模式
+
+您可以根据业务逻辑（例如点击切换按钮）动态更新 `RoomView` 属性 `layoutTemplate` 的值。
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >属性名</td>
+
+<td rowspan="1" colSpan="1" >类型</td>
+
+<td rowspan="1" colSpan="1" >默认值</td>
+
+<td rowspan="1" colSpan="1" >说明</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >`layoutTemplate`</td>
+
+<td rowspan="1" colSpan="1" >`RoomLayoutTemplate`</td>
+
+<td rowspan="1" colSpan="1" >`RoomLayoutTemplate.GridLayout`</td>
+
+<td rowspan="1" colSpan="1" >视频流布局</td>
+</tr>
+</table>
+
+
+`RoomLayoutTemplate` 可选值解析：
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >布局模式</td>
+
+<td rowspan="1" colSpan="1" >枚举值</td>
+
+<td rowspan="1" colSpan="1" >描述</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >宫格布局</td>
+
+<td rowspan="1" colSpan="1" >`RoomLayoutTemplate.GridLayout`</td>
+
+<td rowspan="1" colSpan="1" >默认布局。所有参会者画面均匀排列，参会者超出 9 人时支持翻页。</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >侧边栏布局</td>
+
+<td rowspan="1" colSpan="1" >`RoomLayoutTemplate.SidebarLayout`</td>
+
+<td rowspan="1" colSpan="1" >主画面突出显示，其余参会者画面以侧边栏的形式排列，适用于演讲、报告等场景。</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >顶部栏布局</td>
+
+<td rowspan="1" colSpan="1" >`RoomLayoutTemplate.CinemaLayout`</td>
+
+<td rowspan="1" colSpan="1" >主画面突出显示，其余参会者画面以顶部栏的形式排列，适用于演讲、报告等场景。<br></td>
+</tr>
+</table>
+
+``` typescript
+<template>
+  <!-- 添加布局切换按钮 -->
+  <div class="layout-switcher">
+    <button @click="switchLayout(RoomLayoutTemplate.GridLayout)">宫格</button>
+    <button @click="switchLayout(RoomLayoutTemplate.SidebarLayout)">侧边栏</button>
+    <button @click="switchLayout(RoomLayoutTemplate.CinemaLayout)">顶部栏</button>
+  </div>
+  <div class="room-container">
+    <RoomView :layoutTemplate="currentLayout" />
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { RoomView, RoomLayoutTemplate } from 'tuikit-atomicx-vue3/room';
+// 默认使用宫格布局
+const currentLayout = ref(RoomLayoutTemplate.GridLayout);
+
+// 切换布局
+const switchLayout = (layout: RoomLayoutTemplate) => {
+  currentLayout.value = layout;
+};
+</script>
+
+<style lang="scss">
+.room-container {
+ width: 100%;
+ height: 100%;
+}
+</style>
+```
+
+### 步骤3：实现视频流挂件信息
+
+您可以通过使用 `participantViewUI` 插槽，为视频画面定制 UI 显示内容（例如设置昵称，添加自定义图标）。
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/3728c9fce00311f09bba52540044a08e.png)
+
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >插槽参数</td>
+
+<td rowspan="1" colSpan="1" >类型</td>
+
+<td rowspan="1" colSpan="1" >说明</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >`participant`</td>
+
+<td rowspan="1" colSpan="1" >`RoomParticipant`</td>
+
+<td rowspan="1" colSpan="1" >当前视频流对应的参会者对象，包含用户的 `userId`、`userName`、`role` 等实时状态信息。</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >`streamType`</td>
+
+<td rowspan="1" colSpan="1" >`VideoStreamType`</td>
+
+<td rowspan="1" colSpan="1" >区分当前是摄像头流（Camera）还是屏幕分享流（Screen）</td>
+</tr>
+</table>
+
+
+#### 准备视觉资源
+
+为了提供完整的交互反馈，建议您提前准备以下图标：
+- 麦克风状态图标：区分开启、静音及动态音量条。
+
+- 身份标识图标：用于区分房主（Owner）、管理员（Admin）与普通成员。
+
+- 网络信号图标：展示实时的上/下行网络质量。
+   
+
+   > **特别说明：**
+   > 
+
+   > 我们在示例项目的 @tencentcloud/uikit-base-component-vue3 npm 包中提供了免版权的图标，您可以直接引入使用。
+   > 
+
+
+#### 实现代码示例
+1. 新增文件 `ParticipantViewUI.vue` 实现单个视频流挂件层 UI 渲染逻辑。
+
+   ``` typescript
+   <template>
+     <div class="stream-cover-container">
+       <div class="corner-user-info-container">
+         <div
+           v-if="showMasterIcon || showAdminIcon"
+           :class="{ 'master-icon': showMasterIcon, 'admin-icon': showAdminIcon }"
+         >
+           <IconUser />
+         </div>
+         <div v-if="!isScreenStream" :class="['audio-icon-container']">
+           <div class="audio-level-container">
+             <div class="audio-level" :style="audioLevelStyle" />
+           </div>
+           <IconMicOff v-if="!isMicrophoneOn" class="audio-icon" size="20" />
+           <IconMicOn v-else class="audio-icon" size="20" />
+         </div>
+         <span class="user-name" :title="displayName">
+           {{ displayName }}
+         </span>
+       </div>
+     </div>
+   </template>
+   
+   <script setup lang="ts">
+   import { computed, defineProps } from 'vue';
+   import {
+     IconUser,
+     IconMicOff,
+     IconMicOn,
+   } from '@tencentcloud/uikit-base-component-vue3';
+   import { RoomParticipantRole, DeviceStatus, VideoStreamType, useRoomParticipantState } from 'tuikit-atomicx-vue3/room';
+   import type { RoomParticipant } from 'tuikit-atomicx-vue3/room';
+   
+   interface Props {
+     participant: RoomParticipant;
+     streamType: VideoStreamType;
+   }
+   const props = defineProps<Props>();
+   
+   const { speakingUsers } = useRoomParticipantState();
+   const speakingAudioVolume = computed(() => speakingUsers.value.get(props.participant.userId) || 0);
+   const audioLevelStyle = computed(() => {
+     if (props.participant.microphoneStatus === DeviceStatus.Off || !speakingAudioVolume.value) {
+       return '';
+     }
+     return `height: ${speakingAudioVolume.value * 4}%`;
+   });
+   
+   const isMicrophoneOn = computed(() => props.participant.microphoneStatus === DeviceStatus.On);
+   const displayName = computed(() => props.participant.nameCard || props.participant.userName || props.participant.userId);
+   
+   const showMasterIcon = computed(() => {
+     const { role } = props.participant;
+     return role === RoomParticipantRole.Owner && props.streamType === VideoStreamType.Camera;
+   });
+   
+   const showAdminIcon = computed(() => {
+     const { role } = props.participant;
+     return (role === RoomParticipantRole.Admin && props.streamType === VideoStreamType.Camera);
+   });
+   </script>
+   
+   <style lang="scss" scoped>
+   .stream-cover-container {  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 100%;  border-radius: 12px;  pointer-events: none;  .corner-user-info-container {    position: absolute;    bottom: 8px;    left: 8px;    display: flex;    align-content: center;    align-items: center;    box-sizing: border-box;    min-width: 118px;    max-width: calc(100% - 24px);    padding-right: 10px;    height: 32px;    overflow: hidden;    font-size: 14px;    color: var(--uikit-color-white-1);    border-radius: 16px;    background-color: var(--uikit-color-black-5);    .master-icon,    .admin-icon {      display: flex;      flex-shrink: 0;      align-items: center;      justify-content: center;      width: 32px;      height: 32px;      margin-left: 0;      border-radius: 50%;      background-color: var(--button-color-primary-default);    }    .admin-icon {      background-color: var(--text-color-warning);    }    .audio-icon-container {      margin-left: 4px;      position: relative;      width: 20px;      height: 20px;      flex-shrink: 0;      min-width: 20px;      &:first-child {        margin-left: 8px;      }      .audio-level-container {        position: absolute;        top: 2px;        left: 6px;        display: flex;        flex-flow: column-reverse wrap;        justify-content: space-between;        width: 8px;        height: 12px;        overflow: hidden;        border-radius: 4px;        .audio-level {          width: 100%;          background-color: var(--text-color-success);          transition: height 0.2s;        }      }      .audio-icon {        position: absolute;        top: 0;        left: 0;      }    }    .user-name {      margin-left: 4px;      overflow: hidden;      text-overflow: ellipsis;      white-space: nowrap;      min-width: 0;    }    .screen-icon {      flex-shrink: 0;      min-width: 0;      color: var(--uikit-color-white-1);      margin-left: 4px;      margin-right: 2px;    }    .screen-info {      margin-left: 4px;      font-size: 12px;      color: var(--uikit-color-white-1);      flex-shrink: 0;      min-width: 0;    }  }}
+   </style>
+   ```
+2. 配置 `RoomView` 插槽，在页面中渲染视频流挂件内容。
+
+   ``` typescript
+   <template>
+     <div class="room-container">
+       <RoomView :layout-template="currentLayout">
+         <template #participantViewUI="{ participant, streamType }">
+           <ParticipantViewUI :participant="participant" :stream-type="streamType" />
+         </template>
+       </RoomView>
+     </div>
+   </template>
+   
+   <script setup lang="ts">
+   import { ref } from 'vue';
+   import { RoomView, RoomLayoutTemplate } from 'tuikit-atomicx-vue3/room';
+   // 引入新增的 ParticipantViewUI.vue 文件
+   import ParticipantViewUI from './ParticipantViewUI.vue';
+   
+   // 默认使用宫格布局
+   const currentLayout = ref(RoomLayoutTemplate.GridLayout);
+   </script>
+   ```
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useRoomParticipantState**</td>
+
+<td rowspan="1" colSpan="1" >包含房间内用户数据，用户管理接口。</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState)</td>
+</tr>
+</table>
+
+
+## 常见问题
+
+### **RoomView 是否包含屏幕分享流的渲染？**
+
+`RoomView` 内置远端屏幕分享流的渲染，对于本地屏幕共享您需要通过 `participantViewUI` 插槽完成本地屏幕分享的占位 UI。
+
+### RoomView 是否默认包含 UI 挂件？
+
+`RoomView` 内部无默认 UI 挂件，您可以参考 [RoomView 开源使用示例](https://github.com/Tencent-RTC/TUIRoomKit/tree/main/Web/example/atomicx-vite-vue3-ts/src/components/RoomLayoutView) 快速完成自定义 UI 挂件。
+
+### RoomView 提供的布局均不满足需求，是否可以提供更多的可选布局？
+
+`RoomView` 暂时支持宫格布局、侧边栏和顶部栏布局。如果您有定制需求请 [联系我们](https://cloud.tencent.com/document/product/647/19906)。
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/schedule-room.md
+
+预定房间功能允许用户提前规划会议时间、主题和入会密码。通过该功能，用户可以创建未来的会议计划，生成专属的会议号和入会链接，方便提前通知参会人员。
+
+## 适用场景
+- **企业定期会议：** 提前安排周会、月会，确保参会者提前收到通知。
+
+- **在线课堂排课：** 老师可以提前设置好一周的课程表。
+
+- **远程面试预约：** HR 为面试者和面试官预约特定的时间段。
+
+
+## 前提条件
+- **用户状态：** 用户已经通过 useLoginState 完成登录鉴权，参考 [接入概览](https://write.woa.com/document/197379797539790848)，处于**已登录**状态才能发起预定或查看预定列表。
+
+- **环境依赖：** 项目已引入 `tuikit-atomicx-vue3`。
+
+
+## 实现预定房间功能
+
+本功能提供两种集成方案，您可以根据业务需求选择最适合的一种：
+- **方案一（推荐）：** 使用 UI 组件快速集成。直接引入 `tuikit-atomicx-vue3` 提供的预定房间面板（[ScheduleRoomPanel](https://github.com/Tencent-RTC/TUIKit_Vue3/blob/main/packages/tuikit-atomicx-vue3/src/components/ScheduleRoomPanel/ScheduleRoomPanel.vue)）和预定房间列表组件（[ScheduledRoomList](https://github.com/Tencent-RTC/TUIKit_Vue3/blob/main/packages/tuikit-atomicx-vue3/src/components/ScheduleRoomPanel/ScheduledRoomList.vue)），开发成本最低。
+
+- **方案二（高级）：** 使用底层 API 自定义集成。基于 atomicx-core SDK API `useRoomState` 状态钩子自行实现 UI 和交互逻辑，灵活度最高。
+
+   ![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027160512/87d4918de48011f0ab0f5254005ef0f7.png)
+
+
+## 方案一：使用 UI 组件快速集成
+
+`tuikit-atomicx-vue3` 提供了两个核心组件：
+- [**ScheduleRoomPanel**](https://github.com/Tencent-RTC/TUIKit_Vue3/blob/main/packages/tuikit-atomicx-vue3/src/components/ScheduleRoomPanel/ScheduleRoomPanel.vue)**：**预定会议的配置面板，包含时间选择、成员邀请等功能。
+
+- [**ScheduledRoomList**](https://github.com/Tencent-RTC/TUIKit_Vue3/blob/main/packages/tuikit-atomicx-vue3/src/components/ScheduleRoomPanel/ScheduledRoomList.vue)**：**展示当前用户的预定会议列表，支持点击入会、修改和取消预定。
+
+
+### 步骤1：引入组件
+``` typescript
+import { ScheduleRoomPanel, ScheduledRoomList } from 'tuikit-atomicx-vue3/room';
+```
+
+### 步骤2：使用组件
+
+在您的页面中，可以直接组合使用这两个组件。
+``` typescript
+<template>
+  <UIKitProvider theme="light" language="zh-CN">
+    <div class="schedule-container">
+      <!-- 预定按钮，点击后显示预定弹窗 -->
+      <button @click="showSchedulePanel = true">
+        预定会议
+      </button>
+
+      <!-- 预定列表组件 -->
+      <div class="list-container">
+        <!-- 监听 join-room 事件处理入会逻辑 -->
+        <ScheduledRoomList @join-room="handleJoinRoom" />
+      </div>
+
+      <!-- 预定面板弹窗 -->
+      <!-- 建议将其包裹在 Dialog 或 Modal 组件中 -->
+      <div v-if="showSchedulePanel" class="modal-mask">
+        <div class="modal-content">
+          <ScheduleRoomPanel
+            @confirm="handleScheduleConfirm"
+            @cancel="showSchedulePanel = false"
+          />
+        </div>
+      </div>
+    </div>
+  </UIKitProvider>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { UIKitProvider } from '@tencentcloud/uikit-base-component-vue3';
+import { ScheduleRoomPanel, ScheduledRoomList, useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { joinRoom } = useRoomState();
+
+const showSchedulePanel = ref(false);
+
+const handleScheduleConfirm = (roomId: string, options: Record<string, any>) => {
+  console.log('预定成功', roomId, options);
+  showSchedulePanel.value = false;
+  // 可选：显示邀请弹窗或复制链接
+};
+
+const handleJoinRoom = async (roomInfo: { roomId: string }) => {
+  console.log('点击入会', roomInfo.roomId);
+  await joinRoom(roomInfo.roomId); 
+};
+</script>
+
+<style scoped>
+.schedule-container{padding:24px;max-width:1000px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif}button{background-color:#006eff;color:#fff;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;font-size:14px;font-weight:500;transition:background-color .2s;margin-bottom:24px}button:hover{background-color:#0056cc}.list-container{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.05);padding:16px}.modal-mask{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.4);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:1000}.modal-content{background-color:#fff;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.1);padding:24px;width:100%;max-width:480px}
+</style>
+```
+
+## 方案二：使用底层 API 自定义集成
+
+本节主要介绍如何通过 atomicx-core SDK API [useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) 接口来实现预定房间的核心逻辑。
+
+![预定房间时序图](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027160512/8dbc9bdedfae11f08304525400454e06.png)
+
+预定房间时序图
+
+
+### 步骤1：发起预定
+
+使用 [scheduleRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#scheduleRoom) 方法创建一个新的预定会议。您需要指定会议的开始时间、结束时间以及房间名称等信息。
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { scheduleRoom } = useRoomState();
+
+const createSchedule = async () => {
+  try {
+    // roomId 限制：字符串类型，必传参数，建议随机生成
+    const roomId = '123456'; 
+    
+    // 注意：时间戳单位必须为 **秒** (Date.getTime() 获取的是毫秒，需除以 1000)
+    const startTime = Math.floor(new Date().getTime() / 1000) + 3600; // 1小时后开始
+    const duration = 1800; // 30分钟
+
+    const options = {
+      roomName: '产品需求评审会',
+      scheduleStartTime: startTime, // 单位：秒
+      scheduleEndTime: startTime + duration, // 单位：秒
+      scheduleAttendees: ['userA', 'userB'], // 邀请参会成员ID列表
+      password: '123', // 可选：设置入会密码
+      isAllMicrophoneDisabled: false, // 可选：是否全体禁麦
+      isAllCameraDisabled: false,     // 可选：是否全体禁画
+    };
+
+    await scheduleRoom({ roomId, options });
+    console.log('预定成功', roomId);
+  } catch (error) {
+    console.error('预定失败', error);
+  }
+};
+```
+
+### 步骤2：获取预定列表
+
+使用 [getScheduledRoomList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#getScheduledRoomList) 方法拉取当前用户的预定会议列表。列表数据会响应式更新到 [scheduledRoomList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#scheduledRoomList) 状态中。
+``` typescript
+import { onMounted, watch } from 'vue';
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { 
+  scheduledRoomList,      // 响应式数据：预定会议列表
+  getScheduledRoomList    // 方法：拉取列表
+} = useRoomState();
+
+// 初始化加载列表
+onMounted(async () => {
+  // cursor 表示从哪里开始拉取数据，空字符串表示从头开始
+  // getScheduledRoomList 返回值包含新的 cursor
+  const { cursor } = await getScheduledRoomList({ cursor: '' }); 
+  // 如果 cursor 不为空，表示还有更多数据，可继续调用拉取
+});
+
+// 监听列表变化，实时更新 UI
+watch(scheduledRoomList, (list) => {
+  console.log('当前预定列表：', list);
+});
+```
+
+### 步骤3：修改预定
+
+如果需要调整已预定会议的时间或主题，可以使用 [updateScheduledRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#updateScheduledRoom) 方法。
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { updateScheduledRoom } = useRoomState();
+
+const updateRoom = async (roomId: string) => {
+  try {
+    const newStartTime = Math.floor(new Date().getTime() / 1000) + 7200; // 延后2小时
+    const options = {
+      roomName: '产品需求评审会（改期）',
+      scheduleStartTime: newStartTime,
+      scheduleEndTime: newStartTime + 1800,
+    };
+
+    await updateScheduledRoom({ roomId, options });
+    console.log('修改成功');
+  } catch (error) {
+    console.error('修改失败', error);
+  }
+};
+```
+
+### 步骤4：取消预定
+
+如果需要取消某个已预定的会议，可以调用 [cancelScheduledRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#cancelScheduledRoom) 方法。
+``` typescript
+import { useRoomState } from 'tuikit-atomicx-vue3/room';
+
+const { cancelScheduledRoom } = useRoomState();
+
+const cancelRoom = async (roomId: string) => {
+  try {
+    await cancelScheduledRoom({ roomId });
+    console.log('取消成功');
+    // 取消成功后，scheduledRoomList 会自动更新，无需手动重新拉取
+  } catch (error) {
+    console.error('取消失败', error);
+  }
+};
+```
+
+### 步骤5：处理入会密码
+
+对于设置了密码的预定会议，在调用 [joinRoom](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#joinRoom) 接口入会时，需要捕获鉴权失败的错误，并引导用户输入密码。
+``` typescript
+import { useRoomState, TUIErrorCode } from 'tuikit-atomicx-vue3/room';
+
+const { joinRoom } = useRoomState();
+
+const enterRoom = async (roomId: string, password?: string) => {
+  try {
+    await joinRoom({ roomId, password });
+  } catch (error: any) {
+    // 捕获特定错误码，TUIErrorCode.ERR_NEED_PASSWORD (-2010)
+    if (error.code === TUIErrorCode.ERR_NEED_PASSWORD) {
+      console.log('该房间需要密码，请引导用户输入');
+      // 1. 弹出密码输入框
+      // 2. 获取用户输入的密码 inputPassword
+      // 3. 重新调用 enterRoom(roomId, inputPassword)
+    } else if (error.code === TUIErrorCode.ERR_WRONG_PASSWORD) {
+      console.error('密码错误，请重新输入');
+    } else {
+      console.error('入会失败', error);
+    }
+  }
+};
+```
+
+### 步骤6：监听预定事件
+
+除了被动响应数据变化，您还可以监听特定的预定事件来处理业务逻辑，例如在会议即将开始时弹出提醒。
+``` typescript
+import { onMounted, onUnmounted } from 'vue';
+import { useRoomState, RoomEvent } from 'tuikit-atomicx-vue3/room';
+
+const { subscribeEvent, unsubscribeEvent } = useRoomState();
+
+// 会议即将开始通知（默认为开始前5分钟）
+const handleRoomStartingSoon = (info: { roomInfo: any }) => {
+  console.log('会议即将开始：', info.roomInfo.roomName);
+  // 可在此处实现 Toast 提醒或系统通知
+};
+
+// 会议被取消通知
+const handleRoomCancelled = (info: { roomInfo: any; operateUser: any }) => {
+  console.log(`会议 ${info.roomInfo.roomName} 已被 ${info.operateUser.userName} 取消`);
+};
+
+// 收到新的会议邀请通知
+const handleRoomAdded = (info: { roomInfo: any }) => {
+  console.log('收到新的会议邀请：', info.roomInfo.roomName);
+};
+
+// 被移出会议通知
+const handleRemovedFromRoom = (info: { roomInfo: any; operateUser: any }) => {
+  console.log(`您已被 ${info.operateUser.userName} 移出会议 ${info.roomInfo.roomName}`);
+};
+
+onMounted(() => {
+  // 注册事件监听
+  subscribeEvent(RoomEvent.onScheduledRoomStartingSoon, handleRoomStartingSoon);
+  subscribeEvent(RoomEvent.onScheduledRoomCancelled, handleRoomCancelled);
+  subscribeEvent(RoomEvent.onAddedToScheduledRoom, handleRoomAdded);
+  subscribeEvent(RoomEvent.onRemovedFromScheduledRoom, handleRemovedFromRoom);
+});
+
+onUnmounted(() => {
+  // 移除事件监听
+  unsubscribeEvent(RoomEvent.onScheduledRoomStartingSoon, handleRoomStartingSoon);
+  unsubscribeEvent(RoomEvent.onScheduledRoomCancelled, handleRoomCancelled);
+  unsubscribeEvent(RoomEvent.onAddedToScheduledRoom, handleRoomAdded);
+  unsubscribeEvent(RoomEvent.onRemovedFromScheduledRoom, handleRemovedFromRoom);
+});
+```
+
+## 开发注意事项
+1. **时间戳单位**：SDK 中涉及的所有时间参数（例如 `scheduleStartTime`、`scheduleEndTime`）单位均为 **秒**，而非 JavaScript 中 `Date` 对象默认的毫秒。在传参前请务必执行 `/ 1000` 操作。
+
+2. **样式引入**：使用 UI 组件时，务必引入 `UIKitProvider`，否则组件样式将无法正常渲染。
+
+3. **RoomID 建议**：虽然 `scheduleRoom` 允许前端传入 `roomId`，但为了避免 ID 冲突，建议该 ID 由业务后端生成并保证全局唯一。
+
+4. **分页处理**：预定列表可能会很长，`getScheduledRoomList` 接口支持分页拉取。请关注返回值中的 `cursor` 字段，若不为空，则说明还有更多数据。
+
+
+## 常见问题
+1. **预定成功但列表不更新？**
+
+
+   请确认已登录且首屏调用过 `getScheduledRoomList`（例如 `cursor: ''`）。返回的 `cursor` 不为空需继续拉取；列表是响应式的，更新后 UI 会同步。
+
+2. `joinRoom`** 参数怎么传？**
+
+
+   推荐统一使用对象入参：`joinRoom({ roomId, password })`，避免直接传字符串导致类型不匹配或后续扩展受限。
+
+3. **时间戳用毫秒导致预约失败？**
+
+
+   所有时间相关参数必须是秒，`Date.now()` 需 `/ 1000`，否则会返回时间冲突错误。
+
+4. **房间设置了密码如何处理？**
+
+
+   捕获 `TUIErrorCode.ERR_NEED_PASSWORD` / `ERR_WRONG_PASSWORD`，弹出密码输入框，重新 `joinRoom({ roomId, password })`；错误多次后可提示联系房主重置。
+
+5. **roomId 冲突或重复？**
+
+
+   建议由后端生成全局唯一 roomId；如果前端生成，请在调度前检查冲突并做好重试策略。
+
+6. **分页怎么继续拉取？**
+
+
+   `getScheduledRoomList` 返回的 `cursor` 不为空时继续传入；为空表示已拉完。
+
+
+## **示例项目**
+
+腾讯云在 GitHub 上提供了示例项目 [atomicx-vite-vue3-ts](https://github.com/Tencent-RTC/TUIRoomKit/tree/main/Web/example/atomicx-vite-vue3-ts) ，您可以参考以实现完整的 RoomKit 功能。
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useRoomState**</td>
+
+<td rowspan="1" colSpan="1" >房间状态管理（创建、加入、预约等）</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState)</td>
+</tr>
+</table>
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/screen-share.md
+
+本文档指导您如何使用 Atomicx 实现屏幕分享能力，并根据屏幕分享状态处理房间内交互。
+
+## 前提条件
+- 用户已经通过 [useLoginState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-LoginState) 完成登录鉴权，请参考 [接入概览](https://write.woa.com/document/197379797539790848)。
+
+- 用户已经通过 [useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) 进入房间，请参考 [房间管理](https://write.woa.com/document/197379861957083136)。
+
+- 若在 `iframe` 中集成，需在标签中声明权限。
+
+   ``` typescript
+   <iframe allow="display-capture; fullscreen;"></iframe>
+   ```
+
+## 实现屏幕分享功能
+
+### 步骤1：开始屏幕分享
+
+使用 [startScreenShare](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#startScreenShare) 方法开始屏幕分享。在 Web 环境下，您将看到浏览器的屏幕选择器，可以选择分享整个屏幕、应用窗口或浏览器标签页。
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/3233e9a6dbe911f0a38652540044a08e.png)
+
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { startScreenShare } = useDeviceState();
+
+// 尝试开始屏幕分享，并尝试分享系统音频
+const handleStartShare = async () => {
+  try {
+    await startScreenShare({ screenAudio: true });
+  } catch (error) {
+    // 处理用户拒绝或浏览器不支持等错误
+    console.error('开始屏幕分享失败:', error);
+  }
+};
+```
+
+### 步骤2：分享系统音频
+
+通过设置 `screenAudio: true` 参数，可以在屏幕分享时同时分享系统音频。这在分享视频、演示、音乐等包含音频内容时非常有用。
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/3e3557c9dbe911f0a4f35254007c27c5.png)
+
+``` typescript
+import { useDeviceState } from 'tuikit-atomicx-vue3/room';
+const { startScreenShare } = useDeviceState();
+
+// 开始屏幕分享并分享系统音频
+const handleStartScreenShareWithAudio = async () => {
+  try {
+    await startScreenShare({ screenAudio: true });
+    console.log('屏幕分享（含音频）已开始');
+  } catch (error) {
+    console.error('开始屏幕分享失败:', error);
+  }
+};
+```
+
+**浏览器兼容性说明：**
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >浏览器</td>
+
+<td rowspan="1" colSpan="1" >系统音频分享支持</td>
+
+<td rowspan="1" colSpan="1" >备注</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >Chrome 74+</td>
+
+<td rowspan="1" colSpan="1" >支持</td>
+
+<td rowspan="1" colSpan="1" >需要在选择器中勾选**分享音频**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >Edge 79+</td>
+
+<td rowspan="1" colSpan="1" >支持</td>
+
+<td rowspan="1" colSpan="1" >基于 Chromium，体验同 Chrome</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >Firefox</td>
+
+<td rowspan="1" colSpan="1" >不支持</td>
+
+<td rowspan="1" colSpan="1" >暂不支持系统音频分享</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >Safari</td>
+
+<td rowspan="1" colSpan="1" >不支持</td>
+
+<td rowspan="1" colSpan="1" >暂不支持系统音频分享</td>
+</tr>
+</table>
+
+
+> **注意：**
+> 
+
+> 系统音频分享需要浏览器支持，且用户在屏幕选择器中勾选**分享音频**选项。如果浏览器不支持系统音频分享，`screenAudio` 参数会被忽略，但屏幕画面分享功能不受影响，可以正常使用。
+> 
+
+
+### 步骤3：停止屏幕分享
+
+用户可以通过以下几种方式停止屏幕分享：
+1. **调用 **[**stopScreenShare()**](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#stopScreenShare)** 接口**
+
+   ``` typescript
+   import { useDeviceState, DeviceStatus } from 'tuikit-atomicx-vue3/room';
+   const { screenStatus, stopScreenShare } = useDeviceState();
+   
+   // 停止屏幕分享
+   const handleStopScreenShare = async () => {
+     try {
+       await stopScreenShare();
+       console.log('屏幕分享已停止');
+     } catch (error) {
+       console.error('停止屏幕分享失败:', error);
+     }
+   };
+   ```
+2. **点击浏览器原生的"停止分享"按钮**
+
+   ![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/471f5332dbe911f0809c525400454e06.png)
+
+3. **关闭被分享的窗口或标签页**
+   
+
+   > **说明：**
+   > 
+
+   > 用户使用任意一种方式停止屏幕分享时，Atomicx 都会自动更新 [screenStatus](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#screenStatus) 的状态。
+   > 
+
+
+### 步骤4：权限控制与状态监听
+
+#### **设置屏幕分享权限**
+
+您可以通过 [useRoomParticipantState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState) 提供的成员管理接口控制房间内的屏幕管理权限。
+``` typescript
+import { useRoomParticipantState, DeviceType } from 'tuikit-atomicx-vue3/room';
+const { disableAllDevices } = useRoomParticipantState();
+
+// 限制仅房主/管理员可以发起屏幕分享
+async function handleDisableAllScreen() {
+  await disableAllDevices({
+    deviceType: DeviceType.Screen,
+    disable: true,
+  });
+}
+
+// 允许房间内所有用户发起屏幕分享
+async function handleEnableAllScreen() {
+  await disableAllDevices({
+    deviceType: DeviceType.Screen,
+    disable: false,
+  });
+}
+```
+
+#### **自动布局切换**
+
+当检测到房间中有用户开始屏幕分享时，建议切换到侧边栏布局（`RoomLayoutTemplate.SidebarLayout`），将分享画面放大显示，其他参会者画面显示在侧边栏。
+``` typescript
+<template>
+  <div class="room-container">
+    <RoomView :layout-template="layoutTemplate">
+      <template #participantViewUI="{ participant, streamType }">
+        <ParticipantViewUI 
+          :participant="participant" 
+          :stream-type="streamType" 
+        />
+      </template>
+    </RoomView>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, watch } from 'vue';
+import { 
+  RoomView, 
+  RoomLayoutTemplate,
+  useRoomParticipantState
+} from 'tuikit-atomicx-vue3/room';
+
+const layoutTemplate = ref(RoomLayoutTemplate.GridLayout);
+const { participantWithScreen } = useRoomParticipantState();
+
+// 监听屏幕分享状态，自动切换布局
+watch(participantWithScreen, (participant) => {
+  if (participant) {
+    // 有人分享屏幕，切换到侧边栏布局
+    layoutTemplate.value = RoomLayoutTemplate.SidebarLayout;
+  } else {
+    // 没有人分享屏幕，切换回网格布局
+    layoutTemplate.value = RoomLayoutTemplate.GridLayout;
+  }
+});
+</script>
+```
+
+#### **限制仅一人屏幕分享**
+
+在房间中应该只允许一个人分享屏幕，当有人正在分享时，禁用其他人的分享按钮：
+``` typescript
+<script setup>
+import { computed } from 'vue';
+import { useRoomParticipantState } from 'tuikit-atomicx-vue3/room';
+
+const { participantWithScreen, localParticipant } = useRoomParticipantState();
+
+const isOtherSharing = computed(() => {
+  const sharer = participantWithScreen.value;
+  if (!sharer) return false;
+  return sharer.userId !== localParticipant.value?.userId;
+});
+
+const canStartScreenShare = computed(() => {
+  return !isOtherSharing.value;
+});
+</script>
+
+// 在模板中使用
+<template>
+  <button :disabled="!canStartScreenShare" @click="handleStartShare">
+    开始屏幕分享
+  </button>
+<template>
+```
+
+### 步骤5：处理屏幕分享错误
+
+当屏幕分享发生错误时，根据错误信息提示用户做出相应的操作。
+
+**代码示例：**
+``` typescript
+import { useDeviceState, DeviceError } from 'tuikit-atomicx-vue3/room';
+import { TUIToast } from '@tencentcloud/uikit-base-component-vue3';
+
+const { startScreenShare } = useDeviceState();
+
+try {
+  await startScreenShare();
+} catch (error: any) {
+  let message = '';
+  switch (error.name) {
+    case 'NotReadableError':
+      message = '系统禁止当前浏览器访问屏幕内容，请启用屏幕分享权限。';
+      break;
+    case 'NotAllowedError':
+      if (error.message.includes('Permission denied by system')) {
+        message = '系统禁止当前浏览器访问屏幕内容，请启用屏幕分享权限。';
+      } else {
+        message = '用户取消屏幕分享';
+      }
+      break;
+    default:
+      message = '屏幕分享过程中发生未知错误，请重试。';
+      break;
+  }
+  TUIToast.warning({
+    message,
+  });
+}
+```
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useDeviceState**</td>
+
+<td rowspan="1" colSpan="1" >包含音视频设备状态，音视频设备列表及操作接口。</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState)</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useRoomParticipantState**</td>
+
+<td rowspan="1" colSpan="1" >包含房间内用户数据，用户管理接口。</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState)</td>
+</tr>
+</table>
+
+
+## 常见问题
+
+### 为什么系统音频分享不生效？
+- **平台限制：**音频分享目前仅在 Chrome、Edge 等现代浏览器上支持。
+
+- **操作细节：**用户必须在浏览器弹出的屏幕选择器中，手动选择**分享音频**。
+
+- **系统限制：**部分操作系统不支持分享特定**应用窗口**的音频，建议优先选择**整个屏幕**或**浏览器标签页**。
+
+
+### 如何感知用户通过点击浏览器的“停止分享”按钮后结束屏幕分享？
+
+Atomicx 会自动监听浏览器的停止分享事件，并更新 `screenStatus` 状态。您只需要监听 `screenStatus` 的变化即可：
+``` typescript
+watch(screenStatus, (newStatus, oldStatus) => {
+  if (oldStatus === DeviceStatus.On && newStatus === DeviceStatus.Off) {
+    console.log('用户已停止屏幕分享。');
+  }
+});
+```
+
+### 移动端浏览器是否支持屏幕分享？
+
+仅桌面端浏览器支持屏幕分享，移动端浏览器不支持屏幕分享能力。
+
+### 为什么用户开启屏幕分享音频后，其他参会者看到该用户的麦克风状态显示为“开启”？
+
+这是符合预期的系统行为，原因如下：
+
+**技术原理：**`microphoneStatus`表示当前设备是否正在对外传输音频信号。当开启屏幕分享并**勾选采集系统音频**时，Atomicx SDK 会启动一条音频传输通道。由于远端接收到的是连续的音频数据流，系统无法区分音频来源是物理麦克风还是系统播放声音，因此会将音频采集状态统一标识为 `DeviceStatus.On`。
+
+**隐私说明：**请放心，这并不代表您的麦克风已经在采集说话声音。 麦克风声音是否在推送仅和麦克风控制接口（ `openLocalMicrophone` 和 `unmuteLocalMicrophone` ）有关，与屏幕分享音频采集是独立的两个通道。即使屏幕分享音频正在传输，只要未调用麦克风相关接口，您的麦克风声音不会被采集和推送。
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/virtual-background.md
+
+虚拟背景功能允许用户在视频通话或直播中，将真实背景替换为自定义图片或进行模糊处理。通过该功能，用户可以有效保护隐私，隐藏杂乱的背景，或者通过特定背景展示企业形象。
+
+## 适用场景
+- **远程办公/会议：** 在家中或公共场所参会时，使用背景虚化或虚拟背景隐藏真实环境，保护个人隐私。
+
+- **在线教育：** 教师使用统一的教学背景，营造专业的课堂氛围。
+
+- **品牌展示：** 企业员工在对外会议中使用带有公司 Logo 的背景图，提升品牌形象。
+
+- **趣味互动：** 社交场景下，用户更换有趣的背景图片，增加互动乐趣。
+
+
+## 前提条件
+- **用户状态：** 用户已经通过 useLoginState 完成登录鉴权，参考 [接入概览](https://write.woa.com/document/197379797539790848)，处于**已登录**状态。
+
+- **环境依赖：** 项目已引入 `tuikit-atomicx-vue3`。
+
+- **设备要求：** 需要有可用的摄像头设备，并且用户已授权摄像头访问权限。如果用户拒绝授权，虚拟背景功能将无法使用。
+
+- **资源依赖：** 虚拟背景功能依赖 AI 模型文件，为保证浏览器可以正常加载和运行这些文件，您需要完成以下步骤。
+
+  - 将 `node_modules/trtc-sdk-v5/assets` 目录发布至 CDN 或者静态资源服务器中，详情可见 [SDK 文档](https://web.sdk.qcloud.com/trtc/webrtc/doc/zh-cn/tutorial-36-advanced-virtual-background.html)。
+
+  - 若选择 [方案一：使用 UI 组件快速集成](https://write.woa.com/#1362aad9-2836-4931-b947-2f0f7836d284)，在使用 [VirtualBackgroundPanel](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/VirtualBackgroundPanel) 组件时，需要通过 props 传入 `assetsPath` 静态资源地址。
+
+  - 若选择 [方案二：使用底层 API 自定义集成](https://write.woa.com/#b941dd3e-0f43-48af-8aa4-8818ab74a80e)，在使用 [initVirtualBackground](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#initVirtualBackground) 接口时，需要传入 `assetsPath` 静态资源地址。
+
+
+## 实现虚拟背景功能
+
+本功能提供两种集成方案，您可以根据业务需求选择最适合的一种：
+- **方案一（推荐）：** 使用 UI 组件快速集成。直接引入 `tuikit-atomicx-vue3` 提供的虚拟背景面板组件（[VirtualBackgroundPanel](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/VirtualBackgroundPanel)），将其嵌入到您的应用弹窗或侧边栏中，开发成本最低。
+
+- **方案二（高级）：** 使用底层 API 自定义集成。基于 atomicx-core SDK API [useVirtualBackgroundState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-VirtualBackgroundState) 状态钩子自行实现 UI 和交互逻辑，灵活度最高。
+
+   ![虚拟背景](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027160512/1d881d05dee711f09143525400bf7822.png)
+
+   虚拟背景
+
+
+## 方案一：使用 UI 组件快速集成
+
+`tuikit-atomicx-vue3` 提供了核心设置面板组件：
+- [**VirtualBackgroundPanel**](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/VirtualBackgroundPanel)**：** 虚拟背景的配置面板，包含背景虚化、图片选择和预览功能。
+
+
+### 步骤1：引入组件
+``` typescript
+import { VirtualBackgroundPanel } from 'tuikit-atomicx-vue3/room';
+```
+
+### 步骤2：使用组件
+
+通常建议将 [VirtualBackgroundPanel](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/VirtualBackgroundPanel) 放置在一个弹窗（Dialog）或模态框（Modal）中，通过按钮点击触发显示。
+
+**以下示例展示了如何实现一个点击按钮弹出虚拟背景设置的完整交互：**
+
+> **注意：**
+> 
+> - 将 `node_modules/trtc-sdk-v5/assets` 目录发布至 CDN 或者静态资源服务器中，详情可见 [SDK 文档](https://web.sdk.qcloud.com/trtc/webrtc/doc/zh-cn/tutorial-36-advanced-virtual-background.html)。
+> - 在使用 [VirtualBackgroundPanel](https://github.com/Tencent-RTC/TUIKit_Vue3/tree/main/packages/tuikit-atomicx-vue3/src/components/VirtualBackgroundPanel) 组件时，通过 props 传入 `assetsPath` 静态资源地址。
+> - 所有 TUIKit 组件必须包裹在 [UIKitProvider](https://write.woa.com/document/197379797539790848) 内部，否则将无法获取上下文依赖，导致样式异常。
+
+``` typescript
+<template>
+  <UIKitProvider theme="light" language="zh-CN">
+    <div class="toolbar-container">
+      <!-- 1. 触发按钮 -->
+      <button @click="openSettings">设置虚拟背景</button>
+
+      <!-- 2. 设置弹窗 -->
+      <div v-if="showSettings" class="modal-mask">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span>虚拟背景</span>
+            <button @click="showSettings = false">关闭</button>
+          </div>
+          
+          <div class="modal-body">
+            <!-- 3. 引入面板组件 -->
+            <!-- @close 事件：当用户点击面板内的关闭按钮（如有）时触发 -->
+            <VirtualBackgroundPanel assetsPath='https://xxxx/assets' @close="showSettings = false" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </UIKitProvider>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { UIKitProvider } from '@tencentcloud/uikit-base-component-vue3';
+import { VirtualBackgroundPanel, useVirtualBackgroundState, useDeviceState } from 'tuikit-atomicx-vue3/room';
+
+const showSettings = ref(false);
+const { isSupported } = useVirtualBackgroundState();
+const { cameraList } = useDeviceState();
+
+const openSettings = () => {
+  // 1. 检查浏览器是否支持虚拟背景
+  if (!isSupported()) {
+    alert('当前浏览器不支持虚拟背景');
+    return;
+  }
+  
+  // 2. 检查是否有可用摄像头
+  if (cameraList.value.length === 0) {
+    alert('未检测到摄像头，无法设置虚拟背景');
+    return;
+  }
+
+  // 3. 打开设置面板
+  showSettings.value = true;
+};
+</script>
+
+<style scoped>
+.modal-mask{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;z-index:1000}.modal-content{background:white;width:600px;border-radius:8px;overflow:hidden}.modal-header{padding:16px;display:flex;justify-content:space-between;border-bottom:1px solid #eee}
+</style>
+```
+
+## 方案二：使用底层 API 自定义集成
+
+本节主要介绍如何通过 atomicx-core SDK API [**useVirtualBackgroundState**](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-VirtualBackgroundState) 接口来实现虚拟背景。
+
+### 步骤1：初始化与检测
+
+在调用虚拟背景功能前，必须先检查浏览器是否支持，并初始化资源路径。
+
+> **注意：**
+> 
+> - 将 node_modules/trtc-sdk-v5/assets 目录发布至 CDN 或者静态资源服务器中，详情可见 [SDK 文档](https://web.sdk.qcloud.com/trtc/webrtc/doc/zh-cn/tutorial-36-advanced-virtual-background.html)。
+> - 在使用 [initVirtualBackground](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#initVirtualBackground) 接口时，传入 assetsPath 静态资源地址。
+> - 虚拟背景功能依赖摄像头设备。可使用 [useDeviceState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-DeviceState) 检查设备状态。
+> - [cameraList](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#cameraList)：当前可用的摄像头设备列表，如果列表为空，说明未检测到摄像头或摄像头权限被禁止。
+
+``` typescript
+import { onMounted } from 'vue';
+import { useVirtualBackgroundState } from 'tuikit-atomicx-vue3/room';
+
+const { isSupported, initVirtualBackground } = useVirtualBackgroundState();
+
+onMounted(async () => {
+  // 1. 检查浏览器兼容性
+  if (!isSupported()) {
+    console.warn('当前浏览器不支持虚拟背景');
+    return;
+  }
+
+  // 2. 初始化资源
+  try {
+    await initVirtualBackground({ assetsPath: './assets' });
+    console.log('虚拟背景初始化完成');
+  } catch (error) {
+    console.error('初始化失败', error);
+  }
+});
+```
+
+### 步骤2：设置预览
+
+在用户确认应用背景前，通常需要先预览效果。使用 [setVirtualBackground](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#setVirtualBackground) 方法可以设置预览效果，此时不会应用到远端可见的视频流中。
+
+> **说明：**
+> 
+
+> 调用 `setVirtualBackground` 仅在本地预览画面生效，远端用户不会看到虚拟背景效果，需调用 `saveVirtualBackground` 后才会同步到远端视频流。
+> 
+
+``` typescript
+import { useVirtualBackgroundState } from 'tuikit-atomicx-vue3/room';
+
+const { setVirtualBackground } = useVirtualBackgroundState();
+
+// 开启背景虚化预览
+const previewBlur = async () => {
+  await setVirtualBackground({
+    enable: true,
+    type: 'blur',
+    level: 0.5 // 虚化程度，可选
+  });
+};
+
+// 开启背景图片预览
+const previewImage = async (imageUrl: string) => {
+  await setVirtualBackground({
+    enable: true,
+    type: 'image',
+    source: imageUrl // 图片 URL，支持本地或网络路径
+  });
+};
+```
+
+### 步骤3：保存并生效
+
+用户确认预览效果满意后，调用 [saveVirtualBackground](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#saveVirtualBackground) 将配置真正应用到当前的视频流中，此时远端用户将看到效果。
+``` typescript
+import { useVirtualBackgroundState } from 'tuikit-atomicx-vue3/room';
+
+const { saveVirtualBackground } = useVirtualBackgroundState();
+
+const confirmSettings = async () => {
+  try {
+    await saveVirtualBackground();
+    console.log('虚拟背景已生效');
+  } catch (error) {
+    console.error('保存失败', error);
+  }
+};
+```
+
+### 步骤4：关闭虚拟背景
+
+如果需要关闭虚拟背景，恢复真实背景，可以将其 `enable` 属性设为 `false` 并保存。
+``` typescript
+import { useVirtualBackgroundState } from 'tuikit-atomicx-vue3/room';
+
+const { setVirtualBackground, saveVirtualBackground } = useVirtualBackgroundState();
+
+const disableVirtualBackground = async () => {
+  // 1. 设置为关闭状态
+  await setVirtualBackground({ enable: false });
+  // 2. 保存生效
+  await saveVirtualBackground();
+};
+```
+
+## 开发注意事项
+- **资源文件路径：**`initVirtualBackground` 中的 `assetsPath` 必须正确指向 AI 模型文件的目录。如果路径错误，会导致虚拟背景无法启动。请查阅 [SDK 文档](https://web.sdk.qcloud.com/trtc/webrtc/doc/zh-cn/tutorial-36-advanced-virtual-background.html) 获取资源文件包。
+
+- **性能消耗：** 开启虚拟背景会占用较高的 CPU 和 GPU 资源。在低端设备上可能会导致视频掉帧或发热，建议在检测到设备性能不足时提示用户关闭。
+
+- **浏览器兼容性：** 并非所有浏览器都支持虚拟背景（依赖 WebAssembly 和 SIMD 等特性）。务必在 UI 渲染前调用 `isSupported()` 进行检查。
+
+- **图片格式：** 自定义背景图片建议使用 `jpg` 或 `png` 格式，且分辨率不宜过大（建议 1920x1080 以内），以免影响加载速度和内存占用。
+
+
+## 常见问题
+
+### **在 Chrome 中运行 Demo 发现画面颠倒且卡顿？**
+
+虚拟背景插件使用 GPU 进行加速，您需要在浏览器设置中找到使用硬件加速模式并启用。可以将 `chrome://settings/system` 复制到浏览器地址栏，并且打开硬件加速模式。
+
+### **为什么开启虚拟背景后，电脑发热严重或风扇高速运转？**
+
+虚拟背景功能需要实时识别人物轮廓并进行图像处理，对 CPU 和 GPU 算力有一定要求。建议在无需使用时关闭该功能，或在低端设备上避免开启。
+
+### **初始化失败，报错 "assets load failed" 怎么办？**
+
+请检查 `initVirtualBackground` 中传入的 `assetsPath` 是否正确。确保该路径下包含必要的 AI 模型文件，且能够通过浏览器直接访问。如果是跨域资源，需要配置 CORS 策略。
+
+### **虚拟背景支持移动端浏览器吗？**
+
+由于移动端浏览器的性能限制和 WebAssembly 支持情况差异较大，体验可能不如桌面端稳定。建议优先在桌面端 Chrome（推荐 94+）、Edge 等主流浏览器中使用，并做好兼容性判断 `isSupported()`。
+
+### **本地开发时无法使用虚拟背景？**
+
+WebRTC 相关功能通常要求在 HTTPS 环境下运行，或者是 `localhost` / `127.0.0.1`。请确保您的开发环境满足安全上下文要求。
+
+## **示例项目**
+
+腾讯云在 GitHub 上提供了示例项目 [atomicx-vite-vue3-ts](https://github.com/Tencent-RTC/TUIRoomKit/tree/main/Web/example/atomicx-vite-vue3-ts) ，您可以参考以实现完整的 RoomKit 功能。
+
+## API 文档
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >**State/Component**</td>
+
+<td rowspan="1" colSpan="1" >**功能描述**</td>
+
+<td rowspan="1" colSpan="1" >**API 文档**</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >**useVirtualBackgroundState**</td>
+
+<td rowspan="1" colSpan="1" >虚拟背景管理</td>
+
+<td rowspan="1" colSpan="1" >[API 文档](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-VirtualBackgroundState)</td>
+</tr>
+</table>
+
+---
+
+Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/integration.md
+
+TUIRoomKit 是腾讯云推出的音视频房间 UI 应用。本次升级引入了全新的原子化组件接入方案，开发者可以灵活组合这些原子化组件，以构建个性化的音视频房间界面。
+
+> **推荐使用更高效的 AI 集成助手**
+> 
+
+> 我们为您提供了全新的 AI 集成方式，只需要描述您的需求，即可自动生成集成代码，大幅提升开发效率。
+> 
+
+> [点击这里，立即体验 AI 集成](https://cloud.tencent.com/document/product/647/127873)
+> 
+
+
+本文档介绍如何将 TUIRoomKit 集成到现有的 Vue3 项目中，同时介绍如何对 TUIRoomKit 的样式、布局及功能进行自定义修改。
+- 桌面端多人会议
+
+   ![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/31045da2d73111f097cb5254005ef0f7.png)
+
+- H5 多人会议
+
+   ![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/1d8af2f1fd3611f0b5c0525400380f7d.png)
+
+
+## 前提条件
+
+### 开通服务
+
+请参考 [开通服务](https://cloud.tencent.com/document/product/647/104842) 领取 TUIRoomKit 体验版，并在 [应用管理](https://console.cloud.tencent.com/trtc) 页面获取以下信息:
+- **SDKAppID**: 应用标识，腾讯云基于 `SDKAppID` 完成计费统计。
+
+- **SDKSecretKey**: 应用密钥，用于初始化配置文件的密钥信息。
+
+
+### 环境准备
+- **Node.js**: ≥ 18.19.1 (推荐使用官方 LTS 版本)。
+
+- **Vue**: ≥ 3.4.21。
+
+- **现代浏览器**：支持 [WebRTC APIs](https://cloud.tencent.com/document/product/647/17249#.E6.94.AF.E6.8C.81.E7.9A.84.E5.B9.B3.E5.8F.B0) 的现代浏览器。
+
+- **设备**：摄像头、麦克风、扬声器。
+
+
+## 源码接入
+
+### 步骤1：安装项目依赖
+
+在您的业务项目中安装以下依赖。
+
+
+
+
+【npm】
+``` bash
+npm install @tencentcloud/roomkit-web-vue3@latest tuikit-atomicx-vue3 @tencentcloud/uikit-base-component-vue3 @tencentcloud/universal-api 
+```
+
+
+【pnpm】
+``` bash
+pnpm install @tencentcloud/roomkit-web-vue3@latest tuikit-atomicx-vue3 @tencentcloud/uikit-base-component-vue3 @tencentcloud/universal-api
+```
+
+
+【yarn】
+``` bash
+yarn add @tencentcloud/roomkit-web-vue3@latest tuikit-atomicx-vue3 @tencentcloud/uikit-base-component-vue3 @tencentcloud/universal-api
+```
+
+### 步骤2：**引用 **TUIRoomKit** 组件**
+``` typescript
+<template>
+  <ConferenceMainView v-if="isPC"></ConferenceMainView>
+  <ConferenceMainViewH5 v-else></ConferenceMainViewH5>
+</template>
+<script setup>
+import { ref } from 'vue';
+import { ConferenceMainView, ConferenceMainViewH5 } from '@tencentcloud/roomkit-web-vue3';
+import { getPlatform } from '@tencentcloud/universal-api';
+
+const isPC = ref(getPlatform() === 'pc');
+</script>
+
+```
+
+### 步骤3：配置 App.vue 文件
+
+将以下内容合并到项目的 App.vue 文件中，以配置全局 UI 样式和用户登录逻辑：
+- 配置全局 `UIKitProvider`：引入 `UIKitProvider` 组件，并设置默认主题和语言；
+
+- 用户登录： 在 `onMounted` 钩子中执行 `login` 和 `setSelfInfo`；
+
+   ``` typescript
+   <template>
+     <!-- Step 1: 配置全局 UIKitProvider -->
+     <UIKitProvider theme="light" language="zh-CN">
+       <!-- 您包含 ConferenceMainView 的业务组件 -->
+     </UIKitProvider>
+   </template>
+    
+   <script setup>
+   import { UIKitProvider } from '@tencentcloud/uikit-base-component-vue3';
+   import { onMounted } from 'vue';
+   import { useLoginState } from 'tuikit-atomicx-vue3/room';
+   
+   // step 2: 用户登陆
+   const { login, setSelfInfo } = useLoginState();
+   const SDKAppID = 0;    // 注意：请替换为实时音视频控制台获取的 SDKAppID 信息
+   const userId = '填入您真实的 userId';    // 注意：请替换为真实的 userId
+   const userName = '填入您真实的 userName';  // 注意：请替换为真实的 userName
+   const userSig = '填入您真实的 userSig';    // 注意：生成临时 userSig 请参考 https://cloud.tencent.com/document/product/647/17275#console
+   onMounted(async () => {
+     try {
+       await login({
+         userId,
+         userSig,
+         sdkAppId: SDKAppID,
+       });
+       await setSelfInfo({
+         userName,
+         avatarUrl: '',
+       });
+     } catch (error: any) {
+       console.error('Login failed:', error);
+     }
+   });
+   </script>
+   
+   <!-- Step 3: 配置全局样式（此样式用来覆盖脚手架搭建的新项目的默认样式，可按需配置）-->
+   <style>
+   html, body {
+     padding: 0 !important;
+     margin: 0 !important;
+   }
+   
+   #app {
+     width: 100% !important;
+     height: 100% !important;
+     padding: 0 !important;
+     margin: 0 !important;
+     max-width: 100% !important;
+     max-height: 100% !important;
+     text-align: left !important;
+     overflow: hidden;
+   }
+   </style>
+   ```
+
+### 步骤4：发起新的会议
+
+会议主持人可以通过调用 `conference.start`  接口来发起一场新的会议，其他参会者可以参见 [步骤6](https://write.woa.com/#061c9593-1112-4763-aff2-7289b3af0c41) 的描述，调用 `conference.join` 接口加入该会议。
+
+> **注意：**
+> 
+
+> 请参考步骤 3 在用户登录成功后调用 `conference.start `接口发起会议。
+> 
+
+``` typescript
+import { conference } from '@tencentcloud/roomkit-web-vue3';
+const startConference = async () => {  
+  await conference.start({
+    roomId: '123456',   // 请替换为您真实的 roomId
+    options: {
+      roomName: '我的临时会议',
+    },
+  });
+}
+startConference();
+```
+
+### 步骤5：进入已有会议
+
+参与者可以通过调用 `conference.join` 接口，填写对应的 roomId 参数，来加入由会议主持人在 [步骤4](https://write.woa.com/#7e2fb3c2-2b17-4445-985d-4af641ff66be) 中发起的会议。
+
+> **注意：**
+> 
+
+> 请参考步骤 3 在用户登录成功后调用 `conference.join `接口加入会议。
+> 
+
+``` typescript
+import { conference } from '@tencentcloud/roomkit-web-vue3';
+const joinConference = async () => {
+  await conference.join({
+    roomId: '123456',   // 请替换为您真实的 roomId
+  });
+}
+joinConference();
+```
+
+## 启动项目
+
+
+
+
+【npm】
+``` bash
+npm run dev
+```
+
+
+【pnpm】
+``` bash
+pnpm run dev
+```
+
+
+【yarn】
+``` bash
+yarn run dev
+```
+
+启动成功后，请在浏览器中打开调试地址（通常为 http://localhost:5173）访问应用。您将看到如下所示的会议界面：
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/7986ed3bfd3711f098c8525400370dda.png)
+
+
+## UI 快速自定义
+
+### 主题及语言
+
+通过配置 App.vue 中 `UIKitProvider` 的入参，修改主题及语言的默认值。
+<table>
+<tr>
+<td rowspan="1" colSpan="1" >UIKitProvider 参数</td>
+
+<td rowspan="1" colSpan="1" >可选值</td>
+
+<td rowspan="1" colSpan="1" >默认值</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >theme</td>
+
+<td rowspan="1" colSpan="1" >"light" \| "dark"</td>
+
+<td rowspan="1" colSpan="1" >"light"</td>
+</tr>
+
+<tr>
+<td rowspan="1" colSpan="1" >language</td>
+
+<td rowspan="1" colSpan="1" >"zh-CN" \| "en-US"</td>
+
+<td rowspan="1" colSpan="1" >"en-US"</td>
+</tr>
+</table>
+
+``` typescript
+<UIKitProvider theme="light" language="zh-CN">
+  <router-view />
+</UIKitProvider>
+ 
+<script setup lang="ts">
+import { UIKitProvider } from '@tencentcloud/uikit-base-component-vue3';
+```
+
+### 配置用户联系人列表
+
+TUIRoomKit 预定会议用户选择列表和会中呼叫用户选择列表默认展示用户关系链列表，批量导入用户关系链请参考以下步骤：
+
+步骤1：使用 [账号管理 > 导入多个账号](https://cloud.tencent.com/document/product/269/4919) REST API 接口批量导入用户账号；
+
+步骤2：使用 [好友管理 > 导入好友](https://cloud.tencent.com/document/product/269/8301) REST API 接口批量导入用户关系链；
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/c8e55003fd8611f08080525400074c32.png)
+
+
+## TUIRoomKit 界面定制
+
+### 源码导出
+
+
+
+【Vue3】
+1. 执行源码导出脚本，默认拷贝路径为 `./src/components/RoomKit`
+
+``` bash
+  node ./node_modules/@tencentcloud/roomkit-web-vue3/scripts/eject.js
+```
+2. 根据脚本提示确认是否要将 TUIRoomKit 源码拷贝到 `./src/components/RoomKit` 目录。如您需要自定义拷贝目录请输入 'y', 否则输入'n'。
+
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/05a672b6fd8711f0a1eb52540073fd3b.png)
+
+3. 源码导出后，在您指定的项目路径中会新增 TUIRoomKit 源码。此时，您需要手动将 ConferenceMainView 组件，ConferenceMainViewH5 组件的 conference 对象的引用从 npm 包地址更改为 TUIRoom 源码的相对路径地址。
+
+``` typescript
+- import { ConferenceMainView, conference } from '@tencentcloud/roomkit-web-vue3';
+// 替换引用路径为 TUIRoomKit 源码的真实路径
++ import { ConferenceMainView, ConferenceMainViewH5, conference } from './components/RoomKit/index.ts';
+```
+4. 配置 ESLint 校验
+
+
+如果您导出 TUIRoomKit 源码后运行项目出现 ESLint 报错，您可以在`.eslintignore`文件中添加 RoomKit 文件夹忽略 ESLint 检测。
+``` javascript
+// 请替换为 TUIRoomKit 源码真实路径
+src/components/RoomKit
+```
+
+### 自定义房间流布局
+
+TUIRoomKit 目前支持九宫格、侧边栏及顶部栏三种流布局，默认为九宫格布局。
+``` typescript
+// RoomKit/views/ConferenceMainView/index.vue
+import { RoomLayoutTemplate } from 'tuikit-atomicx-vue3/room';
+// 修改默认视频流布局为侧边栏布局
+const participantViewLayout = ref(RoomLayoutTemplate.SidebarLayout);
+function handleLayoutUpdate(layout: RoomLayoutTemplate) {
+  participantViewLayout.value = layout;
+}
+
+// 修改默认视频流布局为顶部栏布局
+const participantViewLayout = ref(RoomLayoutTemplate.CinemaLayout);
+function handleLayoutUpdate(layout: RoomLayoutTemplate) {
+  participantViewLayout.value = layout;
+}
+```
+
+### 自定义视频流挂件
+
+TUIRoomKit 默认视频流挂件如图所示，如需自定义视频流挂件请修改 `RoomKit/components/RoomLayoutView/ParticipantViewUI/ParticipantViewUI.vue` 组件。
+
+![](https://write-document-release-1258344699.cos.ap-guangzhou.tencentcos.cn/100027337918/2fab38f2d73111f0929b525400bf7822.png)
+
+
+## 常见问题
+
+#### **TUIRoomKit 在本地开发时使用正常，但部署到线上环境后无法**正常采集用户的摄像头或麦克风设备**？**
+- **原因分析：**浏览器出于安全和隐私保护的考虑，对音视频设备（麦克风、摄像头）的采集有着严格限制。只有在安全环境下，采集操作才会被允许。安全环境协议包括：https://、localhost、file:// 等。HTTP 协议被视为不安全，浏览器会默认禁止访问媒体设备。
+
+- **解决方案：**若您在本地（localhost）测试一切正常，但部署后出现采集失败，请立即检查您的网页是否部署在 HTTP 协议上。您必须使用 HTTPS 协议部署您的网页，并确保具备有效的安全证书。
+
+- **相关资源：**更多关于 URL 域名及协议的限制详情，请参见 [URL 域名及协议限制说明](https://cloud.tencent.com/document/product/647/17249#URL-.E5.9F.9F.E5.90.8D.E5.8D.8F.E8.AE.AE.E9.99.90.E5.88.B6)。
+
+
+#### **TUIRoomKit 是否支持使用 iframe 集成?**
+
+支持。使用 iframe 集成 TUIRoomKit 时, 需要在 iframe 标签中配置 allow 属性以授予必要的浏览器权限（麦克风、摄像头、屏幕共享、全屏等），示例如下: 
+``` typescript
+// 开启麦克风、摄像头、屏幕分享、全屏权限
+<iframe allow="microphone; camera; display-capture; display; fullscreen;">
+```
+
+#### TUIRoomKit 是否支持设置内网代理？
+
+支持。请参考如下指引设置内网代理参数。更多内网代理信息请参考 [应对防火墙受限](https://web.sdk.qcloud.com/trtc/webrtc/doc/zh-cn/tutorial-34-advanced-proxy.html)。
+``` typescript
+// 请在进房前设置内网代理参数
+import TUIRoomEngine from '@tencentcloud/tuiroom-engine-js';
+import { useRoomEngine } from 'tuikit-atomicx-vue3/room';
+const { roomEngine } = useRoomEngine();
+
+TUIRoomEngine.once('ready', () => {
+  const trtcCloud = roomEngine.instance?.getTRTCCloud();
+  trtcCloud.callExperimentalAPI(JSON.stringify({
+    api: 'setNetworkProxy',
+    params: {
+      websocketProxy: "wss://proxy.example.com/ws/",
+      turnServer: [{
+        url: '14.3.3.3:3478',
+        username: 'turn',
+        credential: 'turn',
+      }],
+      iceTransportPolicy: 'relay',
+    },
+  }));
+});
+```
+
+## 联系我们
+
+如果您在接入或使用过程有任何疑问或者建议，欢迎 [联系我们](https://cloud.tencent.com/document/product/269/59590) 提交反馈。
