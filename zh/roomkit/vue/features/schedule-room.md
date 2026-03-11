@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 预定房间功能允许用户提前规划会议时间、主题和入会密码。通过该功能，用户可以创建未来的会议计划，生成专属的会议号和入会链接，方便提前通知参会人员。

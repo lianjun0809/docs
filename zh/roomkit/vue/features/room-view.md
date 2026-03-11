@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 本篇文档将指导您使用 Atomicx 的核心视图组件 `RoomView` 实现实时音视频房间的视频画面渲染。通过配置布局模板和利用组件插槽，您可以快速实现视频布局的切换与个性化定制。

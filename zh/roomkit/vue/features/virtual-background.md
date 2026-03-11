@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 虚拟背景功能允许用户在视频通话或直播中，将真实背景替换为自定义图片或进行模糊处理。通过该功能，用户可以有效保护隐私，隐藏杂乱的背景，或者通过特定背景展示企业形象。

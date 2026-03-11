@@ -2,225 +2,225 @@
 
 ## Docs
 
-- [准备账号与凭证（必做）](https://raw.githubusercontent.com/lianjun0809/docs/zh/quick-start.md): 你需要先在腾讯云控制台创建应用，并获取以下凭证：
-- [MCP 功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/mcp.md): - **智能集成**：覆盖 Chat/Call/Live/Room UIKit 和 底层 SDK（WebRTC 和 Native RTC） 集成工具。
-- [前置条件](https://raw.githubusercontent.com/lianjun0809/docs/zh/skills.md): 使用 Skills 前，请先完成 MCP Server 配置，MCP 配置说明。
-- [TUIKit 源码是否支持 Androidx？](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/android/faq.md): TUIKit 最新源码已经支持 Androidx。
-- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/android/features/theme.md): **模式切换**
-- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/android/integration.md): TUIKit Compose 提供了一套完整的即时通信 UI 组件，向下依赖 AtomicXCore 数据层，向上可构建各种功能性 Page。
-- [初始化登录接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/android_sdk/client-api.md): 初始化并成功登录，是正常使用腾讯云 IM 服务的前提。
-- [购买计费相关](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/common/product.md): - 即时通信 IM 如何计费？
-- [服务端错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/common/server_error_code.md): **原因：** userSig 已过期。
-- [通用问题知识库](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/common/server.md): **A：** 服务端生成 userSig 的具体方式可参考： https://cloud.tencent.com/document/product/269/32688， 文档中提供了多种服务端语言的解决方案。
-- [初始化登录接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/flutter_sdk/client-api.md): 初始化并成功登录，是正常使用腾讯云 IM 服务的前提。
-- [Flutter SDK 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/flutter_sdk/faq.md): **A：** SDK 支持消息回应能力，您需要购买旗舰版或企业版套餐，具体 API 有3个：
-- [初始化登录接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/ios_sdk/client-api.md): 初始化并成功登录，是正常使用腾讯云 IM 服务的前提。
-- [Web JS SDK 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/web_sdk/error_code.md): **原因：** 用户未登录。
-- [Web js SDK 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/faq/web_sdk/faq.md): **SDK 版本说明：**
-- [Flutter TUIKit 集成与常见问题解决方案](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/flutter/faq.md): **A:** flutter chat 中消息免打扰相关的API:
-- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/flutter/features/theme.md): **模式切换**
-- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/flutter/integration.md): TUIKit 提供了一套完整的即时通信 UI 组件，向下依赖 AtomicXCore 数据层，向上可构建各种功能性 Page。
-- [TUIKit 源码是否支持 Androidx？](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/ios/faq.md): TUIKit 最新源码已经支持 Androidx。
-- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/ios/features/theme.md): **模式切换**
-- [开发环境要求](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/ios/integration.md): - Xcode 10 及以上
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/chat-header.md): ChatHeader 聊天头部组件是聊天界面的顶部导航组件，用于显示当前会话的基本信息。能够展示会话标题、头像、在线状态、输入状态提示等信息。组件采用容器组件模式，提供了灵活的插槽机制用于自定义左右两侧的操作区域。
-- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/chat-setting.md): ChatSetting 是一个聊天设置组件，它能根据当前激活的**会话类型**（单聊或群聊）自动渲染对应的设置界面。该组件通过统一的入口，无缝集成了 C2C（单聊） 和群聊两种模式的设置功能，为用户提供了流畅且一致的操作体验。
-- [atomicx 组件库清单与组件的适用场景与注意事项](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/component-list.md): 共 25 个组件:
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/contact-list.md): ContactList 是一个高度可配置的联系人列表组件。该组件支持好友列表、群组列表、黑名单和申请管理，提供分组折叠、搜索过滤、自定义渲染等核心功能，适用于即时通讯、社交应用等场景的联系人管理界面。
-- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/conversation-actions.md): 当在 `ConversationList` 使用 `ConversationActions` 时，您可以通过 `ConversationList` 顶层 `actionsConfig` 参数直接进行自定义，`actionsConfig` 支持对于默认会话操作功能开关、事件响应、新增自定义操作项、基础
-- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/conversation-list.md): `ConversationList` 组件主要负责会话列表功能，它包含了 Header 部分和 List 部分，具有搜索会话、创建会话、会话置顶、会话删除等功能。
-- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/conversation-preview.md): 您可以使用 `ConversationList` 的 `Preview` 属性来自定义会话列表中每个单独会话的预览项，如果没有指定 `Preview` 属性，系统将自动采用 `ConversationPreviewUI` 组件作为默认值。
-- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/conversation-search.md): import {
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/message-input.md): MessageInput 是一个功能完整的消息输入组件，提供了文本编辑、表情选择、文件附件、发送按钮等核心聊天输入功能。该组件支持丰富的自定义选项，包括输入行为配置、工具栏定制、组件替换和插槽扩展，能够满足不同聊天场景的个性化需求。
-- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/message-list.md): MessageList 是一个功能强大的聊天消息列表组件，提供了完整的消息展示、交互和自定义功能。该组件支持消息分组、已读回执、消息操作、滚动控制等核心聊天功能，同时提供了丰富的自定义选项来满足不同的业务需求。
-- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/components/search.md): Search 是一个功能完整的搜索解决方案，包含了搜索框、搜索结果展示、高级搜索等功能的完整组件集合。适用于即时通讯、在线会议、在线教育等场景的用户、群组、消息搜索。
-- [React TUIKit 集成与常见问题解决方案](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/faq.md): **A:** TUIKit 是基于 Web SDK 开发的，您需要安装 `@tencentcloud/chat-uikit-react`
-- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/react/integration.md): chat-uikit-react 主要分为 ConversationList、Chat、MessageList、ChatHeader、MessageInput、ChatSetting、Search、Contact 等核心 UI 组件，每个 UI 组件负责展示不同的内容。
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/chat-header.md): ChatHeader 聊天头部组件是聊天界面的顶部导航组件，用于显示当前会话的基本信息。能够展示会话标题、头像、在线状态、输入状态提示等信息。组件采用容器组件模式，提供了灵活的插槽机制用于自定义左右两侧的操作区域。
-- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/chat-setting.md): ChatSetting 是一个智能的聊天设置组件，它能够根据当前激活的会话类型自动渲染相应的设置界面。该组件内部集成了 C2C（1 对 1）聊天设置和群聊设置两种模式，为用户提供了统一的聊天设置入口。
-- [atomicx 组件库清单与组件的适用场景与注意事项](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/component-list.md): 共 25 个组件:
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/contact-list.md): ContactList 是一个高度可配置的联系人列表组件。该组件支持好友列表、群组列表、黑名单和申请管理，提供分组折叠、搜索过滤、自定义渲染等核心功能，适用于即时通讯、社交应用等场景的联系人管理界面。
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/conversation-actions.md): ConversationActions 组件负责单条会话的操作，默认支持删除、置顶、免打扰和标记未读/已读。
-- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/conversation-list.md): ConversationList 组件负责渲染会话列表，包含搜索、创建、置顶和删除等功能。
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/conversation-preview.md): ConversationPreview 组件用于预览会话列表中的单个会话。它负责显示会话信息、未读数，并提供会话操作功能。
-- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/conversation-search.md): <template>
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/message-input.md): MessageInput 是一个功能完整的消息输入组件，专为 Vue3 应用设计，提供了文本编辑、表情选择、文件附件、发送按钮等核心聊天输入功能。该组件支持丰富的自定义选项，包括输入行为配置、工具栏定制、组件替换和插槽扩展，能够满足不同聊天场景的个性化需求。
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/message-list.md): MessageList 组件是聊天界面的核心组件，负责展示消息列表并提供丰富的交互功能。它支持消息聚合、自动滚动、历史消息加载、已读回执等高级特性，适用于构建高度可定制的聊天界面。组件内部处理滚动行为、消息加载逻辑和消息分组展示，为用户提供流畅的消息浏览体验。
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/components/search.md): Search 是一个功能完整的搜索解决方案，包含了搜索框、搜索结果展示、高级搜索等功能的完整组件集合。适用于即时通讯、在线会议、在线教育等场景的用户、群组、消息搜索。
-- [Vue TUIKit 集成与常见问题解决方案](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/faq.md): **A:** TUIKit 是基于 Web SDK 开发的，您需要安装 `@tencentcloud/chat-uikit-vue3`。
-- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/chatuikit/vue/integration.md): chat-uikit-vue3 主要分为 ConversationList、Chat、MessageList、ChatHeader、MessageInput、ChatSetting、Search、Contact 等核心 UI 组件，每个 UI 组件负责展示不同的内容。
-- [LiveKit 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/faq/common/error_code.md): **原因：** 可能原因如下：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-base-beauty.md): - **磨皮效果调节**：设置磨皮强度 (0-9)。
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-co-guest-interaction.md): `CoGuestStore` 支持以下两种最主流的连麦场景：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-host-interaction.md): 一次完整的“主播连线 PK”通常包含三个核心阶段，其整体流程如下：
-- [**核心功能**](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-integration.md): **LiveCoreView** 是一个专为直播场景设计的轻量级 `View` 组件，是您构建直播场景的核心，它封装了所有复杂的底层直播技术（如推拉流、连麦、音视频渲染）。您可以将 LiveCoreView 作为直播画面的"画布"，专注于上层 UI 与交互的开发。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/android/live-live-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-base-beauty.md): - **磨皮效果调节**：设置磨皮强度 (0-9)。
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-co-guest-interaction.md): `CoGuestStore` 支持以下两种最主流的连麦场景：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-host-interaction.md): 一次完整的"主播连线 PK"通常包含三个核心阶段，其整体流程如下：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-integration.md): **LiveCoreWidget** 是一个专为直播场景设计的轻量级 Widget 组件，是您构建直播场景的核心，它封装了所有复杂的底层直播技术（例如推拉流、连麦、音视频渲染）。您可以将 LiveCoreWidget 作为直播画面的"画布"，专注于上层 UI 与交互的开发。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/flutter/live-live-list.md): - **获取直播列表**：获取当前所有公开的直播间列表，支持分页加载。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-base-beauty.md): - **磨皮效果调节**：设置磨皮强度 (0-9)。
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-co-guest-interaction.md): `CoGuestStore` 支持以下两种最主流的连麦场景：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-host-interaction.md): 一次完整的“主播连线 PK”通常包含三个核心阶段，其整体流程如下：
-- [**核心功能**](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-integration.md): **LiveCoreView** 是一个专为直播场景设计的轻量级 `UIView` 组件，是您构建直播场景的核心，它封装了所有复杂的底层直播技术（例如推拉流、连麦、音视频渲染）。您可以将 LiveCoreView 作为直播画面的“画布”，专注于上层 UI 与交互的开发。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/ios/live-live-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
-- [组件构成](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/components/barrage.md): <table>
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/components/co-guest-panel.md): <table>
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/components/live-audience-list.md): <table>
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/components/live-scene-panel.md): <table>
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/components/live-view.md): <table>
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/components/stream-mixer.md): <table>
-- [faq](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/faq.md)
-- [概述](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/live-list-integration.md): 本文对 TUILiveKit Demo 中的**直播列表页面**进行了详细的介绍，您可以在已有项目中直接参考本文档集成我们开发好的直播列表页面，也可以根据您的需求按照文档中的内容对页面的样式，布局以及功能项进行深度的定制。
-- [功能展示](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/live-player-desk-integration.md): 观看页面提供默认行为和风格，但如果默认行为和样式不能完全满足您的需求，您也可以对 UI 进行自定义。图中显示的数字与特定功能列表中的类别相对应。其中主要包含直播**信息展示、视频直播区域、在线观众、音视频操作、直播时长、画面分辨率切换、全屏功能、聊天互动、消息列表等。**
-- [功能展示](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/live-player-h5-integration.md): 观看页面提供默认行为和风格，但如果默认行为和样式不能完全满足您的需求，您也可以对 UI 进行自定义。图中显示的数字与特定功能列表中的类别相对应。其中主要包含直播**信息展示、视频直播区域、在线观众、音视频操作、直播时长、画面分辨率切换、全屏功能、聊天互动、消息列表等。**
-- [功能展示](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/live-pusher-integration.md): - **横屏开播**
-- [LoginState](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/live/vue/states/live-state.md): 用户身份认证与登录管理模块
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-co-guest-interaction.md): `CoGuestStore`和`LiveSeatStore`支持以下几个主流的场景：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
-- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-host-interaction.md): 在开始集成之前，我们先通过下表了解一下跨房连线与 PK 相关的几个核心概念。
-- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-integration.md): 在开始集成之前，我们先通过下表了解一下 `LiveSeatStore` 相关的几个核心概念：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/android/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/flutter/voice-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/flutter/voice-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/flutter/voice-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/flutter/voice-co-guest-interaction.md): `CoGuestStore` 和 `LiveSeatStore` 支持以下几个主流的场景：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/flutter/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
-- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/flutter/voice-integration.md): 在开始集成之前，请先通过下表了解一下 `LiveSeatStore` 相关的几个核心概念：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/flutter/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-co-guest-interaction.md): `CoGuestStore`和`LiveSeatStore`支持以下几个主流的场景：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
-- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-host-interaction.md): <table>
-- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-integration.md): 在开始集成之前，我们先通过下表了解一下 `LiveSeatStore` 相关的几个核心概念：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/ios/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/uni-app/voice-audience-list.md): - **实时观众列表**：获取并展示当前在语聊房内的所有观众信息。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/uni-app/voice-audio-effect.md): 通过组合 `AudioEffectState` 和 `DeviceState`，您将能实现以下核心功能：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/uni-app/voice-barrage.md): `BarrageState` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
-- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/uni-app/voice-co-guest-interaction.md): `CoGuestState`和 `LiveSeatState`支持以下几个主流的场景：
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/uni-app/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
-- [准备工作](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/uni-app/voice-integration.md): 请参见 开通服务，获取体验版或付费版 SDK。
-- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/zh/livekit/voice/uni-app/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
-- [腾讯云直播SDK V2TXLiveCode 错误码文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/android/V2TXLiveCode_api_android.md): `V2TXLiveCode.java` 是腾讯云直播SDK Android平台的错误码和警告码定义文件，包含了推流器、播放器、混流、录制等功能的错误码分类和详细说明。
-- [腾讯云直播SDK V2TXLiveDef 类型定义文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/android/V2TXLiveDef_api_android.md): `V2TXLiveDef` 是腾讯云直播SDK的核心类型定义文件，包含了直播推流和播放相关的所有枚举、常量和数据结构定义。
-- [腾讯云直播SDK V2TXLivePlayer 播放接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/android/V2TXLivePlayer_api_android.md): `V2TXLivePlayer` 是腾讯云直播播放器的核心接口类，负责从指定的直播流地址拉取音视频数据，并进行解码和本地渲染播放。
-- [腾讯云直播SDK V2TXLivePlayerObserver 直播播放器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/android/V2TXLivePlayerObserver_api_android.md): `V2TXLivePlayerObserver` 是腾讯云直播SDK的播放器回调接口，用于接收播放器的各种状态通知和事件回调。通过实现该接口的回调方法，开发者可以监控播放器的运行状态、处理播放事件、获取统计数据等。
-- [腾讯云直播SDK V2TXLivePremier 接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/android/V2TXLivePremier_api_android.md): `V2TXLivePremier` 是腾讯云直播 SDK 的高级接口类，提供 SDK 全局配置和管理功能。
-- [腾讯云直播SDK V2TXLivePusher 推流接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/android/V2TXLivePusher_api_android.md): `V2TXLivePusher` 是腾讯云直播SDK的核心推流器接口类，负责将本地的音频和视频画面进行编码，并推送到指定的推流地址，支持任意的推流服务端。
-- [腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/android/V2TXLivePusherObserver_api_android.md): `V2TXLivePusherObserver` 是腾讯云直播SDK的推流器回调接口，用于接收推流器的各种状态通知和事件回调。通过实现该接口的回调方法，开发者可以监控推流器的运行状态、处理推流事件、获取统计数据等。
-- [腾讯云直播SDK V2TXLiveCode 错误码文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/flutter/V2TXLiveCode_api_flutter.md): `V2TXLiveCode` 是腾讯云直播SDK Flutter平台的错误码和警告码定义文件，包含了推流器、播放器、混流、录制等功能的错误码分类和详细说明。
-- [腾讯云直播SDK V2TXLiveDef 类型定义文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/flutter/V2TXLiveDef_api_flutter.md): `V2TXLiveDef` 是腾讯云直播SDK的核心类型定义文件，包含了直播推流和播放相关的所有枚举、常量和数据结构定义。
-- [腾讯云直播SDK V2TXLivePlayer 播放接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/flutter/V2TXLivePlayer_api_flutter.md): `V2TXLivePlayer` 是腾讯云直播播放器的核心接口类，负责从指定的直播流地址拉取音视频数据，并进行解码和本地渲染播放。
-- [腾讯云直播SDK V2TXLivePlayerObserver 播放器回调接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/flutter/V2TXLivePlayerObserver_api_flutter.md): `V2TXLivePlayerObserver` 是腾讯云直播SDK的播放器回调接口，用于接收播放器的各种状态通知和事件回调。通过实现该接口的回调方法，开发者可以监控播放器的运行状态、处理播放事件、获取统计数据等。
-- [腾讯云直播SDK V2TXLivePremier 接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/flutter/V2TXLivePremier_api_flutter.md): `V2TXLivePremier` 是腾讯云直播 SDK 的高级接口类，提供 SDK 全局配置和管理功能。
-- [腾讯云直播SDK V2TXLivePusher 推流接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/flutter/V2TXLivePusher_api_flutter.md): `V2TXLivePusher` 是腾讯云 TRTC 直播 SDK 的核心推流器接口类，负责将本地的音频和视频画面进行编码，并推送到指定的推流地址，支持任意的推流服务端。
-- [腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/flutter/V2TXLivePusherObserver_api_flutter.md): `V2TXLivePusherObserver` 是腾讯云 TRTC 直播 SDK 推流器的观察者回调接口定义文件，提供了推流过程中的各种状态通知、错误处理、数据统计和自定义处理等回调功能。
-- [腾讯云直播SDK V2TXLiveCode 错误码文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/iOS/V2TXLiveCode_api_iOS.md): `V2TXLiveCode.h` 是腾讯云直播SDK iOS/macOS平台的错误码和警告码定义文件，包含了推流器、播放器、混流、录制等功能的错误码分类和详细说明。
-- [腾讯云直播SDK V2TXLiveDef 类型定义文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/iOS/V2TXLiveDef_api_iOS.md): `V2TXLiveDef.h` 是腾讯云直播SDK iOS/macOS平台的核心类型定义文件，包含了直播推流和播放相关的所有枚举、常量和数据结构定义。
-- [腾讯云直播SDK V2TXLivePlayer 播放接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/iOS/V2TXLivePlayer_api_iOS.md): `V2TXLivePlayer` 是腾讯云直播播放器的核心接口类，负责从指定的直播流地址拉取音视频数据，并进行解码和本地渲染播放。
-- [腾讯云直播SDK V2TXLivePlayerObserver 直播播放器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/iOS/V2TXLivePlayerObserver_api_iOS.md): `V2TXLivePlayerObserver.h` 是腾讯云直播SDK iOS/macOS平台的播放器回调接口定义文件，包含了播放器状态、音视频事件、统计数据、错误处理等所有回调方法的定义。
-- [腾讯云直播SDK V2TXLivePremier 接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/iOS/V2TXLivePremier_api_iOS.md): `V2TXLivePremier` 是腾讯云直播 SDK 的高级接口类，提供 SDK 全局配置和管理功能。
-- [腾讯云直播SDK V2TXLivePusher 推流接口文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/iOS/V2TXLivePusher_api_iOS.md): `V2TXLivePusher` 是腾讯云直播 SDK 的核心推流器接口类，负责将本地的音频和视频画面进行编码，并推送到指定的推流地址，支持任意的推流服务端。
-- [腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/zh/native_live/iOS/V2TXLivePusherObserver_api_iOS.md): `V2TXLivePusherObserver.h` 是腾讯云直播SDK iOS/macOS平台的推流器回调接口定义文件，用于接收推流过程中的各种状态通知、统计数据、错误信息和事件回调。
-- [RoomKit 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/common/error_code.md): **原因：** 操作频率超限，请求过于频繁，请稍后重试。
-- [faq](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/faq.md)
-- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/call-user-to-room.md): - **协同办公：**在进行远程会议时，若涉及跨部门决策，可一键呼叫外部专家快速入会，缩短沟通链路。
-- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/device-detection.md): 设备预览是保障音视频房间顺利运行的重要环节。Atomicx 专为进房前场景提供了一套独立的测试接口，其核心能力包括：
-- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/device-state.md): - **设备枚举与切换：**支持实时获取系统可用设备列表，并实现无缝切换。
-- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/free-beauty-panel.md): - **视频会议：** 弱化皮肤瑕疵，提亮肤色，使参会者看起来更加专业和精神。
-- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/room-chat.md): - **在线研讨会：**主讲人进行视频演讲时，参会者可以通过文字提问或讨论。
-- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/room-participant-state.md): 成员管理模块涵盖了房间内用户信息展示以及权限处理的全套能力：
-- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/room-state.md): useRoomState 是 Atomicx 方案中负责房间管理的核心 Hook。它封装了复杂的底层信令流程，开发者可以通过简单的响应式数据和
-- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/room-view.md): `RoomView` 作为多人音视频房间的核心视图容器，内置了多项企业级音视频处理能力：
-- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/schedule-room.md): - **企业定期会议：** 提前安排周会、月会，确保参会者提前收到通知。
-- [前提条件](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/screen-share.md): - 用户已经通过 useLoginState 完成登录鉴权，请参考 [接入概览](https://write.woa.com/documen
-- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/features/virtual-background.md): - **远程办公/会议：** 在家中或公共场所参会时，使用背景虚化或虚拟背景隐藏真实环境，保护个人隐私。
-- [前提条件](https://raw.githubusercontent.com/lianjun0809/docs/zh/roomkit/vue/integration.md): 请参考 开通服务 领取 TUIRoomKit 体验版，并在 应用管理 页面获取以下信息:
-- [概览](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/faq/common/userSig.md): 本文档主要介绍腾讯云实时音视频（TRTC）服务的两种鉴权方式，目前，腾讯云实时音视频（TRTC）、即时通信（IM）等服务都采用了 UserSig 的鉴权方式。UserSig 是腾讯云设计的一种安全保护签名，目的是为了阻止恶意攻击者盗用您的云服务使用权。如果您要使用这些基础云服务，就需要在 SDK 初
-- [自动播放受限处理建议](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/faq/web/web.md): 浏览器为了防止网页自动播放音视频对用户造成干扰，对音视频的自动播放功能做了限制：**在用户与网页产生交互（例如点击、触摸页面等）之前，网页将被禁止播放带有声音的媒体。在 iOS 10+ 中，如果开启了省电模式，[无声音的媒体也会被禁止播放](https://discussions.apple.com
-- [TRTC](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/api.md): TRTC对象 通过 TRTC.create() 创建，提供实时音视频的核心能力：
-- [集成音视频通话](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/how_to_integrated_web_sdk.md): RTC Engine Web SDK 也称为 TRTC Web SDK，是腾讯云实时音视频 Web SDK。提供 npm package name “trtc-sdk-v5”。
-- [快速跑通 Demo](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/how_to_run_web_sdk_demo.md): 本文主要介绍如何快速跑通腾讯云 TRTC Web demo。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/20-advanced-customized-capture-rendering.md): 本文主要介绍自定义采集和自定义播放渲染的高阶用法。
-- [简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/21-advanced-auto-play-policy.md): 浏览器为了防止网页自动播放音视频对用户造成干扰，对音视频的自动播放功能做了限制：**在用户与网页产生交互（例如点击、触摸页面等）之前，网页将被禁止播放带有声音的媒体。在 iOS 10+ 中，如果开启了省电模式，[无声音的媒体也会被禁止播放](https://discussions.apple.com
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/22-advanced-audio-mixer.md): 本文将介绍如何在通话过程中增加背景音乐的功能，点击 体验 demo 进行体验。
-- [浏览器环境检测](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/23-advanced-support-detection.md): 在开始音视频通话之前，建议您先使用 {@link TRTC.isSupported TRTC.isSupported} 接口检测 SDK 是否支持当前网页。如果 SDK 不支持当前浏览器，建议用户使用最新版的 Chrome 浏览器、Edge 浏览器、Safari 浏览器、Firefox 浏览器。
-- [通话过程中的网络质量检测](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/24-advanced-network-quality.md): 参考： {@link module:EVENT.NETWORK_QUALITY NETWORK_QUALITY}
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/25-advanced-device-change.md): 本文主要介绍如何检测用户的设备插入、拔出、启动的行为。以及如何处理设备采集异常。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/26-advanced-publish-cdn-stream.md): 本文主要描述如何使用 CDNStreaming 插件，实现云端混流、转推 CDN、回推混流到 TRTC 房间的功能。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/27-advanced-small-stream.md): 在多人视频通话场景中，随着推流用户的增加，对于拉流的用户来说，带宽流量消耗及设备性能消耗都会随之上升，如果不做优化，在中低端机型的体验会大打折扣。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/28-advanced-beauty.md): 本文主要描述如何使用美颜插件。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/29-advanced-water-mark.md): 本文主要介绍如何使用水印插件在视频流上添加图片水印。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/30-advanced-cross-room-link.md): 默认情况下，不同房间的音视频流是相互隔离的，只有同一房间内的用户可以进行音视频通话。跨房连麦功能允许不同房间的用户进行音视频通话。
-- [功能简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/31-advanced-plugins-overview.md): TRTC Web SDK v5 提供了插件系统，支持按需加载各种音视频增强能力。插件系统的优势：
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/34-advanced-proxy.md): 本文主要介绍应对防火墙受限的最佳实践。例如在企业内网这类有防火墙的网络环境中，往往由于防火墙的原因，无法正常使用 TRTC Web SDK。这种情况下，有两种解决方案：
-- [功能简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/35-advanced-ai-denoiser.md): AI 降噪插件能够降低通话中的噪声，减少环境噪声对通话的影响。可以更好地抑制通话过程中的键盘声、碰撞声、敲击声等噪声，特别适用于对瞬时噪声敏感的场景，例如会议场景中的短时噪声。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/36-advanced-virtual-background.md): 本文将介绍如何在通话过程中实现虚拟背景的功能。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/37-advanced-voice-changer.md): 本文主要介绍如何使用美声插件。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/38-advanced-basic-beauty.md): 本文主要介绍如何使用基础美颜插件。在线体验
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/39-advanced-video-decoder.md): 本文主要介绍如何使用 TRTCVideoDecoder 插件来启动视频解码器降级能力。该插件支持常规解码失败后降级到软解码方式渲染视频。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/40-advanced-video-mixer.md): 本文档详细介绍了如何使用 TRTC Web SDK 的 VideoMixer 插件，将摄像头、屏幕共享、文字、图片和视频等多个输入源合成为一个视频轨道，实现自定义布局的推流。开发者可以灵活控制每个源的布局（位置、大小、层级 zIndex）。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/41-advanced-small-stream-auto-switcher.md): 本文主要介绍如何使用 SmallStreamAutoSwitcher 插件来启动自动切换大小流的能力。该插件通常用在带宽受限的场景，如带宽不足，导致大流卡顿，则自动切换到小流，会降低分辨率但保证流畅度。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/42-advanced-realtime-transcriber.md): 本文主要介绍如何使用实时传译插件来启动实时语音转文字（ASR）和翻译能力。该插件可以将房间内用户的语音实时转换为文字，并支持翻译成多种语言。
-- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/zh/rtcengine/web/plugin/43-advanced-face-detection.md): 本文档详细介绍了如何使用 TRTC Web SDK 的人脸检测插件，实时检测摄像头视频流中的人脸状态变化。该插件采用智能防抖逻辑，仅在人脸出现/消失状态真正变化时触发回调，避免因光线变化或短暂遮挡导致的误报。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TRTCCloud.md): `TRTCCloud.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的 API 文档，包含了推流、拉流、拉流、混流、录制等功能详细说明。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TRTCCloudDef.md): `TRTCCloudDef.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的类型定义文档。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TRTCCloudListener.md): `TRTCCloudListener.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的事件回调接口文档。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TRTCStatistics.md): `TRTCStatistics.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的统计指标（只读）文档，TRTC SDK 会以两秒钟一次的频率向您汇报当前实时的音视频指标（帧率、码率、卡顿情况等）。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TXAudioEffectManager.md): `TXAudioEffectManager.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的背景音乐、短音效和人声特效的管理类文档，用于对背景音乐、短音效和人声特效进行设置的管理类。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TXBeautyManager.md): `TXBeautyManager.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的美颜与图像处理参数设置文档，用于修改美颜、滤镜、绿幕等参数。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TXDeviceManager.md): `TXDeviceManager.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的音视频设备管理模块文档，用于管理摄像头、麦克风和扬声器等音视频相关的硬件设备。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/android/TXLiteAVCode.md): `TXLiteAVCode.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的状态码文档，用于通知客户 TRTC 在使用过程中出现的警告和错误。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/C++/ITRTCCloud.md): `ITRTCCloud.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的 API 文档，包含了推流、拉流、拉流、混流、录制等功能详细说明。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/C++/ITRTCStatistics.md): `ITRTCStatistics.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的统计指标（只读）文档，TRTC SDK 会以两秒钟一次的频率向您汇报当前实时的音视频指标（帧率、码率、卡顿情况等）。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/C++/ITXAudioEffectManager.md): `ITXAudioEffectManager.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的背景音乐、短音效和人声特效的管理类文档，用于对背景音乐、短音效和人声特效进行设置的管理类。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/C++/ITXDeviceManager.md): `ITXDeviceManager.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的音视频设备管理模块文档，用于管理摄像头、麦克风和扬声器等音视频相关的硬件设备。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/C++/TRTCCloudCallback.md): `TRTCCloudCallback.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的事件回调接口文档。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/C++/TRTCTypeDef.md): `TRTCTypeDef.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的类型定义文档。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/C++/TXLiteAVCode.md): `TXLiteAVCode.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的状态码文档，用于通知客户 TRTC 在使用过程中出现的警告和错误。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TRTCCloud.md): `TRTCCloud.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的 API 文档，包含了推流、拉流、拉流、混流、录制等功能详细说明。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TRTCCloudDelegate.md): `TRTCCloudDelegate.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的事件回调接口文档。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TRTCStatistics.md): `TRTCStatistics.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的统计指标（只读）文档，TRTC SDK 会以两秒钟一次的频率向您汇报当前实时的音视频指标（帧率、码率、卡顿情况等）。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TXAudioEffectManager.md): `TXAudioEffectManager.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的背景音乐、短音效和人声特效的管理类文档，用于对背景音乐、短音效和人声特效进行设置的管理类。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TXBeautyManager.md): `TXBeautyManager.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的美颜与图像处理参数设置文档，用于修改美颜、滤镜、绿幕等参数。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TXDeviceManager.md): `TXDeviceManager.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的音视频设备管理模块文档，用于管理摄像头、麦克风和扬声器等音视频相关的硬件设备。
-- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TXLiteAVCode.md): `TXLiteAVCode.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的状态码文档，用于通知客户 TRTC 在使用过程中出现的警告和错误。
-- [腾讯云实时音视频(TRTC SDK) 文档](https://raw.githubusercontent.com/lianjun0809/docs/zh/trtc/iOS/TXLiveSDKTypeDef.md): `TXLiveSDKTypeDef.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的类型定义文档。
-- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/android/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
-- [准备工作](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/android/integration.md): - **Android 版本要求**：Android 5.0（SDK API Level 21）及以上版本。
-- [TUICallObserver API 简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/android_sdk/call-observer-api.md): TUICallObserver 是 TUICallEngine 对应的回调事件类，您可以通过此回调，来监听自己感兴趣的回调事件。
-- [TUICallKit API 简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/android_sdk/callkit-api.md): TUICallKit API 是音视频通话组件的**含 UI 接口**，使用 TUICallKit API，您可以通过简单接口快速实现一个类微信的音视频通话场景，更详细的接入步骤，详情请参见 [快速接入TUICallKit](https://cloud.tencent.com/document/pr
-- [CallKit 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/common/error_code.md): **原因：** 您的应用还未开通音视频通话（TUICallKit）能力。
-- [**常用结构**](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/flutter_sdk/call-define-api.md): 调用 API 的返回值
-- [TUICallObserver API 简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/flutter_sdk/call-observer-api.md): TUICallObserver 是 TUICallKit 对应的回调事件类，您可以通过此回调，来监听自己感兴趣的回调事件。
-- [TUICallKit API 简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/flutter_sdk/callkit-api.md): TUICallKit API 是音视频通话组件的**含 UI 接口**，使用TUICallKit API，您可以通过简单接口快速实现一个类微信的音视频通话场景，更详细的接入步骤，详情请参见 [快速接入（TUICallKit）](https://write.woa.com/document/86735
-- [TUICallObserver API 简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/ios_sdk/call-observer-api.md): TUICallObserver 是 TUICallEngine 对应的回调事件类，您可以通过此回调，来监听自己感兴趣的回调事件。
-- [TUICallKit API 简介](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/faq/ios_sdk/callkit-api.md): TUICallKit API 是音视频通话组件的**含 UI 接口**，使用TUICallKit API，您可以通过简单接口快速实现一个类微信的音视频通话场景，更详细的接入步骤，详情请参见 [快速接入TUICallKit](https://cloud.tencent.com/document/pro
-- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/flutter/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
-- [准备工作](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/flutter/integration.md): Flutter 3.24.0、Dart 3.5.0 及以上版本。
-- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/ios/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
-- [环境准备](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/ios/integration.md): - Xcode 13 及以上。
-- [重要提醒](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/react/api.md): **文档内容说明：**
-- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/react/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
-- [calls-uikit-react Integration](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/react/integration.md): if you don't have a react project, you can use vite create a react project. otherwise, you can skip this step.
-- [重要提醒](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/vue/api.md): **文档内容说明：**
-- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/vue/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
-- [calls-uikit-vue Integration](https://raw.githubusercontent.com/lianjun0809/docs/zh/tuicallkit/vue/integration.md): if you don't have a vue3 project, you can use vite create a vue3 project. otherwise, you can skip this step.
+- [准备账号与凭证（必做）](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md): 你需要先在腾讯云控制台创建应用，并获取以下凭证：
+- [MCP 功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md): - **智能集成**：覆盖 Chat/Call/Live/Room UIKit 和 底层 SDK（WebRTC 和 Native RTC） 集成工具。
+- [前置条件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md): 使用 Skills 前，请先完成 MCP Server 配置，MCP 配置说明。
+- [TUIKit 源码是否支持 Androidx？](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/android/faq.md): TUIKit 最新源码已经支持 Androidx。
+- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/android/features/theme.md): **模式切换**
+- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/android/integration.md): TUIKit Compose 提供了一套完整的即时通信 UI 组件，向下依赖 AtomicXCore 数据层，向上可构建各种功能性 Page。
+- [初始化登录接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/android_sdk/client-api.md): 初始化并成功登录，是正常使用腾讯云 IM 服务的前提。
+- [购买计费相关](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/common/product.md): - 即时通信 IM 如何计费？
+- [服务端错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/common/server_error_code.md): **原因：** userSig 已过期。
+- [通用问题知识库](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/common/server.md): **A：** 服务端生成 userSig 的具体方式可参考： https://cloud.tencent.com/document/product/269/32688， 文档中提供了多种服务端语言的解决方案。
+- [初始化登录接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/flutter_sdk/client-api.md): 初始化并成功登录，是正常使用腾讯云 IM 服务的前提。
+- [Flutter SDK 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/flutter_sdk/faq.md): **A：** SDK 支持消息回应能力，您需要购买旗舰版或企业版套餐，具体 API 有3个：
+- [初始化登录接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/ios_sdk/client-api.md): 初始化并成功登录，是正常使用腾讯云 IM 服务的前提。
+- [Web JS SDK 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/web_sdk/error_code.md): **原因：** 用户未登录。
+- [Web js SDK 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/web_sdk/faq.md): **SDK 版本说明：**
+- [Flutter TUIKit 集成与常见问题解决方案](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/flutter/faq.md): **A:** flutter chat 中消息免打扰相关的API:
+- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/flutter/features/theme.md): **模式切换**
+- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/flutter/integration.md): TUIKit 提供了一套完整的即时通信 UI 组件，向下依赖 AtomicXCore 数据层，向上可构建各种功能性 Page。
+- [TUIKit 源码是否支持 Androidx？](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/ios/faq.md): TUIKit 最新源码已经支持 Androidx。
+- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/ios/features/theme.md): **模式切换**
+- [开发环境要求](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/ios/integration.md): - Xcode 10 及以上
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/chat-header.md): ChatHeader 聊天头部组件是聊天界面的顶部导航组件，用于显示当前会话的基本信息。能够展示会话标题、头像、在线状态、输入状态提示等信息。组件采用容器组件模式，提供了灵活的插槽机制用于自定义左右两侧的操作区域。
+- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/chat-setting.md): ChatSetting 是一个聊天设置组件，它能根据当前激活的**会话类型**（单聊或群聊）自动渲染对应的设置界面。该组件通过统一的入口，无缝集成了 C2C（单聊） 和群聊两种模式的设置功能，为用户提供了流畅且一致的操作体验。
+- [atomicx 组件库清单与组件的适用场景与注意事项](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/component-list.md): 共 25 个组件:
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/contact-list.md): ContactList 是一个高度可配置的联系人列表组件。该组件支持好友列表、群组列表、黑名单和申请管理，提供分组折叠、搜索过滤、自定义渲染等核心功能，适用于即时通讯、社交应用等场景的联系人管理界面。
+- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-actions.md): 当在 `ConversationList` 使用 `ConversationActions` 时，您可以通过 `ConversationList` 顶层 `actionsConfig` 参数直接进行自定义，`actionsConfig` 支持对于默认会话操作功能开关、事件响应、新增自定义操作项、基础
+- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-list.md): `ConversationList` 组件主要负责会话列表功能，它包含了 Header 部分和 List 部分，具有搜索会话、创建会话、会话置顶、会话删除等功能。
+- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-preview.md): 您可以使用 `ConversationList` 的 `Preview` 属性来自定义会话列表中每个单独会话的预览项，如果没有指定 `Preview` 属性，系统将自动采用 `ConversationPreviewUI` 组件作为默认值。
+- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-search.md): import {
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/message-input.md): MessageInput 是一个功能完整的消息输入组件，提供了文本编辑、表情选择、文件附件、发送按钮等核心聊天输入功能。该组件支持丰富的自定义选项，包括输入行为配置、工具栏定制、组件替换和插槽扩展，能够满足不同聊天场景的个性化需求。
+- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/message-list.md): MessageList 是一个功能强大的聊天消息列表组件，提供了完整的消息展示、交互和自定义功能。该组件支持消息分组、已读回执、消息操作、滚动控制等核心聊天功能，同时提供了丰富的自定义选项来满足不同的业务需求。
+- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/search.md): Search 是一个功能完整的搜索解决方案，包含了搜索框、搜索结果展示、高级搜索等功能的完整组件集合。适用于即时通讯、在线会议、在线教育等场景的用户、群组、消息搜索。
+- [React TUIKit 集成与常见问题解决方案](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/faq.md): **A:** TUIKit 是基于 Web SDK 开发的，您需要安装 `@tencentcloud/chat-uikit-react`
+- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/integration.md): chat-uikit-react 主要分为 ConversationList、Chat、MessageList、ChatHeader、MessageInput、ChatSetting、Search、Contact 等核心 UI 组件，每个 UI 组件负责展示不同的内容。
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/chat-header.md): ChatHeader 聊天头部组件是聊天界面的顶部导航组件，用于显示当前会话的基本信息。能够展示会话标题、头像、在线状态、输入状态提示等信息。组件采用容器组件模式，提供了灵活的插槽机制用于自定义左右两侧的操作区域。
+- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/chat-setting.md): ChatSetting 是一个智能的聊天设置组件，它能够根据当前激活的会话类型自动渲染相应的设置界面。该组件内部集成了 C2C（1 对 1）聊天设置和群聊设置两种模式，为用户提供了统一的聊天设置入口。
+- [atomicx 组件库清单与组件的适用场景与注意事项](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/component-list.md): 共 25 个组件:
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/contact-list.md): ContactList 是一个高度可配置的联系人列表组件。该组件支持好友列表、群组列表、黑名单和申请管理，提供分组折叠、搜索过滤、自定义渲染等核心功能，适用于即时通讯、社交应用等场景的联系人管理界面。
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-actions.md): ConversationActions 组件负责单条会话的操作，默认支持删除、置顶、免打扰和标记未读/已读。
+- [组件概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-list.md): ConversationList 组件负责渲染会话列表，包含搜索、创建、置顶和删除等功能。
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-preview.md): ConversationPreview 组件用于预览会话列表中的单个会话。它负责显示会话信息、未读数，并提供会话操作功能。
+- [基础使用](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-search.md): <template>
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/message-input.md): MessageInput 是一个功能完整的消息输入组件，专为 Vue3 应用设计，提供了文本编辑、表情选择、文件附件、发送按钮等核心聊天输入功能。该组件支持丰富的自定义选项，包括输入行为配置、工具栏定制、组件替换和插槽扩展，能够满足不同聊天场景的个性化需求。
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/message-list.md): MessageList 组件是聊天界面的核心组件，负责展示消息列表并提供丰富的交互功能。它支持消息聚合、自动滚动、历史消息加载、已读回执等高级特性，适用于构建高度可定制的聊天界面。组件内部处理滚动行为、消息加载逻辑和消息分组展示，为用户提供流畅的消息浏览体验。
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/search.md): Search 是一个功能完整的搜索解决方案，包含了搜索框、搜索结果展示、高级搜索等功能的完整组件集合。适用于即时通讯、在线会议、在线教育等场景的用户、群组、消息搜索。
+- [Vue TUIKit 集成与常见问题解决方案](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/faq.md): **A:** TUIKit 是基于 Web SDK 开发的，您需要安装 `@tencentcloud/chat-uikit-vue3`。
+- [关键概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/integration.md): chat-uikit-vue3 主要分为 ConversationList、Chat、MessageList、ChatHeader、MessageInput、ChatSetting、Search、Contact 等核心 UI 组件，每个 UI 组件负责展示不同的内容。
+- [LiveKit 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/faq/common/error_code.md): **原因：** 可能原因如下：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-base-beauty.md): - **磨皮效果调节**：设置磨皮强度 (0-9)。
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-co-guest-interaction.md): `CoGuestStore` 支持以下两种最主流的连麦场景：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-host-interaction.md): 一次完整的“主播连线 PK”通常包含三个核心阶段，其整体流程如下：
+- [**核心功能**](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-integration.md): **LiveCoreView** 是一个专为直播场景设计的轻量级 `View` 组件，是您构建直播场景的核心，它封装了所有复杂的底层直播技术（如推拉流、连麦、音视频渲染）。您可以将 LiveCoreView 作为直播画面的"画布"，专注于上层 UI 与交互的开发。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-live-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-base-beauty.md): - **磨皮效果调节**：设置磨皮强度 (0-9)。
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-co-guest-interaction.md): `CoGuestStore` 支持以下两种最主流的连麦场景：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-host-interaction.md): 一次完整的"主播连线 PK"通常包含三个核心阶段，其整体流程如下：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-integration.md): **LiveCoreWidget** 是一个专为直播场景设计的轻量级 Widget 组件，是您构建直播场景的核心，它封装了所有复杂的底层直播技术（例如推拉流、连麦、音视频渲染）。您可以将 LiveCoreWidget 作为直播画面的"画布"，专注于上层 UI 与交互的开发。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-live-list.md): - **获取直播列表**：获取当前所有公开的直播间列表，支持分页加载。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-base-beauty.md): - **磨皮效果调节**：设置磨皮强度 (0-9)。
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-co-guest-interaction.md): `CoGuestStore` 支持以下两种最主流的连麦场景：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-host-interaction.md): 一次完整的“主播连线 PK”通常包含三个核心阶段，其整体流程如下：
+- [**核心功能**](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-integration.md): **LiveCoreView** 是一个专为直播场景设计的轻量级 `UIView` 组件，是您构建直播场景的核心，它封装了所有复杂的底层直播技术（例如推拉流、连麦、音视频渲染）。您可以将 LiveCoreView 作为直播画面的“画布”，专注于上层 UI 与交互的开发。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-live-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
+- [组件构成](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/barrage.md): <table>
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/co-guest-panel.md): <table>
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/live-audience-list.md): <table>
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/live-scene-panel.md): <table>
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/live-view.md): <table>
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/stream-mixer.md): <table>
+- [faq](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/faq.md)
+- [概述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-list-integration.md): 本文对 TUILiveKit Demo 中的**直播列表页面**进行了详细的介绍，您可以在已有项目中直接参考本文档集成我们开发好的直播列表页面，也可以根据您的需求按照文档中的内容对页面的样式，布局以及功能项进行深度的定制。
+- [功能展示](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-player-desk-integration.md): 观看页面提供默认行为和风格，但如果默认行为和样式不能完全满足您的需求，您也可以对 UI 进行自定义。图中显示的数字与特定功能列表中的类别相对应。其中主要包含直播**信息展示、视频直播区域、在线观众、音视频操作、直播时长、画面分辨率切换、全屏功能、聊天互动、消息列表等。**
+- [功能展示](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-player-h5-integration.md): 观看页面提供默认行为和风格，但如果默认行为和样式不能完全满足您的需求，您也可以对 UI 进行自定义。图中显示的数字与特定功能列表中的类别相对应。其中主要包含直播**信息展示、视频直播区域、在线观众、音视频操作、直播时长、画面分辨率切换、全屏功能、聊天互动、消息列表等。**
+- [功能展示](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-pusher-integration.md): - **横屏开播**
+- [LoginState](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/states/live-state.md): 用户身份认证与登录管理模块
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-co-guest-interaction.md): `CoGuestStore`和`LiveSeatStore`支持以下几个主流的场景：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
+- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-host-interaction.md): 在开始集成之前，我们先通过下表了解一下跨房连线与 PK 相关的几个核心概念。
+- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-integration.md): 在开始集成之前，我们先通过下表了解一下 `LiveSeatStore` 相关的几个核心概念：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-co-guest-interaction.md): `CoGuestStore` 和 `LiveSeatStore` 支持以下几个主流的场景：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
+- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-integration.md): 在开始集成之前，请先通过下表了解一下 `LiveSeatStore` 相关的几个核心概念：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-audience-list.md): - **实时观众列表**：获取并展示当前在直播间内的所有观众信息。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-audio-effect.md): 通过组合 `AudioEffectStore` 和 `DeviceStore`，您将能实现以下核心功能：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-barrage.md): `BarrageStore` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-co-guest-interaction.md): `CoGuestStore`和`LiveSeatStore`支持以下几个主流的场景：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
+- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-host-interaction.md): <table>
+- [核心概念](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-integration.md): 在开始集成之前，我们先通过下表了解一下 `LiveSeatStore` 相关的几个核心概念：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-audience-list.md): - **实时观众列表**：获取并展示当前在语聊房内的所有观众信息。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-audio-effect.md): 通过组合 `AudioEffectState` 和 `DeviceState`，您将能实现以下核心功能：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-barrage.md): `BarrageState` 为您的直播应用提供了一套完整的弹幕解决方案，核心功能包括：
+- [核心场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-co-guest-interaction.md): `CoGuestState`和 `LiveSeatState`支持以下几个主流的场景：
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-gift.md): - **礼物列表获取**：从服务端拉取礼物面板所需的数据，包括礼物分类和礼物详情。
+- [准备工作](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-integration.md): 请参见 开通服务，获取体验版或付费版 SDK。
+- [核心功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-room-list.md): - **直播列表拉取**：获取当前所有公开的直播间列表，支持分页加载。
+- [腾讯云直播SDK V2TXLiveCode 错误码文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLiveCode_api_android.md): `V2TXLiveCode.java` 是腾讯云直播SDK Android平台的错误码和警告码定义文件，包含了推流器、播放器、混流、录制等功能的错误码分类和详细说明。
+- [腾讯云直播SDK V2TXLiveDef 类型定义文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLiveDef_api_android.md): `V2TXLiveDef` 是腾讯云直播SDK的核心类型定义文件，包含了直播推流和播放相关的所有枚举、常量和数据结构定义。
+- [腾讯云直播SDK V2TXLivePlayer 播放接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePlayer_api_android.md): `V2TXLivePlayer` 是腾讯云直播播放器的核心接口类，负责从指定的直播流地址拉取音视频数据，并进行解码和本地渲染播放。
+- [腾讯云直播SDK V2TXLivePlayerObserver 直播播放器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePlayerObserver_api_android.md): `V2TXLivePlayerObserver` 是腾讯云直播SDK的播放器回调接口，用于接收播放器的各种状态通知和事件回调。通过实现该接口的回调方法，开发者可以监控播放器的运行状态、处理播放事件、获取统计数据等。
+- [腾讯云直播SDK V2TXLivePremier 接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePremier_api_android.md): `V2TXLivePremier` 是腾讯云直播 SDK 的高级接口类，提供 SDK 全局配置和管理功能。
+- [腾讯云直播SDK V2TXLivePusher 推流接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePusher_api_android.md): `V2TXLivePusher` 是腾讯云直播SDK的核心推流器接口类，负责将本地的音频和视频画面进行编码，并推送到指定的推流地址，支持任意的推流服务端。
+- [腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePusherObserver_api_android.md): `V2TXLivePusherObserver` 是腾讯云直播SDK的推流器回调接口，用于接收推流器的各种状态通知和事件回调。通过实现该接口的回调方法，开发者可以监控推流器的运行状态、处理推流事件、获取统计数据等。
+- [腾讯云直播SDK V2TXLiveCode 错误码文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLiveCode_api_flutter.md): `V2TXLiveCode` 是腾讯云直播SDK Flutter平台的错误码和警告码定义文件，包含了推流器、播放器、混流、录制等功能的错误码分类和详细说明。
+- [腾讯云直播SDK V2TXLiveDef 类型定义文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLiveDef_api_flutter.md): `V2TXLiveDef` 是腾讯云直播SDK的核心类型定义文件，包含了直播推流和播放相关的所有枚举、常量和数据结构定义。
+- [腾讯云直播SDK V2TXLivePlayer 播放接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePlayer_api_flutter.md): `V2TXLivePlayer` 是腾讯云直播播放器的核心接口类，负责从指定的直播流地址拉取音视频数据，并进行解码和本地渲染播放。
+- [腾讯云直播SDK V2TXLivePlayerObserver 播放器回调接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePlayerObserver_api_flutter.md): `V2TXLivePlayerObserver` 是腾讯云直播SDK的播放器回调接口，用于接收播放器的各种状态通知和事件回调。通过实现该接口的回调方法，开发者可以监控播放器的运行状态、处理播放事件、获取统计数据等。
+- [腾讯云直播SDK V2TXLivePremier 接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePremier_api_flutter.md): `V2TXLivePremier` 是腾讯云直播 SDK 的高级接口类，提供 SDK 全局配置和管理功能。
+- [腾讯云直播SDK V2TXLivePusher 推流接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePusher_api_flutter.md): `V2TXLivePusher` 是腾讯云 TRTC 直播 SDK 的核心推流器接口类，负责将本地的音频和视频画面进行编码，并推送到指定的推流地址，支持任意的推流服务端。
+- [腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePusherObserver_api_flutter.md): `V2TXLivePusherObserver` 是腾讯云 TRTC 直播 SDK 推流器的观察者回调接口定义文件，提供了推流过程中的各种状态通知、错误处理、数据统计和自定义处理等回调功能。
+- [腾讯云直播SDK V2TXLiveCode 错误码文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLiveCode_api_iOS.md): `V2TXLiveCode.h` 是腾讯云直播SDK iOS/macOS平台的错误码和警告码定义文件，包含了推流器、播放器、混流、录制等功能的错误码分类和详细说明。
+- [腾讯云直播SDK V2TXLiveDef 类型定义文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLiveDef_api_iOS.md): `V2TXLiveDef.h` 是腾讯云直播SDK iOS/macOS平台的核心类型定义文件，包含了直播推流和播放相关的所有枚举、常量和数据结构定义。
+- [腾讯云直播SDK V2TXLivePlayer 播放接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePlayer_api_iOS.md): `V2TXLivePlayer` 是腾讯云直播播放器的核心接口类，负责从指定的直播流地址拉取音视频数据，并进行解码和本地渲染播放。
+- [腾讯云直播SDK V2TXLivePlayerObserver 直播播放器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePlayerObserver_api_iOS.md): `V2TXLivePlayerObserver.h` 是腾讯云直播SDK iOS/macOS平台的播放器回调接口定义文件，包含了播放器状态、音视频事件、统计数据、错误处理等所有回调方法的定义。
+- [腾讯云直播SDK V2TXLivePremier 接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePremier_api_iOS.md): `V2TXLivePremier` 是腾讯云直播 SDK 的高级接口类，提供 SDK 全局配置和管理功能。
+- [腾讯云直播SDK V2TXLivePusher 推流接口文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePusher_api_iOS.md): `V2TXLivePusher` 是腾讯云直播 SDK 的核心推流器接口类，负责将本地的音频和视频画面进行编码，并推送到指定的推流地址，支持任意的推流服务端。
+- [腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePusherObserver_api_iOS.md): `V2TXLivePusherObserver.h` 是腾讯云直播SDK iOS/macOS平台的推流器回调接口定义文件，用于接收推流过程中的各种状态通知、统计数据、错误信息和事件回调。
+- [RoomKit 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/common/error_code.md): **原因：** 操作频率超限，请求过于频繁，请稍后重试。
+- [faq](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/faq.md)
+- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/call-user-to-room.md): - **协同办公：**在进行远程会议时，若涉及跨部门决策，可一键呼叫外部专家快速入会，缩短沟通链路。
+- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/device-detection.md): 设备预览是保障音视频房间顺利运行的重要环节。Atomicx 专为进房前场景提供了一套独立的测试接口，其核心能力包括：
+- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/device-state.md): - **设备枚举与切换：**支持实时获取系统可用设备列表，并实现无缝切换。
+- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/free-beauty-panel.md): - **视频会议：** 弱化皮肤瑕疵，提亮肤色，使参会者看起来更加专业和精神。
+- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-chat.md): - **在线研讨会：**主讲人进行视频演讲时，参会者可以通过文字提问或讨论。
+- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-participant-state.md): 成员管理模块涵盖了房间内用户信息展示以及权限处理的全套能力：
+- [功能介绍](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-state.md): useRoomState 是 Atomicx 方案中负责房间管理的核心 Hook。它封装了复杂的底层信令流程，开发者可以通过简单的响应式数据和
+- [核心能力](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-view.md): `RoomView` 作为多人音视频房间的核心视图容器，内置了多项企业级音视频处理能力：
+- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/schedule-room.md): - **企业定期会议：** 提前安排周会、月会，确保参会者提前收到通知。
+- [前提条件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/screen-share.md): - 用户已经通过 useLoginState 完成登录鉴权，请参考 [接入概览](https://write.woa.com/documen
+- [适用场景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/virtual-background.md): - **远程办公/会议：** 在家中或公共场所参会时，使用背景虚化或虚拟背景隐藏真实环境，保护个人隐私。
+- [前提条件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/integration.md): 请参考 开通服务 领取 TUIRoomKit 体验版，并在 应用管理 页面获取以下信息:
+- [概览](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/faq/common/userSig.md): 本文档主要介绍腾讯云实时音视频（TRTC）服务的两种鉴权方式，目前，腾讯云实时音视频（TRTC）、即时通信（IM）等服务都采用了 UserSig 的鉴权方式。UserSig 是腾讯云设计的一种安全保护签名，目的是为了阻止恶意攻击者盗用您的云服务使用权。如果您要使用这些基础云服务，就需要在 SDK 初
+- [自动播放受限处理建议](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/faq/web/web.md): 浏览器为了防止网页自动播放音视频对用户造成干扰，对音视频的自动播放功能做了限制：**在用户与网页产生交互（例如点击、触摸页面等）之前，网页将被禁止播放带有声音的媒体。在 iOS 10+ 中，如果开启了省电模式，[无声音的媒体也会被禁止播放](https://discussions.apple.com
+- [TRTC](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/api.md): TRTC对象 通过 TRTC.create() 创建，提供实时音视频的核心能力：
+- [集成音视频通话](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/how_to_integrated_web_sdk.md): RTC Engine Web SDK 也称为 TRTC Web SDK，是腾讯云实时音视频 Web SDK。提供 npm package name “trtc-sdk-v5”。
+- [快速跑通 Demo](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/how_to_run_web_sdk_demo.md): 本文主要介绍如何快速跑通腾讯云 TRTC Web demo。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/20-advanced-customized-capture-rendering.md): 本文主要介绍自定义采集和自定义播放渲染的高阶用法。
+- [简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/21-advanced-auto-play-policy.md): 浏览器为了防止网页自动播放音视频对用户造成干扰，对音视频的自动播放功能做了限制：**在用户与网页产生交互（例如点击、触摸页面等）之前，网页将被禁止播放带有声音的媒体。在 iOS 10+ 中，如果开启了省电模式，[无声音的媒体也会被禁止播放](https://discussions.apple.com
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/22-advanced-audio-mixer.md): 本文将介绍如何在通话过程中增加背景音乐的功能，点击 体验 demo 进行体验。
+- [浏览器环境检测](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/23-advanced-support-detection.md): 在开始音视频通话之前，建议您先使用 {@link TRTC.isSupported TRTC.isSupported} 接口检测 SDK 是否支持当前网页。如果 SDK 不支持当前浏览器，建议用户使用最新版的 Chrome 浏览器、Edge 浏览器、Safari 浏览器、Firefox 浏览器。
+- [通话过程中的网络质量检测](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/24-advanced-network-quality.md): 参考： {@link module:EVENT.NETWORK_QUALITY NETWORK_QUALITY}
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/25-advanced-device-change.md): 本文主要介绍如何检测用户的设备插入、拔出、启动的行为。以及如何处理设备采集异常。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/26-advanced-publish-cdn-stream.md): 本文主要描述如何使用 CDNStreaming 插件，实现云端混流、转推 CDN、回推混流到 TRTC 房间的功能。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/27-advanced-small-stream.md): 在多人视频通话场景中，随着推流用户的增加，对于拉流的用户来说，带宽流量消耗及设备性能消耗都会随之上升，如果不做优化，在中低端机型的体验会大打折扣。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/28-advanced-beauty.md): 本文主要描述如何使用美颜插件。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/29-advanced-water-mark.md): 本文主要介绍如何使用水印插件在视频流上添加图片水印。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/30-advanced-cross-room-link.md): 默认情况下，不同房间的音视频流是相互隔离的，只有同一房间内的用户可以进行音视频通话。跨房连麦功能允许不同房间的用户进行音视频通话。
+- [功能简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/31-advanced-plugins-overview.md): TRTC Web SDK v5 提供了插件系统，支持按需加载各种音视频增强能力。插件系统的优势：
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/34-advanced-proxy.md): 本文主要介绍应对防火墙受限的最佳实践。例如在企业内网这类有防火墙的网络环境中，往往由于防火墙的原因，无法正常使用 TRTC Web SDK。这种情况下，有两种解决方案：
+- [功能简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/35-advanced-ai-denoiser.md): AI 降噪插件能够降低通话中的噪声，减少环境噪声对通话的影响。可以更好地抑制通话过程中的键盘声、碰撞声、敲击声等噪声，特别适用于对瞬时噪声敏感的场景，例如会议场景中的短时噪声。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/36-advanced-virtual-background.md): 本文将介绍如何在通话过程中实现虚拟背景的功能。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/37-advanced-voice-changer.md): 本文主要介绍如何使用美声插件。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/38-advanced-basic-beauty.md): 本文主要介绍如何使用基础美颜插件。在线体验
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/39-advanced-video-decoder.md): 本文主要介绍如何使用 TRTCVideoDecoder 插件来启动视频解码器降级能力。该插件支持常规解码失败后降级到软解码方式渲染视频。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/40-advanced-video-mixer.md): 本文档详细介绍了如何使用 TRTC Web SDK 的 VideoMixer 插件，将摄像头、屏幕共享、文字、图片和视频等多个输入源合成为一个视频轨道，实现自定义布局的推流。开发者可以灵活控制每个源的布局（位置、大小、层级 zIndex）。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/41-advanced-small-stream-auto-switcher.md): 本文主要介绍如何使用 SmallStreamAutoSwitcher 插件来启动自动切换大小流的能力。该插件通常用在带宽受限的场景，如带宽不足，导致大流卡顿，则自动切换到小流，会降低分辨率但保证流畅度。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/42-advanced-realtime-transcriber.md): 本文主要介绍如何使用实时传译插件来启动实时语音转文字（ASR）和翻译能力。该插件可以将房间内用户的语音实时转换为文字，并支持翻译成多种语言。
+- [功能描述](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/43-advanced-face-detection.md): 本文档详细介绍了如何使用 TRTC Web SDK 的人脸检测插件，实时检测摄像头视频流中的人脸状态变化。该插件采用智能防抖逻辑，仅在人脸出现/消失状态真正变化时触发回调，避免因光线变化或短暂遮挡导致的误报。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCCloud.md): `TRTCCloud.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的 API 文档，包含了推流、拉流、拉流、混流、录制等功能详细说明。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCCloudDef.md): `TRTCCloudDef.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的类型定义文档。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCCloudListener.md): `TRTCCloudListener.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的事件回调接口文档。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCStatistics.md): `TRTCStatistics.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的统计指标（只读）文档，TRTC SDK 会以两秒钟一次的频率向您汇报当前实时的音视频指标（帧率、码率、卡顿情况等）。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXAudioEffectManager.md): `TXAudioEffectManager.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的背景音乐、短音效和人声特效的管理类文档，用于对背景音乐、短音效和人声特效进行设置的管理类。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXBeautyManager.md): `TXBeautyManager.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的美颜与图像处理参数设置文档，用于修改美颜、滤镜、绿幕等参数。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXDeviceManager.md): `TXDeviceManager.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的音视频设备管理模块文档，用于管理摄像头、麦克风和扬声器等音视频相关的硬件设备。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXLiteAVCode.md): `TXLiteAVCode.java` 是腾讯云实时音视频(TRTC SDK ) Android 平台的状态码文档，用于通知客户 TRTC 在使用过程中出现的警告和错误。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITRTCCloud.md): `ITRTCCloud.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的 API 文档，包含了推流、拉流、拉流、混流、录制等功能详细说明。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITRTCStatistics.md): `ITRTCStatistics.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的统计指标（只读）文档，TRTC SDK 会以两秒钟一次的频率向您汇报当前实时的音视频指标（帧率、码率、卡顿情况等）。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITXAudioEffectManager.md): `ITXAudioEffectManager.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的背景音乐、短音效和人声特效的管理类文档，用于对背景音乐、短音效和人声特效进行设置的管理类。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITXDeviceManager.md): `ITXDeviceManager.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的音视频设备管理模块文档，用于管理摄像头、麦克风和扬声器等音视频相关的硬件设备。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/TRTCCloudCallback.md): `TRTCCloudCallback.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的事件回调接口文档。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/TRTCTypeDef.md): `TRTCTypeDef.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的类型定义文档。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/TXLiteAVCode.md): `TXLiteAVCode.h` 是腾讯云实时音视频(TRTC SDK ) C++ 的状态码文档，用于通知客户 TRTC 在使用过程中出现的警告和错误。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TRTCCloud.md): `TRTCCloud.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的 API 文档，包含了推流、拉流、拉流、混流、录制等功能详细说明。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TRTCCloudDelegate.md): `TRTCCloudDelegate.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的事件回调接口文档。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TRTCStatistics.md): `TRTCStatistics.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的统计指标（只读）文档，TRTC SDK 会以两秒钟一次的频率向您汇报当前实时的音视频指标（帧率、码率、卡顿情况等）。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXAudioEffectManager.md): `TXAudioEffectManager.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的背景音乐、短音效和人声特效的管理类文档，用于对背景音乐、短音效和人声特效进行设置的管理类。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXBeautyManager.md): `TXBeautyManager.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的美颜与图像处理参数设置文档，用于修改美颜、滤镜、绿幕等参数。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXDeviceManager.md): `TXDeviceManager.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的音视频设备管理模块文档，用于管理摄像头、麦克风和扬声器等音视频相关的硬件设备。
+- [腾讯云实时音视频(TRTC SDK )文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXLiteAVCode.md): `TXLiteAVCode.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的状态码文档，用于通知客户 TRTC 在使用过程中出现的警告和错误。
+- [腾讯云实时音视频(TRTC SDK) 文档](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXLiveSDKTypeDef.md): `TXLiveSDKTypeDef.h` 是腾讯云实时音视频(TRTC SDK ) iOS 平台的类型定义文档。
+- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/android/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
+- [准备工作](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/android/integration.md): - **Android 版本要求**：Android 5.0（SDK API Level 21）及以上版本。
+- [TUICallObserver API 简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/android_sdk/call-observer-api.md): TUICallObserver 是 TUICallEngine 对应的回调事件类，您可以通过此回调，来监听自己感兴趣的回调事件。
+- [TUICallKit API 简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/android_sdk/callkit-api.md): TUICallKit API 是音视频通话组件的**含 UI 接口**，使用 TUICallKit API，您可以通过简单接口快速实现一个类微信的音视频通话场景，更详细的接入步骤，详情请参见 [快速接入TUICallKit](https://cloud.tencent.com/document/pr
+- [CallKit 错误码大全](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/common/error_code.md): **原因：** 您的应用还未开通音视频通话（TUICallKit）能力。
+- [**常用结构**](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/flutter_sdk/call-define-api.md): 调用 API 的返回值
+- [TUICallObserver API 简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/flutter_sdk/call-observer-api.md): TUICallObserver 是 TUICallKit 对应的回调事件类，您可以通过此回调，来监听自己感兴趣的回调事件。
+- [TUICallKit API 简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/flutter_sdk/callkit-api.md): TUICallKit API 是音视频通话组件的**含 UI 接口**，使用TUICallKit API，您可以通过简单接口快速实现一个类微信的音视频通话场景，更详细的接入步骤，详情请参见 [快速接入（TUICallKit）](https://write.woa.com/document/86735
+- [TUICallObserver API 简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/ios_sdk/call-observer-api.md): TUICallObserver 是 TUICallEngine 对应的回调事件类，您可以通过此回调，来监听自己感兴趣的回调事件。
+- [TUICallKit API 简介](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/ios_sdk/callkit-api.md): TUICallKit API 是音视频通话组件的**含 UI 接口**，使用TUICallKit API，您可以通过简单接口快速实现一个类微信的音视频通话场景，更详细的接入步骤，详情请参见 [快速接入TUICallKit](https://cloud.tencent.com/document/pro
+- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/flutter/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
+- [准备工作](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/flutter/integration.md): Flutter 3.24.0、Dart 3.5.0 及以上版本。
+- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/ios/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
+- [环境准备](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/ios/integration.md): - Xcode 13 及以上。
+- [重要提醒](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/react/api.md): **文档内容说明：**
+- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/react/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
+- [calls-uikit-react Integration](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/react/integration.md): if you don't have a react project, you can use vite create a react project. otherwise, you can skip this step.
+- [重要提醒](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/vue/api.md): **文档内容说明：**
+- [ALL](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/vue/faq.md): 您可以选择体验版（7 天试用）或者购买正式版。
+- [calls-uikit-vue Integration](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/vue/integration.md): if you don't have a vue3 project, you can use vite create a vue3 project. otherwise, you can skip this step.

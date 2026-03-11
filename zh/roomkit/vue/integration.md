@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 TUIRoomKit 是腾讯云推出的音视频房间 UI 应用。本次升级引入了全新的原子化组件接入方案，开发者可以灵活组合这些原子化组件，以构建个性化的音视频房间界面。

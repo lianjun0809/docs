@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 TUIKit Flutter is a set of Flutter UI component libraries based on Tencent Cloud IM SDK, providing complete solutions for instant messaging features such as chat, conversation list, and contact management. This document introduces how to manually integrate these components and implement core features.

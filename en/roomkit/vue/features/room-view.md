@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 This document will guide you in using Atomicx's core view component `RoomView` to implement video rendering for real-time audio and video rooms. By configuring layout templates and utilizing component slots, you can quickly implement video layout switching and personalized customization.

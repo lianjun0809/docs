@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 `AtomicXCore` 提供了 `CoHostStore` 和 `BattleStore` 两个模块，分别用于处理**跨房连线**和 **PK 对战**。本文将指导您如何组合使用这两个工具，完成语聊房场景下的连线和 PK 功能的开发。

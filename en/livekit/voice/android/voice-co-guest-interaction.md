@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 AtomicXCore provides the [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-co-guest-store/index.html) and [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-live-seat-store/index.html) modules, which are designed to streamline the entire audience co-hosting workflow for live streaming scenarios. You do not need to manage complex state synchronization or signaling logic—simply invoke a few intuitive methods to enable seamless audio and video interactions between hosts and audience members. This guide explains how to quickly implement voice co-hosting features in your Android app using `CoGuestStore` and `LiveSeatStore`.

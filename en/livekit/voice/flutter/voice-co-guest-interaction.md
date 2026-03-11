@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 **AtomicXCore** provides [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_co_guest_store/CoGuestStore-class.html) and [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_live_seat_store/LiveSeatStore-class.html) modules, used to manage the complete business process of audience mic connection. Users do not need to worry about complex state synchronization and signaling interaction, just call a few simple methods to add powerful audio-video interaction between audience and anchor to your live stream. This document will guide you on how to use `CoGuestStore` and `LiveSeatStore` for quick implementation of audio mic connection in Flutter application.

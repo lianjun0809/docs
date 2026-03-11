@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 在进房之前或在通话过程中，检测用户的网络质量，可以判断用户当下的网络质量情况。若用户网络质量太差，应建议用户检查网络或尝试更换网络，以保证正常通话质量。

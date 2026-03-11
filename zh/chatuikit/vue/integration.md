@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 TUIKit 是基于腾讯云 Chat SDK 的一款 Vue 3 UI 组件库，它提供了一些通用的 UI 组件，包含会话、聊天、群组等功能。本文介绍如何快速集成 TUIKit 并实现核心功能。

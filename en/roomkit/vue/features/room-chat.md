@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 The in-room chat feature allows members within a meeting to interact in real-time through text, emojis, and other forms. This feature is implemented based on the IM component capabilities of `tuikit-atomicx-vue3`, providing users with a convenient instant messaging experience.

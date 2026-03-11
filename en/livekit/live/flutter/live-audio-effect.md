@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 This document aims to guide you on how to use the `AtomicXCore` framework's `AudioEffectStore` and `DeviceStore` modules to quickly integrate audio effect control features for your live stream app, including Microphone Volume, listen, and add multiple fun voice-changing effects and reverb effects.

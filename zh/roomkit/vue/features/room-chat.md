@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 会中聊天功能允许会议内的成员通过文字、表情等形式进行实时互动。该功能基于 `tuikit-atomicx-vue3` 的 IM 组件能力实现，为用户提供便捷的即时通讯体验。

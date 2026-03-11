@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 This document aims to guide Flutter developers on how to use the `BarrageStore` module in the `AtomicXCore` framework to quickly integrate a bullet screen system with various features and outstanding performance for your live stream app.

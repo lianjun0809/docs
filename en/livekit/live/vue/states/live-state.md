@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 The atomicx-core SDK is a brand-new first-generation responsive API launched by Tencent Cloud for Chat, Audio/Video Calls, live streaming, voice chat room and other scenarios. You can quickly build your own UI page based on this set of APIs. It supports room management, screen sharing, member management, microphone position control, basic beauty filter and other rich features. Based on the TRTC SDK, it can provide ultra-low latency and high-quality audio/video experience. This page contains ALL API interfaces of the atomicx-core SDK, displayed by feature module.

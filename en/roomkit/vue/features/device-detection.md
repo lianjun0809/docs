@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 This document will guide you on how to provide device preview and testing functionality before users join a room. Through the pre-room testing interfaces provided by Atomicx, you can guide users to check and adjust their audio/video device status, ensuring they enter the multi-party audio/video room in the best condition.

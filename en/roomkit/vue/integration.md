@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 TUIRoomKit is an audio/video room UI application launched by Tencent Cloud. This upgrade introduces a brand new atomic component integration solution, allowing developers to flexibly combine these atomic components to build personalized audio/video room interfaces.

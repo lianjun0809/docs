@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 TUIKit Flutter provides powerful appearance customization capabilities, supporting custom theme modes (Light/Dark/Follow System) and theme colors for your application. Through simple configuration, developers can easily implement app-level theme switching and brand color customization.

@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 会中呼叫功能允许会议内的用户（邀请者）向房间外的其他用户（被邀请者）发送实时入会邀请。该功能基于 `Atomicx State Hooks` 实现，能够帮助开发者快速构建具有主动邀约能力的互动场景。

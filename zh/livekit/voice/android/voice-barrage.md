@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 本篇文档旨在指导 Android 开发者如何使用 `AtomicXCore` 框架中的 `BarrageStore` 模块，为您的直播应用快速集成功能丰富、性能卓越的弹幕系统。

@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 This document provides a guide for integrating the **Host Live Start Page** from the TUILiveKit Demo. You'll learn how to embed our start page into your project and customize the style, layout, and features of the live streaming interface.

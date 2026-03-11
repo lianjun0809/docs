@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 `LiveAudienceState` 是 `AtomicXCore` 中专门负责管理语聊房观众信息的模块。通过 `LiveAudienceState`，您可以为您的直播应用构建一套完整的观众列表及管理系统。

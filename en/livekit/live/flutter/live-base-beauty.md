@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 `BaseBeautyStore` is the module in `AtomicXCore` for management of basic beauty effects for portraits. Through it, you can easily add natural beauty effects to your live stream or call applications.

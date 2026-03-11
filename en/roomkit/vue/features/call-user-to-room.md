@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 The in-room call feature allows users within a meeting (inviter) to send real-time invitations to users outside the room (invitees). This feature is implemented based on `Atomicx State Hooks` and helps developers quickly build interactive scenarios with proactive invitation capabilities.

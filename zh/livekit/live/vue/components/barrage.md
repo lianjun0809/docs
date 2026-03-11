@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 本文对**弹幕组件**进行了详细的介绍，其中包含**弹幕消息组件（BarrageList）**和**消息发送组件（BarrageInput）。**您可以在已有项目中直接参考本文示例集成我们开发好的整体组件，也可以根据您的需求按照文档中的组件自定义部分对样式，布局进行深度的定制。

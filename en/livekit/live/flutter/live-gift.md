@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 `GiftStore` is a module in `AtomicXCore` specialized in managing the gift function of live streaming rooms. With it, you can build a complete gift system for your live stream application to achieve various revenue and interactive scenarios.

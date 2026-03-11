@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 This document provides a detailed introduction to the **Media Source Configuration Panel (LiveScenePanel)**. You can refer to the sample code in this document for seamless integration of our pre-developed components in your existing project, or customize the style and layout according to your needs by following the component customization section in the document.

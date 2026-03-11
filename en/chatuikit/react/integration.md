@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 TUIKit is a UI component library based on the Chat SDK. It enables quick implementation of chat, session, search, relationship chain, group, and other features through UI components. This article introduces how to quickly integrate TUIKit and implement core features

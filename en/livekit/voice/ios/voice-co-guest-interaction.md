@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 **AtomicXCore** provides the [CoGuestStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/cogueststore) and [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/liveseatstore) modules, which handle the complete workflow for audience mic-link requests in live streaming scenarios. You don’t need to worry about complex state synchronization or signaling interactions—simply call a few straightforward methods to add robust audio/video interaction between hosts and viewers in your live broadcast. This guide walks you through how to quickly implement voice mic-link functionality in your iOS app using `CoGuestStore` and `LiveSeatStore`.

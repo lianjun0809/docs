@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 本文档指导您如何使用 Atomicx 组件和 `useDeviceState` Hook 来管理会议中的音视频设备（摄像头、麦克风、扬声器）状态，以及如何获取本地网络质量信息。

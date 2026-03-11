@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 本篇文档将详细指导您如何使用 Atomicx 的 [useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) 管理房间的完整生命周期，包括创建、加入、离开以及结束房间，以及处理关键的房间状态通知。以下时序图演示了房间从创建到销毁的主要流程。

@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/en/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 The scheduled room feature allows users to plan meeting times, topics, and entry passwords in advance. Through this feature, users can create future meeting plans, generate exclusive meeting numbers and entry links, making it convenient to notify participants in advance.

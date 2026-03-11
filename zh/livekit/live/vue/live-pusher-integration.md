@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 本文将介绍如何接入 TUILiveKit Demo 的**主播开播页**，指导您将我们提供的开播页面集成到您的项目中，同时介绍如何对直播页面的样式、布局、以及功能进行自定义修改。

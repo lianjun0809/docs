@@ -1,5 +1,5 @@
 > ## Documentation Index
-> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/zh/llms.txt
+> Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
 本篇文档将指导您如何在用户加入房间前提供设备预览与测试功能。通过 Atomicx 提供的进房前测试接口，您可以引导用户检查并调整音视频设备状态，确保以最佳状态进入多人音视频房间。
