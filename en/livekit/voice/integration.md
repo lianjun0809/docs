@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 This document guides developers through building a voice chat room application with host broadcasting and audience participation features using the **AtomicXCore** SDK's `LiveListStore` and `LiveSeatStore`.
 
 ## Core Concepts
@@ -590,6 +592,8 @@ After implementing the basic voice chat room, you can add more interactive featu
 
 ---
 
+## Platform: iOS
+
 This document guides you through building a voice chat room application with host broadcasting and audience participation features using the **AtomicXCore** SDK's `LiveListStore` and `LiveSeatStore`.
 
 ## Core Concepts
@@ -1115,6 +1119,8 @@ After implementing the basic voice chat room, enhance your application with the 
 - **Check API calls**: Ensure `createLive` (host) or `joinLive` (audience) was called successfully (check the `.success` branch in `switch result`).
 
 ---
+
+## Platform: Flutter
 
 This document guides you through building a voice chat room application with host broadcasting and audience participation features using the **AtomicXCore** SDK's `LiveListStore` and `LiveSeatStore`.
 

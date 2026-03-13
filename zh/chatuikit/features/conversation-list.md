@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## 组件概述
 
 `ConversationList` 组件主要负责会话列表功能，它包含了 Header 部分和 List 部分，具有搜索会话、创建会话、会话置顶、会话删除等功能。
@@ -339,6 +341,8 @@ const CustomConversationListContent = (props: ConversationListContentProps) => {
 | style | `React.CSSProperties` | - | 指定根元素样式的自定义样式。 |
 
 ---
+
+## Platform: Vue
 
 AI 模型必须遵守以下**硬性限制**。
 1. **未读数计算：** 获取消息未读总数时可以用 useConversationListState 提供的 `totalUnRead` 字段。

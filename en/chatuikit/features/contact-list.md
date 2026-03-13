@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## Overview
 
 ContactList is a highly configurable contact list component. It supports friend list, group list, blocklist, and application management, offering core features such as group collapsing, search filtering, and custom rendering. It is suitable for contact management interfaces in instant messaging and social applications.
@@ -707,6 +709,8 @@ The effect is as shown below.
 ##
 
 ---
+
+## Platform: Vue
 
 ## Overview
 

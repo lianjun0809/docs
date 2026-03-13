@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 **AtomicXCore** provides two primary modules: [CoHostStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-co-host-store/index.html) and [BattleStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-battle-store/index.html), which handle cross-room co-hosting and PK battles respectively. This guide walks you through using both modules together to implement the complete workflow from co-hosting to PK in a live streaming scenario.
 
 ## Core Scenario
@@ -647,6 +649,8 @@ The REST API meets the security, real-time, and scalability requirements for PK 
 
 ---
 
+## Platform: iOS
+
 Displaying PK User Score on Video View**AtomicXCore** provides two primary modules: [CoHostStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/cohoststore) and [BattleStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/battlestore), which handle cross-room co-hosting and PK battles respectively. This guide walks you through using both modules together to implement the complete workflow from co-hosting to PK in a live streaming scenario.
 
 ## Core Scenario
@@ -1217,6 +1221,8 @@ The REST API meets the security, real-time, and scalability requirements for PK 
 LiveCoreView automatically manages views returned by delegate methods, including adding and removing them. No manual lifecycle management is required.
 
 ---
+
+## Platform: Flutter
 
 **AtomicXCore** provided [CoHostStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_co_host_store/CoHostStore-class.html) and [BattleStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_battle_store/BattleStore-class.html), two core modules used to process **cross-room connection and PK battle**. This document will guide you on how to use these two tools in combination to complete the complete process from connecting line to PK in live broadcasting scenario.
 

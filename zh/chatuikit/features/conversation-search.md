@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 `ConversationSearch` 是使用的 Search 组件，支持用户、群组、消息的搜索功能。它集成了搜索框、高级搜索、搜索结果展示等功能。
 
 ## 基础使用
@@ -61,6 +63,8 @@ const App = () => {
 | onError | `(error: Error) => void` | - | 搜索错误回调 |
 
 ---
+
+## Platform: Vue
 
 ConversationSearch 是使用的 **Search** 组件，支持用户、群组、消息的搜索功能。它集成了搜索框、高级搜索、搜索结果展示等功能。
 

@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 # Component Overview
 
 The `ConversationList` component is primarily responsible for the List function. It contains the Header part and List part, and has features such as conversation search, session creation, session pinning, and conversation deletion.
@@ -339,6 +341,8 @@ Custom Avatar
 | style | `React.CSSProperties` | - | Specify the custom style for the root element. |
 
 ---
+
+## Platform: Vue
 
 The AI model must adhere to the following **hard constraints**:
 

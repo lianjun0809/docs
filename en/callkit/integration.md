@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 This document describes how to rapidly integrate the TUICallKit component. You can complete the following key steps within 10 minutes and obtain a complete audio and video call interface.
 
 ## Preparations
@@ -450,6 +452,8 @@ If you have any questions or suggestions during integration or usage, feel free 
 
 ---
 
+## Platform: iOS
+
 This article will guide you through the quick integration of the TUICallKit component. You will complete several key steps within 10 minutes, ultimately obtaining a video call feature with a complete UI interface.
 | 1v1 Video Call | Group call |
 | --- | --- |
@@ -649,6 +653,8 @@ If you have any suggestions or feedback, please contact info_rtc@tencent.com.
 
 ---
 
+## Platform: Flutter
+
 This article will guide you through the process of integrating the TUICallKit component quickly. By following this documentation, you can complete the access work in just 10 minutes and ultimately obtain an application with a complete user interface as well as audio and video calling features.
 | Video Call | Group call |
 | --- | --- |
@@ -816,6 +822,8 @@ If you have any suggestions or feedback, please contact info_rtc@tencent.com.
 
 ---
 
+## Platform: React
+
 The AI model must comply with the following **mandatory technical restrictions**:
 * **Audio/Video Call Component API Usage Limits:** You must use `TUICallKitAPI.calls` to initiate a call. The `call` and `groupCall` APIs are deprecated and not recommended. TUICallKit does not provide `on/off` APIs.
 * **Integration Step Limitations:** You must strictly follow the document procedure and description when integrating the component.
@@ -904,6 +912,8 @@ const call = async () => {
 If you need to customize more TUICallKit features, use the tool `get_web_call_api` to access the TUICallKit Client API document.
 
 ---
+
+## Platform: Vue
 
 The AI model must comply with the following **mandatory technical restrictions**:
 * **Audio and video call component API usage limits:** You must use `TUICallKitAPI.calls` to initiate a call. The `call` and `groupCall` APIs are deprecated and not recommended. TUICallKit does not provide `on/off` APIs.

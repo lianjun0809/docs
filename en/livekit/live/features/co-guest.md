@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 **AtomicXCore** provides the [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-co-guest-store/index.html) module, purpose-built to manage the complete audience co-hosting workflow. You do not need to handle complex state synchronization or signaling logic—simply call a few intuitive methods to add robust audio and video interaction between viewers and hosts in your live stream.
 
 ## Core Features
@@ -500,6 +502,8 @@ The viewLayer parameter distinguishes between foreground and background widgets:
 
 ---
 
+## Platform: iOS
+
 **AtomicXCore** provides the [CoGuestStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/cogueststore) module, purpose-built to manage the complete audience co-hosting workflow. You do not need to handle complex state synchronization or signaling logic—simply call a few intuitive methods to add robust audio and video interaction between viewers and hosts in your live stream.
 
 ## Core Features
@@ -886,6 +890,8 @@ The viewLayer parameter distinguishes between foreground and background widgets:
 - **Check return value**: Make sure your adapter method returns a valid `UIView` instance at the appropriate time, not null. Add logs in the adapter method for debugging if needed.
 
 ---
+
+## Platform: Flutter
 
 **AtomicXCore** provided the [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_co_guest_store/CoGuestStore-class.html) module, specialized to manage the complete business process of audience mic connection. Developers do not need to worry about complex state synchronization and signaling interaction, just call a few simple methods to add powerful audio-video interaction between audience and Anchor to your live stream.
 

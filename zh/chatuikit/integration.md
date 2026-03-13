@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 TUIKit Compose 是基于腾讯云 IM SDK 的一套 Jetpack Compose 组件库，提供了聊天、会话列表、联系人管理等即时通信功能的完整解决方案。本文介绍如何手动集成该组件并实现核心功能。
 
 ## 关键概念
@@ -523,6 +525,8 @@ ChatPage(
 如果您在接入或使用过程有任何疑问或者建议，欢迎 [联系我们](https://cloud.tencent.com/document/product/269/59590) 提交反馈。
 
 ---
+
+## Platform: iOS
 
 本文将介绍如何集成 `TUIKit` 组件。 
 
@@ -1776,6 +1780,8 @@ end
 
 ---
 
+## Platform: Flutter
+
 TUIKit Flutter 是基于腾讯云 IM SDK 的一套 Flutter UI 组件库，提供了聊天、会话列表、联系人管理等即时通信功能的完整解决方案。本文介绍如何手动集成该组件并实现核心功能。
 
 ## 关键概念
@@ -2139,6 +2145,8 @@ ConversationsPage、ChatPage、ContactsPage 中实现了默认的用户点击事
 如果您在接入或使用过程中有任何疑问或者建议，欢迎 [联系我们](https://cloud.tencent.com/document/product/269/59590) 提交反馈。
 
 ---
+
+## Platform: React
 
 TUIKit 是基于腾讯云 Chat SDK 的一款 vue3 UI 组件库，它提供了一些通用的 UI 组件，包含会话、聊天、群组等功能。本文介绍如何快速集成 TUIKit 并实现核心功能。
 
@@ -2640,6 +2648,8 @@ function onChatSettingClose() {
 如遇任何问题，可联系 [官网售后](https://cloud.tencent.com/act/event/connect-service#/) 反馈，享有专业工程师的支持，解决您的难题。
 
 ---
+
+## Platform: Vue
 
 TUIKit 是基于腾讯云 Chat SDK 的一款 Vue 3 UI 组件库，它提供了一些通用的 UI 组件，包含会话、聊天、群组等功能。本文介绍如何快速集成 TUIKit 并实现核心功能。
 

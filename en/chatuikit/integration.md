@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 TUIKit Compose is a Jetpack Compose component library based on Tencent Cloud IM SDK, providing complete solutions for instant messaging features such as chat, conversation list, and contact management. This document describes how to manually integrate these components and implement core functionality.
 
 ## Key Concepts
@@ -511,6 +513,8 @@ ChatPage(
 You can refer to the above callback descriptions and reference code to implement interaction logic between Pages.
 
 ---
+
+## Platform: iOS
 
 This article introduces how to integrate `TUIKit` components. 
 
@@ -1280,6 +1284,8 @@ If you have any questions about this article, feel free to join the [Telegram Te
 
 ---
 
+## Platform: Flutter
+
 TUIKit Flutter is a set of Flutter UI component libraries based on Tencent Cloud IM SDK, providing complete solutions for instant messaging features such as chat, conversation list, and contact management. This document introduces how to manually integrate these components and implement core features.
 
 ## Key Concepts
@@ -1635,6 +1641,8 @@ You can refer to the above callback descriptions and reference code to implement
 The component supports theme color and internationalized string switching. You need to use `ComponentTheme` to wrap the root `widget` in the `main.dart` file in the project root directory, and add the `AtomicLocalizations.delegate` configuration to the `localizationsDelegates` of `MaterialApp`. You can refer to the `main.dart` file in the source code Demo for usage.
 
 ---
+
+## Platform: React
 
 TUIKit is a UI component library based on the Chat SDK. It enables quick implementation of chat, session, search, relationship chain, group, and other features through UI components. This article introduces how to quickly integrate TUIKit and implement core features
 <iframe src="https://web.sdk.qcloud.com/im/demo/docs-example/sample-chat/index.html#/inbox?page=intergration" style="width:100%;height:700px;border:none" allow="camera; microphone; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
@@ -2060,6 +2068,8 @@ Join the [Telegram Technical Exchange Group](https://t.me/tencent_imsdk) or [Wha
 - [chat-uikit-engine-lite npm](https://www.npmjs.com/package/@tencentcloud/chat-uikit-engine-lite)
 
 ---
+
+## Platform: Vue
 
 # Vue Chat TUIKit Integration Guide
 

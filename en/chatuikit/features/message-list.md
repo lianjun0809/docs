@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 # Component Overview
 
 MessageList is a powerful chat message list component with complete message display, interaction, and custom function. The component support includes message grouping, read receipt, message manipulation, scroll control, and other core chat features, while providing various custom options to satisfy different business needs.
@@ -297,6 +299,8 @@ function ChatApp() {
 The MessageList component provides complete message list functionality and various custom options. By reasonably configuring Props and custom components, you can create a chat interface that meets business requirements. It is advisable to select appropriate configuration based on specific scenarios in actual use.
 
 ---
+
+## Platform: Vue
 
 # Overview
 

@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 本文档将帮助开发者使用 `AtomicXCore SDK`的 `LiveListStore` 和 `LiveSeatStore`  快速构建一个包含主播开播和观众进房功能的语聊房 `App`。
 
 ## 核心概念
@@ -522,6 +524,8 @@ class YourAnchorActivity : AppCompatActivity() {
 
 ---
 
+## Platform: iOS
+
 本文档将帮助开发者使用 `AtomicXCore SDK` 的 `LiveListStore` 和 `LiveSeatStore` 快速构建一个包含主播开播和观众进房功能的语聊房 `App`。
 
 ## 核心概念
@@ -1014,6 +1018,8 @@ class YourAnchorViewController: UIViewController {
 - **检查接口调用**：请确保 `createLive` (房主) 或 `joinLive` (听众) 接口已成功调用（在 `switch result` 的 `.success` 分支中确认）。
 
 ---
+
+## Platform: Flutter
 
 本文档将帮助开发者使用 `AtomicXCore SDK` 的 `LiveListStore` 和 `LiveSeatStore` 快速构建一个包含主播开播和观众进房功能的语聊房 `App`。
 
@@ -1592,6 +1598,8 @@ class YourSpeakingIndicatorWidget extends StatelessWidget {
 - **检查接口调用**：请确保 `createLive`（房主）或 `joinLive`（听众）接口已成功调用（在回调结果的 `isSuccess` 为 `true` 时确认）。
 
 ---
+
+## Platform: uni-app
 
 本文档将帮助开发者使用 `AtomicXCore SDK` 的 `LiveListState` 和 `LiveSeatState` 快速构建一个包含主播开播和观众进房功能的语聊房 `App`。
 

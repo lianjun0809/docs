@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Vue
+
 This document provides a detailed introduction to **Link Management Panel (CoGuestPanel)**. You can refer to the sample code in this document for seamless integration of our pre-developed components in your existing project, or customize the style and layout according to your needs by following the customization section of components in the document.
 
 ## Core Features

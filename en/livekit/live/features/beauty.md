@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `BaseBeautyStore` is the module in **AtomicXCore** responsible for managing basic portrait beautification effects. This module enables you to easily add natural beautification features to your live streaming or video calling applications.
 
 ## Core Features
@@ -188,6 +190,8 @@ For detailed information on all public interfaces, properties, and methods of [B
 
 ---
 
+## Platform: iOS
+
 `BaseBeautyStore` is the module in **AtomicXCore** responsible for managing basic portrait beautification effects. This module enables you to easily add natural beautification features to your live streaming or video calling applications.
 
 ## Core Features
@@ -345,6 +349,8 @@ For detailed information on all public interfaces, properties, and methods of [B
 3. **Value Range**: Verify that you are passing values between 0 and 9. Passing 0 will result in no visible effect.
 
 ---
+
+## Platform: Flutter
 
 `BaseBeautyStore` is the module in `AtomicXCore` for management of basic beauty effects for portraits. Through it, you can easily add natural beauty effects to your live stream or call applications.
 

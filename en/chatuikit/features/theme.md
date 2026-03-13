@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 TUIKit Compose provides powerful appearance customization capabilities, supporting custom theme modes (Light/Dark/Follow System) and theme colors for your application. Through simple configuration, developers can easily implement app-level theme switching and brand color customization.
 
 Taking the message list as an example, the effects of custom theme modes and theme colors are shown below:
@@ -223,6 +225,8 @@ themeState.setPrimaryColor("#0ABF77")
 ```
 
 ---
+
+## Platform: iOS
 
 TUIKit SwiftUI provides powerful appearance customization capabilities, supporting custom theme modes (Light/Dark/Follow System) and theme colors for your application. Through simple configuration, developers can easily implement app-level theme switching and brand color customization.
 
@@ -493,6 +497,8 @@ struct CustomColorPicker: View {
    ```
 
 ---
+
+## Platform: Flutter
 
 TUIKit Flutter provides powerful appearance customization capabilities, supporting custom theme modes (Light/Dark/Follow System) and theme colors for your application. Through simple configuration, developers can easily implement app-level theme switching and brand color customization.
 

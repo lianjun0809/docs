@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 **AtomicXCore** 提供了 [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-co-guest-store/index.html) 和 [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-live-seat-store/index.html)模块，用于管理观众连麦的完整业务流程。您无需关心复杂的状态同步和信令交互，只需调用几个简单的方法，即可为您的直播添加强大的观众与主播音视频互动功能。本文档将指导您如何使用 `CoGuestStore `和 `LiveSeatStore` 在 `Android` 应用中快速实现语音连麦功能。
 
 ## 核心场景
@@ -544,6 +546,8 @@ seatStore.moveUserToSeat("userC",
 
 ---
 
+## Platform: iOS
+
 **AtomicXCore** 提供了 [CoGuestStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/cogueststore) 和 [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/liveseatstore) 模块，用于管理观众连麦的完整业务流程。您无需关心复杂的状态同步和信令交互，只需调用几个简单的方法，即可为您的直播添加强大的观众与主播音视频互动功能。本文档将指导您如何使用 `CoGuestStore `和 `LiveSeatStore`在 iOS 应用中快速实现语音连麦功能。
 
 ## 核心场景
@@ -1038,6 +1042,8 @@ seatStore.moveUserToSeat(userID: "userC",
 3. **下麦时**：当用户下麦（例如调用 `disconnect`），调用`closeLocalMicrophone`来释放设备。
 
 ---
+
+## Platform: Flutter
 
 **AtomicXCore** 提供了 [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_co_guest_store/CoGuestStore-class.html) 和 [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_live_seat_store/LiveSeatStore-class.html) 模块，用于管理观众连麦的完整业务流程。用户无需关心复杂的状态同步和信令交互，只需调用几个简单的方法，即可为您的直播添加强大的观众与主播音视频互动功能。本文档将指导您如何使用 `CoGuestStore` 和 `LiveSeatStore` 在 Flutter 应用中快速实现语音连麦功能。
 
@@ -1557,6 +1563,8 @@ if (result.isSuccess) {
 - 通过 `seatInfo.userInfo.microphoneStatus` 判断麦上用户的麦克风状态。
 
 ---
+
+## Platform: uni-app
 
 **AtomicXCore** 提供了 [CoGuestState](https://liteav.sdk.qcloud.com/doc/product/tuikit/atomic-x/uni-app/zh/v1.0/api/index.html#module-CoGuestState) 和 [LiveSeatState](https://liteav.sdk.qcloud.com/doc/product/tuikit/atomic-x/uni-app/zh/v1.0/api/index.html#module-LiveSeatState) 模块，用于管理观众连麦的完整业务流程。您无需关心复杂的状态同步和信令交互，只需调用几个简单的方法，即可为您的直播添加强大的观众与主播音视频互动功能。本文档将指导您如何使用 `CoGuestState `和 `LiveSeatState`在您的应用中快速实现语音连麦功能。
 

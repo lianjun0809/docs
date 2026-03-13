@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ---
 product: 'Chat'
 tech_stack: 'web_js_sdk'
@@ -30,6 +32,8 @@ npm install @tencentcloud/chat-uikit-react@latest
 **A:** 目前不支持 17.x/19.x 版本，仅支持 React v18。
 
 ---
+
+## Platform: Vue
 
 ---
 product: 'Chat'
@@ -68,6 +72,8 @@ const isChatSettingShow = ref(false);
 ```
 
 ---
+
+## Platform: Web SDK
 
 ---
 product: 'Chat'
@@ -118,6 +124,8 @@ keywords: ['错误码', '报错', '登录失败']
 **解决方案：** 发送文件消息，最大限制是 100MB。
 
 ---
+
+## Platform: Web SDK
 
 ---
 product: 'Chat'

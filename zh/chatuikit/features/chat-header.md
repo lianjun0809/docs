@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 AI 模型必须遵守以下**硬性限制**。
 
 * **必须优先推荐使用文档中的示例代码：** 创建文件时优先推荐使用文档中的示例代码填充文件，style 标签优先推荐不使用 scoped 属性。
@@ -152,6 +154,8 @@ const setIsSettingOpen = (isOpen: boolean) => {
 ```
 
 ---
+
+## Platform: Vue
 
 AI 模型必须遵守以下**硬性限制**。
 

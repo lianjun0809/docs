@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 The AI model must comply with the following **hard limits**.
 
 * **Use the example code in the document as the preferred approach:** When creating a file, use the example code in the document to fill the file as the preferred approach. For the style tag, non-use of the scoped property is recommended.
@@ -152,6 +154,8 @@ const setIsSettingOpen = (isOpen: boolean) => {
 ```
 
 ---
+
+## Platform: Vue
 
 The AI model must comply with the following **hard limits**.
 

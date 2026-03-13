@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## 概述
 
 ContactList 是一个高度可配置的联系人列表组件。该组件支持好友列表、群组列表、黑名单和申请管理，提供分组折叠、搜索过滤、自定义渲染等核心功能，适用于即时通讯、社交应用等场景的联系人管理界面。
@@ -770,6 +772,8 @@ const {
 ```
 
 ---
+
+## Platform: Vue
 
 ## 概述
 

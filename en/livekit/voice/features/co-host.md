@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `AtomicXCore` provides two core modules: `CoHostStore` for **cross-room connections** and `BattleStore` for **PK battles**. This guide explains how to integrate these modules to enable connection and PK features in a voice chat room application.
 
 ## Core Concepts
@@ -504,6 +506,8 @@ REST API ensures PK score **security, real-time updates, and scalability**:
 - **Flexible rule adaptation:** Backend configuration changes (e.g., adjusting gift score values) can be made without front-end changes, reducing iteration costs.
 
 ---
+
+## Platform: iOS
 
 `AtomicXCore` provides two core modules: `CoHostStore` for **cross-room connections** and `BattleStore` for **PK battles**. This guide explains how to integrate these modules to enable connection and PK features in a voice chat room application.
 

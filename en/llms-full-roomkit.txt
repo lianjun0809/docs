@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent Real-Time Communication Onboarding
+description: Set up AI Agent environment from scratch, integrate Tencent RTC SDKs (Chat/Call/Live/Room/TRTC) via Cursor/VS Code + MCP Server to build IM, calls, live streaming and conferencing apps.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
 
 This guide helps you quickly build a working Tencent Cloud Real-Time Communication (TRTC) and Instant Messaging (IM) application using an AI editor. We provide rich documentation resources to enhance your development experience.
 
@@ -169,9 +173,11 @@ Troubleshooting:
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
+title: Configure MCP Server
+description: Add Tencent RTC MCP Server configuration in Cursor/VS Code, set SDKAppID and SDKSecretKey environment variables to enable Chat/Call/Live/Room/TRTC tool capabilities.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) standardizes how applications provide context to LLMs. This guide describes how to use MCP to integrate TRTC (Real-Time Communication) and IM (Instant Messaging) UIKit components. Only `stdio` transport mode is supported.
 
@@ -326,9 +332,11 @@ If you need a global installation, run the following command in the terminal:
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
+title: Configure RTC Skills
+description: Configure AI Agent's RTC Skills package to load Chat UIKit, TUICallKit, LiveKit, RoomKit, TRTC Engine integration capabilities and best practice rules.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills provides structured guidance for Tencent Cloud real-time audio/video scenarios. It translates natural language requirements into executable steps and helps the Agent call the corresponding MCP tools in the correct order. Use RTC Skills to enable AI Agents to complete Chat, Call, Live, and Room MCP integrations more efficiently.
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/beauty.md
+--------------------------------------------------------------------------------
+title: Integrate Vue RoomKit Basic Beauty
+description: Use TUIRoomKit free beauty panel for smoothing, whitening and blushing with real-time preview and remote effect.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/beauty.md
+--------------------------------------------------------------------------------
 
 The basic beauty feature allows users to apply skin smoothing, whitening, and ruddiness adjustments to portraits during video calls or live streaming.
 
@@ -585,9 +595,11 @@ Tencent Cloud provides a sample project [atomicx-vite-vue3-ts](https://github.co
 | --- | --- | --- |
 | **useFreeBeautyState** | Free beauty feature management | [API Documentation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-FreeBeautyState) |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/call-user-to-room.md
+--------------------------------------------------------------------------------
+title: Implement Vue RoomKit In-Meeting Call
+description: Use useRoomState API to send real-time meeting invitations to outside users, handle accept/reject and timeout.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/call-user-to-room.md
+--------------------------------------------------------------------------------
 
 The in-room call feature allows users within a meeting (inviter) to send real-time invitations to users outside the room (invitees). This feature is implemented based on `Atomicx State Hooks` and helps developers quickly build interactive scenarios with proactive invitation capabilities.
 
@@ -810,9 +822,11 @@ Tencent Cloud provides a sample project [atomicx-vite-vue3-ts](https://github.co
 | --- | --- | --- |
 | **useRoomState** | Room state management (create, join, schedule, etc.) | [API Documentation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/device-detection.md
+--------------------------------------------------------------------------------
+title: Implement Vue RoomKit Device Detection
+description: Use useDeviceState API for pre-meeting camera, microphone, speaker and network quality detection.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/device-detection.md
+--------------------------------------------------------------------------------
 
 This document will guide you on how to provide device preview and testing functionality before users join a room. Through the pre-room testing interfaces provided by Atomicx, you can guide users to check and adjust their audio/video device status, ensuring they enter the multi-party audio/video room in the best condition.
 
@@ -1185,9 +1199,11 @@ Possible reasons include:
 
 - **Wrong device selected:** Switch to the correct microphone device.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/device-state.md
+--------------------------------------------------------------------------------
+title: Manage Vue RoomKit Device State
+description: Use useDeviceState API to manage camera, microphone, speaker on/off and switching in meetings.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/device-state.md
+--------------------------------------------------------------------------------
 
 This document guides you on how to use Atomicx components and the `useDeviceState` Hook to manage audio/video device (camera, microphone, speaker) state in meetings, and how to obtain local network quality information.
 
@@ -1650,9 +1666,11 @@ Yes, they can enter the room. Users can still successfully call the `joinRoom` i
 
 Atomicx has built-in device hot-plug detection. When media devices are plugged in or unplugged, the device list and current device data will be automatically updated.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-chat.md
+--------------------------------------------------------------------------------
+title: Implement Vue RoomKit In-Meeting Chat
+description: Use useRoomChat API for in-meeting text, emoji, image real-time chat.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-chat.md
+--------------------------------------------------------------------------------
 
 The in-room chat feature allows members within a meeting to interact in real-time through text, emojis, and other forms. This feature is implemented based on the IM component capabilities of `tuikit-atomicx-vue3`, providing users with a convenient instant messaging experience.
 
@@ -2026,9 +2044,11 @@ Tencent Cloud provides a sample project [atomicx-vite-vue3-ts](https://github.co
 | **useMessageListState** | Message list management | [API Documentation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageListState) |
 | **useMessageInputState** | Message input management | [API Documentation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-MessageInputState) |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-participant.md
+--------------------------------------------------------------------------------
+title: Manage Vue RoomKit Participants
+description: Use useRoomParticipantState API to manage participant list, permissions, admin settings, mute all and kick operations.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-participant.md
+--------------------------------------------------------------------------------
 
 This document will guide you on how to manage participants in a room. Atomicx provides an out-of-the-box list component `RoomParticipantList` for quick integration, and exposes the [useRoomParticipantState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomParticipantState) Hook to facilitate custom member control logic implementation.
 
@@ -2416,9 +2436,11 @@ const hasAdminPermission = computed(() => {
 <template>
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-state.md
+--------------------------------------------------------------------------------
+title: Manage Vue RoomKit Room Lifecycle
+description: Use useRoomState API to manage room lifecycle: create, join, leave, destroy and room info updates.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-state.md
+--------------------------------------------------------------------------------
 
 This document will guide you in detail on how to use Atomicx's [useRoomState](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) to manage the complete lifecycle of a room, including creating, joining, leaving, and ending a room, as well as handling key room status notifications. The following sequence diagram demonstrates the main process from room creation to destruction.
 
@@ -2703,9 +2725,11 @@ The `useRoomState` provided by Atomicx is a singleton interface and only support
 
 The upper limit on the number of users in a room is related to your package. For details, please check [TUIRoomKit Package Description](https://cloud.tencent.com/document/product/647/104842#function).
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-view.md
+--------------------------------------------------------------------------------
+title: Render Vue RoomKit Video Layout
+description: Use useRoomView API for grid layout, sidebar layout and speaker mode video rendering with custom video overlays.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/room-view.md
+--------------------------------------------------------------------------------
 
 This document will guide you in using Atomicx's core view component `RoomView` to implement video rendering for real-time audio and video rooms. By configuring layout templates and utilizing component slots, you can quickly implement video layout switching and personalized customization.
 
@@ -2952,9 +2976,11 @@ To provide complete interactive feedback, it is recommended to prepare the follo
 
 `RoomView` currently supports grid layout, sidebar, and top bar layouts. If you have customization needs, please [contact us](https://cloud.tencent.com/document/product/647/19906).
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/schedule-room.md
+--------------------------------------------------------------------------------
+title: Schedule Vue RoomKit Meeting Room
+description: Use useRoomState API to create scheduled meetings with time, topic, password and participant list.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/schedule-room.md
+--------------------------------------------------------------------------------
 
 The scheduled room feature allows users to plan meeting times, topics, and entry passwords in advance. Through this feature, users can create future meeting plans, generate exclusive meeting numbers and entry links, making it convenient to notify participants in advance.
 
@@ -3277,9 +3303,11 @@ Tencent Cloud provides a sample project [atomicx-vite-vue3-ts](https://github.co
 | --- | --- | --- |
 | **useRoomState** | Room state management (create, join, schedule, etc.) | [API Documentation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-RoomState) |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/screen-share.md
+--------------------------------------------------------------------------------
+title: Implement Vue RoomKit Screen Sharing
+description: Use useDeviceState API for screen sharing, system audio sharing and permission control.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/screen-share.md
+--------------------------------------------------------------------------------
 
 This document guides you on how to use Atomicx to implement screen sharing capabilities and handle room interactions based on screen sharing status.
 
@@ -3550,9 +3578,11 @@ This is expected system behavior for the following reasons:
 
 **Privacy Note:** Please rest assured, this does not mean your microphone is capturing voice. Whether the microphone voice is being pushed is only related to microphone control interfaces (`openLocalMicrophone` and `unmuteLocalMicrophone`), and is independent of screen sharing audio capture. Even if screen sharing audio is being transmitted, as long as microphone-related interfaces are not called, your microphone voice will not be captured and pushed.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/virtual-background.md
+--------------------------------------------------------------------------------
+title: Use Vue RoomKit Virtual Background
+description: Use TUIRoomKit virtual background plugin for background blur and custom background image replacement.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/features/virtual-background.md
+--------------------------------------------------------------------------------
 
 # Virtual Background
 
@@ -3828,9 +3858,11 @@ Tencent Cloud provides a sample project [atomicx-vite-vue3-ts](https://github.co
 | --- | --- | --- |
 | **useVirtualBackgroundState** | Virtual background management | [API Documentation](https://web.sdk.qcloud.com/trtc/live/web/doc/zh/index.html#module-VirtualBackgroundState) |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/integration.md
+--------------------------------------------------------------------------------
+title: Integrate Vue TUIRoomKit (Atomicx) Video Conferencing
+description: Clone TUIRoomKit from GitHub, integrate home.vue device detection and room.vue conference pages for full video conferencing app. Requires Vue 3.4.21+, Node.js 18+.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/roomkit/integration.md
+--------------------------------------------------------------------------------
 
 TUIRoomKit is an audio/video room UI application launched by Tencent Cloud. This upgrade introduces a brand new atomic component integration solution, allowing developers to flexibly combine these atomic components to build personalized audio/video room interfaces.
 

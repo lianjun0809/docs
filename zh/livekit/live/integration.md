@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 本文档将帮助您使用 **AtomicXCore SDK**的核心组件 [LiveCoreView](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.view/-live-core-view/index.html)，快速构建一个包含主播开播和观众观看功能的基础直播 App。
 
 ### **核心功能**
@@ -507,6 +509,8 @@ class YourAudienceActivity : AppCompatActivity() {
 
 ---
 
+## Platform: iOS
+
 本文档将帮助您使用 **AtomicXCore SDK **的核心组件 [LiveCoreView](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/livecoreview)，快速构建一个包含主播开播和观众观看功能的基础直播 App。
 
 ## **核心功能**
@@ -954,6 +958,8 @@ Xcode 的用户**脚本沙盒机制**限制了构建过程中 `rsync` 脚本对 
 2. 清理并重新构建项目执行 **Product → Clean Build Folder** 清理项目缓存，然后重新编译运行即可。
 
 ---
+
+## Platform: Flutter
 
 本文档将帮助您使用 **AtomicXCore SDK** 的核心组件 [LiveCoreWidget](https://tencent-rtc.github.io/TUIKit_Flutter/api_view_live_live_core_widget/api_view_live_live_core_widget-library.html)，快速构建一个包含主播开播和观众观看功能的基础直播 App。
 
@@ -1653,6 +1659,8 @@ void dispose() {
 
 ---
 
+## Platform: Vue
+
 ## 概述
 
 本文对 TUILiveKit Demo 中的**直播列表页面**进行了详细的介绍，您可以在已有项目中直接参考本文档集成我们开发好的直播列表页面，也可以根据您的需求按照文档中的内容对页面的样式，布局以及功能项进行深度的定制。
@@ -1899,6 +1907,8 @@ await setSelfInfo({
 | **Web 监播** | 运营平台，支持直播间管控。 | 监播页面（Web Vue3） |
 
 ---
+
+## Platform: Vue
 
 本文将介绍如何接入 TUILiveKit Demo 的**主播开播页**，指导您将我们提供的开播页面集成到您的项目中，同时介绍如何对直播页面的样式、布局、以及功能进行自定义修改。
 
@@ -2662,6 +2672,8 @@ import { UIKitProvider } from '@tencentcloud/uikit-base-component-vue3';
 
 ---
 
+## Platform: Vue
+
 本文对 TUILiveKit Demo 中的**观看页面**进行了详细的介绍，您可以在已有项目中直接参考本文档集成我们开发好的观看页面，也可以根据您的需求按照文档中的内容对页面的样式，布局以及功能项进行深度的定制。
 
 ## 功能展示
@@ -2968,6 +2980,8 @@ export { useCustomizedAutoPlayDialog };
 | **Web 监播** | 运营平台，支持直播间管控。 | Web 监播页（Web Vue3） |
 
 ---
+
+## Platform: Vue
 
 本文对 TUILiveKit Demo 中的**观看页面**进行了详细的介绍，您可以在已有项目中直接参考本文档集成我们开发好的观看页面，也可以根据您的需求按照文档中的内容对页面的样式，布局以及功能项进行深度的定制。
 

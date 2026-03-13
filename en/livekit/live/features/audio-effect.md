@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 This document provides guidance on integrating audio effect controls into your live streaming application using the `AudioEffectStore` and `DeviceStore` modules from the **AtomicXCore** framework. These modules enable features such as microphone volume control, ear monitoring, and a variety of voice changing and reverb effects.
 
 ## Core Features
@@ -227,6 +229,8 @@ Yes. `AudioChangerType` and `AudioReverbType` can be enabled simultaneously. For
 
 ---
 
+## Platform: iOS
+
 This document provides guidance on integrating audio effect controls into your live streaming application using the `AudioEffectStore` and `DeviceStore` modules from the **AtomicXCore** framework. These modules enable features such as microphone volume control, ear monitoring, and a variety of voice changing and reverb effects.
 
 ## Core Features
@@ -441,6 +445,8 @@ Check the following:
 Yes. `AudioChangerType` and `AudioReverbType` can be enabled simultaneously. For example, you can set both `AudioChangerType.LITTLE_GIRL`and `AudioReverbType.KTV` at the same time.
 
 ---
+
+## Platform: Flutter
 
 This document aims to guide you on how to use the `AtomicXCore` framework's `AudioEffectStore` and `DeviceStore` modules to quickly integrate audio effect control features for your live stream app, including Microphone Volume, listen, and add multiple fun voice-changing effects and reverb effects.
 

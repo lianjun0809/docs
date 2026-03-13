@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## Component Overview
 
 `ChatSetting` is an intelligent chat settings component that can automatically render the appropriate settings interface based on the currently activated session type. This component internally integrates two modes: C2C (one-on-one) chat settings and group chat settings, providing users with a uniform chat settings portal.
@@ -61,6 +63,8 @@ function App() {
 ```
 
 ---
+
+## Platform: Vue
 
 ## Component Overview
 

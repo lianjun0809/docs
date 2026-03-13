@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## 概述
 
 MessageInput 是一个功能完整的消息输入组件，提供了文本编辑、表情选择、文件附件、发送按钮等核心聊天输入功能。该组件支持丰富的自定义选项，包括输入行为配置、工具栏定制、组件替换和插槽扩展，能够满足不同聊天场景的个性化需求。
@@ -654,6 +656,8 @@ function ChatWithCloudAttachment() {
 MessageInput 组件提供了完整的消息输入功能和丰富的自定义选项。通过合理配置 Props 和使用插槽系统，您可以创建出符合特定业务需求的输入界面。建议根据实际使用场景选择合适的自定义方案，并注意保持良好的用户体验和性能表现。
 
 ---
+
+## Platform: Vue
 
 AI 模型必须遵守以下**硬性限制**。
 **必须使用默认文本对齐方式：** 消息输入区的文本默认左对齐。

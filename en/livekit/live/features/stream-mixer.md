@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Vue
+
 This document provides a detailed introduction to **Video Source Editing Canvas (StreamMixer)**. You can refer to the sample code in this document to integrate our pre-developed components into your existing project, or customize the style and layout according to your needs by following the component customization section in the document.
 
 ## Core Features

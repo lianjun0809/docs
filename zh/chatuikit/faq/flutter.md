@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Flutter
+
 ---
 product: 'Chat'
 tech_stack: 'flutter_native_sdk'
@@ -26,6 +28,8 @@ keywords: ['flutter', '初始化', '组件', '集成', 'TUIKit']
 消息免打扰无 UI 文档： https://cloud.tencent.com/document/product/269/75355
 
 ---
+
+## Platform: Flutter SDK
 
 ## 初始化登录接口
 
@@ -212,6 +216,8 @@ keywords: ['flutter', '初始化', '组件', '集成', 'TUIKit']
 | [setOfflinePushConfig](https://pub.dev/documentation/tencent_cloud_chat_sdk/latest/manager_v2_tim_offline_push_manager/V2TIMOfflinePushManager/setOfflinePushConfig.html) | 设置离线推送配置信息 |
 
 ---
+
+## Platform: Flutter SDK
 
 ---
 product: 'Chat'
@@ -270,6 +276,8 @@ keywords: ['sdk 集成', '登录 API', '创建群组','发送消息','接收消�
 
 ---
 
+## Platform: Flutter SDK
+
 ## 初始化登录接口
 
 初始化并成功登录，是正常使用腾讯云 IM 服务的前提。
@@ -455,6 +463,8 @@ keywords: ['sdk 集成', '登录 API', '创建群组','发送消息','接收消�
 | [setOfflinePushConfig](https://pub.dev/documentation/tencent_cloud_chat_sdk/latest/manager_v2_tim_offline_push_manager/V2TIMOfflinePushManager/setOfflinePushConfig.html) | 设置离线推送配置信息 |
 
 ---
+
+## Platform: Flutter SDK
 
 ---
 product: 'Chat'

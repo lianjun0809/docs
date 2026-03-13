@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 本篇文档旨在指导您如何使用 `AtomicXCore` 框架中的  `AudioEffectStore` 和 `DeviceStore` 模块，为您的直播应用快速集成音效控制功能，包括麦克风音量、耳返监听，并添加多种趣味变声效果和混响效果。
 
 ## 核心功能
@@ -231,6 +233,8 @@ audioEffectStore.setAudioReverbType(AudioReverbType.NONE)
 
 ---
 
+## Platform: iOS
+
 本篇文档旨在指导您如何使用 `AtomicXCore` 框架中的  `AudioEffectStore` 和 `DeviceStore` 模块，为您的直播应用快速集成音效控制功能，包括麦克风音量、耳返监听，并添加多种趣味变声效果和混响效果。
 
 ## 核心功能
@@ -444,6 +448,8 @@ audioEffectStore.setAudioReverbType(type: .none)
 可以。`AudioChangerType` 和 `AudioReverbType` 是可以叠加生效的。例如，您可以同时设置 `.littleGirl` 变声和 `.ktv` 混响。
 
 ---
+
+## Platform: Flutter
 
 本篇文档旨在指导您如何使用 `AtomicXCore` 框架中的 `AudioEffectStore` 和 `DeviceStore` 模块，为您的直播应用快速集成音效控制功能，包括麦克风音量、耳返监听，并添加多种趣味变声效果和混响效果。
 
@@ -1043,6 +1049,8 @@ class AudioEffectPage extends StatelessWidget {
 可以。`AudioChangerType` 和 `AudioReverbType` 是可以叠加生效的。例如，您可以同时设置 `AudioChangerType.girl` 变声和 `AudioReverbType.ktv` 混响。
 
 ---
+
+## Platform: uni-app
 
 本篇文档旨在指导您如何使用 `AtomicXCore` 框架中的  `AudioEffectState` 和 `DeviceState` 模块，为您的直播应用快速集成音效控制功能，包括麦克风音量、耳返监听，并添加多种趣味变声效果和混响效果。
 

@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 **AtomicXCore** 提供了 [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-co-guest-store/index.html) 模块，专门用于管理观众连麦的完整业务流程。您无需关心复杂的状态同步和信令交互，只需调用几个简单的方法，即可为您的直播添加强大的观众与主播音视频互动功能。
 
 ## 核心场景
@@ -498,6 +500,8 @@
 
 ---
 
+## Platform: iOS
+
 **AtomicXCore** 提供了 [CoGuestStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/cogueststore) 模块，专门用于管理观众连麦的完整业务流程。您无需关心复杂的状态同步和信令交互，只需调用几个简单的方法，即可为您的直播添加强大的观众与主播音视频互动功能。
 
 ## 核心场景
@@ -878,6 +882,8 @@
 - **检查返回值**：确保您的代理方法在正确的时机返回了一个有效的 `UIView` 实例，而不是 `nil`。您可以在代理方法中添加断点或日志进行调试。
 
 ---
+
+## Platform: Flutter
 
 **AtomicXCore** 提供了 [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_co_guest_store/CoGuestStore-class.html) 模块，专门用于管理观众连麦的完整业务流程。开发者无需关心复杂的状态同步和信令交互，只需调用几个简单的方法，即可为您的直播添加强大的观众与主播音视频互动功能。
 

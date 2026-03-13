@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 本篇文档旨在指导 Android 开发者如何使用 `AtomicXCore` 框架中的 `BarrageStore` 模块，为您的直播应用快速集成功能丰富、性能卓越的弹幕系统。
 
 ## 核心功能
@@ -463,6 +465,8 @@ class BarrageViewHolder(
 
 ---
 
+## Platform: iOS
+
 本篇文档旨在指导 iOS 开发者如何使用 `AtomicXCore` 框架中的 `BarrageStore` 模块，为您的直播应用快速集成功能丰富、性能卓越的弹幕系统。
 
 ## 核心功能
@@ -881,6 +885,8 @@ class BarrageCell: UITableViewCell {
    当新用户加入直播间时，`AtomicXCore` 的底层 会自动拉取您配置的历史消息数量。这些历史消息会和实时消息一样，通过您已实现的 `BarrageStore.state` 订阅通道推送给您的UI层。您的应用会像接收实时弹幕一样，自然地接收并展示这些历史弹幕。
 
 ---
+
+## Platform: Flutter
 
 本篇文档旨在指导 Flutter 开发者如何使用 `AtomicXCore` 框架中的 `BarrageStore` 模块，为您的直播应用快速集成功能丰富、性能卓越的弹幕系统。
 
@@ -1380,6 +1386,8 @@ void _refreshUIIfNeeded() {
    当新用户加入直播间时，`AtomicXCore` 的底层 会自动拉取您配置的历史消息数量。这些历史消息会和实时消息一样，通过您已实现的 `BarrageStore.barrageState` 订阅通道推送给您的 UI 层。您的应用会像接收实时弹幕一样，自然地接收并展示这些历史弹幕。
 
 ---
+
+## Platform: uni-app
 
 本篇文档旨在指导 uniapp 开发者如何使用 `AtomicXCore` 框架中的 `BarrageState` 模块，为您的直播应用快速集成功能丰富、性能卓越的弹幕系统。
 

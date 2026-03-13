@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Flutter
+
 ---
 product: 'Chat'
 tech_stack: 'flutter_native_sdk'
@@ -27,6 +29,8 @@ keywords: ['flutter', 'initialization', 'component', 'integration', 'TUIKit']
 Message do-not-disturb documentation (no UI): https://cloud.tencent.com/document/product/269/75355
 
 ---
+
+## Platform: Flutter SDK
 
 ## Initialization and Login APIs
 
@@ -229,6 +233,8 @@ Use the following API to add or delete friends and manage friend lists.
 | [searchFriends](https://pub.dev/documentation/tencent_cloud_chat_sdk/latest/manager_v2_tim_friendship_manager/V2TIMFriendshipManager/searchFriends.html) | Searches for friends. |
 
 ---
+
+## Platform: Flutter SDK
 
 ---
 product: 'Chat'
@@ -286,6 +292,8 @@ keywords: ['sdk integration', 'login API', 'create group','send message','receiv
 
 ---
 
+## Platform: Flutter SDK
+
 ## Initialization and Login APIs
 
 To use the Tencent Cloud Chat service, you need to initialize the SDK and log in.
@@ -487,6 +495,8 @@ Use the following API to add or delete friends and manage friend lists.
 | [searchFriends](https://pub.dev/documentation/tencent_cloud_chat_sdk/latest/manager_v2_tim_friendship_manager/V2TIMFriendshipManager/searchFriends.html) | Searches for friends. |
 
 ---
+
+## Platform: Flutter SDK
 
 ---
 product: 'Chat'

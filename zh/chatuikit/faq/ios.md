@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: iOS
+
 ### TUIKit 源码是否支持 Androidx？
 
 TUIKit 最新源码已经支持 Androidx。
@@ -114,6 +116,8 @@ TUIKit 最新源码已经支持 Androidx。
 为了尊重版权，IM Demo/TUIKit 工程中默认不包含大表情元素切图。在正式上线商用前，请您替换为自己设计或拥有版权的其他表情包。请注意，下图所示的**默认小黄脸表情包版权属于腾讯云**，您可以通过升级至 [IM 企业版套餐](https://buy.cloud.tencent.com/avc) 免费使用该表情包。
 
 ---
+
+## Platform: iOS SDK
 
 > **注意：**
 > 
@@ -396,6 +400,8 @@ TUIKit 最新源码已经支持 Androidx。
 | [checkFollowType](https://im.sdk.qcloud.com/doc/zh-cn/categoryV2TIMManager_07Friendship_08.html#a6a01145bcdfba7fe49d7882fac047b29) | 检查指定用户的关注类型 |
 
 ---
+
+## Platform: iOS SDK
 
 > **注意：**
 > 

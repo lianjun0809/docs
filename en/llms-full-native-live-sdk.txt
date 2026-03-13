@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent Real-Time Communication Onboarding
+description: Set up AI Agent environment from scratch, integrate Tencent RTC SDKs (Chat/Call/Live/Room/TRTC) via Cursor/VS Code + MCP Server to build IM, calls, live streaming and conferencing apps.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
 
 This guide helps you quickly build a working Tencent Cloud Real-Time Communication (TRTC) and Instant Messaging (IM) application using an AI editor. We provide rich documentation resources to enhance your development experience.
 
@@ -169,9 +173,11 @@ Troubleshooting:
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
+title: Configure MCP Server
+description: Add Tencent RTC MCP Server configuration in Cursor/VS Code, set SDKAppID and SDKSecretKey environment variables to enable Chat/Call/Live/Room/TRTC tool capabilities.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) standardizes how applications provide context to LLMs. This guide describes how to use MCP to integrate TRTC (Real-Time Communication) and IM (Instant Messaging) UIKit components. Only `stdio` transport mode is supported.
 
@@ -326,9 +332,11 @@ If you need a global installation, run the following command in the terminal:
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
+title: Configure RTC Skills
+description: Configure AI Agent's RTC Skills package to load Chat UIKit, TUICallKit, LiveKit, RoomKit, TRTC Engine integration capabilities and best practice rules.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills provides structured guidance for Tencent Cloud real-time audio/video scenarios. It translates natural language requirements into executable steps and helps the Agent call the corresponding MCP tools in the correct order. Use RTC Skills to enable AI Agents to complete Chat, Call, Live, and Room MCP integrations more efficiently.
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLiveCode.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLiveCode Error Codes
+description: View Android Live SDK error code list to quickly identify stream pushing failures, pulling exceptions and audio/video capture issues.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLiveCode.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLiveCode Error Code Documentation
 
@@ -680,9 +690,11 @@ public static final int V2TXLIVE_WARNING_CURRENT_DECODE_TYPE_CHANGED = 2008;
 
 **Note**: The extension info for this warning code is not supported on Windows.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLiveDef.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLiveDef Type Definitions
+description: View Android Live SDK type definitions: V2TXLiveVideoResolution (resolution)/V2TXLiveVideoFillMode (fill mode)/V2TXLiveRotation (rotation).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLiveDef.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLiveDef Type Definitions
 
@@ -1115,9 +1127,11 @@ public final static class V2TXLiveStreamInfo {
 
 This document details all type definitions in `V2TXLiveDef.java` and serves as a comprehensive API reference for developing with Tencent Cloud Live Streaming.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePlayer API Reference
+description: View Android Live SDK V2TXLivePlayer API: setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() stream pulling methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
 
 Tencent Cloud Live Streaming SDK V2TXLivePlayer Playback API Documentation
 
@@ -1791,9 +1805,11 @@ player.stopPlay();
 1. **Licence Requirement**: Starting from version 10.7, you must set a valid Licence for playback.
 2. **Permission Requirement**: Requires network and audio playback permissions.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePlayerObserver Player Callbacks
+description: View Android Live SDK player event callbacks: onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() listeners.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePlayerObserver Live Player Callback Interface
 
@@ -2475,9 +2491,11 @@ public class RecordingObserver extends V2TXLivePlayerObserver {
 4. **Error Handling**: Handle error codes appropriately and provide user-friendly messages.
 5. **Permission Check**: Local recording requires storage permissions and sufficient available space.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePremier.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePremier Global Configuration
+description: View Android Live SDK global configuration API: setLicence()/setLogLevel()/setConsoleEnabled() SDK initialization methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePremier.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePremier API Documentation
 
@@ -2751,9 +2769,11 @@ public void onVoiceEarMonitorAudioFrame(V2TXLiveDef.V2TXLiveAudioFrame frame)
 - Frame duration may vary
 - Data is readable and writable; ensure timely processing
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePusher.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePusher API Reference
+description: View Android Live SDK V2TXLivePusher API: setRenderView()/startCamera()/startMicrophone()/startPush() stream pushing methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePusher.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePusher Streaming API Documentation
 
@@ -3802,9 +3822,11 @@ pusher.sendCustomVideoFrame(videoFrame);
 - Release unused pusher instances promptly.
 - Use pause/resume functions to save bandwidth.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePusherObserver Pusher Callbacks
+description: View Android Live SDK pusher event callbacks: onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() listeners.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/android/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePusherObserver Live Stream Pusher Callback Interface
 
@@ -4656,9 +4678,11 @@ public class RecordingObserver extends V2TXLivePusherObserver {
 - `V2TXLiveDef`: Data structures and enums
 - `V2TXLivePremier`: SDK global management interface
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLiveCode.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLiveCode Error Codes
+description: View Flutter Live SDK error code list to quickly identify stream pushing failures, pulling exceptions and audio/video capture issues.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLiveCode.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLiveCode Error Code Documentation
 
@@ -5121,9 +5145,11 @@ static const int V2TXLIVE_WARNING_CURRENT_DECODE_TYPE_CHANGED = 2008;
 
 **Note**: The Flutter platform supports extended information for this error code. You can get detailed codec type information via the callback parameters.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLiveDef.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLiveDef Type Definitions
+description: View Flutter Live SDK type definitions: V2TXLiveVideoResolution, V2TXLiveVideoFillMode, etc.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLiveDef.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLiveDef Type Definition Documentation
 
@@ -5684,9 +5710,11 @@ class TXVoiceChangerType {
 }
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePlayer API Reference
+description: View Flutter Live SDK V2TXLivePlayer API: setRenderViewID()/startLivePlay()/stopPlay()/setPlayoutVolume() stream pulling methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePlayer Playback API Documentation
 
@@ -6346,9 +6374,11 @@ A: Call the `switchStream()` method with a stream URL of a different resolution.
 ### Q: How do I get playback statistics?
 A: Use the `onStatisticsUpdate` callback in `V2TXLivePlayerObserver`.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePlayerObserver Player Callbacks
+description: View Flutter Live SDK player event callbacks: onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() listeners.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePlayerObserver Player Callback Interface Documentation
 
@@ -7216,9 +7246,11 @@ A: Confirm:
 - **Platform Support**: Flutter
 - **SDK Version**: v3
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePremier.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePremier Global Configuration
+description: View Flutter Live SDK global configuration API: setLicence()/setLogConfig() SDK initialization methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePremier.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePremier API Documentation
 
@@ -7658,9 +7690,11 @@ A: Recommendations:
 3. Handle exceptions appropriately
 4. Provide feedback on your experience
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePusher.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePusher API Reference
+description: View Flutter Live SDK V2TXLivePusher API: setRenderViewID()/startCamera()/startMicrophone()/startPush() stream pushing methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePusher.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePusher Streaming Interface Documentation
 
@@ -8411,9 +8445,11 @@ await pusher.sendCustomVideoFrame(videoFrame);
 - Call `destroy` promptly to release resources.
 - Prevent memory leaks by removing observers in a timely manner.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePusherObserver Pusher Callbacks
+description: View Flutter Live SDK pusher event callbacks: onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() listeners.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/flutter/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePusherObserver Live Stream Pusher Callback Interface
 
@@ -8751,9 +8787,11 @@ case V2TXLivePusherListenerType.onPushStatusUpdate:
 5. **Snapshot data**: The image data from `onSnapshotComplete` can be large. Release it promptly after use.
 6. **Custom processing**: When processing video frames in `onProcessVideoFrame`, monitor performance impact.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLiveCode.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLiveCode Error Codes
+description: View iOS Live SDK error code list to quickly identify stream pushing failures, pulling exceptions and audio/video capture issues.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLiveCode.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLiveCode Error Code Documentation
 
@@ -9083,9 +9121,11 @@ V2TXLIVE_WARNING_CURRENT_DECODE_TYPE_CHANGED = 2008
 
 **Note**: Extended info for this warning code is not supported on Windows.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLiveDef.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLiveDef Type Definitions
+description: View iOS Live SDK type definitions: V2TXLiveVideoResolution (resolution)/V2TXLiveVideoFillMode (fill mode)/V2TXLiveRotation (rotation).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLiveDef.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLiveDef Type Definition Documentation
 
@@ -9595,9 +9635,11 @@ typedef NS_ENUM(NSInteger, V2TXLiveLogLevel) {
 @end
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePlayer API Reference
+description: View iOS Live SDK V2TXLivePlayer API: setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() stream pulling methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePlayer Playback API Documentation
 
@@ -10259,9 +10301,11 @@ if (result == V2TXLIVE_OK) {
 - `V2TXLiveDef`: Data structure and enum definitions
 - `V2TXLivePremier`: SDK global management interface
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePlayerObserver Player Callbacks
+description: View iOS Live SDK player event callbacks: onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() delegate methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePlayerObserver Callback Interface
 
@@ -10771,9 +10815,11 @@ params.interval = 1000; // Callback recording progress every 1 second
 2. **Decoding Exceptions**: Prepare backup decoding solutions.
 3. **Recording Exceptions**: Handle file permissions and storage space issues.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePremier.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePremier Global Configuration
+description: View iOS Live SDK global configuration API: setLicence()/setLogLevel()/setConsoleEnabled() SDK initialization methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePremier.md
+--------------------------------------------------------------------------------
 
 # Tencent Cloud Live Streaming SDK V2TXLivePremier API Documentation
 
@@ -11060,9 +11106,11 @@ logConfig.logLevel = V2TXLiveLogLevelAll;
 - Frame duration is variable
 - Data is readable and writable; ensure efficient processing
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePusher.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePusher API Reference
+description: View iOS Live SDK V2TXLivePusher API: setRenderView()/startCamera()/startMicrophone()/startPush() stream pushing methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePusher.md
+--------------------------------------------------------------------------------
 
 Tencent Cloud Live Streaming SDK V2TXLivePusher Streaming API Documentation
 
@@ -12065,9 +12113,11 @@ videoFrame.rotation = V2TXLiveRotation0;
 - Call `stopPush` when streaming ends to free resources
 - Set preview fill mode appropriately
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePusherObserver Pusher Callbacks
+description: View iOS Live SDK pusher event callbacks: onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() delegate methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/native-live/ios/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
 
 Tencent Cloud Live Streaming SDK V2TXLivePusherObserver Callback Reference
 

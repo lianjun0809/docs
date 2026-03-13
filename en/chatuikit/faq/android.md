@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 ### Does TUIKit source code support Androidx?
 
 Yes.
@@ -116,6 +118,8 @@ This error occurs because App Store does not support the x86_64 and i386 archite
 To respect the copyright of emoji designs, the Chat Demo/TUIKit project does not include cutouts of large emoji elements. Please replace them with your own designs or other emoji packs for which you hold the copyright before officially launching for commercial use. **The default smiley face emoji pack shown below is copyrighted by Tencent RTC** and is available for licensed use for a fee. If you need to obtain a license, please [contact us](https://trtc.io/contact).
 
 ---
+
+## Platform: Android SDK
 
 > **Note:**
 > 
@@ -400,6 +404,8 @@ Use the following API to add or delete friends and manage friend lists.
 | [﻿checkFollowType﻿](https://im.sdk.qcloud.com/doc/en/classcom_1_1tencent_1_1imsdk_1_1v2_1_1V2TIMFriendshipManager.html#aeb364a11188590a7e6093522f5bad415) | Checks the follow type of a specified user. |
 
 ---
+
+## Platform: Android SDK
 
 > **Note:**
 > 

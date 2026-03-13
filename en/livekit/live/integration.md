@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 This document guides you through building a basic live streaming app with host broadcasting and audience viewing capabilities using the core component [LiveCoreView](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.view/-live-core-view/index.html) from the **AtomicXCore SDK**.
 
 ### Core Features
@@ -573,6 +575,8 @@ To maintain system stability and efficiency, metaData usage follows these rules:
 
 ---
 
+## Platform: iOS
+
 This document guides you through building a basic live streaming app with host broadcasting and audience viewing capabilities using the core component [LiveCoreView](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.view/-live-core-view/index.html) from the **AtomicXCore SDK**.
 
 ### Core Features
@@ -1097,6 +1101,8 @@ Solution Steps
 2. Clean and rebuild the project. Run **Product → Clean** Build Folder to clear the project cache, then rebuild and run the project.
 
 ---
+
+## Platform: Flutter
 
 This documentation guides you through using the core component of the AtomicXCore SDK, [LiveCoreWidget](https://tencent-rtc.github.io/TUIKit_Flutter/api_view_live_live_core_widget/api_view_live_live_core_widget-library.html), to quickly build a basic live streaming app with host broadcasting and audience viewing functionality.
 
@@ -1761,6 +1767,8 @@ void dispose() {
 
 ---
 
+## Platform: Vue
+
 ## Overview
 
 This guide introduces the **Live Stream List page** in the TUILiveKit Demo. Use this documentation to quickly integrate our ready-made Live Stream List page into your project, or customize its appearance, layout, and features to fit your needs.
@@ -2004,6 +2012,8 @@ You’ve now integrated the **Live Stream List page**. Next, you can add the **H
 | **Host Streaming** | Host starts streaming and configures related settings on the current page. | Host Streaming |
 
 ---
+
+## Platform: Vue
 
 This document provides a guide for integrating the **Host Live Start Page** from the TUILiveKit Demo. You'll learn how to embed our start page into your project and customize the style, layout, and features of the live streaming interface.
 
@@ -2756,6 +2766,8 @@ Congratulations! You've successfully integrated the **Host Live Start Page**. Ne
 
 ---
 
+## Platform: Vue
+
 This guide provides a comprehensive overview of the **Viewer Page** in the TUILiveKit Demo. Use this documentation to quickly integrate our pre-built viewer page into your project, or leverage the details here to fully customize its style, layout, and features to fit your specific needs.
 
 ## Feature Overview
@@ -3060,6 +3072,8 @@ You’ve now integrated the audience viewing feature. To further enhance your ap
 | Web Monitoring | Operations platform for live room management. | Web Monitoring Page |
 
 ---
+
+## Platform: Vue
 
 This guide provides a comprehensive overview of the **Viewer Page** in the TUILiveKit Demo. Use this documentation to quickly integrate our pre-built viewer page into your project, or leverage the details here to fully customize its style, layout, and features to fit your specific needs.
 

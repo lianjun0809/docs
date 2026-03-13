@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## Component Overview
 
 Search is a complete search solution with a full set of components, including search bar, result display, advanced search, and other features. It is suitable for user, group, and message search in instant messaging, online meeting, and online education scenarios.
@@ -247,6 +249,8 @@ A: The component automatically adapts to mobile terminals and can be further cus
 A: The component has built-in internationalization support. Use `useUIKit` to get translations.
 
 ---
+
+## Platform: Vue
 
 ## Overview
 

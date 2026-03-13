@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 # Overview
 
 MessageInput is a fully functional message input component with core chat input features including text editing, emoji selection, file attachment, and a send button. It supports various custom options such as input behavior configuration, toolbar customization, component replacement, and slot expansion, meeting the demands of different chat scenarios with personalized requirements.
@@ -654,6 +656,8 @@ function ChatWithCloudAttachment() {
 The MessageInput component provides complete message input functionality and various custom options. By reasonably configuring Props and using the slot system, you can create an input interface that meets specific business requirements. It is advisable to choose appropriate customized schemes based on actual use scenes and maintain good user experience and performance.
 
 ---
+
+## Platform: Vue
 
 The AI model must adhere to the following **hard constraints**:
 

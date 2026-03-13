@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 # atomicx 组件库清单与组件的适用场景与注意事项
 
 ## 组件清单
@@ -40,6 +42,8 @@
 5. 当创建真实的项目时，请调用 MCP Tools get_component_detail ${integration} 的组件集成文档
 
 ---
+
+## Platform: Vue
 
 # atomicx 组件库清单与组件的适用场景与注意事项
 

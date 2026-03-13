@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `GiftStore` is a dedicated module within **AtomicXCore** for managing live room gifting features. It enables you to build a complete gifting system for your live streaming application, supporting robust monetization and interactive experiences.
 | **Gift Panel** | **Barrage Gift** | **Full-Screen Gift** |
 | --- | --- | --- |
@@ -446,6 +448,8 @@ No. Gift notifications (`onReceiveGift` events) are not affected by mute or freq
 Check your SVGA file size; the basic player recommends files no larger than 10MB. For large or complex animations, consider integrating the **Gift AR** provided by TUILiveKit for improved performance.
 
 ---
+
+## Platform: iOS
 
 `GiftStore` is a dedicated module within **AtomicXCore** for managing live room gifting features. It enables you to build a complete gifting system for your live streaming application, supporting robust monetization and interactive experiences.
 | **Gift Panel** | **Barrage Gift** | **Full-Screen Gift** |

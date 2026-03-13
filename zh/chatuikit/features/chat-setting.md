@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## 组件概述
 
 ChatSetting 是一个聊天设置组件，它能根据当前激活的**会话类型**（单聊或群聊）自动渲染对应的设置界面。该组件通过统一的入口，无缝集成了 C2C（单聊） 和群聊两种模式的设置功能，为用户提供了流畅且一致的操作体验。
@@ -124,6 +126,8 @@ export default App;
 如遇任何问题，可联系 [官网售后](https://cloud.tencent.com/act/event/connect-service#/) 反馈，享有专业工程师的支持，解决您的难题。
 
 ---
+
+## Platform: Vue
 
 ## 组件概述
 

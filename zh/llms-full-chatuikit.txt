@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent 实时音视频入门
+description: 从零开始配置 AI Agent 环境，使用 Cursor/VS Code + MCP Server 集成腾讯实时音视频 SDK (Chat/Call/Live/Room/TRTC)，快速构建 IM、音视频通话、直播和会议应用。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md
+--------------------------------------------------------------------------------
 
 本文介绍用 AI 编辑器快速跑通一个可用的腾讯云实时音视频 TRTC 和即时通信 IM 应用。我们提供了丰富的文档资源来提升您的开发体验。
 
@@ -169,9 +173,11 @@ npx skills add Tencent-RTC/tencent-rtc-skills
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md
+--------------------------------------------------------------------------------
+title: 配置 MCP Server
+description: 在 Cursor/VS Code 中添加 Tencent RTC MCP Server 配置，设置 SDKAppID 和 SDKSecretKey 环境变量，启用 Chat/Call/Live/Room/TRTC 工具能力。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) 标准化了应用向 LLM 提供上下文的方式。本文介绍如何使用 MCP 集成实时音视频 TRTC 和即时通信 IM 的 UIKit 组件，仅支持 `stdio`模式传输。
 
@@ -326,9 +332,11 @@ claude mcp add tencentcloud-sdk-mcp \
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md
+--------------------------------------------------------------------------------
+title: 配置 RTC Skills 技能包
+description: 配置 AI Agent 的 RTC Skills 技能包，加载 Chat UIKit、TUICallKit、LiveKit、RoomKit、TRTC Engine 集成能力和最佳实践规则。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills 为腾讯云实时音视频场景提供结构化指引。它可以将自然语言需求转为可执行步骤，并帮助 Agent 按正确顺序调用对应的 MCP 工具。使用 RTC Skills，让 AI Agent 更高效地完成 Chat、Call、Live、Room 的 MCP 集成。
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/chat-header.md
+--------------------------------------------------------------------------------
+title: ChatHeader 聊天头部组件
+description: 自定义 ChatHeader 组件，配置对话标题、头像和操作按钮，支持 React/Vue 双框架。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/chat-header.md
+--------------------------------------------------------------------------------
 
 AI 模型必须遵守以下**硬性限制**。
 
@@ -668,9 +678,11 @@ const setIsSettingOpen = (isOpen: boolean) => {
 </style>
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/chat-setting.md
+--------------------------------------------------------------------------------
+title: ChatSetting 聊天设置组件
+description: 自定义 ChatSetting 组件，管理消息免打扰、置顶和聊天记录清空等会话设置。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/chat-setting.md
+--------------------------------------------------------------------------------
 
 ## 组件概述
 
@@ -882,9 +894,11 @@ const toggleChatSetting = () => {
 
 如遇任何问题，可联系 [官网售后](https://cloud.tencent.com/act/event/connect-service#/) 反馈，享有专业工程师的支持，解决您的难题。
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/contact-list.md
+--------------------------------------------------------------------------------
+title: ContactList 联系人列表组件
+description: 自定义 ContactList 组件，展示好友列表、群组列表和黑名单，实现通讯录页面和好友管理。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/contact-list.md
+--------------------------------------------------------------------------------
 
 ## 概述
 
@@ -1931,9 +1945,11 @@ import CustomFriendInfo from './CustomFriendInfo.vue';
 | --- | --- |
 |  |  |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-actions.md
+--------------------------------------------------------------------------------
+title: ConversationActions 会话操作组件
+description: 自定义 ConversationActions 组件，实现会话删除、置顶、免打扰和标记未读/已读等操作。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-actions.md
+--------------------------------------------------------------------------------
 
 `ConversationActions` 组件负责对于单条会话进行操作，默认支持会话删除、会话置顶/取消置顶、会话免打扰/取消免打扰功能。
 
@@ -2341,9 +2357,11 @@ const CustomConversationActions = defineComponent({
 </script>
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-list.md
+--------------------------------------------------------------------------------
+title: ConversationList 会话列表组件
+description: 自定义 ConversationList 组件，展示所有对话的预览信息（最后一条消息、未读数等），支持搜索、创建会话和置顶。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-list.md
+--------------------------------------------------------------------------------
 
 ## 组件概述
 
@@ -3003,9 +3021,11 @@ const handleFilterClick = (filterType: FilterType) => {
 | className | String | - | 指定根元素类的 CSS 自定义名称。 |
 | style | CSSProperties | - | 指定根元素样式的自定义样式。 |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-preview.md
+--------------------------------------------------------------------------------
+title: ConversationPreview 会话预览 Item 组件
+description: 自定义 ConversationPreview 组件，配置单个会话项的未读计数、最后一条消息展示和会话操作。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-preview.md
+--------------------------------------------------------------------------------
 
 `ConversationPreview` 用于对于会话列表中单条会话内容进行预览，组件负责显示会话信息、未读计数以及提供会话操作功能。
 
@@ -3340,9 +3360,11 @@ import CustomConversationPreview from './CustomConversationPreview.vue';
 | --- | --- |
 |  |  |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-search.md
+--------------------------------------------------------------------------------
+title: ConversationSearch 会话搜索组件
+description: 自定义 ConversationSearch 组件，搜索用户、群组和消息，集成搜索框和高级搜索功能。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-search.md
+--------------------------------------------------------------------------------
 
 `ConversationSearch` 是使用的 Search 组件，支持用户、群组、消息的搜索功能。它集成了搜索框、高级搜索、搜索结果展示等功能。
 
@@ -3455,9 +3477,11 @@ import CustomConversationSearch from "./CustomConversationSearch.vue";
 | onResultItemClick | (data: SearchResultItem, type: SearchType) => void | - | 搜索结果点击回调 |
 | onError | (error: Error) => void | - | 搜索错误回调 |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/message-input.md
+--------------------------------------------------------------------------------
+title: MessageInput 消息输入组件
+description: 自定义 MessageInput 组件，扩展表情、图片、文件等多种消息类型发送能力。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/message-input.md
+--------------------------------------------------------------------------------
 
 ## 概述
 
@@ -4641,9 +4665,11 @@ const RichTextEditor = defineComponent({
 </script>
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/message-list.md
+--------------------------------------------------------------------------------
+title: MessageList 消息列表组件
+description: 自定义 MessageList 组件，展示历史消息、支持滚动加载、多种消息类型渲染和消息气泡样式配置。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/message-list.md
+--------------------------------------------------------------------------------
 
 ## 组件概述
 
@@ -5385,9 +5411,11 @@ MessageModel 的完整内容请参见：[TUIChatEngine 参考文档](https://web
 
 如遇任何问题，可联系 [官网售后](https://cloud.tencent.com/act/event/connect-service#/) 反馈，享有专业工程师的支持，解决您的难题。
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/overview.md
+--------------------------------------------------------------------------------
+title: Web Chat UIKit 组件清单 (atomicx)
+description: 查看 @tencentcloud/chat-uikit-react/vue3 全部 25 个 atomicx 组件：TUIKit、Chat、ConversationList、MessageList、MessageInput、ContactList、Search、ChatSetting、Avatar 等。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/overview.md
+--------------------------------------------------------------------------------
 
 # atomicx 组件库清单与组件的适用场景与注意事项
 
@@ -5519,9 +5547,11 @@ Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/fea
 4. 根据用户需求，判断有没有可能是一个综合场景，比如聊天 + 直播，概率较低，应该谨慎
 5. 如需了解具体组件的使用方法，请询问用户："你可以问 ${componentname} 怎么用？" 这样的问题
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/search.md
+--------------------------------------------------------------------------------
+title: Search 全局搜索组件
+description: 自定义 Search 组件，支持搜索联系人、群组和聊天记录的全局搜索功能。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/search.md
+--------------------------------------------------------------------------------
 
 ## 组件概述
 
@@ -6626,9 +6656,11 @@ const EmptyComponent = defineComponent({
 </style>
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/theme.md
+--------------------------------------------------------------------------------
+title: 自定义 Chat UIKit 主题 (Android/iOS/Flutter)
+description: 通过 TUIKit 自定义聊天界面的主题色、深色模式和视觉样式，支持 Android Compose、iOS Swift 和 Flutter 三个平台。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/theme.md
+--------------------------------------------------------------------------------
 
 TUIKit Compose 提供了强大的外观定制能力，支持自定义应用的主题模式（浅色/深色/跟随系统）和主题色。通过简单的配置，开发者可以轻松实现应用级别的主题切换和品牌色定制。
 
@@ -7358,9 +7390,11 @@ themeState.setThemeMode(ThemeType.DARK)
 themeState.setPrimaryColor("#0ABF77")
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/integration.md
+--------------------------------------------------------------------------------
+title: 集成 Android Chat UIKit (TUIKit Compose)
+description: 在 Android 项目中集成 TUIKit Compose 聊天组件，使用 ChatPage、ConversationsPage、ContactsPage 搭建 IM 应用。要求 Android Studio Ladybug 2024.2.1+、JDK 17+。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/integration.md
+--------------------------------------------------------------------------------
 
 TUIKit Compose 是基于腾讯云 IM SDK 的一套 Jetpack Compose 组件库，提供了聊天、会话列表、联系人管理等即时通信功能的完整解决方案。本文介绍如何手动集成该组件并实现核心功能。
 

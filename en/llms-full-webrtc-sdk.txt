@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent Real-Time Communication Onboarding
+description: Set up AI Agent environment from scratch, integrate Tencent RTC SDKs (Chat/Call/Live/Room/TRTC) via Cursor/VS Code + MCP Server to build IM, calls, live streaming and conferencing apps.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
 
 This guide helps you quickly build a working Tencent Cloud Real-Time Communication (TRTC) and Instant Messaging (IM) application using an AI editor. We provide rich documentation resources to enhance your development experience.
 
@@ -169,9 +173,11 @@ Troubleshooting:
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
+title: Configure MCP Server
+description: Add Tencent RTC MCP Server configuration in Cursor/VS Code, set SDKAppID and SDKSecretKey environment variables to enable Chat/Call/Live/Room/TRTC tool capabilities.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) standardizes how applications provide context to LLMs. This guide describes how to use MCP to integrate TRTC (Real-Time Communication) and IM (Instant Messaging) UIKit components. Only `stdio` transport mode is supported.
 
@@ -326,9 +332,11 @@ If you need a global installation, run the following command in the terminal:
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
+title: Configure RTC Skills
+description: Configure AI Agent's RTC Skills package to load Chat UIKit, TUICallKit, LiveKit, RoomKit, TRTC Engine integration capabilities and best practice rules.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills provides structured guidance for Tencent Cloud real-time audio/video scenarios. It translates natural language requirements into executable steps and helps the Agent call the corresponding MCP tools in the correct order. Use RTC Skills to enable AI Agents to complete Chat, Call, Live, and Room MCP integrations more efficiently.
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/integration.md
+--------------------------------------------------------------------------------
+title: Integrate TRTC Web SDK Audio/Video Calling
+description: npm install trtc-sdk-v5, use TRTC.create(), enterRoom(), startLocalVideo(), publish() for Web real-time audio/video calling. Requires Node.js 18+, WebRTC-supported browsers.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/integration.md
+--------------------------------------------------------------------------------
 
 # Tutorial: Quick Start Call
 
@@ -858,9 +868,11 @@ await trtc.updateLocalVideo({
 
 - Due to device and browser limitations, the video resolution may not match exactly. In this case, the browser will automatically adjust the resolution to be close to the resolution corresponding to the Profile.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/ai-denoiser.md
+--------------------------------------------------------------------------------
+title: Use AIDenoiser AI Noise Reduction Plugin
+description: Use trtc-sdk-v5 AIDenoiser plugin to reduce background noise (keyboard/fan/mouse clicks) with far-field elimination mode.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/ai-denoiser.md
+--------------------------------------------------------------------------------
 
 ## Function Introduction
 
@@ -944,9 +956,11 @@ Used to enable denoiser.
 
 Used to disable denoiser.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/audio-mixer.md
+--------------------------------------------------------------------------------
+title: Use AudioMixer Background Music Plugin
+description: Use trtc-sdk-v5 AudioMixer plugin to play multiple background music tracks with volume control, loop, seek and mixing output.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/audio-mixer.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -1124,9 +1138,11 @@ For example: NotSupportedError: The operation is not supported.
 
 Solution: You need to use an audio format supported by the browser.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/auto-play-policy.md
+--------------------------------------------------------------------------------
+title: Handle Browser Auto-play Policy
+description: Handle Chrome/Safari autoplay restrictions using user gesture triggers or muted autoplay strategies.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/auto-play-policy.md
+--------------------------------------------------------------------------------
 
 ## Introduction
 
@@ -1216,9 +1232,11 @@ The default autoplay policy in Android and iOS Webview may be different to the b
 - Android Webview: Call [setMediaPlaybackRequiresUserGesture(false)](https://developer.android.com/reference/android/webkit/WebSettings#setMediaPlaybackRequiresUserGesture(boolean)).
 - iOS Webview: Set [mediaTypesRequiringUserActionForPlayback](https://developer.apple.com/documentation/webkit/wkwebviewconfiguration/1851524-mediatypesrequiringuseractionfor) to WKAudiovisualMediaTypeNone.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/beauty.md
+--------------------------------------------------------------------------------
+title: Use Beauty Professional Plugin
+description: Use trtc-sdk-v5 Beauty plugin for smoothing, whitening, face reshaping, eye enlargement and dynamic stickers (commercial license required).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/beauty.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -1465,9 +1483,11 @@ await trtc.startPlugin('Beauty', {
 });
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/capture-rendering.md
+--------------------------------------------------------------------------------
+title: Custom Audio/Video Capture & Rendering
+description: Use trtc-sdk-v5 createCustomVideoTrack(), createCustomAudioTrack() for custom capture sources (Canvas/MediaStream) and rendering logic.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/capture-rendering.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 This article mainly introduces the advanced usage of custom capture and custom rendering.
@@ -1556,9 +1576,11 @@ trtc.on(TRTC.EVENT.TRACK, event => {
 })
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/cdn-streaming.md
+--------------------------------------------------------------------------------
+title: Use CDNStreaming Plugin
+description: Use trtc-sdk-v5 CDNStreaming plugin for cloud mixing, CDN streaming and pushing mixed stream back to TRTC room.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/cdn-streaming.md
+--------------------------------------------------------------------------------
 
 ## Feature Description
 
@@ -2012,9 +2034,11 @@ Q. Screen sharing is blurry?
 
 The SDK uses `1080p` parameter configuration by default to capture screen sharing. Please refer to the interface: {@link TRTC#startScreenShare startScreenShare}
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/cross-room.md
+--------------------------------------------------------------------------------
+title: Use CrossRoom Plugin
+description: Use trtc-sdk-v5 CrossRoom plugin for cross-room audio/video interaction between hosts (PK battles, cross-room co-hosting).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/cross-room.md
+--------------------------------------------------------------------------------
 
 ## Feature Description
 
@@ -2113,9 +2137,11 @@ await trtc.stopPlugin('CrossRoom'); // Stop all cross-room connections initiated
 | roomId         | Number   | No       | Target room ID.                          |
 | strRoomId      | String   | No       | Target room string-type ID, choose either roomId or strRoomId. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/device-change.md
+--------------------------------------------------------------------------------
+title: Listen Device Changes
+description: Listen to trtc-sdk-v5 device-changed event to handle camera, microphone, speaker plug/unplug and device list changes.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/device-change.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -2215,9 +2241,11 @@ trtc.on(TRTC.EVENT.ERROR, error => {
 })
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/face-detection.md
+--------------------------------------------------------------------------------
+title: Use FaceDetection Plugin
+description: Use trtc-sdk-v5 FaceDetection plugin to detect face position, count and state changes in camera in real-time.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/face-detection.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -2400,9 +2428,11 @@ Adjust sensitivity by combining these parameters:
 
 No. The plugin automatically handles video stream state changes and resumes detection upon recovery.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/network-quality.md
+--------------------------------------------------------------------------------
+title: Monitor Network Quality
+description: Listen to trtc-sdk-v5 network-quality event for uplink/downlink latency, packet loss and quality levels.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/network-quality.md
+--------------------------------------------------------------------------------
 
 Before entering the room or during the call, you can check the user's network quality to determine the current network quality. If the user's network quality is too poor, it is recommended that the user change the network environment to ensure normal call quality.
 
@@ -2542,9 +2572,11 @@ After the above steps, you can get the average uplink network quality and the av
 > - If the uplink network quality is greater than 3, you can reduce the bitrate through the [TRTC.updateLocalVideo()](./TRTC.html#updateLocalVideo) interface or close the video through the [TRTC.stopLocalVideo()](./TRTC.html#stopLocalVideo) method to reduce uplink bandwidth consumption.
 > - If the downlink network quality is greater than 3, you can reduce the downlink bandwidth consumption by subscribing to a small stream (refer to: [Enable Small Stream Transmission](./tutorial-27-advanced-small-stream.html)) or only subscribing to audio.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/overview.md
+--------------------------------------------------------------------------------
+title: TRTC Web SDK Plugins Overview
+description: Browse all trtc-sdk-v5 plugins: beauty/virtual background/AI denoiser/voice changer/media mixing/CDN streaming/device detection/network quality and 20+ plugin capabilities.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/overview.md
+--------------------------------------------------------------------------------
 
 ## Overview
 
@@ -2877,9 +2909,11 @@ const trtc = TRTC.create({
 - [Package Billing](https://cloud.tencent.com/document/product/647/85386)
 - [Online Demo](https://web.sdk.qcloud.com/trtc/webrtc/demo/api-sample/index.html)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/proxy.md
+--------------------------------------------------------------------------------
+title: Configure Proxy Server Forwarding
+description: Use TRTC.setProxyServer() to configure HTTP/HTTPS proxy server for forwarding WebRTC signaling and media traffic.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/proxy.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -3128,9 +3162,11 @@ sudo . /turn.sh 10.0.0.4
 - For the Nginx server, the domain name whitelist needs to be configured in the company's intranet firewall to allow the Nginx server to access TRTC's related domain names. Refer to: [TRTC Web SDK domain and port whitelist](https://trtc.io/document/59667?platform=web&product=rtcengine&menulabel=coresdk)
 - For the Turn Server, allow the Turn Server to access the external network.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/realtime-transcriber.md
+--------------------------------------------------------------------------------
+title: Use RealtimeTranscriber Plugin
+description: Use trtc-sdk-v5 RealtimeTranscriber plugin to convert speech to text in real-time with multi-language translation.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/realtime-transcriber.md
+--------------------------------------------------------------------------------
 
 ## Overview
 
@@ -3447,9 +3483,11 @@ trtc.on(TRTC.EVENT.REALTIME_TRANSCRIBER_MESSAGE, (event) => {
 
 When you don't need to receive transcription messages, remove all listeners for the `REALTIME_TRANSCRIBER_MESSAGE` event, and the plugin will automatically pause receiving messages to save bandwidth. When listeners are added again, message receiving will automatically resume.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/small-stream-auto.md
+--------------------------------------------------------------------------------
+title: Use SmallStreamAutoSwitcher Plugin
+description: Use trtc-sdk-v5 SmallStreamAutoSwitcher plugin to auto-switch to small stream in weak network, auto-switch back when network recovers.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/small-stream-auto.md
+--------------------------------------------------------------------------------
 
 ## Function Introduction
 
@@ -3543,9 +3581,11 @@ trtc.startPlugin('SmallStreamAutoSwitcher', {
 > - After each switch, it enters a sleep period of `sleepTime` duration, during which automatic switching will not be triggered again
 > - Only users who have automatically switched to small stream once are allowed to switch back to large stream, users who have switched twice will remain in small stream state
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/small-stream.md
+--------------------------------------------------------------------------------
+title: Use Dual Stream Encoding
+description: Use startVideoStream({ small: true }) to enable dual stream, subscribers auto-switch based on network for smooth playback.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/small-stream.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -3698,9 +3738,11 @@ isLoading = false;
 
     You can call {@link TRTC.isSupported TRTC.isSupported} to get checkResult.detail.isSmallStreamSupported to confirm whether the current environment supports enabling small stream.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/support-detection.md
+--------------------------------------------------------------------------------
+title: Detect WebRTC Browser Compatibility
+description: Use TRTC.isSupported() to detect WebRTC support, H.264 codec and camera/microphone permissions in browsers.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/support-detection.md
+--------------------------------------------------------------------------------
 
 ## Browser Environment Check
 
@@ -3923,9 +3965,11 @@ Reference: [Network Quality Detection before enterRoom](./tutorial-24-advanced-n
 
 You can use the [TRTC Detection Page](https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html) where you are currently using the TRTC SDK to detect the current environment. You can also click the "Generate Report" button to get a report of the current environment for environment detection or troubleshooting.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/video-decoder.md
+--------------------------------------------------------------------------------
+title: Use TRTCVideoDecoder Fallback Plugin
+description: Use trtc-sdk-v5 TRTCVideoDecoder plugin for automatic fallback to software decoding (wasm) when hardware decoding fails.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/video-decoder.md
+--------------------------------------------------------------------------------
 
 ## Feature Description
 
@@ -3961,9 +4005,11 @@ const trtc = TRTC.create({ plugins: [TRTCVideoDecoder], assetsPath: 'https://exa
 
 The plugin functionality will automatically activate the fallback logic when SDK regular decoding fails, using software decoding method to decode.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/video-mixer.md
+--------------------------------------------------------------------------------
+title: Use VideoMixer Plugin
+description: Use trtc-sdk-v5 VideoMixer plugin to mix camera, screen, text, images, video into one stream.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/video-mixer.md
+--------------------------------------------------------------------------------
 
 ## Overview
 
@@ -4347,9 +4393,11 @@ await trtc.startPlugin('VideoMixer', {
 });
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/virtual-background.md
+--------------------------------------------------------------------------------
+title: Use VirtualBackground Plugin
+description: Use trtc-sdk-v5 VirtualBackground plugin for background blur and custom background image replacement (portrait segmentation).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/virtual-background.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -4515,9 +4563,11 @@ await trtc.startPlugin('VirtualBackground', {
 });
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/voice-changer.md
+--------------------------------------------------------------------------------
+title: Use VoiceChanger Plugin
+description: Use trtc-sdk-v5 VoiceChanger plugin for 11 voice effects: child/little girl/man/cold/ethereal/fatso/foreigner/trapped beast/heavy metal/strong current/heavy machinery.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/voice-changer.md
+--------------------------------------------------------------------------------
 
 ## Feature Description
 
@@ -4619,9 +4669,11 @@ await trtc.stopPlugin('VoiceChanger');
 await trtc.stopLocalAudio();
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/watermark.md
+--------------------------------------------------------------------------------
+title: Use Watermark Video Plugin
+description: Use trtc-sdk-v5 Watermark plugin to add image watermarks to local video streams with position, size and opacity configuration.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/plugins/watermark.md
+--------------------------------------------------------------------------------
 
 ## Function Description
 
@@ -4773,9 +4825,11 @@ await trtc.updateLocalVideo({
 
 Update SDK to v5.8.6+.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/quick-start.md
+--------------------------------------------------------------------------------
+title: Run TRTC Web SDK Demo
+description: Clone TRTC-Simple-Demo repo, run trtc-sdk-v5 Demo locally to experience real-time audio/video calling.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/quick-start.md
+--------------------------------------------------------------------------------
 
 # Tutorial: Demo Quick Run
 
@@ -4841,9 +4895,11 @@ After your application created, you can get your **SDKAppID** and **SDKSecretKey
 > - Currently, the desktop Chrome browser supports TRTC Web SDK's related features more completely, so it is recommended to use Chrome browser for experience, please refer to the document [Browser Compatibility Information](./tutorial-05-info-browser.html#h2-2).
 > - The correct way to generate UserSig is to integrate the UserSig calculation code into your server and provide an interface for the App. When you need UserSig, your App sends a request to the business server to obtain a dynamic UserSig. For more details, please refer to [Generating UserSig on the Server](https://trtc.io/document/35166?platform=web&product=rtcengine&menulabel=coresdk).
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/reference/api.md
+--------------------------------------------------------------------------------
+title: TRTC Web SDK API Reference
+description: View complete trtc-sdk-v5 API: TRTC.create(), enterRoom(), exitRoom(), startLocalVideo(), startLocalAudio(), publish(), subscribe() methods and events.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/rtcengine/reference/api.md
+--------------------------------------------------------------------------------
 
 # TRTC
 

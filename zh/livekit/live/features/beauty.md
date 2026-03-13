@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `BaseBeautyStore` 是 `AtomicXCore` 中负责管理人像基础美颜效果的模块。通过它，您可以轻松为您的直播或通话应用添加自然的美颜效果。
 
 ## 核心功能
@@ -187,6 +189,8 @@ AtomicXCore 也提供了高级美颜支持，以满足不同场景的需求：
 
 ---
 
+## Platform: iOS
+
 `BaseBeautyStore` 是 `AtomicXCore` 中负责管理人像基础美颜效果的模块。通过它，您可以轻松为您的直播或通话应用添加自然的美颜效果。
 
 ## 核心功能
@@ -341,6 +345,8 @@ AtomicXCore 也提供了高级美颜支持，以满足不同场景的需求
 3. **参数范围**：如果您使用的基础美颜，请确认您传入的强度值在有效的范围内 (`0` 到 `9` 之间的 Float 值)。
 
 ---
+
+## Platform: Flutter
 
 `BaseBeautyStore` 是 `AtomicXCore` 中负责管理人像基础美颜效果的模块。通过它，您可以轻松为您的直播或通话应用添加自然的美颜效果。
 

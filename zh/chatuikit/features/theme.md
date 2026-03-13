@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 TUIKit Compose 提供了强大的外观定制能力，支持自定义应用的主题模式（浅色/深色/跟随系统）和主题色。通过简单的配置，开发者可以轻松实现应用级别的主题切换和品牌色定制。
 
 以消息列表为例，自定义主题模式和主题色的效果如下图所示：
@@ -223,6 +225,8 @@ themeState.setPrimaryColor("#0ABF77")
 ```
 
 ---
+
+## Platform: iOS
 
 TUIKit SwiftUI 提供了强大的外观定制能力，支持自定义应用的主题模式（浅色/深色/跟随系统）和主题色。通过简单的配置，开发者可以轻松实现应用级别的主题切换和品牌色定制。
 
@@ -493,6 +497,8 @@ struct CustomColorPicker: View {
    ```
 
 ---
+
+## Platform: Flutter
 
 TUIKit Flutter 提供了强大的外观定制能力，支持自定义应用的主题模式（浅色/深色/跟随系统）和主题色。通过简单的配置，开发者可以轻松实现应用级别的主题切换和品牌色定制。
 

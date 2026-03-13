@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent 实时音视频入门
+description: 从零开始配置 AI Agent 环境，使用 Cursor/VS Code + MCP Server 集成腾讯实时音视频 SDK (Chat/Call/Live/Room/TRTC)，快速构建 IM、音视频通话、直播和会议应用。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md
+--------------------------------------------------------------------------------
 
 本文介绍用 AI 编辑器快速跑通一个可用的腾讯云实时音视频 TRTC 和即时通信 IM 应用。我们提供了丰富的文档资源来提升您的开发体验。
 
@@ -169,9 +173,11 @@ npx skills add Tencent-RTC/tencent-rtc-skills
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md
+--------------------------------------------------------------------------------
+title: 配置 MCP Server
+description: 在 Cursor/VS Code 中添加 Tencent RTC MCP Server 配置，设置 SDKAppID 和 SDKSecretKey 环境变量，启用 Chat/Call/Live/Room/TRTC 工具能力。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) 标准化了应用向 LLM 提供上下文的方式。本文介绍如何使用 MCP 集成实时音视频 TRTC 和即时通信 IM 的 UIKit 组件，仅支持 `stdio`模式传输。
 
@@ -326,9 +332,11 @@ claude mcp add tencentcloud-sdk-mcp \
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md
+--------------------------------------------------------------------------------
+title: 配置 RTC Skills 技能包
+description: 配置 AI Agent 的 RTC Skills 技能包，加载 Chat UIKit、TUICallKit、LiveKit、RoomKit、TRTC Engine 集成能力和最佳实践规则。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills 为腾讯云实时音视频场景提供结构化指引。它可以将自然语言需求转为可执行步骤，并帮助 Agent 按正确顺序调用对应的 MCP 工具。使用 RTC Skills，让 AI Agent 更高效地完成 Chat、Call、Live、Room 的 MCP 集成。
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLiveCode.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLiveCode 错误码
+description: 查阅 Android Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLiveCode.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLiveCode 错误码文档
 
@@ -702,9 +712,11 @@ public static final int V2TXLIVE_WARNING_CURRENT_DECODE_TYPE_CHANGED = 2008;
 
 **注意**: Windows端不支持此错误码的扩展信息
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLiveDef.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLiveDef 类型定义
+description: 查阅 Android Live SDK 类型定义：V2TXLiveVideoResolution（分辨率）/V2TXLiveVideoFillMode（填充模式）/V2TXLiveRotation（旋转角度）。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLiveDef.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLiveDef 类型定义文档
 
@@ -1141,9 +1153,11 @@ public final static class V2TXLiveStreamInfo {
 
 该文档涵盖了V2TXLiveDef.java中的所有类型定义，为开发腾讯云直播功能提供了完整的API参考。
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePlayer API 参考
+description: 查阅 Android Live SDK 播放器 V2TXLivePlayer API：setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePlayer 播放接口文档
 
@@ -1858,9 +1872,11 @@ player.stopPlay();
 1. **Licence 要求**: 10.7 版本开始必须设置有效的 Licence 才能正常播放
 2. **权限要求**: 需要网络权限和音频播放权限
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePlayerObserver 播放回调
+description: 查阅 Android Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等监听器。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePlayerObserver 直播播放器回调接口
 
@@ -2548,9 +2564,11 @@ public class RecordingObserver extends V2TXLivePlayerObserver {
 4. **错误处理**: 合理处理各种错误码，提供友好的用户提示
 5. **权限检查**: 本地录制需要确保有存储权限和足够的存储空间
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePremier.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePremier 全局配置
+description: 查阅 Android Live SDK 全局配置 API：setLicence()/setLogLevel()/setConsoleEnabled() 等 SDK 初始化方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePremier.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePremier 接口文档
 
@@ -2837,9 +2855,11 @@ public void onVoiceEarMonitorAudioFrame(V2TXLiveDef.V2TXLiveAudioFrame frame)
 - 时间帧长不固定
 - 数据可读写，但需保证处理耗时
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePusher.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePusher API 参考
+description: 查阅 Android Live SDK 推流器 V2TXLivePusher API：setRenderView()/startCamera()/startMicrophone()/startPush() 等推流方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePusher.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePusher 推流接口文档
 
@@ -3888,9 +3908,11 @@ pusher.sendCustomVideoFrame(videoFrame);
 - 及时释放不使用的推流器实例
 - 合理使用暂停/恢复功能节省带宽
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
+title: Android Live SDK V2TXLivePusherObserver 推流回调
+description: 查阅 Android Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等监听器。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口
 
@@ -4742,9 +4764,11 @@ public class RecordingObserver extends V2TXLivePusherObserver {
 - `V2TXLiveDef`: 数据结构和枚举定义
 - `V2TXLivePremier`: SDK全局管理接口
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLiveCode.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLiveCode 错误码
+description: 查阅 Flutter Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLiveCode.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLiveCode 错误码文档
 
@@ -5207,9 +5231,11 @@ static const int V2TXLIVE_WARNING_CURRENT_DECODE_TYPE_CHANGED = 2008;
 
 **注意**: Flutter平台支持此错误码的扩展信息，可以通过回调参数获取详细的编解码器类型信息
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLiveDef.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLiveDef 类型定义
+description: 查阅 Flutter Live SDK 关键类型定义：V2TXLiveVideoResolution、V2TXLiveVideoFillMode 等。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLiveDef.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLiveDef 类型定义文档
 
@@ -5770,9 +5796,11 @@ class TXVoiceChangerType {
 }
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePlayer API 参考
+description: 查阅 Flutter Live SDK 播放器 V2TXLivePlayer API：setRenderViewID()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePlayer 播放接口文档
 
@@ -6442,9 +6470,11 @@ A: 使用 `switchStream()` 方法切换不同分辨率的流地址
 ### Q: 如何获取播放统计信息？
 A: 通过 `V2TXLivePlayerObserver` 的 `onStatisticsUpdate` 回调获取
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePlayerObserver 播放回调
+description: 查阅 Flutter Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等监听器。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePlayerObserver 播放器回调接口文档
 
@@ -7326,9 +7356,11 @@ A: 确认：
 - **平台支持**: Flutter
 - **SDK版本**: v3
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePremier.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePremier 全局配置
+description: 查阅 Flutter Live SDK 全局配置 API：setLicence()/setLogConfig() 等 SDK 初始化方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePremier.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePremier 接口文档
 
@@ -7787,9 +7819,11 @@ A: 建议：
 3. 做好异常处理
 4. 反馈使用体验
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePusher.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePusher API 参考
+description: 查阅 Flutter Live SDK 推流器 V2TXLivePusher API：setRenderViewID()/startCamera()/startMicrophone()/startPush() 等推流方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePusher.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePusher 推流接口文档
 
@@ -8540,9 +8574,11 @@ await pusher.sendCustomVideoFrame(videoFrame);
 - 及时调用`destroy`释放资源
 - 避免内存泄漏，及时移除观察者
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
+title: Flutter Live SDK V2TXLivePusherObserver 推流回调
+description: 查阅 Flutter Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等监听器。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口
 
@@ -8877,9 +8913,11 @@ case V2TXLivePusherListenerType.onPushStatusUpdate:
 5. **截图数据**: `onSnapshotComplete` 返回的图像数据较大，使用后及时释放
 6. **自定义处理**: `onProcessVideoFrame` 回调中处理视频帧时要注意性能影响
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLiveCode.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLiveCode 错误码
+description: 查阅 iOS Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLiveCode.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLiveCode 错误码文档
 
@@ -9210,9 +9248,11 @@ V2TXLIVE_WARNING_CURRENT_DECODE_TYPE_CHANGED = 2008
 
 **注意**: Windows端不支持此错误码的扩展信息
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLiveDef.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLiveDef 类型定义
+description: 查阅 iOS Live SDK 类型定义：V2TXLiveVideoResolution（分辨率）/V2TXLiveVideoFillMode（填充模式）/V2TXLiveRotation（旋转角度）。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLiveDef.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLiveDef 类型定义文档
 
@@ -9720,9 +9760,11 @@ typedef NS_ENUM(NSInteger, V2TXLiveLogLevel) {
 @end
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePlayer API 参考
+description: 查阅 iOS Live SDK 播放器 V2TXLivePlayer API：setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePlayer.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePlayer 播放接口文档
 
@@ -10401,9 +10443,11 @@ if (result == V2TXLIVE_OK) {
 - `V2TXLiveDef`: 数据结构和枚举定义
 - `V2TXLivePremier`: SDK全局管理接口
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePlayerObserver 播放回调
+description: 查阅 iOS Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等代理方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePlayerObserver.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePlayerObserver 直播播放器回调接口
 
@@ -10913,9 +10957,11 @@ params.interval = 1000; // 1秒回调一次录制进度
 2. **解码异常**: 准备备用解码方案
 3. **录制异常**: 处理文件权限和存储空间问题
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePremier.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePremier 全局配置
+description: 查阅 iOS Live SDK 全局配置 API：setLicence()/setLogLevel()/setConsoleEnabled() 等 SDK 初始化方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePremier.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePremier 接口文档
 
@@ -11202,9 +11248,11 @@ logConfig.logLevel = V2TXLiveLogLevelAll;
 - 时间帧长不固定
 - 数据可读写，但需保证处理耗时
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePusher.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePusher API 参考
+description: 查阅 iOS Live SDK 推流器 V2TXLivePusher API：setRenderView()/startCamera()/startMicrophone()/startPush() 等推流方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePusher.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePusher 推流接口文档
 
@@ -12272,9 +12320,11 @@ videoFrame.rotation = V2TXLiveRotation0;
 - 推流结束后调用`stopPush`释放资源
 - 合理设置预览视图的填充模式
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
+title: iOS Live SDK V2TXLivePusherObserver 推流回调
+description: 查阅 iOS Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等代理方法。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePusherObserver.md
+--------------------------------------------------------------------------------
 
 # 腾讯云直播SDK V2TXLivePusherObserver 直播推流器回调接口
 

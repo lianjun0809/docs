@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: iOS
+
 ### Does TUIKit source code support Androidx?
 
 Yes.
@@ -116,6 +118,8 @@ This error occurs because App Store does not support the x86_64 and i386 archite
 To respect the copyright of emoji designs, the Chat Demo/TUIKit project does not include cutouts of large emoji elements. Please replace them with your own designs or other emoji packs for which you hold the copyright before officially launching for commercial use. **The default smiley face emoji pack shown below is copyrighted by Tencent RTC** and is available for licensed use for a fee. If you need to obtain a license, please [contact us](https://trtc.io/contact).
 
 ---
+
+## Platform: iOS SDK
 
 > **Note:**
 > 
@@ -354,6 +358,8 @@ Use the following API to add or delete friends and manage friend lists.
 | [deleteFriendsFromFriendGroup](https://im.sdk.qcloud.com/doc/en/categoryV2TIMManager_07Friendship_08.html#a4a14a878816c8d6a20981d1903fcf359) | Removes friends from a friend list. |
 
 ---
+
+## Platform: iOS SDK
 
 > **Note:**
 > 

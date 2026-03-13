@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent Real-Time Communication Onboarding
+description: Set up AI Agent environment from scratch, integrate Tencent RTC SDKs (Chat/Call/Live/Room/TRTC) via Cursor/VS Code + MCP Server to build IM, calls, live streaming and conferencing apps.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
 
 This guide helps you quickly build a working Tencent Cloud Real-Time Communication (TRTC) and Instant Messaging (IM) application using an AI editor. We provide rich documentation resources to enhance your development experience.
 
@@ -169,9 +173,11 @@ Troubleshooting:
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
+title: Configure MCP Server
+description: Add Tencent RTC MCP Server configuration in Cursor/VS Code, set SDKAppID and SDKSecretKey environment variables to enable Chat/Call/Live/Room/TRTC tool capabilities.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) standardizes how applications provide context to LLMs. This guide describes how to use MCP to integrate TRTC (Real-Time Communication) and IM (Instant Messaging) UIKit components. Only `stdio` transport mode is supported.
 
@@ -326,9 +332,11 @@ If you need a global installation, run the following command in the terminal:
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
+title: Configure RTC Skills
+description: Configure AI Agent's RTC Skills package to load Chat UIKit, TUICallKit, LiveKit, RoomKit, TRTC Engine integration capabilities and best practice rules.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills provides structured guidance for Tencent Cloud real-time audio/video scenarios. It translates natural language requirements into executable steps and helps the Agent call the corresponding MCP tools in the correct order. Use RTC Skills to enable AI Agents to complete Chat, Call, Live, and Room MCP integrations more efficiently.
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCCloud.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TRTCCloud API Reference
+description: View Android TRTC SDK TRTCCloud API: enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio()/switchRoom() methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCCloud.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -2185,9 +2195,11 @@ After the user leaves the room, the SDK will automatically disable private encry
 
 API invocation results: 0: Method call successful, -1: Invalid input parameter, -2: Feature expired. To unlock: Please visit the Chinese mainland site to activate the [TRTC Enterprise Edition Package](https://buy.cloud.tencent.com/trtc?tab=month&trtcversion=ultimate), and submit an [application](https://cloud.tencent.com/apply/p/diifjcmffhw). You can use it upon approval.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCCloudDef.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TRTCCloudDef Type Definitions
+description: View Android TRTC SDK type definitions: TRTCParams (room params)/TRTCVideoEncParam (video encoding)/TRTCNetworkQosParam (network QoS).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCCloudDef.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -3182,9 +3194,11 @@ This setting is used to enable voice detection and sound spectrum calculation.
 | enableVadDetection | [Field Meaning] Whether to enable local voice detection. [Please Note] It takes effect only when called before startLocalAudio. |
 | interval | [Field Meaning] Sets the trigger interval for the onUserVoiceVolume callback, in milliseconds. The minimum interval is 100ms. If the value is less than or equal to 0, the callback will be disabled. [Recommended Value] Recommended value: 300 milliseconds. [Special Instruction] When the interval is greater than 0, the volume prompt will be enabled by default without additional settings. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCCloudListener.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TRTCCloudListener Event Callbacks
+description: View Android TRTC SDK event callbacks: onEnterRoom()/onExitRoom()/onUserVideoAvailable()/onNetworkQuality() listeners.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCCloudListener.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -4193,9 +4207,11 @@ In the new interface, background music and sound effects are no longer distingui
 
 @deprecated Starting from the new version, it is recommended to use the onSpeedTestResult interface instead.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCStatistics.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TRTCStatistics
+description: View Android TRTC SDK audio/video statistics: bitrate/frame rate/resolution/packet loss/latency data structures.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TRTCStatistics.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -4263,9 +4279,11 @@ Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/
 | systemCpu | [Field Meaning] Current system CPU utilization, in percentage (%); not supported on Android 8.0 and above. |
 | upLoss | [Field Meaning] Uplink packet loss rate from the SDK to the cloud, in percentage (%) The smaller the value, the better. If upLoss is 0%, it means the uplink network quality is good, with almost no data packet loss when uploading to the cloud. If upLoss is 30%, it means that 30% of the audio and video data packets sent by the SDK to the cloud are lost in the transmission link. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXAudioEffectManager.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TXAudioEffectManager Audio Effects
+description: View Android TRTC SDK audio effect APIs: playBGM()/setVoiceChangerType()/setVoiceReverbType() for BGM, voice changer, reverb.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXAudioEffectManager.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Feature Overview
@@ -4737,9 +4755,11 @@ This information is used to specify background music details in the interface [s
 | publish | [Field Meaning] Whether to transmit the music to the remote end. [Recommended Value] true: Music can be heard by remote users while playing locally; false: Only the host can hear the music locally, remote audience cannot hear it. Default: false. |
 | startTimeMS | [Field Meaning] Music start time, in milliseconds. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXBeautyManager.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TXBeautyManager Beauty Effects
+description: View Android TRTC SDK beauty APIs: setBeautyLevel()/setWhitenessLevel()/setRuddyLevel() for smoothing, whitening, blushing.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXBeautyManager.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Feature Overview
@@ -5144,9 +5164,11 @@ TRTC offers various skin smoothing algorithms. You can choose the one that best 
 | TXBeautyStyleNature | 1 | Natural: This algorithm retains more facial details, resulting in a more natural smoothing effect, suitable for most live streaming scenarios. |
 | TXBeautyStylePitu | 2 | YouTu: Provided by YouTu Laboratory, this algorithm balances between smooth and natural, retaining more skin details than smooth and providing more smoothing than natural. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXDeviceManager.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TXDeviceManager Device Management
+description: View Android TRTC SDK device management APIs: switchCamera()/setSystemVolumeType()/enableCameraTorch() for camera and audio device control.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXDeviceManager.md
+--------------------------------------------------------------------------------
 
 # TRTC SDK Documentation
 ## Feature Overview
@@ -5322,9 +5344,11 @@ This setting determines the image quality of the local preview.
 | mode | **Field Definition:** Camera Capture Preferences, refer to TXCameraCaptureMode |
 | width | **Field Definition:** Captured Image Length |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXLiteAVCode.md
+--------------------------------------------------------------------------------
+title: Android TRTC SDK TXLiteAVCode Error Codes
+description: View Android TRTC SDK error and warning code list to quickly identify room entry failures and stream issues.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/TXLiteAVCode.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -5454,9 +5478,11 @@ Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/android/
 | WARNING_IGNORE_UPSTREAM_FOR_AUDIENCE | 6001 | Currently in audience role, publishing audio and video is not supported. Please switch to the anchor role first |
 | WARNING_UPSTREAM_AUDIO_AND_VIDEO_OUT_OF_SYNC | 6006 | Abnormal timestamp of audio and video transmission, which may cause audio and video out of sync issues |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITRTCCloud.md
+--------------------------------------------------------------------------------
+title: C++ TRTC SDK ITRTCCloud API Reference
+description: View C++ TRTC SDK ITRTCCloud API: enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio() methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITRTCCloud.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -7431,9 +7457,11 @@ After the user leaves the room, the SDK will automatically disable private encry
 
 API invocation results: 0: Method call successful, -1: Invalid input parameter, -2: Feature expired. To unlock: Please visit the Chinese mainland site to activate the [TRTC Enterprise Edition Package](https://buy.cloud.tencent.com/trtc?tab=month&trtcversion=ultimate), and submit an [application](https://cloud.tencent.com/apply/p/diifjcmffhw). You can use it upon approval.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITRTCStatistics.md
+--------------------------------------------------------------------------------
+title: C++ TRTC SDK ITRTCStatistics
+description: View C++ TRTC SDK audio/video statistics: bitrate/frame rate/resolution/packet loss/latency data structures.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITRTCStatistics.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -7506,9 +7534,11 @@ Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITRT
 | systemMemoryUsageInMB | [Field Meaning] Current system memory usage, in MB, not supported on iOS/MAC. |
 | upLoss | [Field Meaning] Uplink packet loss rate from the SDK to the cloud, in percentage (%) The smaller the value, the better. If upLoss is 0%, it means the uplink network quality is good, with almost no data packet loss when uploading to the cloud. If upLoss is 30%, it means that 30% of the audio and video data packets sent by the SDK to the cloud are lost in the transmission link. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITXAudioEffectManager.md
+--------------------------------------------------------------------------------
+title: C++ TRTC SDK ITXAudioEffectManager Audio Effects
+description: View C++ TRTC SDK audio effect APIs: playBGM()/setVoiceChangerType()/setVoiceReverbType() for BGM, voice changer, reverb.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITXAudioEffectManager.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Feature Overview
@@ -7980,9 +8010,11 @@ This information is used to specify background music details in the interface [s
 | publish | [Field Meaning] Whether to transmit the music to the remote end. [Recommended Value] true: Music can be heard by remote users while playing locally; false: Only the host can hear the music locally, remote audience cannot hear it. Default: false. |
 | startTimeMS | [Field Meaning] Music start time, in milliseconds. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITXDeviceManager.md
+--------------------------------------------------------------------------------
+title: C++ TRTC SDK ITXDeviceManager Device Management
+description: View C++ TRTC SDK device management APIs: getDevicesList()/setCurrentDevice() for audio/video device enumeration and control.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/ITXDeviceManager.md
+--------------------------------------------------------------------------------
 
 # TRTC SDK Documentation
 ## Feature Overview
@@ -8372,9 +8404,11 @@ This structure functions similarly to std::vector<ITXDeviceInfo>, used to solve 
 | index) | Device Information (JSON Format) **Note** Example: {"SupportedResolution":[{"width":640,"height":480},{"width":320,"height":240}]} param index Device Index, value is [0,getCount). Return JSON Format Device Information |
 | release() | Release Device List, please do not use delete to release resources!!! |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/TRTCCloudCallback.md
+--------------------------------------------------------------------------------
+title: C++ TRTC SDK TRTCCloudCallback Event Callbacks
+description: View C++ TRTC SDK event callback interface: onEnterRoom()/onExitRoom()/onUserVideoAvailable() callback methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/TRTCCloudCallback.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -9461,9 +9495,11 @@ If you wish to capture the SDK's local log printing behavior, you can set a log 
 | log | Log content. |
 | module | Reserved field; currently has no specific meaning and is fixed at TXLiteAVSDK. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/TRTCTypeDef.md
+--------------------------------------------------------------------------------
+title: C++ TRTC SDK TRTCTypeDef Type Definitions
+description: View C++ TRTC SDK type definitions: TRTCParams (room params)/TRTCVideoEncParam (video encoding)/TRTCNetworkQosParam (network QoS).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/TRTCTypeDef.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -10391,9 +10427,11 @@ This setting is used to enable voice detection and sound spectrum calculation.
 | enableVadDetection | [Field Meaning] Whether to enable local voice detection. [Please Note] It takes effect only when called before startLocalAudio. |
 | interval | [Field Meaning] Sets the trigger interval for the onUserVoiceVolume callback, in milliseconds. The minimum interval is 100ms. If the value is less than or equal to 0, the callback will be disabled. [Recommended Value] Recommended value: 300 milliseconds. [Special Instruction] When the interval is greater than 0, the volume prompt will be enabled by default without additional settings. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/TXLiteAVCode.md
+--------------------------------------------------------------------------------
+title: C++ TRTC SDK TXLiteAVCode Error Codes
+description: View C++ TRTC SDK error and warning code list to quickly identify room entry failures and stream issues.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/TXLiteAVCode.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -10525,9 +10563,11 @@ Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/cpp/TXLi
 | WARNING_IGNORE_UPSTREAM_FOR_AUDIENCE | 6001 | You are currently in Audience Role and cannot publish audio or video. You need to switch to an anchor role |
 | WARNING_UPSTREAM_AUDIO_AND_VIDEO_OUT_OF_SYNC | 6006 | Audio and video sending timestamp abnormal, may cause audio and video out of sync issues |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCCloud.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TRTCCloud API Reference
+description: View iOS TRTC SDK TRTCCloud API: enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio()/switchRoom() methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCCloud.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -12558,9 +12598,11 @@ After the user leaves the room, the SDK will automatically disable private encry
 
 API invocation results: 0: Method call successful, -1: Invalid input parameter, -2: Feature expired. To unlock: Please visit the Chinese mainland site to activate the [TRTC Enterprise Edition Package](https://buy.cloud.tencent.com/trtc?tab=month&trtcversion=ultimate), and submit an [application](https://cloud.tencent.com/apply/p/diifjcmffhw). You can use it upon approval.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCCloudDef.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TRTCCloudDef Type Definitions
+description: View iOS TRTC SDK type definitions: TRTCParams (room params)/TRTCVideoEncParam (video encoding)/TRTCNetworkQosParam (network QoS) and other data structures.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCCloudDef.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -13521,9 +13563,11 @@ This setting is used to enable voice detection and sound spectrum calculation.
 | enableVadDetection | [Field Meaning] Whether to enable local voice detection. [Please Note] It takes effect only when called before startLocalAudio. |
 | interval | [Field Meaning] Sets the trigger interval for the onUserVoiceVolume callback, in milliseconds. The minimum interval is 100ms. If the value is less than or equal to 0, the callback will be disabled. [Recommended Value] Recommended value: 300 milliseconds. [Special Instruction] When the interval is greater than 0, the volume prompt will be enabled by default without additional settings. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCCloudDelegate.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TRTCCloudDelegate Event Callbacks
+description: View iOS TRTC SDK event callbacks: onEnterRoom()/onExitRoom()/onUserVideoAvailable()/onNetworkQuality() delegate methods.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCCloudDelegate.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -14574,9 +14618,11 @@ If you wish to capture the SDK's local log printing behavior, you can set a log 
 | log | Log content. |
 | module | Reserved field; currently has no specific meaning and is fixed at TXLiteAVSDK. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCStatistics.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TRTCStatistics
+description: View iOS TRTC SDK audio/video statistics: bitrate/frame rate/resolution/packet loss/latency data structures.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTCStatistics.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview
@@ -14644,9 +14690,11 @@ Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TRTC
 | systemCpu | [Field Meaning] Current system CPU utilization, in percentage (%); not supported on Android 8.0 and above. |
 | upLoss | [Field Meaning] Uplink packet loss rate from the SDK to the cloud, in percentage (%) The smaller the value, the better. If upLoss is 0%, it means the uplink network quality is good, with almost no data packet loss when uploading to the cloud. If upLoss is 30%, it means that 30% of the audio and video data packets sent by the SDK to the cloud are lost in the transmission link. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXAudioEffectManager.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TXAudioEffectManager Audio Effects
+description: View iOS TRTC SDK audio effect APIs: playBGM()/setVoiceChangerType()/setVoiceReverbType() for BGM, voice changer, reverb.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXAudioEffectManager.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Feature Overview
@@ -15046,9 +15094,11 @@ This information is used to specify background music details in the interface [s
 | publish | [Field Meaning] Whether to transmit the music to the remote end. [Recommended Value] YES: The music is played locally and is also heard by remote users; NO: The host hears the music locally, but remote audience cannot. Default: NO. |
 | startTimeMS | [Field Meaning] Music start time, in milliseconds. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXBeautyManager.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TXBeautyManager Beauty Effects
+description: View iOS TRTC SDK beauty APIs: setBeautyLevel()/setWhitenessLevel()/setRuddyLevel() for smoothing, whitening, blushing.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXBeautyManager.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Feature Overview
@@ -15454,9 +15504,11 @@ TRTC offers multiple skin smoothing algorithms for you to choose the one that be
 | TXBeautyStyleNature | 1 | Natural: The algorithm retains more facial details, providing a more natural skin smoothing effect, suitable for most live streaming scenarios. |
 | TXBeautyStylePitu | 2 | YouTu: Provided by the YouTu Lab, it offers a skin smoothing effect between Smooth and Natural, retaining more skin details than Smooth while providing more smoothing than Natural. |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXDeviceManager.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TXDeviceManager Device Management
+description: View iOS TRTC SDK device management APIs: switchCamera()/setSystemVolumeType()/enableCameraTorch() for camera and audio device control.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXDeviceManager.md
+--------------------------------------------------------------------------------
 
 # TRTC SDK Documentation
 ## Feature Overview
@@ -15840,9 +15892,11 @@ This structure is used to describe key information of an audio and video device,
 | deviceProperties | Device Attributes |
 | type | Device Type |
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXLiteAVCode.md
+--------------------------------------------------------------------------------
+title: iOS TRTC SDK TXLiteAVCode Error Codes
+description: View iOS TRTC SDK error and warning code list to quickly identify room entry failures and stream issues.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/trtc/ios/TXLiteAVCode.md
+--------------------------------------------------------------------------------
 
 # TRTC Real-Time Communication (TRTC SDK) Documentation
 ## Overview

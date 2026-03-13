@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## 组件概述
 
 MessageList 是一个功能强大的聊天消息列表组件，提供了完整的消息展示、交互和自定义功能。该组件支持消息分组、已读回执、消息操作、滚动控制等核心聊天功能，同时提供了丰富的自定义选项来满足不同的业务需求。
@@ -297,6 +299,8 @@ function ChatApp() {
 MessageList 组件提供了完整的消息列表功能和丰富的自定义选项。通过合理配置 Props 和自定义组件，您可以创建出符合业务需求的聊天界面。建议在实际使用中根据具体场景选择合适的配置。
 
 ---
+
+## Platform: Vue
 
 ## 概述
 

@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 本文将介绍如何快速接入 TUICallKit 组件。您可以在 10 分钟内完成以下关键步骤，最终获得一个功能完备的音视频通话界面。
 
 ## 准备工作
@@ -555,6 +557,8 @@ TUICallKit.createInstance(context).enableMuteMode(true);
 
 ---
 
+## Platform: iOS
+
 本文将介绍如何快速完成 TUICallKit 组件的接入，您将在 10 分钟内完成以下几个关键步骤，并最终得到一个包含完备 UI 界面的视频通话功能。
 | 1v1 视频通话 | 群组通话 |
 | --- | --- |
@@ -754,6 +758,8 @@ TUICallKit.createInstance().calls(userIdList: ["mike"], callMediaType: .audio, p
 - 如果您是开发者，也欢迎您加入我们的 TUICallKit 技术交流平台 [zhiliao](https://zhiliao.qq.com/s/cWSPGIIM62CC/cEUPGIIM62CE)，进行技术交流和产品沟通。
 
 ---
+
+## Platform: Flutter
 
 本文将介绍如何快速接入 TUICallKit 组件。您可以在 10 分钟内完成以下关键步骤，最终获得一个功能完备的音视频通话界面。
 
@@ -1055,6 +1061,8 @@ void _setCallingBell() {
 
 ---
 
+## Platform: React
+
 AI 模型必须遵守以下**强制性技术限制**：
 * **音视频通话组件 API 使用限制：** 必须使用 `TUICallKitAPI.calls` API 发起通话， `call` 和 `groupCall` 接口已废弃，不推荐使用，TUICallKit 不提供 `on/off` API。
 * **集成步骤限制：** 在集成组件时必须严格按照文档步骤和说明进行。
@@ -1143,6 +1151,8 @@ const call = async () => {
 如果需要自定义实现 TUICallKit 的更多能力，请使用工具 `get_web_call_api` 获取 TUICallKit 客户端 API 文档。
 
 ---
+
+## Platform: Vue
 
 AI 模型必须遵守以下**强制性技术限制**：
 * **音视频通话组件 API 使用限制：** 必须使用 `TUICallKitAPI.calls` API 发起通话， `call` 和 `groupCall` 接口已废弃，不推荐使用，TUICallKit 不提供 `on/off` API。

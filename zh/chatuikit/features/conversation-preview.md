@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 `ConversationPreview` 用于对于会话列表中单条会话内容进行预览，组件负责显示会话信息、未读计数以及提供会话操作功能。
 
 借助原子化的信息展示组件，您可以自由地设计和组合出您所期望的 `ConversationPreview` 布局。
@@ -120,6 +122,8 @@ const App = () => {
 |  |  |
 
 ---
+
+## Platform: Vue
 
 ## 概述
 

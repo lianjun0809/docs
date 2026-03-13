@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent 实时音视频入门
+description: 从零开始配置 AI Agent 环境，使用 Cursor/VS Code + MCP Server 集成腾讯实时音视频 SDK (Chat/Call/Live/Room/TRTC)，快速构建 IM、音视频通话、直播和会议应用。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/quick-start.md
+--------------------------------------------------------------------------------
 
 本文介绍用 AI 编辑器快速跑通一个可用的腾讯云实时音视频 TRTC 和即时通信 IM 应用。我们提供了丰富的文档资源来提升您的开发体验。
 
@@ -169,9 +173,11 @@ npx skills add Tencent-RTC/tencent-rtc-skills
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md
+--------------------------------------------------------------------------------
+title: 配置 MCP Server
+description: 在 Cursor/VS Code 中添加 Tencent RTC MCP Server 配置，设置 SDKAppID 和 SDKSecretKey 环境变量，启用 Chat/Call/Live/Room/TRTC 工具能力。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) 标准化了应用向 LLM 提供上下文的方式。本文介绍如何使用 MCP 集成实时音视频 TRTC 和即时通信 IM 的 UIKit 组件，仅支持 `stdio`模式传输。
 
@@ -326,9 +332,11 @@ claude mcp add tencentcloud-sdk-mcp \
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md
+--------------------------------------------------------------------------------
+title: 配置 RTC Skills 技能包
+description: 配置 AI Agent 的 RTC Skills 技能包，加载 Chat UIKit、TUICallKit、LiveKit、RoomKit、TRTC Engine 集成能力和最佳实践规则。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills 为腾讯云实时音视频场景提供结构化指引。它可以将自然语言需求转为可执行步骤，并帮助 Agent 按正确顺序调用对应的 MCP 工具。使用 RTC Skills，让 AI Agent 更高效地完成 Chat、Call、Live、Room 的 MCP 集成。
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/integration.md
+--------------------------------------------------------------------------------
+title: 集成 TUICallKit 音视频通话
+description: 快速接入 TUICallKit 音视频通话组件，支持 Android (tuicallkit-kt)、iOS (TUICallKit_Swift)、Flutter (tencent_calls_uikit)、React (@trtc/calls-uikit-react)、Vue (@trtc/calls-uikit-vue) 五个平台。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/integration.md
+--------------------------------------------------------------------------------
 
 本文将介绍如何快速接入 TUICallKit 组件。您可以在 10 分钟内完成以下关键步骤，最终获得一个功能完备的音视频通话界面。
 
@@ -1593,9 +1603,11 @@ const call = async () => {
 ## 重要提醒
 如果需要自定义实现 TUICallKit 的更多能力，请使用工具 `get_web_call_api` 获取 TUICallKit 客户端 API 文档。
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/reference/api.md
+--------------------------------------------------------------------------------
+title: TUICallEngine + TUICallKit Web/小程序 API 参考
+description: 查阅 TUICallEngine（通话引擎）和 TUICallKit（UI 组件）完整 API：call()、groupCall()、accept()、hangup()、switchCallMediaType() 等，适用于 Web 和微信小程序。
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/reference/api.md
+--------------------------------------------------------------------------------
 
 ## 重要提醒
 **文档内容说明：**  

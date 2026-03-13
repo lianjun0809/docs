@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `GiftStore` 是 `AtomicXCore` 中专门负责管理直播间礼物功能的模块。通过它，您可以为您的直播应用构建一套完整的礼物系统，实现丰富的营收和互动场景。
 | 礼物面板 | 弹幕礼物 | 全屏礼物 |
 | --- | --- | --- |
@@ -458,6 +460,8 @@ class LiveRoomManager(
 
 ---
 
+## Platform: iOS
+
 `GiftStore` 是 `AtomicXCore` 中专门负责管理直播间礼物功能的模块。通过它，您可以为您的直播应用构建一套完整的礼物系统，实现丰富的营收和互动场景。
 | 礼物面板 | 弹幕礼物 | 全屏礼物 |
 | --- | --- | --- |
@@ -865,6 +869,8 @@ private func setupGiftToBarrageFlow() {
 请检查您的 SVGA 文件大小，基础播放器建议不要超过 10MB。如果文件过大或动画复杂，您可以考虑集成 TUILiveKit 提供的高级特效播放器，以获得更优的性能表现。
 
 ---
+
+## Platform: Flutter
 
 `GiftStore` 是 `AtomicXCore` 中专门负责管理直播间礼物功能的模块。通过它，您可以为您的直播应用构建一套完整的礼物系统，实现丰富的营收和互动场景。
 | **礼物面板** | **弹幕礼物** | **全屏礼物** |

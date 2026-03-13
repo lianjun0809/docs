@@ -1,4 +1,8 @@
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
+title: AI Agent Real-Time Communication Onboarding
+description: Set up AI Agent environment from scratch, integrate Tencent RTC SDKs (Chat/Call/Live/Room/TRTC) via Cursor/VS Code + MCP Server to build IM, calls, live streaming and conferencing apps.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/quick-start.md
+--------------------------------------------------------------------------------
 
 This guide helps you quickly build a working Tencent Cloud Real-Time Communication (TRTC) and Instant Messaging (IM) application using an AI editor. We provide rich documentation resources to enhance your development experience.
 
@@ -169,9 +173,11 @@ Troubleshooting:
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
+title: Configure MCP Server
+description: Add Tencent RTC MCP Server configuration in Cursor/VS Code, set SDKAppID and SDKSecretKey environment variables to enable Chat/Call/Live/Room/TRTC tool capabilities.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/mcp.md
+--------------------------------------------------------------------------------
 
 MCP (Model Context Protocol) standardizes how applications provide context to LLMs. This guide describes how to use MCP to integrate TRTC (Real-Time Communication) and IM (Instant Messaging) UIKit components. Only `stdio` transport mode is supported.
 
@@ -326,9 +332,11 @@ If you need a global installation, run the following command in the terminal:
 npx -y @tencentcloud/sdk-mcp@latest
 ```
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
+title: Configure RTC Skills
+description: Configure AI Agent's RTC Skills package to load Chat UIKit, TUICallKit, LiveKit, RoomKit, TRTC Engine integration capabilities and best practice rules.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/skills.md
+--------------------------------------------------------------------------------
 
 RTC Skills provides structured guidance for Tencent Cloud real-time audio/video scenarios. It translates natural language requirements into executable steps and helps the Agent call the corresponding MCP tools in the correct order. Use RTC Skills to enable AI Agents to complete Chat, Call, Live, and Room MCP integrations more efficiently.
 
@@ -363,9 +371,11 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/callkit/integration.md
+--------------------------------------------------------------------------------
+title: Integrate TUICallKit Audio/Video Calling
+description: Quick integration of TUICallKit audio/video calling for Android (tuicallkit-kt), iOS (TUICallKit_Swift), Flutter (tencent_calls_uikit), React (@trtc/calls-uikit-react), Vue (@trtc/calls-uikit-vue).
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/callkit/integration.md
+--------------------------------------------------------------------------------
 
 This document describes how to rapidly integrate the TUICallKit component. You can complete the following key steps within 10 minutes and obtain a complete audio and video call interface.
 
@@ -1354,9 +1364,11 @@ const call = async () => {
 ## Important reminder
 If you need custom implementation of more TUICallKit capabilities, use the tool `get_web_call_api` to access the TUICallKit Client API document.
 
----
-
-Source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/callkit/reference/api.md
+--------------------------------------------------------------------------------
+title: TUICallEngine + TUICallKit Web/Mini Program API Reference
+description: View complete TUICallEngine and TUICallKit API: call(), groupCall(), accept(), hangup(), switchCallMediaType() for Web and WeChat Mini Programs.
+source: https://raw.githubusercontent.com/lianjun0809/docs/main/en/callkit/reference/api.md
+--------------------------------------------------------------------------------
 
 ## Important Notice
 

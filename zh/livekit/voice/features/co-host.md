@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `AtomicXCore` 提供了 `CoHostStore` 和 `BattleStore` 两个模块，分别用于处理**跨房连线**和 **PK 对战**。本文将指导您如何组合使用这两个工具，完成语聊房场景下的连线和 PK 功能的开发。
 
 ## 核心概念
@@ -532,6 +534,8 @@ override fun onCoHostRequestReceived(inviter: SeatUserInfo, extensionInfo: Strin
 - **灵活适配规则**：后端改配置（例如调整礼物对应分数、加成分数）即可适配业务变化，无需改前端，降低迭代成本。
 
 ---
+
+## Platform: iOS
 
 `AtomicXCore` 提供了 `CoHostStore` 和 `BattleStore` 两个模块，分别用于处理**跨房连线**和 **PK 对战**。本文将指导您如何组合使用这两个工具，完成语聊房场景下的连线和 PK 功能的开发。
 

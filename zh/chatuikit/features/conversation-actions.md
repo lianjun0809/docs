@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 `ConversationActions` 组件负责对于单条会话进行操作，默认支持会话删除、会话置顶/取消置顶、会话免打扰/取消免打扰功能。
 
 ## 基础使用
@@ -178,6 +180,8 @@ const CustomConversationActions = (props: ConversationActionsProps) => {
 |  |  |
 
 ---
+
+## Platform: Vue
 
 ## 概述
 

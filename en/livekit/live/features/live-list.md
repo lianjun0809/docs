@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `LiveListStore` is the core module of **AtomicXCore** responsible for managing the live room list, creating and joining rooms, and maintaining room state. With LiveListStore, you can implement comprehensive live streaming lifecycle management in your application.
 
 ## Core Features
@@ -441,6 +443,8 @@ This template ID defines the room layout. For supported template IDs and effects
 
 ---
 
+## Platform: iOS
+
 `LiveListStore` is the core module of **AtomicXCore** responsible for managing the live room list, creating and joining rooms, and maintaining room state. With `LiveListStore`, you can implement comprehensive live streaming lifecycle management in your application.
 
 ## Core Features
@@ -792,6 +796,8 @@ This template ID defines the room layout. For supported template IDs and effects
   - On the client side, after fetching the list, distinguish rooms by checking the liveID prefix.
 
 ---
+
+## Platform: Flutter
 
 `LiveListStore` is the `AtomicXCore` core module for management of live room list, creation, joining and room status maintenance. With `LiveListStore`, you can build complete lifecycle management for your application.
 

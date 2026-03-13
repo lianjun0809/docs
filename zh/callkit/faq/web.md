@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 # ALL
 
 ### 音视频通话功能出现了未开通的错误提示？
@@ -780,6 +782,8 @@ iOS 在执行`pod install`出现如下报错：
    
 
 ---
+
+## Platform: Vue
 
 # ALL
 

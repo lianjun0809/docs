@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `LiveAudienceStore` is a module in `AtomicXCore` designed for managing audience information in live streaming rooms. With `LiveAudienceStore`, you can implement a comprehensive audience list and management system for your live streaming application.
 
 ## Core Features
@@ -267,6 +269,8 @@ The update of `audienceCount` is not always strictly real-time. The mechanism is
    `audienceCount` is a near real-time, high-precision estimate, but in extreme high-concurrency scenarios, there may be brief delays or data loss. We recommend using it for UI display only, and not as the sole basis for billing, statistics, or other scenarios requiring absolute accuracy.
 
 ---
+
+## Platform: iOS
 
 `LiveAudienceStore` is a module in `AtomicXCore` designed for managing audience information in live streaming rooms. With `LiveAudienceStore`, you can implement a comprehensive audience list and management system for your live streaming application.
 
@@ -534,6 +538,8 @@ The `audienceCount` is a high-precision estimate. Updates occur based on specifi
    Treat `audienceCount` as a metric for UI display purposes only. Do not rely on it for billing, critical statistics, or scenarios requiring 100% accuracy, as brief delays or data loss may occur during high-concurrency events.
 
 ---
+
+## Platform: Flutter
 
 `LiveAudienceStore` is a module in `AtomicXCore` specialized in managing live streaming room audience information. With `LiveAudienceStore`, you can build a complete audience list and management system for your live stream application.
 

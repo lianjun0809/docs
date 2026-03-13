@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 # atomicx component library Application scenarios and considerations for components
 
 
@@ -50,6 +52,8 @@ Must-Knows
 5. When creating a real project, call MCP Tools get_component_detail ${integration} integration guide of components
 
 ---
+
+## Platform: Vue
 
 # atomicx component library Manifest and components Application scenarios and considerations
 

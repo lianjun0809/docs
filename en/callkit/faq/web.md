@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ### 1. Error message `[-100035]The package you purchased does not support this ability. Please purchase the package` appears during voice or video call？
 
 To make voice or video calls, you need to subscribe to our Call Monthly Package. You can try it for free for 7 days. For more information on how to activate the service, please refer to: [Activate Service (TUICallKit)](https://www.tencentcloud.com/document/product/647/59832).
@@ -40,6 +42,8 @@ TUICallKitServer.getTUICallEngineInstance().callExperimentalAPI(JSON.stringfy(js
 ```
 
 ---
+
+## Platform: Vue
 
 ### 1. Error message `[-100035]The package you purchased does not support this ability. Please purchase the package` appears during voice or video call？
 

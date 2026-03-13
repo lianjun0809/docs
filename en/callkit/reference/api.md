@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## Important Notice
 
 **Documentation Content Description:**
@@ -506,6 +508,8 @@ offlinePushInfo.extension = JSON.stringify(extension);
 
 ---
 
+## Platform: Vue
+
 ## Important Notice
 
 **Documentation Content Description:**
@@ -1009,6 +1013,8 @@ offlinePushInfo.extension = JSON.stringify(extension);
 | LayoutMode.RemoteInLargeView | Remote user in large window display |
 
 ---
+
+## Platform: Android SDK
 
 ## TUICallObserver APIs
 
@@ -1318,6 +1324,8 @@ The parameters are described below:
 
 ---
 
+## Platform: Android SDK
+
 ## TUICallKit APIs
 
 `TUICallKit` is an audio/video call component that **includes UI elements**. You can use its APIs to quickly implement an audio/video call application similar to WeChat. For directions on integration, see [Integrating TUICallKit](https://www.tencentcloud.com/document/product/647/50991).
@@ -1616,6 +1624,8 @@ The parameters are described below:
 | callMediaType | TUICallDefine.MediaType | The call type, which can be video or audio. |
 
 ---
+
+## Platform: iOS SDK
 
 ## TUICallObserver APIs
 
@@ -1922,6 +1932,8 @@ The parameters are described below:
 
 ---
 
+## Platform: iOS SDK
+
 ## TUICallKit (UI Included)
 
 TUICallKit is an audio/video call component that **includes UI elements**. You can use its APIs to quickly implement an audio/video call application similar to WeChat.
@@ -2004,6 +2016,8 @@ TUICallKit is an audio/video call component that **includes UI elements**. You c
 | TUINetworkQualityInfo | The current network quality. |
 
 ---
+
+## Platform: Flutter SDK
 
 ## Common structures
 
@@ -2246,6 +2260,8 @@ Call end reason.
 | endByServer | Backend ends |
 
 ---
+
+## Platform: Flutter SDK
 
 ## TUICallObserver API
 
@@ -2662,6 +2678,8 @@ This indicates that the call was canceled by the caller, timed out by the callee
 | userId | String | The user ID of the inviter. |
 
 ---
+
+## Platform: Flutter SDK
 
 ## TUICallKit APIs
 

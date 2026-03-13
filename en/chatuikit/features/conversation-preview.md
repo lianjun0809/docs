@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 `ConversationPreview` is used for previewing session content in the list. The component displays session information, unread count, and provides conversation action feature.
 
 With the aid of atomic information display components, you can freely design and combine your desired `ConversationPreview` layout.
@@ -122,6 +124,8 @@ const App = () => {
 ###
 
 ---
+
+## Platform: Vue
 
 ## Overview
 

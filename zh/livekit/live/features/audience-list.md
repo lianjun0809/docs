@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 `LiveAudienceStore` 是 `AtomicXCore` 中专门负责管理直播间观众信息的模块。通过`LiveAudienceStore`，您可以为您的直播应用构建一套完整的观众列表及管理系统。
 
 ## 核心功能
@@ -269,6 +271,8 @@ class LiveRoomManager(
 
 ---
 
+## Platform: iOS
+
 `LiveAudienceStore` 是 `AtomicXCore` 中专门负责管理直播间观众信息的模块。通过 `LiveAudienceStore`，您可以为您的直播应用构建一套完整的观众列表及管理系统。
 
 ## 核心功能
@@ -533,6 +537,8 @@ class LiveRoomManager {
       `audienceCount` 是一个非常接近实时的**高精度估算值**，但在极端高并发场景下，它可能存在短暂的延迟或数据丢失。因此，我们建议您将其用于 **UI 展示**，而不应作为计费、统计等需要绝对精准场景的唯一依据。
 
 ---
+
+## Platform: Flutter
 
 `LiveAudienceStore` 是 `AtomicXCore` 中专门负责管理直播间观众信息的模块。通过 `LiveAudienceStore`，您可以为您的直播应用构建一套完整的观众列表及管理系统。
 

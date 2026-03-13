@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/en/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: Android
+
 AtomicXCore provides the [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-co-guest-store/index.html) and [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_Android/-atomic-x%20-core%20-a-p-i/io.trtc.tuikit.atomicxcore.api.live/-live-seat-store/index.html) modules, which are designed to streamline the entire audience co-hosting workflow for live streaming scenarios. You do not need to manage complex state synchronization or signaling logic—simply invoke a few intuitive methods to enable seamless audio and video interactions between hosts and audience members. This guide explains how to quickly implement voice co-hosting features in your Android app using `CoGuestStore` and `LiveSeatStore`.
 
 ## Core Scenarios
@@ -541,6 +543,8 @@ Subscribe to the `seatList` property in `LiveSeatState`, which is a reactive `Li
 
 ---
 
+## Platform: iOS
+
 **AtomicXCore** provides the [CoGuestStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/cogueststore) and [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_iOS/documentation/atomicxcore/liveseatstore) modules, which handle the complete workflow for audience mic-link requests in live streaming scenarios. You don’t need to worry about complex state synchronization or signaling interactions—simply call a few straightforward methods to add robust audio/video interaction between hosts and viewers in your live broadcast. This guide walks you through how to quickly implement voice mic-link functionality in your iOS app using `CoGuestStore` and `LiveSeatStore`.
 
 ## Core Scenarios
@@ -1042,6 +1046,8 @@ This is an important distinction. `DeviceStore` manages the physical device, whi
 3. **When leaving mic:** When leaving mic (e.g., calling `disconnect`), call `closeLocalMicrophone` to release the device.
 
 ---
+
+## Platform: Flutter
 
 **AtomicXCore** provides [CoGuestStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_co_guest_store/CoGuestStore-class.html) and [LiveSeatStore](https://tencent-rtc.github.io/TUIKit_Flutter/api_live_live_seat_store/LiveSeatStore-class.html) modules, used to manage the complete business process of audience mic connection. Users do not need to worry about complex state synchronization and signaling interaction, just call a few simple methods to add powerful audio-video interaction between audience and anchor to your live stream. This document will guide you on how to use `CoGuestStore` and `LiveSeatStore` for quick implementation of audio mic connection in Flutter application.
 

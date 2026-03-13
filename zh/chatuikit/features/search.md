@@ -2,6 +2,8 @@
 > Fetch the complete documentation index at: https://raw.githubusercontent.com/lianjun0809/docs/main/zh/llms.txt
 > Use this file to discover all available pages before exploring further.
 
+## Platform: React
+
 ## 组件概述
 
 Search 是一个功能完整的搜索解决方案，包含了搜索框、搜索结果展示、高级搜索等功能的完整组件集合。适用于即时通讯、在线会议、在线教育等场景的用户、群组、消息搜索。
@@ -286,6 +288,8 @@ A: 组件自动适配移动端，也可通过 CSS 进一步定制。
 A: 组件内置国际化支持，通过 `useUIKit` 获取翻译。
 
 ---
+
+## Platform: Vue
 
 ## 概述
 
