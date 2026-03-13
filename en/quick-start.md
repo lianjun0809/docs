@@ -4,43 +4,21 @@
 
 This guide helps you quickly build a working Tencent Cloud Real-Time Communication (TRTC) and Instant Messaging (IM) application using an AI editor. We provide rich documentation resources to enhance your development experience.
 
-[RTC MCP Server](https://write.woa.com/#32173486-db56-466d-b8ed-ca4c28b027d3)
+RTC MCP Server
 
-[RTC Skills](https://write.woa.com/#1b9d0a80-b3f8-4387-9b83-4e53af424e73)
+RTC Skills
 
-[Quick Start Guide](https://write.woa.com/#b78521a8-feff-4ac8-be60-4f46f5e5b183)
+Quick Start Guide
 
-[OpenClaw Guide](https://write.woa.com/#179ee73f-a7e2-49d8-b742-ec1af41edfbe)
+OpenClaw Guide
 
 ## Prepare Account & Credentials (Required)
 
 You need to create an application in the Tencent Cloud console first and obtain the following credentials:
-<table>
-<tr>
-<td rowspan="1" colSpan="1" >Credential</td>
-
-<td rowspan="1" colSpan="1" >Where to Get</td>
-
-<td rowspan="1" colSpan="1" >Purpose</td>
-</tr>
-
-<tr>
-<td rowspan="1" colSpan="1" >`SDKAppID`</td>
-
-<td rowspan="1" colSpan="1" >[IM Console](https://console.cloud.tencent.com/im)</td>
-
-<td rowspan="1" colSpan="1" >SDK initialization, MCP environment variable</td>
-</tr>
-
-<tr>
-<td rowspan="1" colSpan="1" >`SecretKey`</td>
-
-<td rowspan="1" colSpan="1" >IM Console → App Management</td>
-
-<td rowspan="1" colSpan="1" >Generate UserSig (for testing only), MCP environment variable</td>
-</tr>
-</table>
-
+| Credential | Where to Get | Purpose |
+| --- | --- | --- |
+| `SDKAppID` | [IM Console](https://console.cloud.tencent.com/im) | SDK initialization, MCP environment variable |
+| `SecretKey` | IM Console → App Management | Generate UserSig (for testing only), MCP environment variable |
 
 ## Configure MCP (Required)
 
@@ -60,7 +38,7 @@ Configure MCP in your AI editor (CodeBuddy / Trae / Cursor / Codex / Claude Code
 }
 ```
 
-For detailed installation instructions for CodeBuddy, Trae, Cursor, Codex, Claude Code, Claude Desktop, etc., see [MCP Configuration](https://write.woa.com/document/197816375534501888).
+For detailed installation instructions for CodeBuddy, Trae, Cursor, Codex, Claude Code, Claude Desktop, etc., see MCP Configuration.
 
 ## Install Skills (Recommended)
 
@@ -69,7 +47,7 @@ Run the following command to install Skills. The CLI will automatically detect t
 npx skills add Tencent-RTC/tencent-rtc-skills
 ```
 
-Installing Skills is recommended to improve the stability and accuracy of Agent MCP tool invocations. For details, see: [Tencent RTC Skills](https://write.woa.com/document/194928764706254848).
+Installing Skills is recommended to improve the stability and accuracy of Agent MCP tool invocations. For details, see: Tencent RTC Skills.
 
 ## Quick Start Guide
 
@@ -114,9 +92,6 @@ If you want to integrate OpenClaw into your IM application, refer to the [OpenCl
 
 After successfully running the Chat UIKit integration, you can use the following Prompts as needed.
 
-
-
-
 [Build Audio/Video Call Application]
 ``` markdown
 Task: Integrate CallKit into the current project (first get 1v1 voice call and video call working)
@@ -140,7 +115,6 @@ Troubleshooting:
 - 60001: Regenerate userSig
 - Call failure: Check network and device permissions
 ```
-
 
 [Build Live Streaming Application]
 ``` markdown
@@ -166,7 +140,6 @@ Troubleshooting:
 - No audio: Check audio permissions and device routing
 
 ```
-
 
 [Build Video Conference Application]
 ``` markdown

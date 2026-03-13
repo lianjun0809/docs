@@ -6,7 +6,7 @@ RTC Skills 为腾讯云实时音视频场景提供结构化指引。它可以将
 
 ## 前置条件
 
-使用 Skills 前，请先完成 MCP Server 配置，[MCP 配置说明](https://write.woa.com/document/197816375534501888)。
+使用 Skills 前，请先完成 MCP Server 配置，MCP 配置说明。
 
 ## 安装
 
@@ -29,12 +29,9 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 - **场景覆盖完整：**单一技能包覆盖 Chat / Call / Live / Room 集成场景。
 
-
 ## 参考
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
-
-
 

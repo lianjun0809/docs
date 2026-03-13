@@ -6,7 +6,7 @@ RTC Skills provides structured guidance for Tencent Cloud real-time audio/video 
 
 ## Prerequisites
 
-Before using Skills, please complete the MCP Server configuration first. See [MCP Configuration Guide](https://write.woa.com/document/197816375534501888).
+Before using Skills, please complete the MCP Server configuration first. See MCP Configuration Guide.
 
 ## Installation
 
@@ -29,11 +29,9 @@ git clone https://github.com/Tencent-RTC/tencent-rtc-skills.git ~/.skills/tencen
 
 - **Complete Scenario Coverage:** A single skill package covers Chat / Call / Live / Room integration scenarios.
 
-
 ## References
 
 [Tencent RTC Skills](https://github.com/Tencent-RTC/tencent-rtc-skills)
 
 [MCP NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp)
-
 

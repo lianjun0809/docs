@@ -4,43 +4,21 @@
 
 本文介绍用 AI 编辑器快速跑通一个可用的腾讯云实时音视频 TRTC 和即时通信 IM 应用。我们提供了丰富的文档资源来提升您的开发体验。
 
-[RTC MCP Server](https://write.woa.com/#32173486-db56-466d-b8ed-ca4c28b027d3)
+RTC MCP Server
 
-[RTC Skills](https://write.woa.com/#1b9d0a80-b3f8-4387-9b83-4e53af424e73)
+RTC Skills
 
-[快速开始指南](https://write.woa.com/#b78521a8-feff-4ac8-be60-4f46f5e5b183)
+快速开始指南
 
-[OpenClaw 指南](https://write.woa.com/#179ee73f-a7e2-49d8-b742-ec1af41edfbe)
+OpenClaw 指南
 
 ## 准备账号与凭证（必做）
 
 你需要先在腾讯云控制台创建应用，并获取以下凭证：
-<table>
-<tr>
-<td rowspan="1" colSpan="1" >凭证</td>
-
-<td rowspan="1" colSpan="1" >获取位置</td>
-
-<td rowspan="1" colSpan="1" >用途</td>
-</tr>
-
-<tr>
-<td rowspan="1" colSpan="1" >`SDKAppID`</td>
-
-<td rowspan="1" colSpan="1" >[IM 控制台](https://console.cloud.tencent.com/im)</td>
-
-<td rowspan="1" colSpan="1" >SDK 初始化、MCP 环境变量</td>
-</tr>
-
-<tr>
-<td rowspan="1" colSpan="1" >`SecretKey`</td>
-
-<td rowspan="1" colSpan="1" >IM 控制台 → 应用管理</td>
-
-<td rowspan="1" colSpan="1" >生成 UserSig（仅用于测试）、MCP 环境变量</td>
-</tr>
-</table>
-
+| 凭证 | 获取位置 | 用途 |
+| --- | --- | --- |
+| `SDKAppID` | [IM 控制台](https://console.cloud.tencent.com/im) | SDK 初始化、MCP 环境变量 |
+| `SecretKey` | IM 控制台 → 应用管理 | 生成 UserSig（仅用于测试）、MCP 环境变量 |
 
 ## 配置 MCP（必做）
 
@@ -60,7 +38,7 @@
 }
 ```
 
-查看 CodeBuddy、Trae 、Cursor、Codex、Claude Code、Claude Desktop 等的详细安装说明，请点击 [MCP 配置](https://write.woa.com/document/197816375534501888)。
+查看 CodeBuddy、Trae 、Cursor、Codex、Claude Code、Claude Desktop 等的详细安装说明，请点击 MCP 配置。
 
 ## 安装 Skills（推荐）
 
@@ -69,7 +47,7 @@
 npx skills add Tencent-RTC/tencent-rtc-skills
 ```
 
-建议安装 Skills，以提高 Agent 调用 MCP 工具的稳定性与准确率。详细说明见：[Tencent RTC Skills](https://write.woa.com/document/194928764706254848)。
+建议安装 Skills，以提高 Agent 调用 MCP 工具的稳定性与准确率。详细说明见：Tencent RTC Skills。
 
 ## 快速开始指南
 
@@ -114,9 +92,6 @@ npx skills add Tencent-RTC/tencent-rtc-skills
 
 在跑通 Chat UIKit 集成后，您可以根据需要使用下面的 Prompt。
 
-
-
-
 【构建音视频通话应用】
 ``` markdown
 任务：在当前项目中集成 CallKit（先跑通 1v1 语音通话和视频通话）
@@ -140,7 +115,6 @@ npx skills add Tencent-RTC/tencent-rtc-skills
 - 60001：重新生成 userSig
 - 通话失败：检查网络与设备权限
 ```
-
 
 【构建直播互动应用】
 ``` markdown
@@ -166,7 +140,6 @@ npx skills add Tencent-RTC/tencent-rtc-skills
 - 无声：检查音频权限与设备路由
 
 ```
-
 
 【构建视频会议应用】
 ``` markdown

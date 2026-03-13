@@ -12,253 +12,183 @@
 ### Chat UIKit
 > 即时通讯 IM 聊天组件，支持会话列表、聊天窗口、联系人管理等完整 IM 功能。
 
-- [排查 Android Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/android/faq.md): 解决 Android TUIKit Compose 集成中的构建错误、初始化失败和运行时异常。
-- [自定义 Android Chat UIKit 主题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/android/features/theme.md): 通过 TUIKit Compose 自定义 Android 聊天界面的主题色、深色模式和视觉样式。
-- [集成 Android Chat UIKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/android/integration.md): 在 Android 项目中集成 TUIKit Compose 聊天组件，使用 ChatPage、ConversationsPage、ContactsPage 搭建 IM 应用。要求 Android Studio Ladybug 2024.2.1+、JDK 17+。
-- [排查 Android IM SDK 初始化与登录问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/android_sdk/client-api.md): 解决 Android IM SDK 中 V2TIMManager.getInstance().initSDK() 初始化失败和 login() 登录异常。
-- [Chat UIKit 计费与版本选择](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/common/product.md): 了解 Chat UIKit 免费版和付费版的功能差异、计费模式和升级路径。
-- [Chat UIKit 服务端错误码参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/common/server_error_code.md): 查阅 Chat UIKit 服务端 REST API 错误码列表，定位接口调用异常原因。
-- [排查 Chat UIKit 服务端问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/common/server.md): 解决 Chat UIKit 服务端 REST API 调用失败、回调配置和消息推送异常。
-- [排查 Flutter IM SDK 初始化与登录问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/flutter_sdk/client-api.md): 解决 Flutter IM SDK 中 TencentImSDKPlugin 初始化失败和登录异常问题。
-- [排查 Flutter Chat UIKit 常见问题（SDK 层）](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/flutter_sdk/faq.md): 解决 Flutter Chat UIKit SDK 层面的依赖冲突、构建错误和兼容性问题。
-- [排查 iOS IM SDK 初始化与登录问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/ios_sdk/client-api.md): 解决 iOS IM SDK 中 V2TIMManager 初始化失败和登录异常问题。
-- [Web Chat UIKit 错误码参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/web_sdk/error_code.md): 查阅 Web IM SDK 错误码列表，快速定位初始化、登录、消息发送等异常原因。
-- [排查 Web Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/web_sdk/faq.md): 解决 Web Chat UIKit (@tencentcloud/chat-uikit-react/vue3) 集成中的浏览器兼容、打包和运行时问题。
-- [排查 Flutter Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/flutter/faq.md): 解决 Flutter TUIKit 集成中的依赖冲突、构建错误和运行时异常。
-- [自定义 Flutter Chat UIKit 主题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/flutter/features/theme.md): 自定义 Flutter TUIKit 聊天界面的主题色、深色模式和视觉样式。
-- [集成 Flutter Chat UIKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/flutter/integration.md): 从 GitHub 克隆 TUIKit_Flutter 源码，使用 ChatPage、ConversationsPage、ContactsPage 搭建跨平台 IM 应用。要求 Flutter 3.29.0+、Dart 3.7.0+。
-- [排查 iOS Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/ios/faq.md): 解决 iOS TUIChat_Swift/TUIConversation_Swift CocoaPods 集成中的编译和运行时问题。
-- [自定义 iOS Chat UIKit 主题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/ios/features/theme.md): 自定义 iOS TUIChat_Swift 聊天界面的主题色、深色模式和视觉样式。
-- [集成 iOS Chat UIKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/ios/integration.md): 通过 CocoaPods 安装 TUIChat_Swift、TUIConversation_Swift、TUIContact_Swift 等组件，搭建 iOS IM 应用。要求 Xcode 10+、iOS 9.0+。
-- [React ChatHeader 聊天头部组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/chat-header.md): 自定义 @tencentcloud/chat-uikit-react 的 ChatHeader 组件，配置对话标题、头像和操作按钮。
-- [React ChatSetting 聊天设置组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/chat-setting.md): 自定义 @tencentcloud/chat-uikit-react 的 ChatSetting 组件，管理消息免打扰、置顶和聊天记录清空。
-- [React Chat UIKit 组件清单](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/component-list.md): 查看 @tencentcloud/chat-uikit-react 所有可用组件：UIKitProvider、ConversationList、Chat、MessageList、ContactList、Search 等。
-- [React ContactList 联系人列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/contact-list.md): 自定义 @tencentcloud/chat-uikit-react 的 ContactList 组件，展示好友列表和群组列表。
-- [React ConversationActions 会话操作组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-actions.md): 自定义 @tencentcloud/chat-uikit-react 的 ConversationActions，实现删除、置顶、免打扰等操作。
-- [React ConversationList 会话列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-list.md): 自定义 @tencentcloud/chat-uikit-react 的 ConversationList 组件，支持搜索、创建会话和置顶。
-- [React ConversationPreview 会话预览组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-preview.md): 自定义 @tencentcloud/chat-uikit-react 的 ConversationPreview 组件，配置未读计数和最后一条消息展示。
-- [React ConversationSearch 会话搜索组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/conversation-search.md): 自定义 @tencentcloud/chat-uikit-react 的 ConversationSearch 组件，搜索用户、群组和消息。
-- [React MessageInput 消息输入组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/message-input.md): 自定义 @tencentcloud/chat-uikit-react 的 MessageInput 组件，扩展表情、图片、文件发送能力。
-- [React MessageList 消息列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/message-list.md): 自定义 @tencentcloud/chat-uikit-react 的 MessageList 组件，配置消息气泡样式和交互行为。
-- [React Search 全局搜索组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/components/search.md): 自定义 @tencentcloud/chat-uikit-react 的 Search 组件，搜索联系人、群组和聊天记录。
-- [排查 React Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/faq.md): 解决 @tencentcloud/chat-uikit-react 集成中的依赖冲突、TypeScript 类型错误和渲染问题。
-- [集成 React Chat UIKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/react/integration.md): npm install @tencentcloud/chat-uikit-react，使用 UIKitProvider、ConversationList、Chat、MessageList 组件搭建 React IM 应用。要求 React 18、Node.js 18+。
-- [Vue ChatHeader 聊天头部组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/chat-header.md): 自定义 @tencentcloud/chat-uikit-vue3 的 ChatHeader 组件，配置对话标题、头像和操作按钮。
-- [Vue ChatSetting 聊天设置组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/chat-setting.md): 自定义 @tencentcloud/chat-uikit-vue3 的 ChatSetting 组件，管理消息免打扰、置顶和聊天记录清空。
-- [Vue Chat UIKit 组件清单](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/component-list.md): 查看 @tencentcloud/chat-uikit-vue3 所有可用组件：UIKitProvider、ConversationList、Chat、MessageList、ContactList、Search 等。
-- [Vue ContactList 联系人列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/contact-list.md): 自定义 @tencentcloud/chat-uikit-vue3 的 ContactList 组件，展示好友列表和群组列表。
-- [Vue ConversationActions 会话操作组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-actions.md): 自定义 @tencentcloud/chat-uikit-vue3 的 ConversationActions，实现删除、置顶、免打扰等操作。
-- [Vue ConversationList 会话列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-list.md): 自定义 @tencentcloud/chat-uikit-vue3 的 ConversationList 组件，支持搜索、创建会话和置顶。
-- [Vue ConversationPreview 会话预览组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-preview.md): 自定义 @tencentcloud/chat-uikit-vue3 的 ConversationPreview 组件，配置未读计数和最后一条消息展示。
-- [Vue ConversationSearch 会话搜索组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/conversation-search.md): 自定义 @tencentcloud/chat-uikit-vue3 的 ConversationSearch 组件，搜索用户、群组和消息。
-- [Vue MessageInput 消息输入组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/message-input.md): 自定义 @tencentcloud/chat-uikit-vue3 的 MessageInput 组件，扩展表情、图片、文件发送能力。
-- [Vue MessageList 消息列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/message-list.md): 自定义 @tencentcloud/chat-uikit-vue3 的 MessageList 组件，配置消息气泡样式和交互行为。
-- [Vue Search 全局搜索组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/components/search.md): 自定义 @tencentcloud/chat-uikit-vue3 的 Search 组件，搜索联系人、群组和聊天记录。
-- [排查 Vue Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/faq.md): 解决 @tencentcloud/chat-uikit-vue3 集成中的依赖冲突、TypeScript 类型错误和渲染问题。
-- [集成 Vue Chat UIKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/vue/integration.md): npm install @tencentcloud/chat-uikit-vue3，使用 UIKitProvider、ConversationList、Chat、MessageList 组件搭建 Vue3 IM 应用。要求 Vue 3.0+、Node.js 20+。
-
+- [集成 Android Chat UIKit (TUIKit Compose)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/integration.md): 在 Android 项目中集成 TUIKit Compose 聊天组件，使用 ChatPage、ConversationsPage、ContactsPage 搭建 IM 应用。要求 Android Studio Ladybug 2024.2.1+、JDK 17+。
+- [Web Chat UIKit 组件清单 (atomicx)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/overview.md): 查看 @tencentcloud/chat-uikit-react/vue3 全部 25 个 atomicx 组件：TUIKit、Chat、ConversationList、MessageList、MessageInput、ContactList、Search、ChatSetting、Avatar 等。
+- [排查 Android Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/android.md): 解决 Android TUIKit Compose 和 IM SDK 集成中的构建错误、初始化失败、登录异常和运行时问题。包含 V2TIMManager 初始化和 client-api 排查。
+- [Chat UIKit 计费、服务端与通用问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/common.md): 了解 Chat UIKit 免费版和付费版差异、计费模式，排查服务端 REST API 调用失败和回调配置异常。包含服务端错误码参考。
+- [排查 Flutter Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/flutter.md): 解决 Flutter TUIKit 和 TencentImSDKPlugin 集成中的依赖冲突、构建错误、登录异常和兼容性问题。
+- [排查 iOS Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/ios.md): 解决 iOS TUIChat_Swift/TUIConversation_Swift CocoaPods 集成中的编译和运行时问题，以及 IM SDK V2TIMManager 初始化异常。
+- [排查 Web Chat UIKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/faq/web.md): 解决 @tencentcloud/chat-uikit-react/vue3 集成中的浏览器兼容、TypeScript 类型错误、打包和运行时问题。包含 Web IM SDK 错误码参考。
+- [ChatHeader 聊天头部组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/chat-header.md): 自定义 ChatHeader 组件，配置对话标题、头像和操作按钮，支持 React/Vue 双框架。
+- [ChatSetting 聊天设置组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/chat-setting.md): 自定义 ChatSetting 组件，管理消息免打扰、置顶和聊天记录清空等会话设置。
+- [ContactList 联系人列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/contact-list.md): 自定义 ContactList 组件，展示好友列表、群组列表和黑名单，实现通讯录页面和好友管理。
+- [ConversationActions 会话操作组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-actions.md): 自定义 ConversationActions 组件，实现会话删除、置顶、免打扰和标记未读/已读等操作。
+- [ConversationList 会话列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-list.md): 自定义 ConversationList 组件，展示所有对话的预览信息（最后一条消息、未读数等），支持搜索、创建会话和置顶。
+- [ConversationPreview 会话预览 Item 组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-preview.md): 自定义 ConversationPreview 组件，配置单个会话项的未读计数、最后一条消息展示和会话操作。
+- [ConversationSearch 会话搜索组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/conversation-search.md): 自定义 ConversationSearch 组件，搜索用户、群组和消息，集成搜索框和高级搜索功能。
+- [MessageInput 消息输入组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/message-input.md): 自定义 MessageInput 组件，扩展表情、图片、文件等多种消息类型发送能力。
+- [MessageList 消息列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/message-list.md): 自定义 MessageList 组件，展示历史消息、支持滚动加载、多种消息类型渲染和消息气泡样式配置。
+- [Search 全局搜索组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/search.md): 自定义 Search 组件，支持搜索联系人、群组和聊天记录的全局搜索功能。
+- [自定义 Chat UIKit 主题 (Android/iOS/Flutter)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/chatuikit/features/theme.md): 通过 TUIKit 自定义聊天界面的主题色、深色模式和视觉样式，支持 Android Compose、iOS Swift 和 Flutter 三个平台。
 
 ### TUICallKit
 > 音视频通话组件，快速实现类微信的一对一和多人音视频通话功能。
 
-- [排查 Android TUICallKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/android/faq.md): 解决 Android tuicallkit-kt 集成中的音视频权限、通话建连失败和 UI 异常问题。
-- [集成 Android TUICallKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/android/integration.md): 从 GitHub 克隆 TUIKit_Android 源码，导入 tuicallkit-kt 和 atomic_x 模块实现音视频通话。内含 TRTC SDK 和 IM SDK 依赖。要求 Android 5.0+。
-- [Android TUICallObserver 回调 API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/android_sdk/call-observer-api.md): 查阅 Android TUICallObserver 通话事件回调接口：onCallReceived、onCallCancelled、onUserJoin 等。
-- [Android TUICallKit API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/android_sdk/callkit-api.md): 查阅 Android tuicallkit-kt 模块完整 API：call()、groupCall()、joinInGroupCall()、setSelfInfo() 等方法。
-- [TUICallKit 错误码参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/common/error_code.md): 查阅 TUICallKit 错误码列表，定位通话发起、接听、挂断等环节的异常原因。
-- [Flutter TUICallKit 类型定义参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/flutter_sdk/call-define-api.md): 查阅 Flutter tencent_calls_uikit 数据结构：TUICallParams、TUICallMediaType、TUICallRole 等类型定义。
-- [Flutter TUICallObserver 回调 API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/flutter_sdk/call-observer-api.md): 查阅 Flutter tencent_calls_uikit 的 TUICallObserver 通话事件回调接口文档。
-- [Flutter TUICallKit API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/flutter_sdk/callkit-api.md): 查阅 Flutter tencent_calls_uikit 完整 API：call()、groupCall()、setSelfInfo()、enableFloatWindow() 等方法。
-- [iOS TUICallObserver 回调 API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/ios_sdk/call-observer-api.md): 查阅 iOS TUICallKit_Swift 的 TUICallObserver 通话事件回调接口文档。
-- [iOS TUICallKit API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/faq/ios_sdk/callkit-api.md): 查阅 iOS TUICallKit_Swift/Professional 完整 API：call()、groupCall()、setSelfInfo() 等方法。
-- [排查 Flutter TUICallKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/flutter/faq.md): 解决 Flutter tencent_calls_uikit 集成中的平台适配、权限和构建问题。
-- [集成 Flutter TUICallKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/flutter/integration.md): 运行 flutter pub add tencent_calls_uikit 安装 Flutter 音视频通话组件。要求 Flutter 3.24.0+、Dart 3.5.0+。
-- [排查 iOS TUICallKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/ios/faq.md): 解决 iOS TUICallKit_Swift/Professional CocoaPods 集成中的编译错误和通话异常。
-- [集成 iOS TUICallKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/ios/integration.md): 通过 CocoaPods 安装 pod 'TUICallKit_Swift/Professional'，搭建 iOS 音视频通话应用。要求 Xcode 13+、iOS 13.0+。
-- [React TUICallKit API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/react/api.md): 查阅 @trtc/calls-uikit-react 完整 API：TUICallKitAPI.init()、TUICallKitAPI.calls()、CallMediaType 枚举。
-- [排查 React TUICallKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/react/faq.md): 解决 @trtc/calls-uikit-react 集成中的组件渲染、通话建连和浏览器兼容问题。
-- [集成 React TUICallKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/react/integration.md): npm install @trtc/calls-uikit-react，使用 TUICallKit 组件和 TUICallKitAPI.calls() 方法实现 React 音视频通话。要求 React 18、Node.js 22+。
-- [Vue TUICallKit API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/vue/api.md): 查阅 @trtc/calls-uikit-vue 完整 API：TUICallKitAPI.init()、TUICallKitAPI.calls()、CallMediaType 枚举。
-- [排查 Vue TUICallKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/vue/faq.md): 解决 @trtc/calls-uikit-vue 集成中的组件渲染、通话建连和浏览器兼容问题。
-- [集成 Vue TUICallKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/tuicallkit/vue/integration.md): npm install @trtc/calls-uikit-vue，使用 TUICallKit 组件和 TUICallKitAPI.calls() 方法实现 Vue3 音视频通话。要求 Vue 3.0+、Node.js 22+。
-
+- [集成 TUICallKit 音视频通话](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/integration.md): 快速接入 TUICallKit 音视频通话组件，支持 Android (tuicallkit-kt)、iOS (TUICallKit_Swift)、Flutter (tencent_calls_uikit)、React (@trtc/calls-uikit-react)、Vue (@trtc/calls-uikit-vue) 五个平台。
+- [排查 Android TUICallKit 常见问题与 API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/faq/android.md): 解决 Android tuicallkit-kt 集成中的音视频权限、通话建连失败和 UI 异常。包含 TUICallKit API、TUICallObserver 回调 API 完整文档。
+- [TUICallKit 错误码参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/faq/common.md): 查阅 TUICallKit 完整错误码列表，定位通话发起、接听、挂断等各环节的异常原因和解决方案。
+- [排查 Flutter TUICallKit 常见问题与 API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/faq/flutter.md): 解决 Flutter tencent_calls_uikit 集成中的平台适配、权限和构建问题。包含 TUICallKit API、TUICallObserver 回调、TUICallParams 类型定义完整文档。
+- [排查 iOS TUICallKit 常见问题与 API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/faq/ios.md): 解决 iOS TUICallKit_Swift/Professional CocoaPods 集成中的编译错误和通话异常。包含 TUICallKit API、TUICallObserver 回调 API 完整文档。
+- [排查 Web TUICallKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/faq/web.md): 解决 @trtc/calls-uikit-react/vue 集成中的组件渲染、通话建连和浏览器兼容问题。
+- [TUICallEngine + TUICallKit Web/小程序 API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/callkit/reference/api.md): 查阅 TUICallEngine（通话引擎）和 TUICallKit（UI 组件）完整 API：call()、groupCall()、accept()、hangup()、switchCallMediaType() 等，适用于 Web 和微信小程序。
 
 ### LiveKit
 > 视频直播与语聊房组件，支持主播开播、观众观看、连麦互动、PK 对战、弹幕、礼物等功能。
 
-- [查看 LiveKit 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/faq/common/error_code.md): 查阅 LiveKit 错误码列表与排查指南。
-- [集成 Android 直播观众列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-audience-list.md): 使用 AudienceStore API 获取在线观众列表，展示观众头像墙和实时人数统计。
-- [集成 Android LiveKit 音效控制](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-audio-effect.md): 使用 AudioEffectStore.setAudioChangerType()、setAudioReverbType() 实现变声（熊孩子/萝莉/大叔）和混响（KTV/礼堂/磁性）。
-- [集成 Android LiveKit 弹幕](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-barrage.md): 使用 BarrageStore.sendTextMessage()、sendCustomMessage() 发送弹幕，监听 barrageState 接收实时弹幕消息。
-- [集成 Android LiveKit 基础美颜](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-base-beauty.md): 使用 BaseBeautyStore.setSmoothLevel()、setWhitenessLevel()、setRuddyLevel() 调节磨皮/美白/红润效果（0-9级）。
-- [集成 Android 观众上麦](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-co-guest-interaction.md): 使用 CoGuestStore.requestConnection()、respondToCrossRoomConnection() 实现观众申请上麦、主播同意/拒绝和连麦互动。
-- [集成 Android LiveKit 礼物](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-gift.md): 使用 GiftStore.sendGift()、addGiftListener() 实现礼物赠送、全屏动画和弹幕礼物消息展示。
-- [集成 Android 主播连麦与 PK](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-host-interaction.md): 使用 CoHostStore.requestConnection() 实现跨房连麦、BattleStore.requestBattle() 实现 PK 对战。
-- [集成 Android LiveKit 基础功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-integration.md): 从 GitHub 克隆 TUIKit_Android 源码，集成 AtomicXCore、LoginStore、LiveCoreView 实现主播开播和观众观看。要求 Android Studio Ladybug 2024.2.1+、JDK 17+。
-- [集成 Android LiveKit 直播列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/android/live-live-list.md): 使用 RoomManager API 获取直播间列表、房间信息，实现房间跳转和在线状态展示。
-- [集成 Flutter 直播观众列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-audience-list.md): 使用 AudienceStore API 获取在线观众列表，展示观众头像墙和实时人数统计。
-- [集成 Flutter LiveKit 音效控制](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-audio-effect.md): 使用 AudioEffectStore.setAudioChangerType()、setAudioReverbType() 实现变声（熊孩子/萝莉/大叔）和混响（KTV/礼堂/磁性）。
-- [集成 Flutter LiveKit 弹幕](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-barrage.md): 使用 BarrageStore.sendTextMessage()、sendCustomMessage() 发送弹幕，监听 barrageState 接收实时弹幕消息。
-- [集成 Flutter LiveKit 基础美颜](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-base-beauty.md): 使用 BaseBeautyStore.setSmoothLevel()、setWhitenessLevel()、setRuddyLevel() 调节磨皮/美白/红润效果（0-9级）。
-- [集成 Flutter 观众上麦](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-co-guest-interaction.md): 使用 CoGuestStore.requestConnection()、respondToCrossRoomConnection() 实现观众申请上麦、主播同意/拒绝和连麦互动。
-- [集成 Flutter LiveKit 礼物](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-gift.md): 使用 GiftStore.sendGift()、addGiftListener() 实现礼物赠送、全屏动画和弹幕礼物消息展示。
-- [集成 Flutter 主播连麦与 PK](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-host-interaction.md): 使用 CoHostStore.requestConnection() 实现跨房连麦、BattleStore.requestBattle() 实现 PK 对战。
-- [集成 Flutter LiveKit 基础功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-integration.md): 从 GitHub 克隆 TUIKit_Flutter 源码，集成 AtomicXCore、LoginStore、LiveCoreView 实现主播开播和观众观看。要求 Flutter 3.29.0+、Dart 3.7.0+。
-- [集成 Flutter LiveKit 直播列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/flutter/live-live-list.md): 使用 RoomManager API 获取直播间列表、房间信息，实现房间跳转和在线状态展示。
-- [集成 iOS 直播观众列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-audience-list.md): 使用 AudienceStore API 获取在线观众列表，展示观众头像墙和实时人数统计。
-- [集成 iOS LiveKit 音效控制](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-audio-effect.md): 使用 AudioEffectStore.setAudioChangerType()、setAudioReverbType() 实现变声（熊孩子/萝莉/大叔）和混响（KTV/礼堂/磁性）。
-- [集成 iOS LiveKit 弹幕](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-barrage.md): 使用 BarrageStore.sendTextMessage()、sendCustomMessage() 发送弹幕，监听 barrageState 接收实时弹幕消息。
-- [集成 iOS LiveKit 基础美颜](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-base-beauty.md): 使用 BaseBeautyStore.setSmoothLevel()、setWhitenessLevel()、setRuddyLevel() 调节磨皮/美白/红润效果（0-9级）。
-- [集成 iOS 观众上麦](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-co-guest-interaction.md): 使用 CoGuestStore.requestConnection()、respondToCrossRoomConnection() 实现观众申请上麦、主播同意/拒绝和连麦互动。
-- [集成 iOS LiveKit 礼物](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-gift.md): 使用 GiftStore.sendGift()、addGiftListener() 实现礼物赠送、全屏动画和弹幕礼物消息展示。
-- [集成 iOS 主播连麦与 PK](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-host-interaction.md): 使用 CoHostStore.requestConnection() 实现跨房连麦、BattleStore.requestBattle() 实现 PK 对战。
-- [集成 iOS LiveKit 基础功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-integration.md): 从 GitHub 克隆 TUIKit_iOS 源码，集成 AtomicXCore、LoginStore、LiveCoreView 实现主播开播和观众观看。要求 Xcode 13+、iOS 13.0+。
-- [集成 iOS LiveKit 直播列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/ios/live-live-list.md): 使用 RoomManager API 获取直播间列表、房间信息，实现房间跳转和在线状态展示。
-- [Vue Barrage 弹幕组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/barrage.md): 自定义 TUILiveKit 的 Barrage 组件，配置弹幕发送、接收和展示样式。
-- [Vue CoGuestPanel 连麦管理组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/co-guest-panel.md): 自定义 TUILiveKit 的 CoGuestPanel 组件，管理观众上麦申请、主播同意/拒绝和连麦状态。
-- [Vue LiveAudienceList 观众列表组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/live-audience-list.md): 自定义 TUILiveKit 的 LiveAudienceList 组件，展示在线观众列表和头像墙。
-- [Vue LiveScenePanel 媒体资源配置组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/live-scene-panel.md): 自定义 TUILiveKit 的 LiveScenePanel 组件，配置摄像头、屏幕、音频等媒体资源。
-- [Vue LiveView 直播视频组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/live-view.md): 自定义 TUILiveKit 的 LiveView 组件，配置直播视频流渲染区域和播放参数。
-- [Vue StreamMixer 视频混流编辑组件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/components/stream-mixer.md): 自定义 TUILiveKit 的 StreamMixer 组件，编辑多路视频源的混流布局和合成参数。
-- [排查 Vue LiveKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/faq.md): 解决 Vue TUILiveKit 集成中的组件渲染、路由配置和浏览器兼容问题。
-- [集成 Vue LiveKit 直播列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-list-integration.md): 从 GitHub 克隆 TUILiveKit 源码，集成 liveList 组件展示直播间列表、支持房间跳转。要求 Vue 3.0+、Node.js 20+。
-- [集成 Vue LiveKit 桌面端观看](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-player-desk-integration.md): 从 GitHub 克隆 TUILiveKit 源码，集成 livePlayer 组件实现桌面端观众拉流观看、连麦互动。要求 Vue 3.0+、Node.js 20+。
-- [集成 Vue LiveKit H5 观看](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-player-h5-integration.md): 从 GitHub 克隆 TUILiveKit 源码，集成 livePlayer 组件实现 H5 移动端观众拉流观看。要求 Vue 3.0+、Node.js 20+。
-- [集成 Vue LiveKit 主播开播](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/live-pusher-integration.md): 从 GitHub 克隆 TUILiveKit 源码，集成 livePusher 组件实现主播创建房间、推流开播。要求 Vue 3.0+、Node.js 20+。
-- [Vue LiveKit State API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/vue/states/live-state.md): 查阅 TUILiveKit State API 文档：roomState、barrageState、giftState、coGuestState、coHostState 等状态管理接口。
-- [集成 Android 语聊房观众列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-audience-list.md): 使用 AudienceStore API 获取语聊房在线听众列表，展示头像墙和实时人数统计。
-- [集成 Android 语聊房音效控制](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-audio-effect.md): 使用 AudioEffectStore.setAudioChangerType()、setAudioReverbType() 实现语聊房变声（熊孩子/萝莉/大叔）和混响（KTV/礼堂/磁性）。
-- [集成 Android 语聊房弹幕](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-barrage.md): 使用 BarrageStore.sendTextMessage()、sendCustomMessage() 发送语聊房弹幕，监听 barrageState 接收实时消息。
-- [集成 Android 语聊房观众上麦](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-co-guest-interaction.md): 使用 CoGuestStore.requestConnection()、respondToCrossRoomConnection() 实现语聊房观众申请上麦、房主同意/拒绝。
-- [集成 Android 语聊房礼物](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-gift.md): 使用 GiftStore.sendGift()、addGiftListener() 实现语聊房礼物赠送、全屏动画和弹幕礼物消息。
-- [集成 Android 语聊房主播连线与 PK](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-host-interaction.md): 使用 CoHostStore.requestConnection() 实现语聊房跨房连线、BattleStore.requestBattle() 实现 PK 对战。
-- [集成 Android 语聊房基础功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-integration.md): 从 GitHub 克隆 TUIKit_Android 源码，集成 AtomicXCore、LoginStore、VoiceCoreView 实现房主开播和听众收听。要求 Android Studio Ladybug 2024.2.1+、JDK 17+。
-- [集成 Android 语聊房房间列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/android/voice-room-list.md): 使用 RoomManager API 获取语聊房房间列表、房间信息，实现房间跳转和在线状态展示。
-- [集成 Flutter 语聊房观众列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-audience-list.md): 使用 AudienceStore API 获取语聊房在线听众列表，展示头像墙和实时人数统计。
-- [集成 Flutter 语聊房音效控制](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-audio-effect.md): 使用 AudioEffectStore.setAudioChangerType()、setAudioReverbType() 实现语聊房变声（熊孩子/萝莉/大叔）和混响（KTV/礼堂/磁性）。
-- [集成 Flutter 语聊房弹幕](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-barrage.md): 使用 BarrageStore.sendTextMessage()、sendCustomMessage() 发送语聊房弹幕，监听 barrageState 接收实时消息。
-- [集成 Flutter 语聊房观众上麦](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-co-guest-interaction.md): 使用 CoGuestStore.requestConnection()、respondToCrossRoomConnection() 实现语聊房观众申请上麦、房主同意/拒绝。
-- [集成 Flutter 语聊房礼物](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-gift.md): 使用 GiftStore.sendGift()、addGiftListener() 实现语聊房礼物赠送、全屏动画和弹幕礼物消息。
-- [集成 Flutter 语聊房基础功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-integration.md): 从 GitHub 克隆 TUIKit_Flutter 源码，集成 AtomicXCore、LoginStore、VoiceCoreView 实现房主开播和听众收听。要求 Flutter 3.29.0+、Dart 3.7.0+。
-- [集成 Flutter 语聊房房间列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/flutter/voice-room-list.md): 使用 RoomManager API 获取语聊房房间列表、房间信息，实现房间跳转和在线状态展示。
-- [集成 iOS 语聊房观众列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-audience-list.md): 使用 AudienceStore API 获取语聊房在线听众列表，展示头像墙和实时人数统计。
-- [集成 iOS 语聊房音效控制](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-audio-effect.md): 使用 AudioEffectStore.setAudioChangerType()、setAudioReverbType() 实现语聊房变声（熊孩子/萝莉/大叔）和混响（KTV/礼堂/磁性）。
-- [集成 iOS 语聊房弹幕](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-barrage.md): 使用 BarrageStore.sendTextMessage()、sendCustomMessage() 发送语聊房弹幕，监听 barrageState 接收实时消息。
-- [集成 iOS 语聊房观众上麦](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-co-guest-interaction.md): 使用 CoGuestStore.requestConnection()、respondToCrossRoomConnection() 实现语聊房观众申请上麦、房主同意/拒绝。
-- [集成 iOS 语聊房礼物](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-gift.md): 使用 GiftStore.sendGift()、addGiftListener() 实现语聊房礼物赠送、全屏动画和弹幕礼物消息。
-- [集成 iOS 语聊房主播连线与 PK](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-host-interaction.md): 使用 CoHostStore.requestConnection() 实现语聊房跨房连线、BattleStore.requestBattle() 实现 PK 对战。
-- [集成 iOS 语聊房基础功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-integration.md): 从 GitHub 克隆 TUIKit_iOS 源码，集成 AtomicXCore、LoginStore、VoiceCoreView 实现房主开播和听众收听。要求 Xcode 13+、iOS 13.0+。
-- [集成 iOS 语聊房房间列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/ios/voice-room-list.md): 使用 RoomManager API 获取语聊房房间列表、房间信息，实现房间跳转和在线状态展示。
-- [集成 uni-app 语聊房观众列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-audience-list.md): 使用 AudienceStore API 获取语聊房在线听众列表，展示头像墙和实时人数统计。
-- [集成 uni-app 语聊房音效控制](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-audio-effect.md): 使用 AudioEffectStore.setAudioChangerType()、setAudioReverbType() 实现语聊房变声（熊孩子/萝莉/大叔）和混响（KTV/礼堂/磁性）。
-- [集成 uni-app 语聊房弹幕](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-barrage.md): 使用 BarrageStore.sendTextMessage()、sendCustomMessage() 发送语聊房弹幕，监听 barrageState 接收实时消息。
-- [集成 uni-app 语聊房观众上麦](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-co-guest-interaction.md): 使用 CoGuestStore.requestConnection()、respondToCrossRoomConnection() 实现语聊房观众申请上麦、房主同意/拒绝。
-- [集成 uni-app 语聊房礼物](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-gift.md): 使用 GiftStore.sendGift()、addGiftListener() 实现语聊房礼物赠送、全屏动画和弹幕礼物消息。
-- [集成 uni-app 语聊房基础功能](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-integration.md): 在 uni-app 项目中集成 AtomicXCore、LoginStore、VoiceCoreView 实现语聊房房主开播和听众收听。
-- [集成 uni-app 语聊房房间列表](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/uni-app/voice-room-list.md): 使用 RoomManager API 获取语聊房房间列表、房间信息，实现房间跳转和在线状态展示。
+#### 视频直播 (Live)
+> 视频直播场景：主播开播、观众观看、观众连麦、主播 PK、弹幕、礼物、美颜和音效。
 
+- [集成视频直播基础功能 (Android/iOS/Flutter/Vue)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/integration.md): 集成 AtomicXCore LiveKit 实现视频直播功能：主播开播（LiveCoreView/livePusher）、观众观看（livePlayer）、直播列表，支持 Android、iOS、Flutter、Vue 四个平台。
+- [实现直播间观众列表管理 (LiveAudienceStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/audience-list.md): 使用 AtomicXCore LiveAudienceStore 管理直播间观众：实时观众列表、人数统计、观众动态监听、管理员权限和踢人操作。
+- [集成直播音效控制 (AudioEffectStore/DeviceStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/audio-effect.md): 使用 AtomicXCore AudioEffectStore 和 DeviceStore 实现直播音效：人声音量调节、耳返功能、变声效果（萝莉/大叔/熊孩子等）和混响效果（KTV/金属声等）。
+- [集成直播弹幕系统 (BarrageStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/barrage.md): 使用 AtomicXCore BarrageStore 实现直播弹幕：接收/发送文本弹幕、自定义业务弹幕（礼物/点赞）和本地系统提示消息。
+- [集成直播基础美颜 (BaseBeautyStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/beauty.md): 使用 AtomicXCore BaseBeautyStore 实现直播基础美颜：磨皮/美白/红润效果调节（0-9 强度）、一键重置和状态监听。
+- [集成 Vue 连麦管理面板 (CoGuestPanel)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/co-guest-panel.md): 在 Vue 项目中集成 CoGuestPanel 连麦管理面板组件，实现 Tab 切换、连麦申请列表和连麦用户管理，支持深度样式定制。
+- [实现直播观众连麦 (CoGuestStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/co-guest.md): 使用 AtomicXCore CoGuestStore 实现观众连麦：观众申请上麦、主播邀请上麦、同意/拒绝连麦请求和下麦管理。
+- [实现直播主播跨房连线与 PK (CoHostStore/BattleStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/co-host.md): 使用 AtomicXCore CoHostStore 和 BattleStore 实现主播跨房连线和 PK 对战：发起/接受连线请求、开始/结束 PK、PK 计时和结果判定。
+- [集成直播礼物系统 (GiftStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/gift.md): 使用 AtomicXCore GiftStore 实现直播礼物功能：礼物面板、发送/接收礼物、弹幕礼物消息和全屏礼物动画。
+- [集成 Vue 直播观众列表组件 (LiveAudienceList)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/live-audience-list.md): 在 Vue 项目中集成 LiveAudienceList 观众列表组件，展示实时观众头像、人数和观众详情面板。
+- [实现直播房间列表 (LiveListStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/live-list.md): 使用 AtomicXCore LiveListStore 管理直播房间列表：拉取列表、分页加载、创建/加入/离开房间和直播信息更新。
+- [集成 Vue 媒体资源配置面板 (LiveScenePanel)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/live-scene-panel.md): 在 Vue 项目中集成 LiveScenePanel 组件，配置直播摄像头、麦克风、美颜参数和直播模式选择。
+- [集成 Vue 直播视频组件 (LiveView)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/live-view.md): 在 Vue 项目中集成 LiveView 直播视频组件，渲染主播和连麦用户的视频画面，支持布局自定义。
+- [集成 Vue 视频源编辑面板 (StreamMixer)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/live/features/stream-mixer.md): 在 Vue 项目中集成 StreamMixer 视频源编辑面板，管理摄像头、屏幕分享和图片等多路视频源的混合布局。
+
+#### 语聊房 (Voice)
+> 语聊房场景：房主开播、听众收听、语音上麦、跨房 PK、弹幕、礼物和音效。
+
+- [集成语聊房基础功能 (Android/iOS/Flutter/uni-app)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/integration.md): 集成 AtomicXCore LiveKit 实现语聊房功能：房主开播（LiveSeatStore/VoiceCoreView）、听众收听、房间列表，支持 Android、iOS、Flutter、uni-app 四个平台。
+- [实现语聊房观众列表管理 (LiveAudienceStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/features/audience-list.md): 使用 AtomicXCore LiveAudienceStore 管理语聊房观众：实时观众列表、人数统计、观众动态监听、管理员权限和踢人操作。
+- [集成语聊房音效控制 (AudioEffectStore/DeviceStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/features/audio-effect.md): 使用 AtomicXCore AudioEffectStore 和 DeviceStore 实现语聊房音效：人声音量调节、耳返功能、变声效果和混响效果。
+- [集成语聊房弹幕系统 (BarrageStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/features/barrage.md): 使用 AtomicXCore BarrageStore 实现语聊房弹幕：接收/发送文本弹幕、自定义业务弹幕和本地系统提示消息。
+- [实现语聊房语音连麦 (CoGuestStore/LiveSeatStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/features/co-guest.md): 使用 AtomicXCore CoGuestStore 和 LiveSeatStore 实现语聊房连麦：观众申请上麦、主播邀请上麦、麦位管理（踢人/闭麦/锁麦）。
+- [实现语聊房跨房连线与 PK (CoHostStore/BattleStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/features/co-host.md): 使用 AtomicXCore CoHostStore 和 BattleStore 实现语聊房跨房连线和 PK 对战：发起/接受连线请求、开始/结束 PK、PK 计时和结果判定。
+- [集成语聊房礼物系统 (GiftStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/features/gift.md): 使用 AtomicXCore GiftStore 实现语聊房礼物功能：礼物面板、发送/接收礼物、弹幕礼物消息和全屏礼物动画。
+- [实现语聊房房间列表 (LiveListStore)](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/voice/features/room-list.md): 使用 AtomicXCore LiveListStore 管理语聊房列表：拉取列表、分页加载、创建/加入/离开房间、直播信息更新和自定义元数据。
+
+#### API 参考
+- [LiveKit atomicx-core SDK State API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/reference/state-api.md): 查阅 atomicx-core SDK 全部 State API：LoginStore、RoomStore、UserStore、LiveCoreViewStore、LiveSeatStore、CoGuestStore、CoHostStore、BattleStore、AudienceStore、BarrageStore、GiftStore、BaseBeautyStore、AudioEffectStore、DeviceStore 等模块。
+
+#### 常见问题
+- [排查 LiveKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/livekit/faq/common.md): 解决 LiveKit 集成中的常见问题，包括 SDK 初始化、登录鉴权、推拉流异常和平台兼容性。
 
 ### TUIRoomKit
 > 音视频会议组件，支持多人视频会议、屏幕共享、成员管理等企业级会议功能。
 
-- [TUIRoomKit 错误码参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/common/error_code.md): 查阅 TUIRoomKit 错误码列表，快速定位会议创建、加入、设备异常等问题原因。
-- [排查 Vue TUIRoomKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/faq.md): 解决 Vue TUIRoomKit (Atomicx) 集成中的组件渲染、设备权限和浏览器兼容问题。
-- [实现 Vue RoomKit 会中呼叫](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/call-user-to-room.md): 使用 useRoomState API 实现向房间外用户发送实时入会邀请、接受/拒绝邀请和超时处理。
-- [实现 Vue RoomKit 设备检测](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/device-detection.md): 使用 useDeviceState API 实现进房前摄像头、麦克风、扬声器和网络质量检测与测试。
-- [管理 Vue RoomKit 设备状态](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/device-state.md): 使用 useDeviceState API 管理会议中摄像头、麦克风、扬声器的开关和切换。
-- [集成 Vue RoomKit 基础美颜](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/free-beauty-panel.md): 使用 TUIRoomKit 基础美颜面板实现磨皮、美白和红润效果调节。
-- [实现 Vue RoomKit 会中聊天](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-chat.md): 使用 useRoomChat API 实现会中文字消息、表情、图片等实时聊天互动。
-- [管理 Vue RoomKit 参会成员](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-participant-state.md): 使用 useRoomParticipantState API 管理参会成员列表、权限控制、全员禁言和踢人操作。
-- [管理 Vue RoomKit 房间生命周期](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-state.md): 使用 useRoomState API 管理房间的创建、加入、离开、销毁等生命周期和房间信息。
-- [渲染 Vue RoomKit 视频布局](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/room-view.md): 使用 useRoomView API 实现宫格布局、侧边栏布局和演讲者模式的视频画面渲染。
-- [预定 Vue RoomKit 会议房间](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/schedule-room.md): 使用 useRoomState API 创建预定会议、设置会议时间、主题、密码和参会成员列表。
-- [实现 Vue RoomKit 屏幕分享](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/screen-share.md): 使用 useDeviceState API 实现屏幕分享、系统音频分享和分享权限控制。
-- [使用 Vue RoomKit 虚拟背景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/features/virtual-background.md): 使用 TUIRoomKit 虚拟背景插件实现背景虚化和自定义背景图片。
-- [集成 Vue TUIRoomKit](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/vue/integration.md): 从 GitHub 克隆 TUIRoomKit 源码，集成 home.vue 设备检测页和 room.vue 会议室页。要求 Vue 3.4.21+、Node.js 18+。
-
+- [集成 Vue TUIRoomKit (Atomicx) 音视频会议](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/integration.md): 从 GitHub 克隆 TUIRoomKit 源码，集成 home.vue 设备检测页和 room.vue 会议室页，实现完整的音视频会议应用。要求 Vue 3.4.21+、Node.js 18+。
+- [排查 Vue TUIRoomKit 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/faq/web.md): 解决 Vue TUIRoomKit (Atomicx) 集成中的组件渲染、设备权限和浏览器兼容问题。
+- [集成 Vue RoomKit 基础美颜](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/beauty.md): 使用 TUIRoomKit 基础美颜面板实现磨皮、美白和红润效果调节，支持实时预览和远端生效。
+- [实现 Vue RoomKit 会中呼叫](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/call-user-to-room.md): 使用 useRoomState API 实现向房间外用户发送实时入会邀请、接受/拒绝邀请和超时处理。
+- [实现 Vue RoomKit 设备检测](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/device-detection.md): 使用 useDeviceState API 实现进房前摄像头、麦克风、扬声器和网络质量检测与测试。
+- [管理 Vue RoomKit 设备状态](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/device-state.md): 使用 useDeviceState API 管理会议中摄像头、麦克风、扬声器的开关和切换。
+- [实现 Vue RoomKit 会中聊天](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/room-chat.md): 使用 useRoomChat API 实现会中文字消息、表情、图片等实时聊天互动。
+- [管理 Vue RoomKit 参会成员](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/room-participant.md): 使用 useRoomParticipantState API 管理参会成员列表、权限控制、设置管理员、全员禁言/禁画和踢人操作。
+- [管理 Vue RoomKit 房间生命周期](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/room-state.md): 使用 useRoomState API 管理房间的创建、加入、离开、销毁等生命周期和房间信息更新。
+- [渲染 Vue RoomKit 视频布局](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/room-view.md): 使用 useRoomView API 实现宫格布局、侧边栏布局和演讲者模式的视频画面渲染与视频挂件自定义。
+- [预定 Vue RoomKit 会议房间](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/schedule-room.md): 使用 useRoomState API 创建预定会议、设置会议时间、主题、密码和参会成员列表。
+- [实现 Vue RoomKit 屏幕分享](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/screen-share.md): 使用 useDeviceState API 实现屏幕分享、系统音频分享和分享权限控制。
+- [使用 Vue RoomKit 虚拟背景](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/features/virtual-background.md): 使用 TUIRoomKit 虚拟背景插件实现背景虚化和自定义背景图片替换。
+- [TUIRoomKit 错误码参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/roomkit/reference/error-code.md): 查阅 TUIRoomKit 错误码列表，快速定位会议创建、加入、设备异常等问题原因。
 
 ### RTC Engine Web SDK
 > TRTC Web SDK 及插件系统，提供实时音视频核心能力和丰富的音视频增强插件。
 
-- [生成 UserSig 鉴权凭证](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/faq/common/userSig.md): 查看 UserSig 生成算法和代码示例（HMAC-SHA256），支持 Java/Go/PHP/Node.js/Python/C#/C++ 多种语言。用于 TRTC、IM、TUIKit 身份鉴权。
-- [排查 Web TRTC 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/faq/web/web.md): 解决 trtc-sdk-v5 集成中的设备权限、浏览器兼容和自动播放策略问题。
-- [TRTC Web SDK API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/api.md): 查阅 trtc-sdk-v5 完整 API：TRTC.create()、enterRoom()、startLocalVideo()、publish() 等方法。
-- [集成 TRTC Web SDK 音视频通话](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/how_to_integrated_web_sdk.md): npm install trtc-sdk-v5，使用 TRTC.create()、enterRoom() 实现 Web 实时音视频通话。要求 Node.js 18+、支持 WebRTC 的浏览器。
-- [运行 TRTC Web SDK Demo](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/how_to_run_web_sdk_demo.md): 克隆 TRTC-Simple-Demo 仓库，本地运行 trtc-sdk-v5 Demo 体验实时音视频通话功能。
-- [自定义音视频采集与渲染](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/20-advanced-customized-capture-rendering.md): 使用 trtc-sdk-v5 的 createCustomVideoTrack()、createCustomAudioTrack() 实现自定义采集源（Canvas/MediaStream）和自定义渲染逻辑。
-- [处理浏览器自动播放策略](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/21-advanced-auto-play-policy.md): 处理 Chrome/Safari 浏览器的自动播放限制，使用用户手势触发播放或静音自动播放策略。
-- [使用 AudioMixer 背景音乐插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/22-advanced-audio-mixer.md): 使用 trtc-sdk-v5 的 AudioMixer 插件播放多路背景音乐，支持音量控制、循环播放、跳转进度和混音输出。
-- [检测 WebRTC 浏览器兼容性](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/23-advanced-support-detection.md): 使用 TRTC.isSupported() 检测浏览器是否支持 WebRTC、H.264 编解码和获取摄像头/麦克风权限。
-- [监测网络质量](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/24-advanced-network-quality.md): 监听 trtc-sdk-v5 的 network-quality 事件，获取上下行网络延迟、丢包率和质量等级（优秀/良好/一般/差/极差）。
-- [监听设备插拔变更](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/25-advanced-device-change.md): 监听 trtc-sdk-v5 的 device-changed 事件，处理摄像头、麦克风、扬声器的插拔和设备列表变化。
-- [使用 CDNStreaming 转推插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/26-advanced-publish-cdn-stream.md): 使用 trtc-sdk-v5 的 CDNStreaming 插件实现云端混流、转推 CDN 和回推混流到 TRTC 房间。
-- [使用大小流双流编码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/27-advanced-small-stream.md): 使用 startVideoStream({ small: true }) 开启大小流，订阅端根据网络自动切换流，保证弱网流畅度。
-- [使用 Beauty 专业美颜插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/28-advanced-beauty.md): 使用 trtc-sdk-v5 的 Beauty 插件实现磨皮、美白、瘦脸、大眼和动态贴纸特效（需商业授权）。
-- [使用 Watermark 视频水印插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/29-advanced-water-mark.md): 使用 trtc-sdk-v5 的 Watermark 插件为本地视频流添加图片水印，支持位置、尺寸和透明度配置。
-- [使用 CrossRoom 跨房连麦插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/30-advanced-cross-room-link.md): 使用 trtc-sdk-v5 的 CrossRoom 插件实现不同房间主播间的音视频互动（主播 PK、跨房连麦）。
-- [TRTC Web SDK 插件总览](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/31-advanced-plugins-overview.md): 浏览 trtc-sdk-v5 全部插件：美颜/虚拟背景/AI降噪/变声/音视频混流/CDN转推/设备检测/网络质量等 20+ 插件能力。
-- [配置代理服务器转发](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/34-advanced-proxy.md): 使用 TRTC.setProxyServer() 配置 HTTP/HTTPS 代理服务器转发 WebRTC 信令和媒体流量。
-- [使用 AIDenoiser AI 降噪插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/35-advanced-ai-denoiser.md): 使用 trtc-sdk-v5 的 AIDenoiser 插件智能降低环境噪声（键盘声/风扇声/鼠标点击），支持远场消除模式。
-- [使用 VirtualBackground 虚拟背景插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/36-advanced-virtual-background.md): 使用 trtc-sdk-v5 的 VirtualBackground 插件实现背景虚化和自定义背景图片替换（人像分割）。
-- [使用 VoiceChanger 变声插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/37-advanced-voice-changer.md): 使用 trtc-sdk-v5 的 VoiceChanger 插件实现 11 种变声效果：熊孩子/萝莉/大叔/冷酷/空灵/胖子/老外/困兽/重金属/强电流/重机械。
-- [使用 BasicBeauty 基础美颜插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/38-advanced-basic-beauty.md): 使用 trtc-sdk-v5 的 BasicBeauty 插件调节美颜、明亮、红润 3 种参数（0-1 范围），适合免费场景。
-- [使用 TRTCVideoDecoder 解码器降级插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/39-advanced-video-decoder.md): 使用 trtc-sdk-v5 的 TRTCVideoDecoder 插件，硬解码失败时自动降级到软解码（wasm）保证拉流成功率。
-- [使用 VideoMixer 视频合流插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/40-advanced-video-mixer.md): 使用 trtc-sdk-v5 的 VideoMixer 插件将摄像头、屏幕、文字、图片、视频合成一路流（画中画/水印/字幕）。
-- [使用 SmallStreamAutoSwitcher 自动切换插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/41-advanced-small-stream-auto-switcher.md): 使用 trtc-sdk-v5 的 SmallStreamAutoSwitcher 插件，弱网时自动切换小流保证流畅度，网络恢复后自动切回大流。
-- [使用 RealtimeTranscriber 实时语音转录插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/42-advanced-realtime-transcriber.md): 使用 trtc-sdk-v5 的 RealtimeTranscriber 插件将用户语音实时转换为文字，支持多语言翻译（中/英/日/韩等）。
-- [使用 FaceDetection 人脸检测插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/web/plugin/43-advanced-face-detection.md): 使用 trtc-sdk-v5 的 FaceDetection 插件实时检测摄像头中的人脸位置、数量和状态变化。
-
+- [集成 TRTC Web SDK 音视频通话](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/integration.md): npm install trtc-sdk-v5，使用 TRTC.create()、enterRoom()、startLocalVideo()、publish() 实现 Web 实时音视频通话。要求 Node.js 18+、支持 WebRTC 的浏览器。
+- [运行 TRTC Web SDK Demo](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/quick-start.md): 克隆 TRTC-Simple-Demo 仓库，本地运行 trtc-sdk-v5 Demo 体验实时音视频通话功能。
+- [TRTC Web SDK 插件总览](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/overview.md): 浏览 trtc-sdk-v5 全部插件：美颜/虚拟背景/AI降噪/变声/音视频混流/CDN转推/设备检测/网络质量等 20+ 插件能力。
+- [TRTC 通用问题与 UserSig 鉴权](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/faq/common.md): 查阅 TRTC SDK 错误码列表和 UserSig 生成算法（HMAC-SHA256），支持 Java/Go/PHP/Node.js/Python/C#/C++ 多种语言。
+- [排查 Web TRTC 常见问题](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/faq/web.md): 解决 trtc-sdk-v5 集成中的设备权限、浏览器兼容和自动播放策略问题。
+- [使用 AIDenoiser AI 降噪插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/ai-denoiser.md): 使用 trtc-sdk-v5 的 AIDenoiser 插件智能降低环境噪声（键盘声/风扇声/鼠标点击），支持远场消除模式。
+- [使用 AudioMixer 背景音乐插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/audio-mixer.md): 使用 trtc-sdk-v5 的 AudioMixer 插件播放多路背景音乐，支持音量控制、循环播放、跳转进度和混音输出。
+- [处理浏览器自动播放策略](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/auto-play-policy.md): 处理 Chrome/Safari 浏览器的自动播放限制，使用用户手势触发播放或静音自动播放策略。
+- [使用 BasicBeauty 基础美颜插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/basic-beauty.md): 使用 trtc-sdk-v5 的 BasicBeauty 插件调节美颜、明亮、红润 3 种参数（0-1 范围），适合免费场景。
+- [使用 Beauty 专业美颜插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/beauty.md): 使用 trtc-sdk-v5 的 Beauty 插件实现磨皮、美白、瘦脸、大眼和动态贴纸特效（需商业授权）。
+- [自定义音视频采集与渲染](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/capture-rendering.md): 使用 trtc-sdk-v5 的 createCustomVideoTrack()、createCustomAudioTrack() 实现自定义采集源（Canvas/MediaStream）和自定义渲染逻辑。
+- [使用 CDNStreaming 转推插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/cdn-streaming.md): 使用 trtc-sdk-v5 的 CDNStreaming 插件实现云端混流、转推 CDN 和回推混流到 TRTC 房间。
+- [使用 CrossRoom 跨房连麦插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/cross-room.md): 使用 trtc-sdk-v5 的 CrossRoom 插件实现不同房间主播间的音视频互动（主播 PK、跨房连麦）。
+- [监听设备插拔变更](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/device-change.md): 监听 trtc-sdk-v5 的 device-changed 事件，处理摄像头、麦克风、扬声器的插拔和设备列表变化。
+- [使用 FaceDetection 人脸检测插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/face-detection.md): 使用 trtc-sdk-v5 的 FaceDetection 插件实时检测摄像头中的人脸位置、数量和状态变化。
+- [监测网络质量](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/network-quality.md): 监听 trtc-sdk-v5 的 network-quality 事件，获取上下行网络延迟、丢包率和质量等级。
+- [配置代理服务器转发](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/proxy.md): 使用 TRTC.setProxyServer() 配置 HTTP/HTTPS 代理服务器转发 WebRTC 信令和媒体流量。
+- [使用 RealtimeTranscriber 实时语音转录插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/realtime-transcriber.md): 使用 trtc-sdk-v5 的 RealtimeTranscriber 插件将用户语音实时转换为文字，支持多语言翻译。
+- [使用 SmallStreamAutoSwitcher 自动切换插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/small-stream-auto.md): 使用 trtc-sdk-v5 的 SmallStreamAutoSwitcher 插件，弱网时自动切换小流保证流畅度，网络恢复后自动切回大流。
+- [使用大小流双流编码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/small-stream.md): 使用 startVideoStream({ small: true }) 开启大小流，订阅端根据网络自动切换流，保证弱网流畅度。
+- [检测 WebRTC 浏览器兼容性](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/support-detection.md): 使用 TRTC.isSupported() 检测浏览器是否支持 WebRTC、H.264 编解码和获取摄像头/麦克风权限。
+- [使用 TRTCVideoDecoder 解码器降级插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/video-decoder.md): 使用 trtc-sdk-v5 的 TRTCVideoDecoder 插件，硬解码失败时自动降级到软解码（wasm）保证拉流成功率。
+- [使用 VideoMixer 视频合流插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/video-mixer.md): 使用 trtc-sdk-v5 的 VideoMixer 插件将摄像头、屏幕、文字、图片、视频合成一路流。
+- [使用 VirtualBackground 虚拟背景插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/virtual-background.md): 使用 trtc-sdk-v5 的 VirtualBackground 插件实现背景虚化和自定义背景图片替换（人像分割）。
+- [使用 VoiceChanger 变声插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/voice-changer.md): 使用 trtc-sdk-v5 的 VoiceChanger 插件实现 11 种变声效果：熊孩子/萝莉/大叔/冷酷/空灵/胖子/老外/困兽/重金属/强电流/重机械。
+- [使用 Watermark 视频水印插件](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/plugins/watermark.md): 使用 trtc-sdk-v5 的 Watermark 插件为本地视频流添加图片水印，支持位置、尺寸和透明度配置。
+- [TRTC Web SDK API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/rtcengine/reference/api.md): 查阅 trtc-sdk-v5 完整 API：TRTC.create()、enterRoom()、exitRoom()、startLocalVideo()、startLocalAudio()、publish()、subscribe() 等方法和事件。
 
 ### TRTC Native SDK API
 > TRTC 原生 SDK API 参考文档，覆盖 Android、iOS、C++ 平台的完整接口说明。
 
+#### Android
 - [Android TRTC SDK TRTCCloud API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCCloud.md): 查阅 Android TRTC SDK 核心类 TRTCCloud API：enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio()/switchRoom() 等方法。
 - [Android TRTC SDK TRTCCloudDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCCloudDef.md): 查阅 Android TRTC SDK 类型定义：TRTCParams（进房参数）/TRTCVideoEncParam（视频编码）/TRTCNetworkQosParam（网络QoS）。
 - [Android TRTC SDK TRTCCloudListener 事件回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCCloudListener.md): 查阅 Android TRTC SDK 事件回调：onEnterRoom()/onExitRoom()/onUserVideoAvailable()/onNetworkQuality() 等监听器。
 - [Android TRTC SDK TRTCStatistics 统计数据](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TRTCStatistics.md): 查阅 Android TRTC SDK 音视频统计指标：码率/帧率/分辨率/丢包率/延迟等数据结构定义。
 - [Android TRTC SDK TXAudioEffectManager 音效管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXAudioEffectManager.md): 查阅 Android TRTC SDK 音效管理 API：playBGM()/setVoiceChangerType()/setVoiceReverbType() 实现 BGM、变声和混响。
-- [Android TRTC SDK TXBeautyManager 美颜管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXBeautyManager.md): 查阅 Android TRTC SDK 美颜管理 API：setBeautyLevel()/setWhitenessLevel()/setRuddyLevel() 实现磨皮、美白、瘦脸。
+- [Android TRTC SDK TXBeautyManager 美颜管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXBeautyManager.md): 查阅 Android TRTC SDK 美颜管理 API：setBeautyLevel()/setWhitenessLevel()/setRuddyLevel() 实现磨皮、美白、红润。
 - [Android TRTC SDK TXDeviceManager 设备管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXDeviceManager.md): 查阅 Android TRTC SDK 设备管理 API：switchCamera()/setSystemVolumeType()/enableCameraTorch() 等摄像头和音频设备控制。
 - [Android TRTC SDK TXLiteAVCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/android/TXLiteAVCode.md): 查阅 Android TRTC SDK 错误码和警告码列表，快速定位进房失败、推拉流异常等问题。
-- [C++ TRTC SDK ITRTCCloud API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITRTCCloud.md): 查阅 C++ TRTC SDK 核心接口 ITRTCCloud API：enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio() 等方法。
-- [C++ TRTC SDK ITRTCStatistics 统计数据](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITRTCStatistics.md): 查阅 C++ TRTC SDK 音视频统计指标：码率/帧率/分辨率/丢包率/延迟等数据结构定义。
-- [C++ TRTC SDK ITXAudioEffectManager 音效管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITXAudioEffectManager.md): 查阅 C++ TRTC SDK 音效管理接口：playBGM()/setVoiceChangerType()/setVoiceReverbType() 实现 BGM、变声和混响。
-- [C++ TRTC SDK ITXDeviceManager 设备管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/ITXDeviceManager.md): 查阅 C++ TRTC SDK 设备管理接口：getDevicesList()/setCurrentDevice() 等音视频设备枚举和控制。
-- [C++ TRTC SDK TRTCCloudCallback 事件回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/TRTCCloudCallback.md): 查阅 C++ TRTC SDK 事件回调接口：onEnterRoom()/onExitRoom()/onUserVideoAvailable() 等回调方法。
-- [C++ TRTC SDK TRTCTypeDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/TRTCTypeDef.md): 查阅 C++ TRTC SDK 类型定义：TRTCParams（进房参数）/TRTCVideoEncParam（视频编码）/TRTCNetworkQosParam（网络QoS）。
-- [C++ TRTC SDK TXLiteAVCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/C++/TXLiteAVCode.md): 查阅 C++ TRTC SDK 错误码和警告码列表，快速定位进房失败、推拉流异常等问题。
-- [iOS TRTC SDK TRTCCloud API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TRTCCloud.md): 查阅 iOS TRTC SDK 核心类 TRTCCloud API：enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio()/switchRoom() 等方法。
-- [iOS TRTC SDK TRTCCloudDelegate 事件回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TRTCCloudDelegate.md): 查阅 iOS TRTC SDK 事件回调：onEnterRoom()/onExitRoom()/onUserVideoAvailable()/onNetworkQuality() 等代理方法。
-- [iOS TRTC SDK TRTCStatistics 统计数据](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TRTCStatistics.md): 查阅 iOS TRTC SDK 音视频统计指标：码率/帧率/分辨率/丢包率/延迟等数据结构定义。
-- [iOS TRTC SDK TXAudioEffectManager 音效管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXAudioEffectManager.md): 查阅 iOS TRTC SDK 音效管理 API：playBGM()/setVoiceChangerType()/setVoiceReverbType() 实现 BGM、变声和混响。
-- [iOS TRTC SDK TXBeautyManager 美颜管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXBeautyManager.md): 查阅 iOS TRTC SDK 美颜管理 API：setBeautyLevel()/setWhitenessLevel()/setRuddyLevel() 实现磨皮、美白、瘦脸。
-- [iOS TRTC SDK TXDeviceManager 设备管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXDeviceManager.md): 查阅 iOS TRTC SDK 设备管理 API：switchCamera()/setSystemVolumeType()/enableCameraTorch() 等摄像头和音频设备控制。
-- [iOS TRTC SDK TXLiteAVCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXLiteAVCode.md): 查阅 iOS TRTC SDK 错误码和警告码列表，快速定位进房失败、推拉流异常等问题。
-- [iOS TRTC SDK TXLiveSDKTypeDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/iOS/TXLiveSDKTypeDef.md): 查阅 iOS TRTC SDK 直播相关类型定义和常量。
 
+#### iOS
+- [iOS TRTC SDK TRTCCloud API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TRTCCloud.md): 查阅 iOS TRTC SDK 核心类 TRTCCloud API：enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio()/switchRoom() 等方法。
+- [iOS TRTC SDK TRTCCloudDelegate 事件回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TRTCCloudDelegate.md): 查阅 iOS TRTC SDK 事件回调：onEnterRoom()/onExitRoom()/onUserVideoAvailable()/onNetworkQuality() 等代理方法。
+- [iOS TRTC SDK TRTCStatistics 统计数据](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TRTCStatistics.md): 查阅 iOS TRTC SDK 音视频统计指标：码率/帧率/分辨率/丢包率/延迟等数据结构定义。
+- [iOS TRTC SDK TXAudioEffectManager 音效管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TXAudioEffectManager.md): 查阅 iOS TRTC SDK 音效管理 API：playBGM()/setVoiceChangerType()/setVoiceReverbType() 实现 BGM、变声和混响。
+- [iOS TRTC SDK TXBeautyManager 美颜管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TXBeautyManager.md): 查阅 iOS TRTC SDK 美颜管理 API：setBeautyLevel()/setWhitenessLevel()/setRuddyLevel() 实现磨皮、美白、红润。
+- [iOS TRTC SDK TXDeviceManager 设备管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TXDeviceManager.md): 查阅 iOS TRTC SDK 设备管理 API：switchCamera()/setSystemVolumeType()/enableCameraTorch() 等摄像头和音频设备控制。
+- [iOS TRTC SDK TXLiteAVCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TXLiteAVCode.md): 查阅 iOS TRTC SDK 错误码和警告码列表，快速定位进房失败、推拉流异常等问题。
+- [iOS TRTC SDK TXLiveSDKTypeDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/ios/TXLiveSDKTypeDef.md): 查阅 iOS TRTC SDK 直播相关类型定义和常量。
+
+#### C++
+- [C++ TRTC SDK ITRTCCloud API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/cpp/ITRTCCloud.md): 查阅 C++ TRTC SDK 核心接口 ITRTCCloud API：enterRoom()/exitRoom()/startLocalVideo()/startLocalAudio() 等方法。
+- [C++ TRTC SDK ITRTCStatistics 统计数据](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/cpp/ITRTCStatistics.md): 查阅 C++ TRTC SDK 音视频统计指标：码率/帧率/分辨率/丢包率/延迟等数据结构定义。
+- [C++ TRTC SDK ITXAudioEffectManager 音效管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/cpp/ITXAudioEffectManager.md): 查阅 C++ TRTC SDK 音效管理接口：playBGM()/setVoiceChangerType()/setVoiceReverbType() 实现 BGM、变声和混响。
+- [C++ TRTC SDK ITXDeviceManager 设备管理](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/cpp/ITXDeviceManager.md): 查阅 C++ TRTC SDK 设备管理接口：getDevicesList()/setCurrentDevice() 等音视频设备枚举和控制。
+- [C++ TRTC SDK TRTCCloudCallback 事件回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/cpp/TRTCCloudCallback.md): 查阅 C++ TRTC SDK 事件回调接口：onEnterRoom()/onExitRoom()/onUserVideoAvailable() 等回调方法。
+- [C++ TRTC SDK TRTCTypeDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/cpp/TRTCTypeDef.md): 查阅 C++ TRTC SDK 类型定义：TRTCParams（进房参数）/TRTCVideoEncParam（视频编码）/TRTCNetworkQosParam（网络QoS）。
+- [C++ TRTC SDK TXLiteAVCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/trtc/cpp/TXLiteAVCode.md): 查阅 C++ TRTC SDK 错误码和警告码列表，快速定位进房失败、推拉流异常等问题。
 
 ### Native Live SDK API
 > 腾讯云直播 Native SDK API 参考文档，覆盖推流器、播放器和全局配置接口。
 
-- [Android Live SDK V2TXLiveCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLiveCode_api_android.md): 查阅 Android Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
-- [Android Live SDK V2TXLiveDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLiveDef_api_android.md): 查阅 Android Live SDK 类型定义：V2TXLiveVideoResolution（分辨率）/V2TXLiveVideoFillMode（填充模式）/V2TXLiveRotation（旋转角度）。
-- [Android Live SDK V2TXLivePlayer API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePlayer_api_android.md): 查阅 Android Live SDK 播放器 V2TXLivePlayer API：setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
-- [Android Live SDK V2TXLivePlayerObserver 播放回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePlayerObserver_api_android.md): 查阅 Android Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等监听器。
-- [Android Live SDK V2TXLivePremier 全局配置](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePremier_api_android.md): 查阅 Android Live SDK 全局配置 API：setLicence()/setLogLevel()/setConsoleEnabled() 等 SDK 初始化方法。
-- [Android Live SDK V2TXLivePusher API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePusher_api_android.md): 查阅 Android Live SDK 推流器 V2TXLivePusher API：setRenderView()/startCamera()/startMicrophone()/startPush() 等推流方法。
-- [Android Live SDK V2TXLivePusherObserver 推流回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/android/V2TXLivePusherObserver_api_android.md): 查阅 Android Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等监听器。
-- [Flutter Live SDK V2TXLiveCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLiveCode_api_flutter.md): 查阅 Flutter Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
-- [Flutter · V2TXLiveDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLiveDef_api_flutter.md): 查阅 Flutter Live SDK 关键类型定义。
-- [Flutter Live SDK V2TXLivePlayer API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePlayer_api_flutter.md): 查阅 Flutter Live SDK 播放器 V2TXLivePlayer API：setRenderViewID()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
-- [Flutter Live SDK V2TXLivePlayerObserver 播放回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePlayerObserver_api_flutter.md): 查阅 Flutter Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等监听器。
-- [Flutter Live SDK V2TXLivePremier 全局配置](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePremier_api_flutter.md): 查阅 Flutter Live SDK 全局配置 API：setLicence()/setLogConfig() 等 SDK 初始化方法。
-- [Flutter Live SDK V2TXLivePusher API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePusher_api_flutter.md): 查阅 Flutter Live SDK 推流器 V2TXLivePusher API：setRenderViewID()/startCamera()/startMicrophone()/startPush() 等推流方法。
-- [Flutter Live SDK V2TXLivePusherObserver 推流回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/flutter/V2TXLivePusherObserver_api_flutter.md): 查阅 Flutter Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等监听器。
-- [iOS Live SDK V2TXLiveCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLiveCode_api_iOS.md): 查阅 iOS Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
-- [iOS Live SDK V2TXLiveDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLiveDef_api_iOS.md): 查阅 iOS Live SDK 类型定义：V2TXLiveVideoResolution（分辨率）/V2TXLiveVideoFillMode（填充模式）/V2TXLiveRotation（旋转角度）。
-- [iOS Live SDK V2TXLivePlayer API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePlayer_api_iOS.md): 查阅 iOS Live SDK 播放器 V2TXLivePlayer API：setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
-- [iOS Live SDK V2TXLivePlayerObserver 播放回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePlayerObserver_api_iOS.md): 查阅 iOS Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等代理方法。
-- [iOS Live SDK V2TXLivePremier 全局配置](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePremier_api_iOS.md): 查阅 iOS Live SDK 全局配置 API：setLicence()/setLogLevel()/setConsoleEnabled() 等 SDK 初始化方法。
-- [iOS Live SDK V2TXLivePusher API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePusher_api_iOS.md): 查阅 iOS Live SDK 推流器 V2TXLivePusher API：setRenderView()/startCamera()/startMicrophone()/startPush() 等推流方法。
-- [iOS Live SDK V2TXLivePusherObserver 推流回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native_live/iOS/V2TXLivePusherObserver_api_iOS.md): 查阅 iOS Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等代理方法。
+#### Android
+- [Android Live SDK V2TXLiveCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLiveCode.md): 查阅 Android Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
+- [Android Live SDK V2TXLiveDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLiveDef.md): 查阅 Android Live SDK 类型定义：V2TXLiveVideoResolution（分辨率）/V2TXLiveVideoFillMode（填充模式）/V2TXLiveRotation（旋转角度）。
+- [Android Live SDK V2TXLivePlayer API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePlayer.md): 查阅 Android Live SDK 播放器 V2TXLivePlayer API：setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
+- [Android Live SDK V2TXLivePlayerObserver 播放回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePlayerObserver.md): 查阅 Android Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等监听器。
+- [Android Live SDK V2TXLivePremier 全局配置](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePremier.md): 查阅 Android Live SDK 全局配置 API：setLicence()/setLogLevel()/setConsoleEnabled() 等 SDK 初始化方法。
+- [Android Live SDK V2TXLivePusher API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePusher.md): 查阅 Android Live SDK 推流器 V2TXLivePusher API：setRenderView()/startCamera()/startMicrophone()/startPush() 等推流方法。
+- [Android Live SDK V2TXLivePusherObserver 推流回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/android/V2TXLivePusherObserver.md): 查阅 Android Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等监听器。
+
+#### iOS
+- [iOS Live SDK V2TXLiveCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLiveCode.md): 查阅 iOS Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
+- [iOS Live SDK V2TXLiveDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLiveDef.md): 查阅 iOS Live SDK 类型定义：V2TXLiveVideoResolution（分辨率）/V2TXLiveVideoFillMode（填充模式）/V2TXLiveRotation（旋转角度）。
+- [iOS Live SDK V2TXLivePlayer API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePlayer.md): 查阅 iOS Live SDK 播放器 V2TXLivePlayer API：setRenderView()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
+- [iOS Live SDK V2TXLivePlayerObserver 播放回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePlayerObserver.md): 查阅 iOS Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等代理方法。
+- [iOS Live SDK V2TXLivePremier 全局配置](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePremier.md): 查阅 iOS Live SDK 全局配置 API：setLicence()/setLogLevel()/setConsoleEnabled() 等 SDK 初始化方法。
+- [iOS Live SDK V2TXLivePusher API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePusher.md): 查阅 iOS Live SDK 推流器 V2TXLivePusher API：setRenderView()/startCamera()/startMicrophone()/startPush() 等推流方法。
+- [iOS Live SDK V2TXLivePusherObserver 推流回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/ios/V2TXLivePusherObserver.md): 查阅 iOS Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等代理方法。
+
+#### Flutter
+- [Flutter Live SDK V2TXLiveCode 错误码](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLiveCode.md): 查阅 Flutter Live SDK 错误码列表，快速定位推流失败、拉流异常、音视频采集问题。
+- [Flutter Live SDK V2TXLiveDef 类型定义](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLiveDef.md): 查阅 Flutter Live SDK 关键类型定义：V2TXLiveVideoResolution、V2TXLiveVideoFillMode 等。
+- [Flutter Live SDK V2TXLivePlayer API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePlayer.md): 查阅 Flutter Live SDK 播放器 V2TXLivePlayer API：setRenderViewID()/startLivePlay()/stopPlay()/setPlayoutVolume() 等拉流方法。
+- [Flutter Live SDK V2TXLivePlayerObserver 播放回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePlayerObserver.md): 查阅 Flutter Live SDK 播放器事件回调：onConnected()/onVideoPlaying()/onAudioPlaying()/onPlayoutVolumeUpdate() 等监听器。
+- [Flutter Live SDK V2TXLivePremier 全局配置](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePremier.md): 查阅 Flutter Live SDK 全局配置 API：setLicence()/setLogConfig() 等 SDK 初始化方法。
+- [Flutter Live SDK V2TXLivePusher API 参考](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePusher.md): 查阅 Flutter Live SDK 推流器 V2TXLivePusher API：setRenderViewID()/startCamera()/startMicrophone()/startPush() 等推流方法。
+- [Flutter Live SDK V2TXLivePusherObserver 推流回调](https://raw.githubusercontent.com/lianjun0809/docs/main/zh/native-live/flutter/V2TXLivePusherObserver.md): 查阅 Flutter Live SDK 推流器事件回调：onPushStatusUpdate()/onCaptureFirstVideoFrame()/onMicrophoneVolumeUpdate() 等监听器。
 

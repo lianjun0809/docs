@@ -21,31 +21,10 @@ MCP (Model Context Protocol) standardizes how applications provide context to LL
 MCP is published on [NPM](https://www.npmjs.com/package/@tencentcloud/sdk-mcp). You can install it via `npx` in any AI editor that supports MCP.
 
 To use MCP, you need to create an application in the Tencent Cloud console first and obtain the following credentials:
-<table>
-<tr>
-<td rowspan="1" colSpan="1" >Credential</td>
-
-<td rowspan="1" colSpan="1" >Where to Get</td>
-
-<td rowspan="1" colSpan="1" >Purpose</td>
-</tr>
-
-<tr>
-<td rowspan="1" colSpan="1" >`SDKAppID`</td>
-
-<td rowspan="1" colSpan="1" >[IM Console](https://console.cloud.tencent.com/im)</td>
-
-<td rowspan="1" colSpan="1" >MCP environment variable</td>
-</tr>
-
-<tr>
-<td rowspan="1" colSpan="1" >`SecretKey`</td>
-
-<td rowspan="1" colSpan="1" >IM Console → App Management</td>
-
-<td rowspan="1" colSpan="1" >MCP environment variable, generate UserSig (for testing only)</td>
-</tr>
-</table>
+| Credential | Where to Get | Purpose |
+| --- | --- | --- |
+| `SDKAppID` | [IM Console](https://console.cloud.tencent.com/im) | MCP environment variable |
+| `SecretKey` | IM Console → App Management | MCP environment variable, generate UserSig (for testing only) |
 
 
 ## MCP Configuration
